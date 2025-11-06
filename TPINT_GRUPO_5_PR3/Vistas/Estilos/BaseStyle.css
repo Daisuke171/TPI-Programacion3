@@ -1,0 +1,119 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 60px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+#LlbSistema {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #e3f2fd;
+    text-shadow: 0 0 10px rgba(33, 150, 243, 0.6);
+    white-space: nowrap;
+}
+
+span {
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 10px;
+    color: #e0f7fa;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 5px #90caf9;
+}
+
+
+#buttonIniciarSesion {
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, #2196f3, #0d47a1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#buttonIniciarSesion:hover {
+    background: linear-gradient(135deg, #64b5f6, #1565c0);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+#LblError {
+    margin-top: 10px;
+    color: #ff8a80;
+    font-weight: bold;
+}
+
+@media (max-width: 420px) {
+    main {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    #LlbSistema {
+        font-size: 1.6rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
