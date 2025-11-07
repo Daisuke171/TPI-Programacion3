@@ -10,10 +10,10 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 201px;
+            width: 269px;
         }
         .auto-style3 {
-            width: 201px;
+            width: 269px;
             height: 23px;
         }
         .auto-style4 {
@@ -62,10 +62,10 @@
                 <tr>
                     <td class="auto-style3">Consultar por DNI:</td>
                     <td class="auto-style6">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtDni" runat="server"></asp:TextBox>
                     </td>
                     <td class="auto-style8">
-                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" Width="116px" />
+                        <asp:Button ID="btnFiltrarDni" runat="server" Text="Filtrar" Width="116px" />
                     </td>
                     <td class="auto-style4"></td>
                     <td class="auto-style4"></td>
@@ -73,9 +73,13 @@
                     <td class="auto-style4"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td class="auto-style7">&nbsp;</td>
+                    <td class="auto-style2">Consultar turnos de medico por LEGAJO:</td>
+                    <td class="auto-style5">
+                        <asp:TextBox ID="txtLegajo" runat="server"></asp:TextBox>
+                    </td>
+                    <td class="auto-style7">
+                        <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" Width="116px" />
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -92,7 +96,16 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:GridView ID="GridView1" runat="server">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                            <Columns>
+                                <asp:TemplateField HeaderText="Id Turno"></asp:TemplateField>
+                                <asp:TemplateField HeaderText="Legajo Medico"></asp:TemplateField>
+                                <asp:TemplateField HeaderText="DNI Paciente"></asp:TemplateField>
+                                <asp:TemplateField HeaderText="Fecha"></asp:TemplateField>
+                                <asp:TemplateField HeaderText="Especialidad"></asp:TemplateField>
+                                <asp:TemplateField HeaderText="Asistencia"></asp:TemplateField>
+                                <asp:TemplateField HeaderText="Observacion"></asp:TemplateField>
+                            </Columns>
                         </asp:GridView>
                     </td>
                     <td class="auto-style5">&nbsp;</td>
