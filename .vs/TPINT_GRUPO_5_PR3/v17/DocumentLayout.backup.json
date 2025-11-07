@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\TPI-Programacion3\\",
+  "WorkspaceRootPath": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\maria\\desktop\\utn\\programacion 3\\tp_integrador\\proyecto\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\basestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\basestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\basestyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -38,25 +38,25 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RegistrarTurno.aspx.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T19:33:14.274Z",
+              "WhenOpened": "2025-11-07T18:05:37.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RegistrarTurno.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\RegistrarTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx",
               "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-06T19:22:02.691Z",
@@ -66,24 +66,24 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ConsultarTurno.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-06T08:38:17.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ListarPaciente.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-06T08:37:55.939Z",
               "EditorCaption": ""
@@ -92,9 +92,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "BaseStyle.css",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyle.css",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyle.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyle.css",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyle.css",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyle.css",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyle.css",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -103,11 +103,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
