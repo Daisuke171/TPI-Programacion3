@@ -71,6 +71,7 @@
     <Content Include="Vistas\Estilos\BaseStyle.css" />
     <Content Include="Vistas\ConsultarTurno.aspx" />
     <Content Include="Vistas\ListarPaciente.aspx" />
+    <Content Include="Vistas\RegistrarMedico.aspx" />
     <Content Include="Web.config" />
     <Content Include="Vistas\Login.aspx" />
   </ItemGroup>
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="Vistas\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\RegistrarMedico.aspx.cs">
+      <DependentUpon>RegistrarMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\RegistrarMedico.aspx.designer.cs">
+      <DependentUpon>RegistrarMedico.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
