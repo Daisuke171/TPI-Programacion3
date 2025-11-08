@@ -3,36 +3,32 @@
   "WorkspaceRootPath": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\tpint_grupo_5_pr3\\vistas\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\estilos\\basestylelistarpacientes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\basestylelistarpacientes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\estilos\\listarpaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\listarpaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\tpint_grupo_5_pr3\\vistas\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\estilos\\basestylelogin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\basestylelogin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\tpint_grupo_5_pr3\\vistas\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\tpint_grupo_5_pr3\\vistas\\registrarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\registrarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\tpint_grupo_5_pr3\\vistas\\altapaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\altapaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\altapaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\altapaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\registrarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\registrarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
+              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-08T21:47:16.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AltaPaciente.aspx",
               "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\AltaPaciente.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\AltaPaciente.aspx",
@@ -65,14 +74,14 @@
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\RegistrarMedico.aspx",
               "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\RegistrarMedico.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\RegistrarMedico.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-07T22:29:21.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ConsultarTurno.aspx",
               "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\ConsultarTurno.aspx",
@@ -85,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RegistrarTurno.aspx",
               "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\RegistrarTurno.aspx",
@@ -99,19 +108,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BaseStyleListarPacientes.css",
-              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleListarPacientes.css",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleListarPacientes.css",
-              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleListarPacientes.css",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleListarPacientes.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-08T14:35:36.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ListarPaciente.aspx",
               "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\ListarPaciente.aspx",
@@ -124,28 +120,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-04T22:07:58.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseStyleLogin.css",
-              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleLogin.css",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleLogin.css",
-              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleLogin.css",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\BaseStyleLogin.css",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ListarPaciente.css",
+              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAYwI0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-06T08:35:41.168Z",
+              "WhenOpened": "2025-11-08T20:21:41.153Z",
               "EditorCaption": ""
             }
           ]
