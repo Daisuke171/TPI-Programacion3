@@ -57,7 +57,9 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                    <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Consultar por DNI:</td>
@@ -105,6 +107,7 @@
                                 <asp:TemplateField HeaderText="Especialidad"></asp:TemplateField>
                                 <asp:TemplateField HeaderText="Asistencia"></asp:TemplateField>
                                 <asp:TemplateField HeaderText="Observacion"></asp:TemplateField>
+                                <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Seleccionar Turno" />
                             </Columns>
                         </asp:GridView>
                     </td>

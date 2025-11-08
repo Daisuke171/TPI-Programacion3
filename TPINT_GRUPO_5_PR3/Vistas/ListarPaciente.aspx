@@ -28,10 +28,10 @@
         }
         .auto-style7 {
             height: 23px;
-            width: 588px;
+            width: 333px;
         }
         .auto-style8 {
-            width: 588px;
+            width: 333px;
         }
         .auto-style9 {
             height: 23px;
@@ -41,22 +41,22 @@
             width: 83px;
         }
         .auto-style11 {
-            height: 66px;
+            height: 52px;
             width: 83px;
         }
         .auto-style12 {
-            height: 66px;
-            width: 588px;
+            height: 52px;
+            width: 333px;
         }
         .auto-style13 {
-            height: 66px;
+            height: 52px;
         }
         .auto-style14 {
-            height: 66px;
+            height: 52px;
             width: 199px;
         }
         .auto-style15 {
-            height: 66px;
+            height: 52px;
             width: 165px;
         }
     </style>
@@ -73,9 +73,11 @@
                     <asp:Label ID="Label1" runat="server" style="font-weight: 700" Text="Listado de pacientes"></asp:Label>
                 </td>
                 <td class="auto-style13"></td>
-                <td class="auto-style14"></td>
+                <td class="auto-style14">
+                    <asp:HyperLink ID="hlnk_Inicio" runat="server">[hlnk_Inicio]</asp:HyperLink>
+                </td>
                 <td class="auto-style15">
-                    <asp:Label ID="lblUsuario" runat="server" style="text-decoration: underline" Text="Username"></asp:Label>
+                    <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -85,7 +87,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 </td>
-                <td class="auto-style2"></td>
+                <td class="auto-style2">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="* Ingrese el nombre de un paciente" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style3"></td>
                 <td class="auto-style5"></td>
             </tr>

@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Vistas\RegistrarTurno.aspx" />
-    <Content Include="Vistas\Estilos\BaseStyle.css" />
+    <Content Include="Vistas\Estilos\BaseStyleLogin.css" />
     <Content Include="Vistas\ConsultarTurno.aspx" />
     <Content Include="Vistas\ListarPaciente.aspx" />
     <Content Include="Vistas\RegistrarMedico.aspx" />

@@ -95,7 +95,8 @@
                     <asp:Button ID="btn_buscarPaciente" runat="server" Text="Buscar paciente" />
                 </td>
                 <td class="auto-style96">
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_Dni" ErrorMessage="* Ingrese un DNI"></asp:RequiredFieldValidator>
+                </td>
                 <td class="auto-style96"></td>
                 <td class="auto-style96"></td>
             </tr>

@@ -506,7 +506,9 @@
                     <td>&nbsp;</td>
                     <td class="auto-style7">&nbsp;</td>
                     <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style2">
+                        <asp:Button ID="btnAltaPaciente" runat="server" Text="Registrarse" />
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
