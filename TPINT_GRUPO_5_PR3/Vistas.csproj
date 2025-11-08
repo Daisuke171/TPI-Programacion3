@@ -72,6 +72,7 @@
     <Content Include="Vistas\ConsultarTurno.aspx" />
     <Content Include="Vistas\ListarPaciente.aspx" />
     <Content Include="Vistas\RegistrarMedico.aspx" />
+    <Content Include="Vistas\AltaPaciente.aspx" />
     <Content Include="Web.config" />
     <Content Include="Vistas\Login.aspx" />
   </ItemGroup>
@@ -111,6 +112,13 @@
     </Compile>
     <Compile Include="Vistas\RegistrarMedico.aspx.designer.cs">
       <DependentUpon>RegistrarMedico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\AltaPaciente.aspx.cs">
+      <DependentUpon>AltaPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\AltaPaciente.aspx.designer.cs">
+      <DependentUpon>AltaPaciente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
