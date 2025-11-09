@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Vistas\Estilos\ListarPaciente.css" />
+    <Content Include="Vistas\ListarMedico.aspx" />
     <Content Include="Vistas\RegistrarTurno.aspx" />
     <Content Include="Vistas\Estilos\BaseStyleLogin.css" />
     <Content Include="Vistas\ConsultarTurno.aspx" />
@@ -79,6 +80,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\ListarMedico.aspx.cs">
+      <DependentUpon>ListarMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\ListarMedico.aspx.designer.cs">
+      <DependentUpon>ListarMedico.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\RegistrarTurno.aspx.cs">
       <DependentUpon>RegistrarTurno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
