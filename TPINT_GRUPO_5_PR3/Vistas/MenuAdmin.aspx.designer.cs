@@ -11,7 +11,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 {
 
 
-    public partial class ListarMedico
+    public partial class MenuAdmin
     {
 
         /// <summary>
@@ -24,75 +24,120 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control lblListadoMedicos.
+        /// Control Label1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblListadoMedicos;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control lbl_Usuario.
+        /// Control Label2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Usuario;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control hlnk_Inicio.
+        /// Control hlnkAltaPaciente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlnk_Inicio;
+        protected global::System.Web.UI.WebControls.HyperLink hlnkAltaPaciente;
 
         /// <summary>
-        /// Control txtMedicos.
+        /// Control hlnkAltaMedico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMedicos;
+        protected global::System.Web.UI.WebControls.HyperLink hlnkAltaMedico;
 
         /// <summary>
-        /// Control rfvTxtMedicos.
+        /// Control Label3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTxtMedicos;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control ddlFiltros.
+        /// Control hlnkBajaPaciente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFiltros;
+        protected global::System.Web.UI.WebControls.HyperLink hlnkBajaPaciente;
 
         /// <summary>
-        /// Control btnBuscar.
+        /// Control hlnkBajaMedico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.HyperLink hlnkBajaMedico;
 
         /// <summary>
-        /// Control gvMedicos.
+        /// Control Label4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMedicos;
+        protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
+        /// Control hlnkListadoPaciente0.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlnkListadoPaciente0;
+
+        /// <summary>
+        /// Control hlnkListadoMedico0.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlnkListadoMedico0;
+
+        /// <summary>
+        /// Control Label5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
+        /// Control hlnkModificacionPaciente1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlnkModificacionPaciente1;
+
+        /// <summary>
+        /// Control hlnkModificacionMedico1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlnkModificacionMedico1;
     }
 }

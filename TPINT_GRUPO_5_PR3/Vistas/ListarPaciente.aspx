@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <nav>
-            <asp:HyperLink ID="hlnk_Inicio" runat="server" Text="Inicio"></asp:HyperLink>
+            <asp:HyperLink ID="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
             <asp:Label ID="lbl_Usuario" runat="server" Text="Username"></asp:Label>
         </nav>
         <main>

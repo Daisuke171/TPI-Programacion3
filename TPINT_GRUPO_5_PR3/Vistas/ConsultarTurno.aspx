@@ -72,7 +72,9 @@
                     <td class="auto-style4"></td>
                     <td class="auto-style4"></td>
                     <td class="auto-style4"></td>
-                    <td class="auto-style4"></td>
+                    <td class="auto-style4">
+                    <asp:HyperLink ID="hlnk_Inicio" runat="server" NavigateUrl="~/Vistas/Inicio.aspx">Inicio</asp:HyperLink>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Consultar turnos de medico por LEGAJO:</td>

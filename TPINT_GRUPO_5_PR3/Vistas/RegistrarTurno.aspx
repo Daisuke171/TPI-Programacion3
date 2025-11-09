@@ -75,7 +75,7 @@
                 <td>
                     &nbsp;</td>
                 <td>
-                    <asp:HyperLink ID="hlnk_Inicio" runat="server">[hlnk_Inicio]</asp:HyperLink>
+                    <asp:HyperLink ID="hlnk_Inicio" runat="server" NavigateUrl="~/Vistas/Inicio.aspx">Inicio</asp:HyperLink>
                 </td>
                 <td>
                     <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>

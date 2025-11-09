@@ -55,20 +55,23 @@
                     <td class="auto-style2" colspan="2">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
                     <td>
-                        <asp:Label ID="lblNombreUsuarioActual" runat="server" Text="Username"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">&nbsp;</td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                    <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">
                         <asp:Label ID="lblRegistrarMedico" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Registrar Medico"></asp:Label>
                     </td>
                     <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                    <asp:HyperLink ID="hlnk_Inicio" runat="server" NavigateUrl="~/Vistas/Inicio.aspx">Inicio</asp:HyperLink>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">

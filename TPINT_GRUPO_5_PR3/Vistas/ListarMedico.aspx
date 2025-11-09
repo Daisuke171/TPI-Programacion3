@@ -26,6 +26,17 @@
             height: 23px;
             width: 433px;
         }
+        .auto-style7 {
+            width: 211px;
+            height: 33px;
+        }
+        .auto-style8 {
+            width: 433px;
+            height: 33px;
+        }
+        .auto-style9 {
+            height: 33px;
+        }
     </style>
 </head>
 <body>
@@ -39,7 +50,9 @@
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                    <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -48,7 +61,9 @@
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                    <asp:HyperLink ID="hlnk_Inicio" runat="server" NavigateUrl="~/Vistas/Inicio.aspx">Inicio</asp:HyperLink>
+                    </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -78,15 +93,15 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">
+                    <td class="auto-style7">
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar Medico" />
                     </td>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style8"></td>
+                    <td class="auto-style9"></td>
+                    <td class="auto-style9"></td>
+                    <td class="auto-style9"></td>
+                    <td class="auto-style9"></td>
+                    <td class="auto-style9"></td>
                 </tr>
                 <tr>
                     <td class="auto-style4"></td>

@@ -110,7 +110,9 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                    <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -134,7 +136,9 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                    <asp:HyperLink ID="hlnk_Inicio" runat="server" NavigateUrl="~/Vistas/Inicio.aspx">Inicio</asp:HyperLink>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
