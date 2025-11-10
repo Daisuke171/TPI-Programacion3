@@ -67,20 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Vistas\Estilos\AltaPaciente.css" />
+    <Content Include="Vistas\Estilos\BajaMedico.css" />
+    <Content Include="Vistas\Estilos\BajaPaciente.css" />
+    <Content Include="Vistas\Estilos\Base.css" />
+    <Content Include="Vistas\Estilos\ConsultarTurno.css" />
+    <Content Include="Vistas\Estilos\Inicio.css" />
+    <Content Include="Vistas\Estilos\ListarMedico.css" />
     <Content Include="Vistas\Estilos\ListarPaciente.css" />
+    <Content Include="Vistas\Estilos\MenuAdmin.css" />
+    <Content Include="Vistas\Estilos\ModificarMedico.css" />
+    <Content Include="Vistas\Estilos\ModificarPaciente.css" />
+    <Content Include="Vistas\Estilos\NavBar.css" />
+    <Content Include="Vistas\Estilos\RegistrarTurno.css" />
+    <Content Include="Vistas\Imagenes\doctor-symbol-universal-png-2.png" />
     <Content Include="Vistas\Inicio.aspx" />
-    <Content Include="Vistas\ListarMedico.aspx" />
+    <Content Include="Vistas\Medico\ListarMedico.aspx" />
     <Content Include="Vistas\MenuAdmin.aspx" />
-    <Content Include="Vistas\RegistrarTurno.aspx" />
-    <Content Include="Vistas\Estilos\BaseStyleLogin.css" />
-    <Content Include="Vistas\ConsultarTurno.aspx" />
-    <Content Include="Vistas\ListarPaciente.aspx" />
-    <Content Include="Vistas\RegistrarMedico.aspx" />
-    <Content Include="Vistas\AltaPaciente.aspx" />
-    <Content Include="Vistas\BajaMedico.aspx" />
-    <Content Include="Vistas\BajaPaciente.aspx" />
-    <Content Include="Vistas\ModificarPaciente.aspx" />
-    <Content Include="Vistas\ModificarMedico.aspx" />
+    <Content Include="Vistas\Turno\RegistrarTurno.aspx" />
+    <Content Include="Vistas\Estilos\Login.css" />
+    <Content Include="Vistas\Turno\ConsultarTurno.aspx" />
+    <Content Include="Vistas\Paciente\ListarPaciente.aspx" />
+    <Content Include="Vistas\Medico\AltaMedico.aspx" />
+    <Content Include="Vistas\Paciente\AltaPaciente.aspx" />
+    <Content Include="Vistas\Medico\BajaMedico.aspx" />
+    <Content Include="Vistas\Paciente\BajaPaciente.aspx" />
+    <Content Include="Vistas\Paciente\ModificarPaciente.aspx" />
+    <Content Include="Vistas\Medico\ModificarMedico.aspx" />
     <Content Include="Web.config" />
     <Content Include="Vistas\Login.aspx" />
   </ItemGroup>
@@ -93,11 +106,11 @@
     <Compile Include="Vistas\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ListarMedico.aspx.cs">
+    <Compile Include="Vistas\Medico\ListarMedico.aspx.cs">
       <DependentUpon>ListarMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ListarMedico.aspx.designer.cs">
+    <Compile Include="Vistas\Medico\ListarMedico.aspx.designer.cs">
       <DependentUpon>ListarMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\MenuAdmin.aspx.cs">
@@ -107,25 +120,25 @@
     <Compile Include="Vistas\MenuAdmin.aspx.designer.cs">
       <DependentUpon>MenuAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\RegistrarTurno.aspx.cs">
+    <Compile Include="Vistas\Turno\RegistrarTurno.aspx.cs">
       <DependentUpon>RegistrarTurno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\RegistrarTurno.aspx.designer.cs">
+    <Compile Include="Vistas\Turno\RegistrarTurno.aspx.designer.cs">
       <DependentUpon>RegistrarTurno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ConsultarTurno.aspx.cs">
+    <Compile Include="Vistas\Turno\ConsultarTurno.aspx.cs">
       <DependentUpon>ConsultarTurno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ConsultarTurno.aspx.designer.cs">
+    <Compile Include="Vistas\Turno\ConsultarTurno.aspx.designer.cs">
       <DependentUpon>ConsultarTurno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ListarPaciente.aspx.cs">
+    <Compile Include="Vistas\Paciente\ListarPaciente.aspx.cs">
       <DependentUpon>ListarPaciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ListarPaciente.aspx.designer.cs">
+    <Compile Include="Vistas\Paciente\ListarPaciente.aspx.designer.cs">
       <DependentUpon>ListarPaciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Login.aspx.cs">
@@ -135,46 +148,46 @@
     <Compile Include="Vistas\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\RegistrarMedico.aspx.cs">
-      <DependentUpon>RegistrarMedico.aspx</DependentUpon>
+    <Compile Include="Vistas\Medico\AltaMedico.aspx.cs">
+      <DependentUpon>AltaMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\RegistrarMedico.aspx.designer.cs">
-      <DependentUpon>RegistrarMedico.aspx</DependentUpon>
+    <Compile Include="Vistas\Medico\AltaMedico.aspx.designer.cs">
+      <DependentUpon>AltaMedico.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\AltaPaciente.aspx.cs">
+    <Compile Include="Vistas\Paciente\AltaPaciente.aspx.cs">
       <DependentUpon>AltaPaciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\AltaPaciente.aspx.designer.cs">
+    <Compile Include="Vistas\Paciente\AltaPaciente.aspx.designer.cs">
       <DependentUpon>AltaPaciente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\BajaMedico.aspx.cs">
+    <Compile Include="Vistas\Medico\BajaMedico.aspx.cs">
       <DependentUpon>BajaMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\BajaMedico.aspx.designer.cs">
+    <Compile Include="Vistas\Medico\BajaMedico.aspx.designer.cs">
       <DependentUpon>BajaMedico.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\BajaPaciente.aspx.cs">
+    <Compile Include="Vistas\Paciente\BajaPaciente.aspx.cs">
       <DependentUpon>BajaPaciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\BajaPaciente.aspx.designer.cs">
+    <Compile Include="Vistas\Paciente\BajaPaciente.aspx.designer.cs">
       <DependentUpon>BajaPaciente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ModificarPaciente.aspx.cs">
+    <Compile Include="Vistas\Paciente\ModificarPaciente.aspx.cs">
       <DependentUpon>ModificarPaciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ModificarPaciente.aspx.designer.cs">
+    <Compile Include="Vistas\Paciente\ModificarPaciente.aspx.designer.cs">
       <DependentUpon>ModificarPaciente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ModificarMedico.aspx.cs">
+    <Compile Include="Vistas\Medico\ModificarMedico.aspx.cs">
       <DependentUpon>ModificarMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\ModificarMedico.aspx.designer.cs">
+    <Compile Include="Vistas\Medico\ModificarMedico.aspx.designer.cs">
       <DependentUpon>ModificarMedico.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
