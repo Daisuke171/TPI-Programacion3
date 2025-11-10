@@ -4,128 +4,40 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            height: 23px;
-        }
-        .auto-style3 {
-            width: 211px;
-        }
-        .auto-style4 {
-            height: 23px;
-            width: 211px;
-        }
-        .auto-style5 {
-            width: 433px;
-        }
-        .auto-style6 {
-            height: 23px;
-            width: 433px;
-        }
-        .auto-style7 {
-            width: 211px;
-            height: 33px;
-        }
-        .auto-style8 {
-            width: 433px;
-            height: 33px;
-        }
-        .auto-style9 {
-            height: 33px;
-        }
-    </style>
+    <title>Listar Medico</title>
+    <link rel="stylesheet" href="../Estilos/NavBar.css" />
+    <link rel="stylesheet" href="../Estilos/Base.css" />
+    <link rel="stylesheet" href="../Estilos/ListarMedico.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style3">
-                        <asp:Label ID="lblListadoMedicos" runat="server" Font-Bold="True" Font-Size="Larger" Text="Listado de Medicos"></asp:Label>
-                    </td>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>
-                    <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>
-                    <asp:HyperLink ID="hlnk_Inicio" runat="server" NavigateUrl="~/Vistas/Inicio.aspx">Inicio</asp:HyperLink>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">Buscar medico: </td>
-                    <td class="auto-style5">
-                        <asp:TextBox ID="txtMedicos" runat="server" Width="415px"></asp:TextBox>
-                    </td>
-                    <td>
-                        <asp:RequiredFieldValidator ID="rfvTxtMedicos" runat="server" ControlToValidate="txtMedicos" ErrorMessage="* Ingrese un nombre"></asp:RequiredFieldValidator>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">Filtrar por:</td>
-                    <td class="auto-style5">
-                        <asp:DropDownList ID="ddlFiltros" runat="server">
-                        </asp:DropDownList>
-                    </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style7">
-                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar Medico" />
-                    </td>
-                    <td class="auto-style8"></td>
-                    <td class="auto-style9"></td>
-                    <td class="auto-style9"></td>
-                    <td class="auto-style9"></td>
-                    <td class="auto-style9"></td>
-                    <td class="auto-style9"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style4"></td>
-                    <td class="auto-style6"></td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style2"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">
-                        <asp:GridView ID="gvMedicos" runat="server">
-                        </asp:GridView>
-                    </td>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-        </div>
+        <nav>
+            <asp:HyperLink class="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+            <asp:Label class="lbl_Usuario" runat="server" Text="Username"></asp:Label>
+        </nav>
+        <main>
+            <asp:Label ID="lblTitulo" runat="server" Text="Listado de medicos"></asp:Label>
+
+            <section class="separador">
+                <p>Buscar Medico:</p>
+                <asp:TextBox ID="txtboxNombreMedico" runat="server" ValidationGroup="1"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvTxtboxNombrePaciente" runat="server" ErrorMessage="* Ingrese el nombre de un paciente" ControlToValidate="txtboxNombrePaciente" Visible="False"></asp:RequiredFieldValidator>
+            </section>
+
+            <section class="separador">
+                <p>Filtrar por:</p>
+                <asp:DropDownList ID="ddlFiltros" runat="server">
+                    <asp:ListItem>Seleccione un filtro</asp:ListItem>
+                </asp:DropDownList>
+            </section>
+
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Paciente" ValidationGroup="1" />
+
+            <section id="tablaMedico">
+                <asp:GridView ID="gvMedico" runat="server" EmptyDataText="asd">
+                </asp:GridView>
+            </section>
+        </main>
     </form>
 </body>
 </html>

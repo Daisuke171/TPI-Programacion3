@@ -1,0 +1,95 @@
+﻿.separador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#lblTitulo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#btnBuscar {
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    background: linear-gradient(135deg, #2196f3, #0d47a1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    #btnBuscar:hover {
+        background: linear-gradient(135deg, #64b5f6, #1565c0);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+    }
+
+#gvMedico {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#gvMedico th {
+    background: rgba(25, 118, 210, 0.8);
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+}
+
+#gvMedico td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+#gvMedico tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    main {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    #lblTitulo {
+        font-size: 1.6rem;
+    }
+
+    #gvMedico th,
+    #gvMedico td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
