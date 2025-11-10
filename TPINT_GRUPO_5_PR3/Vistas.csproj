@@ -79,6 +79,8 @@
     <Content Include="Vistas\AltaPaciente.aspx" />
     <Content Include="Vistas\BajaMedico.aspx" />
     <Content Include="Vistas\BajaPaciente.aspx" />
+    <Content Include="Vistas\ModificarPaciente.aspx" />
+    <Content Include="Vistas\ModificarMedico.aspx" />
     <Content Include="Web.config" />
     <Content Include="Vistas\Login.aspx" />
   </ItemGroup>
@@ -160,6 +162,20 @@
     </Compile>
     <Compile Include="Vistas\BajaPaciente.aspx.designer.cs">
       <DependentUpon>BajaPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ModificarPaciente.aspx.cs">
+      <DependentUpon>ModificarPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\ModificarPaciente.aspx.designer.cs">
+      <DependentUpon>ModificarPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ModificarMedico.aspx.cs">
+      <DependentUpon>ModificarMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\ModificarMedico.aspx.designer.cs">
+      <DependentUpon>ModificarMedico.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
