@@ -1,0 +1,68 @@
+﻿#gvPaciente {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    #gvPaciente th {
+        background-color: #0078d4;
+        color: white;
+        text-align: center;
+        padding: 12px 8px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    #gvPaciente td {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    #gvPaciente input[type="text"] {
+        width: 90%;
+        padding: 6px 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #f8f8f8;
+        font-size: 13px;
+        transition: all 0.2s ease-in-out;
+    }
+
+        #gvPaciente input[type="text"]:focus {
+            outline: none;
+            border-color: #0078d4;
+            background-color: #ffffff;
+            box-shadow: 0 0 4px rgba(0, 120, 212, 0.3);
+        }
+
+    #gvPaciente tr:hover {
+        background-color: #f3f9ff;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    #gvPaciente tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+
+    #gvPaciente a {
+        background-color: #0078d4;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 13px;
+        transition: background-color 0.2s ease;
+    }
+
+.campo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
