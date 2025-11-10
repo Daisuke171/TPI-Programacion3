@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Listar Paciente</title>
     <link rel="stylesheet" href="../Estilos/ListarPaciente.css" />
     <link rel="stylesheet" href="../Estilos/NavBar.css" />
     <link rel="stylesheet" href="../Estilos/Base.css" />
