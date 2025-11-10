@@ -4,230 +4,112 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 756px;
-        }
-        .auto-style4 {
-            width: 153px;
-        }
-        .auto-style5 {
-            width: 756px;
-            height: 23px;
-        }
-        .auto-style6 {
-            width: 153px;
-            height: 23px;
-        }
-        .auto-style7 {
-            height: 23px;
-        }
-        .auto-style9 {
-            width: 756px;
-            height: 26px;
-        }
-        .auto-style10 {
-            width: 153px;
-            height: 26px;
-        }
-        .auto-style11 {
-            height: 26px;
-        }
-        .auto-style15 {
-            width: 379px;
-        }
-        .auto-style16 {
-            width: 379px;
-            height: 23px;
-        }
-        .auto-style17 {
-            width: 379px;
-            height: 26px;
-        }
-        .auto-style18 {
-            width: 340px;
-        }
-        .auto-style19 {
-            width: 340px;
-            height: 23px;
-        }
-        .auto-style20 {
-            width: 340px;
-            height: 26px;
-        }
-    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Modificar Médico</title>
+    <link rel="stylesheet" href="../Estilos/Base.css" />
+    <link rel="stylesheet" href="../Estilos/NavBar.css" />
+    <link rel="stylesheet" href="../Estilos/ModificarMedico.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style2" colspan="3">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2" colspan="3">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>
-                    <asp:Label ID="lbl_Usuario" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style2" colspan="3">
-                        <asp:Label ID="lblRegistrarMedico" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Modificar Medico"></asp:Label>
-                    </td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>
-                    <asp:HyperLink ID="hlnk_Inicio" runat="server" NavigateUrl="~/Vistas/Inicio.aspx">Inicio</asp:HyperLink>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style2" colspan="3">
-                        &nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2" colspan="3">&nbsp;</td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style18">
-                        <asp:Label ID="lblDNI" runat="server" Text="DNI: "></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </td>
-                    <td class="auto-style15">
-                        <asp:Label ID="lblDNIActual" runat="server" Text="DNI Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                    </td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style19">
-                        <asp:Label ID="lblNombre" runat="server" Text="Nombre: "></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </td>
-                    <td class="auto-style16">
-                        <asp:Label ID="lblNombreActual" runat="server" Text="Nombre Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style5">
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                    </td>
-                    <td class="auto-style6"></td>
-                    <td class="auto-style7"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style19">
-                        <asp:Label ID="lblApellido" runat="server" Text="Apellido: "></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </td>
-                    <td class="auto-style16">
-                        <asp:Label ID="lblApellidoActual" runat="server" Text="Apellido Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style5">
-                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                    </td>
-                    <td class="auto-style4" rowspan="2">&nbsp;</td>
-                    <td rowspan="2">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style18">
-                        <asp:Label ID="lblCorreoElectronico" runat="server" Text="Correo Electronico: "></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </td>
-                    <td class="auto-style15">
-                        <asp:Label ID="lblCorreoElectrocnicoActual" runat="server" Text="Correo Electronico Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style20">
-                        <asp:Label ID="lblSexo" runat="server" Text="Sexo:  "></asp:Label>
-                    </td>
-                    <td class="auto-style17">
-                        <asp:Label ID="lblSexoActual" runat="server" Text="Sexo Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style9">
-                        <asp:DropDownList ID="DropDownList1" runat="server">
-                        </asp:DropDownList>
-                    </td>
-                    <td class="auto-style10"></td>
-                    <td class="auto-style11"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style20">
-                        <asp:Label ID="lblNacionalidad" runat="server" Text="Nacionalidad: "></asp:Label>
-                    </td>
-                    <td class="auto-style17">
-                        <asp:Label ID="lblNacionalidadActual" runat="server" Text="Nacionalidad Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style9">
-                        <asp:DropDownList ID="DropDownList2" runat="server">
-                        </asp:DropDownList>
-                    </td>
-                    <td class="auto-style10"></td>
-                    <td class="auto-style11"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style18">
-                        <asp:Label ID="lblFechaNacimiento" runat="server" Text="Fecha de Nacimiento: "></asp:Label>
-                    </td>
-                    <td class="auto-style15">
-                        <asp:Label ID="lblFechaNacimientoActual" runat="server" Text="Fecha Nacimiento Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-                    </td>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style18">
-                        <asp:Label ID="lblDireccion" runat="server" Text="Direccion: "></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </td>
-                    <td class="auto-style15">
-                        <asp:Label ID="lblDireccionActual" runat="server" Text="Direccion Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-                    </td>
-                    <td class="auto-style4" rowspan="3">&nbsp;</td>
-                    <td rowspan="3">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style18">
-                        <asp:Label ID="lblEspecialidad" runat="server" Text="Especialidad: "></asp:Label>
-                    </td>
-                    <td class="auto-style15">
-                        <asp:Label ID="lblEspecialidadActual" runat="server" Text="Especialidad Actual"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:DropDownList ID="DropDownList4" runat="server">
-                        </asp:DropDownList>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style5" colspan="3">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnModificarMedico" runat="server" Text="Modificar Médico" />
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <nav>
+            <asp:HyperLink class="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+            <asp:Label class="lbl_Usuario" runat="server" Text="Username"></asp:Label>
+        </nav>
+
+        <main>
+            <asp:Label ID="lblTitulo" runat="server" Text="Modificar médico" CssClass="lblTitulo"></asp:Label>
+
+            <div class="campo">
+                <p>Buscar Legajo:</p>
+                <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox>
+            </div>
+
+            <asp:GridView ID="gvMedico" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False">
+                <Columns>
+                    <asp:TemplateField HeaderText="Legajo">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_legajo" runat="server" Text='<%# Bind("Legajo") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_legajo" runat="server" Text='<%# Bind("Legajo") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Nombre">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_nombre" runat="server" Text='<%# Bind("Nombre") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("Nombre") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Apellido">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="DNI">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_dni" runat="server" Text='<%# Bind("DNI") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_dni" runat="server" Text='<%# Bind("DNI") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Especialidad">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_especialidad" runat="server" Text='<%# Bind("Especialidad") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_especialidad" runat="server" Text='<%# Bind("Especialidad") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Correo Electrónico">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_email" runat="server" Text='<%# Bind("CorreoElectronico") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_email" runat="server" Text='<%# Bind("CorreoElectronico") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Teléfono">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_telefono" runat="server" Text='<%# Bind("Telefono") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_telefono" runat="server" Text='<%# Bind("Telefono") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Dirección">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_direccion" runat="server" Text='<%# Bind("Direccion") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_direccion" runat="server" Text='<%# Bind("Direccion") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Provincia">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </main>
     </form>
 </body>
 </html>
