@@ -1,0 +1,15 @@
+﻿main {
+    width: 50%;
+}
+
+input[type="text"] {
+    padding: 8px 10px;
+}
+
+select {
+    padding: 8px;
+}
+
+p {
+    font-size: 1.25rem;
+}

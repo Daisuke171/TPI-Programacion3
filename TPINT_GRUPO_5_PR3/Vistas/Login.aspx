@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Login Sistema Médico</title>
-    <link rel="stylesheet" href="Estilos/BaseStyleLogin.css" />
+    <link rel="stylesheet" href="Estilos/Login.css" />
 </head>
 <body>
     <form id="form1" runat="server">

@@ -5,13 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="Estilos/ListarPaciente.css" />
+    <link rel="stylesheet" href="../Estilos/ListarPaciente.css" />
+    <link rel="stylesheet" href="../Estilos/NavBar.css" />
+    <link rel="stylesheet" href="../Estilos/Base.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <nav>
-            <asp:HyperLink ID="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
-            <asp:Label ID="lbl_Usuario" runat="server" Text="Username"></asp:Label>
+            <asp:HyperLink class="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+            <asp:Label class="lbl_Usuario" runat="server" Text="Username"></asp:Label>
         </nav>
         <main>
             <asp:Label ID="lblTitulo" runat="server" Text="Listado de pacientes"></asp:Label>  

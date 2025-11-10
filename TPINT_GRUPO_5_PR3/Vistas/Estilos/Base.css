@@ -1,0 +1,92 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: black;
+    padding: 40px;
+    margin: 40px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.lblTitulo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btnEnviar {
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    background: linear-gradient(135deg, #2196f3, #0d47a1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnEnviar {
+    background: linear-gradient(135deg, #64b5f6, #1565c0);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+p {
+    font-size: 1.75rem;
+    color: #000;
+    width: fit-content;
+}
+
+input[type="text"] {
+    width: 60%;
+    caret-color: black;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+select {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 5px #90caf9;
+}
+
+.formulario .campo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+

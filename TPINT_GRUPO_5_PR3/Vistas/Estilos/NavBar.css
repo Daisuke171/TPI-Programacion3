@@ -1,0 +1,38 @@
+﻿body {
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(13, 71, 161, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+.lbl_Usuario, .hlnk_Inicio {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+}
