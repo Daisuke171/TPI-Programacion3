@@ -1,0 +1,58 @@
+﻿h1 {
+    font-size: 2.2rem;
+    color: #1d6fa5;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #1d6fa5;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #1d6fa5;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    background-color: #155b83;
+    transform: translateY(-2px);
+}
+
+img {
+    width: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 6rem;
+    gap: 2rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+aside {
+    width: fit-content;
+    align-content: center;
+    padding-right: 10rem;
+}
