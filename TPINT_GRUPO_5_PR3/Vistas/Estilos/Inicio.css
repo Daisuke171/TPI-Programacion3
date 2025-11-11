@@ -6,7 +6,6 @@
     letter-spacing: 1.5px;
     text-align: center;
 }
-
 h2 {
     font-size: 1.4rem;
     color: #2c3e50;
@@ -14,8 +13,7 @@ h2 {
     display: inline-block;
     padding-bottom: 4px;
 }
-
-a {
+main a {
     display: inline-block;
     text-decoration: none;
     background-color: #1d6fa5;
@@ -26,17 +24,14 @@ a {
     transition: all 0.3s ease;
     font-weight: 500;
 }
-
-a:hover {
+main a:hover {
     background-color: #155b83;
     transform: translateY(-2px);
 }
-
-img {
+main img {
     width: 200px;
 }
-
-.container {
+main .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,14 +39,12 @@ img {
     padding: 2rem 6rem;
     gap: 2rem;
 }
-
-section {
+main .container section {
     display: flex;
     flex-direction: column;
     width: 40%;
 }
-
-aside {
+main .container aside {
     width: fit-content;
     align-content: center;
     padding-right: 10rem;

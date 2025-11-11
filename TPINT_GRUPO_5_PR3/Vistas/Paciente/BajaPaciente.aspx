@@ -13,8 +13,15 @@
 <body>
     <form id="form1" runat="server">
         <nav>
-            <asp:HyperLink class="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
-            <asp:Label class="lbl_Usuario" runat="server" Text="Username"></asp:Label>
+            <div class="leftSide">
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Pacientes" NavigateUrl="~/Vistas/HomePacientes.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Medicos" NavigateUrl="~/Vistas/HomeMedicos.aspx"></asp:HyperLink>
+            </div>
+            <div class="rightSide">
+                <asp:Label ID="lblUsuario" CssClass="lbl_Usuario" runat="server" Text="Username"></asp:Label>
+                <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesion" CssClass="btn-logout" />
+            </div>
         </nav>
         <main>
             <asp:Label ID="labelBaja" runat="server" CssClass="lblTitulo" Text="Baja Paciente"></asp:Label>
