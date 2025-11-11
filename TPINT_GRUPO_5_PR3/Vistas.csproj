@@ -81,9 +81,10 @@
     <Content Include="Vistas\Estilos\NavBar.css" />
     <Content Include="Vistas\Estilos\RegistrarTurno.css" />
     <Content Include="Vistas\Imagenes\doctor-symbol-universal-png-2.png" />
-    <Content Include="Vistas\Inicio.aspx" />
+    <Content Include="Vistas\Informes\Informes.aspx" />
+    <Content Include="Vistas\InicioAdmin.aspx" />
+    <Content Include="Vistas\InicioMedico.aspx" />
     <Content Include="Vistas\Medico\ListarMedico.aspx" />
-    <Content Include="Vistas\MenuAdmin.aspx" />
     <Content Include="Vistas\Turno\RegistrarTurno.aspx" />
     <Content Include="Vistas\Estilos\Login.css" />
     <Content Include="Vistas\Turno\ConsultarTurno.aspx" />
@@ -99,12 +100,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="Vistas\Informes\Informes.aspx.cs">
+      <DependentUpon>Informes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="Vistas\Informes\Informes.aspx.designer.cs">
+      <DependentUpon>Informes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\InicioAdmin.aspx.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\InicioAdmin.aspx.designer.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\InicioMedico.aspx.cs">
+      <DependentUpon>InicioMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\InicioMedico.aspx.designer.cs">
+      <DependentUpon>InicioMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Medico\ListarMedico.aspx.cs">
       <DependentUpon>ListarMedico.aspx</DependentUpon>
@@ -112,13 +127,6 @@
     </Compile>
     <Compile Include="Vistas\Medico\ListarMedico.aspx.designer.cs">
       <DependentUpon>ListarMedico.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\MenuAdmin.aspx.cs">
-      <DependentUpon>MenuAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\MenuAdmin.aspx.designer.cs">
-      <DependentUpon>MenuAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Turno\RegistrarTurno.aspx.cs">
       <DependentUpon>RegistrarTurno.aspx</DependentUpon>

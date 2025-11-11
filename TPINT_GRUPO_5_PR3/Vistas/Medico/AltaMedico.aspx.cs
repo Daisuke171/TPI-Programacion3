@@ -11,7 +11,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
     }
 }

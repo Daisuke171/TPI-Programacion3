@@ -34,6 +34,8 @@
                     <p>DNI:</p>
                     <asp:TextBox ID="txtDni" runat="server" CssClass="txtBox"></asp:TextBox>
                 </div>
+                    <asp:RequiredFieldValidator ID="rfvDni" runat="server" ErrorMessage="Ingrese un DNI" ControlToValidate="txtDni" CssClass="validator" ></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="revDni" runat="server" ErrorMessage="Solo se acepta 8 numeros" ControlToValidate="txtDni" ValidationExpression="^\d{1,8}$" EnableClientScript="True" CssClass="validator"></asp:RegularExpressionValidator>
 
                 <div class="campo">
                     <p>Nombre:</p>

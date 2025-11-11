@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TPINT_GRUPO_5_PR3.Vistas
+namespace TPINT_GRUPO_5_PR3.Vistas.Informes
 {
 
 
-    public partial class Inicio
+    public partial class Informes
     {
 
         /// <summary>
@@ -42,48 +42,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// hlnkRegistrarTurno control.
+        /// gvInformes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlnkRegistrarTurno;
-
-        /// <summary>
-        /// hlnkConsultarTurno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlnkConsultarTurno;
-
-        /// <summary>
-        /// hlnkListarPaciente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlnkListarPaciente;
-
-        /// <summary>
-        /// hlnkMenuAdministrador control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlnkMenuAdministrador;
-
-        /// <summary>
-        /// img control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img;
+        protected global::System.Web.UI.WebControls.GridView gvInformes;
     }
 }

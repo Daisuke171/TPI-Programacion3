@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuAdmin.aspx.cs" Inherits="TPINT_GRUPO_5_PR3.Vistas.MenuAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InicioAdmin.aspx.cs" Inherits="TPINT_GRUPO_5_PR3.Vistas.MenuAdmin" %>
 
 <!DOCTYPE html>
 
@@ -6,13 +6,12 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Menu Admin</title>
-    <link runat="server" rel="stylesheet" href="~/Vistas/Estilos/Base.css" />
-    <link runat="server" rel="stylesheet" href="~/Vistas/Estilos/NavBar.css" />
-    <link runat="server" rel="stylesheet" href="~/Vistas/Estilos/MenuAdmin.css" />
-
+    <link rel="stylesheet" href="Estilos/Base.css" />
+    <link rel="stylesheet" href="Estilos/NavBar.css" />
+    <link rel="stylesheet" href="Estilos/MenuAdmin.css" />
 </head>
 <body>
-    <form id="menuAdmin" runat="server">
+    <form id="form1" runat="server">
         <nav>
             <div class="leftSide">
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
@@ -52,6 +51,12 @@
                     <h2>MODIFICACION</h2>
                     <asp:HyperLink ID="hlnkModificacionPaciente1" runat="server" NavigateUrl="~/Vistas/AltaPaciente.aspx">Paciente</asp:HyperLink>
                     <asp:HyperLink ID="hlnkModificacionMedico1" runat="server" NavigateUrl="~/Vistas/RegistrarMedico.aspx">Medico</asp:HyperLink>
+                </div>
+            </div>
+            <div class="gridRowMenu">
+                <div class="gridRowElement">
+                    <h2>INFORMES</h2>
+                    <asp:HyperLink ID="hlInformes" runat="server" NavigateUrl="~/Vistas/Informes/Informes.aspx">Informes</asp:HyperLink>
                 </div>
             </div>
         </main>
