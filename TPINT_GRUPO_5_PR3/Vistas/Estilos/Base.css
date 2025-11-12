@@ -89,10 +89,3 @@ main .formulario .campo {
     justify-content: space-between;
     margin-bottom: 1rem;
 }
-
-.validator {
-    color: #ff4d4d; /* bright red */
-    font-size: 0.9rem;
-    margin-left: 8px;
-    font-weight: 500;
-}

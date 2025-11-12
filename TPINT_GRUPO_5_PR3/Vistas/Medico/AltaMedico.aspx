@@ -25,26 +25,32 @@
         </nav>
 
         <main>
-
             <asp:Label ID="lblTitulo" runat="server" CssClass="lblTitulo" Text="Alta del Médico"></asp:Label>
 
             <section class="formulario">
-
                 <div class="campo">
                     <p>DNI:</p>
                     <asp:TextBox ID="txtDni" runat="server" CssClass="txtBox"></asp:TextBox>
                 </div>
-                    <asp:RequiredFieldValidator ID="rfvDni" runat="server" ErrorMessage="Ingrese un DNI" ControlToValidate="txtDni" CssClass="validator" ></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revDni" runat="server" ErrorMessage="Solo se acepta 8 numeros" ControlToValidate="txtDni" ValidationExpression="^\d{1,8}$" EnableClientScript="True" CssClass="validator"></asp:RegularExpressionValidator>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvDni" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtDni" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="revDni" runat="server" ErrorMessage="* Solo se acepta 8 numeros" ControlToValidate="txtDni" ValidationExpression="^\d{8}$" EnableClientScript="True" CssClass="validator" Display="Dynamic"></asp:RegularExpressionValidator>
+                </div>
 
                 <div class="campo">
                     <p>Nombre:</p>
                     <asp:TextBox ID="txtNombre" runat="server" CssClass="txtBox"></asp:TextBox>
                 </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtNombre" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
 
                 <div class="campo">
                     <p>Apellido:</p>
                     <asp:TextBox ID="txtApellido" runat="server" CssClass="txtBox"></asp:TextBox>
+                </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtApellido" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="campo">
@@ -61,20 +67,32 @@
                     <p>Fecha de Nacimiento:</p>
                     <asp:TextBox ID="txtFechaNacimiento" runat="server" CssClass="txtBox" placeholder="DD-MM-AAAA"></asp:TextBox>
                 </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtFechaNacimiento" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
 
                 <div class="campo">
                     <p>Dirección:</p>
                     <asp:TextBox ID="txtDireccion" runat="server" CssClass="txtBox"></asp:TextBox>
+                </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtDireccion" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="campo">
                     <p>Correo Electrónico:</p>
                     <asp:TextBox ID="txtCorreo" runat="server" CssClass="txtBox"></asp:TextBox>
                 </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtCorreo" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
 
                 <div class="campo">
                     <p>Teléfono:</p>
                     <asp:TextBox ID="txtTelefono" runat="server" CssClass="txtBox"></asp:TextBox>
+                </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtTelefono" CssClass="validator" Display="Dynamic"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="campo">
