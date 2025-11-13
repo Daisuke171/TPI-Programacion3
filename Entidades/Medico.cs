@@ -6,46 +6,24 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Medico
+    public class Medico : Persona
     {
         
         public Medico() { }
 
-        public Medico(int legajoMedico, string dniMedico, string nombreMedico, string apellidoMedico, string sexoMedico, string nacionalidadMedico, DateTime fechaNacimiento, string direccionMedico, int idLocalidad, int idProvincia, string correoElectronico, string telefonoMedico, int idEspecialidad, string diasAtencion, string horarioAtencion, bool estadoMedico)    
+        public Medico(int legajoMedico, string dniMedico, string nombreMedico, string apellidoMedico, string sexoMedico, int idNacionalidadMedico, DateTime fechaNacimiento, string direccionMedico, int idProvincia, int idLocalidad, string correoElectronico, string telefonoMedico, int idEspecialidad, string diasAtencion, string horarioAtencion, bool estadoMedico)
+            : base(dniMedico, nombreMedico, apellidoMedico, sexoMedico, idNacionalidadMedico, fechaNacimiento, direccionMedico, idProvincia, idLocalidad, correoElectronico, telefonoMedico)
         {
-            LegajoMedico = legajoMedico;
-            DniMedico = dniMedico;
-            NombreMedico = nombreMedico;
-            ApellidoMedico = apellidoMedico;
-            SexoMedico = sexoMedico;
-            NacionalidadMedico = nacionalidadMedico;
-            FechaNacimiento = fechaNacimiento;
-            DireccionMedico = direccionMedico;
-            IdLocalidad = idLocalidad;
-            IdProvincia = idProvincia;
-            CorreoElectronico = correoElectronico;
-            TelefonoMedico = telefonoMedico;
-            IdEspecialidad = idEspecialidad;
-            DiasAtencion = diasAtencion;
-            HorarioAtencion = horarioAtencion;
-            EstadoMedico = estadoMedico;
+            _legajoMedico = legajoMedico;
+            _idEspecialidad = idEspecialidad;
+            _diasAtencion = diasAtencion;
+            _horarioAtencion = horarioAtencion;
+            _estadoMedico = estadoMedico;
         }
-
-        public int LegajoMedico { get; set; }
-        public string DniMedico { get; set; }
-        public string NombreMedico { get; set; }
-        public string ApellidoMedico { get; set; }
-        public string SexoMedico { get; set; }
-        public string NacionalidadMedico { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string DireccionMedico { get; set; }
-        public int IdLocalidad { get; set; }
-        public int IdProvincia { get; set; }
-        public string CorreoElectronico { get; set; }
-        public string TelefonoMedico { get; set; }
-        public int IdEspecialidad { get; set; }
-        public string DiasAtencion { get; set; }
-        public string HorarioAtencion { get; set; }
-        public bool EstadoMedico { get; set; } = true; 
+        public int _legajoMedico { get; set; }
+        public int _idEspecialidad { get; set; }
+        public string _diasAtencion { get; set; }
+        public string _horarioAtencion { get; set; }
+        public bool _estadoMedico { get; set; } = true; 
     }
 }
