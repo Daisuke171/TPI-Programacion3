@@ -1,0 +1,9 @@
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\bin\Debug\Datos.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\bin\Debug\Datos.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\bin\Debug\Entidades.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\bin\Debug\Entidades.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.pdb

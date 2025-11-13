@@ -102,7 +102,7 @@
 
             </section>
 
-            <asp:Button ID="btnRegistrarMedico" CssClass="btnEnviar" runat="server" Text="Registrar Médico" />
+            <asp:Button ID="btnRegistrarMedico" CssClass="btnEnviar" runat="server" Text="Registrar Médico" OnClick="btnRegistrarMedico_Click" />
 
         </main>
     </form>

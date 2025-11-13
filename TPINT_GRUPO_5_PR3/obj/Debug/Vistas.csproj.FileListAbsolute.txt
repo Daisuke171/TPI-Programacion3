@@ -352,3 +352,7 @@ C:\Users\franc\Desktop\TPI\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\Vistas.
 C:\Users\franc\Desktop\TPI\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\franc\Desktop\TPI\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\TPINT_GRUPO_5_PR3.dll
 C:\Users\franc\Desktop\TPI\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\TPINT_GRUPO_5_PR3.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Entidades.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Entidades.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.pdb

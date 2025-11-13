@@ -9,9 +9,16 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnRegistrarMedico_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -1,17 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\",
+  "WorkspaceRootPath": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\estilos\\altapaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\entidades\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|solutionrelative:entidades\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\altapaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\altapaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|d:\\tpi-programacion3\\tpint_grupo_5_pr3\\tpint_grupo_5_pr3\\vistas\\estilos\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -22,36 +30,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Base.css",
-              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
-              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-12T03:53:16.063Z",
+              "Title": "Medico.cs",
+              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Entidades\\Medico.cs",
+              "RelativeDocumentMoniker": "Entidades\\Medico.cs",
+              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Entidades\\Medico.cs",
+              "RelativeToolTip": "Entidades\\Medico.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T00:08:46.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "AltaMedico.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T00:06:42.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Base.css",
+              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
+              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-12T03:53:16.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AltaPaciente.css",
-              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
+              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
-              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
+              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -60,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AltaMedico.aspx",
-              "DocumentMoniker": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
+              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
-              "ToolTip": "D:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
+              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-12T03:41:49.508Z",
               "EditorCaption": ""

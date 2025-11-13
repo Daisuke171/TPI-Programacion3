@@ -1,0 +1,11 @@
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\bin\Debug\Negocio.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\bin\Debug\Negocio.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\bin\Debug\Datos.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\bin\Debug\Entidades.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\bin\Debug\Datos.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\bin\Debug\Entidades.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\obj\Debug\Negocio.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Negocio\obj\Debug\Negocio.pdb
