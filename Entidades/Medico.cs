@@ -8,6 +8,29 @@ namespace Entidades
 {
     public class Medico
     {
+        
+        public Medico() { }
+
+        public Medico(int legajoMedico, string dniMedico, string nombreMedico, string apellidoMedico, string sexoMedico, string nacionalidadMedico, DateTime fechaNacimiento, string direccionMedico, int idLocalidad, int idProvincia, string correoElectronico, string telefonoMedico, int idEspecialidad, string diasAtencion, string horarioAtencion, bool estadoMedico)    
+        {
+            LegajoMedico = legajoMedico;
+            DniMedico = dniMedico;
+            NombreMedico = nombreMedico;
+            ApellidoMedico = apellidoMedico;
+            SexoMedico = sexoMedico;
+            NacionalidadMedico = nacionalidadMedico;
+            FechaNacimiento = fechaNacimiento;
+            DireccionMedico = direccionMedico;
+            IdLocalidad = idLocalidad;
+            IdProvincia = idProvincia;
+            CorreoElectronico = correoElectronico;
+            TelefonoMedico = telefonoMedico;
+            IdEspecialidad = idEspecialidad;
+            DiasAtencion = diasAtencion;
+            HorarioAtencion = horarioAtencion;
+            EstadoMedico = estadoMedico;
+        }
+
         public int LegajoMedico { get; set; }
         public string DniMedico { get; set; }
         public string NombreMedico { get; set; }
