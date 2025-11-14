@@ -42,3 +42,14 @@ C:\Users\lain\Desktop\TPI-Programacion3-main\Negocio\obj\Debug\Negocio.csproj.Co
 C:\Users\lain\Desktop\TPI-Programacion3-main\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\lain\Desktop\TPI-Programacion3-main\Negocio\obj\Debug\Negocio.dll
 C:\Users\lain\Desktop\TPI-Programacion3-main\Negocio\obj\Debug\Negocio.pdb
+C:\TPI-Programacion3\Negocio\bin\Debug\Negocio.dll
+C:\TPI-Programacion3\Negocio\bin\Debug\Negocio.pdb
+C:\TPI-Programacion3\Negocio\bin\Debug\Datos.dll
+C:\TPI-Programacion3\Negocio\bin\Debug\Entidades.dll
+C:\TPI-Programacion3\Negocio\bin\Debug\Datos.pdb
+C:\TPI-Programacion3\Negocio\bin\Debug\Entidades.pdb
+C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.dll
+C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.pdb

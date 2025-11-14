@@ -16,13 +16,14 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!IsPostBack)
             {
-                DataTable tablaPaciente = neg.listarPaciente();
-                gvPacientes.DataSource = tablaPaciente;
-                gvPacientes.DataBind();
-
+                CargarPacientes();
             }
         }
-
-        
+        private void CargarPacientes()
+        {
+            DataTable tablaPaciente = neg.listarPaciente();
+            gvPacientes.DataSource = tablaPaciente;
+            gvPacientes.DataBind();
+        }
     }
 }

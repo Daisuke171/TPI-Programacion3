@@ -496,3 +496,9 @@ C:\Users\lain\Desktop\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\Vistas.cspro
 C:\Users\lain\Desktop\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\lain\Desktop\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\TPINT_GRUPO_5_PR3.dll
 C:\Users\lain\Desktop\TPI-Programacion3\TPINT_GRUPO_5_PR3\obj\Debug\TPINT_GRUPO_5_PR3.pdb
+C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Entidades.dll
+C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.dll
+C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.dll
+C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Entidades.pdb
+C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.pdb
+C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.pdb

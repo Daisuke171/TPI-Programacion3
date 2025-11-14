@@ -80,8 +80,18 @@
 
                 <div class="campo">
                     <p>Tipo de Sangre:</p>
-                    <asp:DropDownList ID="ddlTipoSangre1" runat="server" Width="85px"></asp:DropDownList>
-                    <asp:DropDownList ID="ddlTipoSangre2" runat="server" Width="75px"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlTipoSangre1" runat="server" Width="85px">
+                        <asp:ListItem Value="0">-- Seleccione --</asp:ListItem>
+                        <asp:ListItem>A</asp:ListItem>
+                        <asp:ListItem>B</asp:ListItem>
+                        <asp:ListItem>AB</asp:ListItem>
+                        <asp:ListItem>O</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="ddlTipoSangre2" runat="server" Width="75px">
+                        <asp:ListItem Value="0">-- Seleccionar --</asp:ListItem>
+                        <asp:ListItem>+</asp:ListItem>
+                        <asp:ListItem>-</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
 
                 <div class="campo">
