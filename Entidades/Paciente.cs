@@ -10,13 +10,20 @@ namespace Entidades
     {
         public Paciente() { }
 
-        public Paciente(string dni, string nombre, string apellido, string sexo, int idNacionalidad, DateTime fechaNacimiento, string direccionPaciente, int idProvincia, int idLocalidad, string tipoSangre, string correo, string telefono, bool estado)
+        public Paciente(int id, string dni, string nombre, string apellido, string sexo, int idNacionalidad, DateTime fechaNacimiento, string direccionPaciente, int idProvincia, int idLocalidad, string tipoSangre, string correo, string telefono, bool estado)
             : base(dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccionPaciente, idProvincia, idLocalidad, correo, telefono)
-        {
+        {   
+            
             _tipoSangre = tipoSangre;
             _estadoPaciente = estado;
+            _id = id;
+
         }
+        public int _id { get; set; }
         public string _tipoSangre { get; set; }
         public bool _estadoPaciente { get; set; } = true;
+
+       
+       
     }
 }

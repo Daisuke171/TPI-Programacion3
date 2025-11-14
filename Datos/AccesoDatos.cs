@@ -66,6 +66,34 @@ namespace Datos
             return dataSet.Tables[tabla];
         }
 
+
+        public int EjecutarProcedimientoAlmacenado(SqlCommand Comando, String NombreSP)
+        {
+
+            int FilasCambiadas;
+            SqlConnection Conexion = obtenerConexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd = Comando;
+            cmd.Connection = Conexion;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = NombreSP;
+            FilasCambiadas = cmd.ExecuteNonQuery();
+            Conexion.Close();
+            return FilasCambiadas;
+        }
+
+
         
+        public int EjecutarTransaccion(String consultaSql)
+        {
+            SqlConnection conexion = obtenerConexion();
+            SqlCommand cmd = new SqlCommand(consultaSql, conexion);
+            int filasAfectadas;
+            filasAfectadas = cmd.ExecuteNonQuery();
+            conexion.Close();
+            return filasAfectadas;
+        }
+
+
     }
 }
