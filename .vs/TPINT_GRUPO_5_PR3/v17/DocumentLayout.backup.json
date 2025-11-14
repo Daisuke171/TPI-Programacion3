@@ -1,37 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\TPI-Programacion3\\",
+  "WorkspaceRootPath": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|c:\\tpi-programacion3\\entidades\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\maria\\desktop\\utn\\programacion 3\\tp_integrador\\proyecto\\tpi-programacion3\\datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|c:\\users\\maria\\desktop\\utn\\programacion 3\\tp_integrador\\proyecto\\tpi-programacion3\\entidades\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|solutionrelative:entidades\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|c:\\tpi-programacion3\\entidades\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\entidades\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|solutionrelative:entidades\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|C:\\TPI-Programacion3\\entidades\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\entidades\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|solutionrelative:entidades\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|C:\\TPI-Programacion3\\entidades\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\entidades\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|solutionrelative:entidades\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\altapaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\altapaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\altapaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -46,11 +50,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Medico.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Entidades\\Medico.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Medico.cs",
               "RelativeDocumentMoniker": "Entidades\\Medico.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Entidades\\Medico.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Medico.cs",
               "RelativeToolTip": "Entidades\\Medico.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,11 +64,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Paciente.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Entidades\\Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Paciente.cs",
               "RelativeDocumentMoniker": "Entidades\\Paciente.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Entidades\\Paciente.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Paciente.cs",
               "RelativeToolTip": "Entidades\\Paciente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -75,10 +79,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "Datos\\AccesoDatos.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\AccesoDatos.cs",
+              "RelativeToolTip": "Datos\\AccesoDatos.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T15:55:59.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Turno.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Entidades\\Turno.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Turno.cs",
               "RelativeDocumentMoniker": "Entidades\\Turno.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Entidades\\Turno.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Turno.cs",
               "RelativeToolTip": "Entidades\\Turno.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -87,11 +104,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Persona.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Entidades\\Persona.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Persona.cs",
               "RelativeDocumentMoniker": "Entidades\\Persona.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Entidades\\Persona.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Persona.cs",
               "RelativeToolTip": "Entidades\\Persona.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAADcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -100,23 +117,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AltaMedico.aspx.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T00:06:42.487Z"
+              "WhenOpened": "2025-11-13T00:06:42.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Base.css",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Base.css",
               "ViewState": "AgIAACEAAAAAAAAAAAAAAEgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -124,11 +142,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AltaPaciente.css",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\AltaPaciente.css",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -136,15 +154,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AltaMedico.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-12T03:41:49.508Z"
+              "WhenOpened": "2025-11-12T03:41:49.508Z",
+              "EditorCaption": ""
             }
           ]
         }
