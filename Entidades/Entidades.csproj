@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Localidad.cs" />
+    <Compile Include="Provincia.cs" />
+    <Compile Include="Especialidad.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="Medico.cs" />
     <Compile Include="Paciente.cs" />
     <Compile Include="Persona.cs" />
