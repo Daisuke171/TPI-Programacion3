@@ -46,7 +46,11 @@
 
                 <div class="campo">
                     <p>Sexo:</p>
-                    <asp:DropDownList ID="ddlSexo" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlSexo" runat="server">
+                        <asp:ListItem Value="0">-- Seleccione --</asp:ListItem>
+                        <asp:ListItem>Masculino</asp:ListItem>
+                        <asp:ListItem>Femenino</asp:ListItem>
+                    </asp:DropDownList>
                 </div>
 
                 <div class="campo">

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace Datos
 {
     public class AccesoDatos
     {
-        // Data Source=db-clinica.c6zog6amkgs7.us-east-1.rds.amazonaws.com;Initial Catalog=Clinica;User ID=admin;Password=***********;Trust Server Certificate=True
-        private string cadenaConexion = "";
+        private string cadenaConexion = "Data Source=db-clinica.c6zog6amkgs7.us-east-1.rds.amazonaws.com;Initial Catalog=Clinica;User ID=admin;Password=utnpacheco";
         public AccesoDatos() { }
 
         public SqlConnection obtenerConexion()
@@ -82,8 +82,6 @@ namespace Datos
             return FilasCambiadas;
         }
 
-
-        
         public int EjecutarTransaccion(String consultaSql)
         {
             SqlConnection conexion = obtenerConexion();
@@ -94,6 +92,6 @@ namespace Datos
             return filasAfectadas;
         }
 
-
+        
     }
 }

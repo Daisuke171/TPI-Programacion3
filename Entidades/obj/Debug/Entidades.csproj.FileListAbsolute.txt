@@ -16,3 +16,9 @@ C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.cspro
 C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.dll
 C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\lain\Desktop\TPI-Programacion3-main\Entidades\bin\Debug\Entidades.dll
+C:\Users\lain\Desktop\TPI-Programacion3-main\Entidades\bin\Debug\Entidades.pdb
+C:\Users\lain\Desktop\TPI-Programacion3-main\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\lain\Desktop\TPI-Programacion3-main\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\lain\Desktop\TPI-Programacion3-main\Entidades\obj\Debug\Entidades.dll
+C:\Users\lain\Desktop\TPI-Programacion3-main\Entidades\obj\Debug\Entidades.pdb

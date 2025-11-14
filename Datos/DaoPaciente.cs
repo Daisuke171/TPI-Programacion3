@@ -13,7 +13,7 @@ namespace Datos
     {
         AccesoDatos accesoDatos = new AccesoDatos();
 
-    public int insertarPaciente(Paciente paciente)
+        public int insertarPaciente(Paciente paciente)
         {   
             int resultado = 0;
             String nombreSp = "insertarPaciente";
@@ -23,7 +23,7 @@ namespace Datos
             return resultado;
         }
 
-    public  void armarParametrosInsertarPaciente(ref SqlCommand comando, Paciente paciente)
+        public  void armarParametrosInsertarPaciente(ref SqlCommand comando, Paciente paciente)
         {
             SqlParameter parametros = new SqlParameter();
             parametros = comando.Parameters.Add("@DNI", SqlDbType.Int);
@@ -52,7 +52,7 @@ namespace Datos
             parametros.Value = paciente._telefono;
         }
 
-    public bool subirPaciente(Paciente paciente)
+        public bool subirPaciente(Paciente paciente)
         {
             bool resultado = false;
 
@@ -73,6 +73,12 @@ namespace Datos
             return filasAfectadas > 0;
         }
 
+        public DataTable getTablePaciente()
+        {
+            DataTable table = accesoDatos.obtenerTabla("Pacientes", "Select * from Pacientes");
+            return table;
+        }
 
+        
     }
 }
