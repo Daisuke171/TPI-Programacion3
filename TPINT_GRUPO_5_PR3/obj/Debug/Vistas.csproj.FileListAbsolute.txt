@@ -364,3 +364,5 @@ C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacio
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.dll
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Entidades.pdb
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.pdb
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.dll
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.pdb

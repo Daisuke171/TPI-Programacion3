@@ -4,15 +4,15 @@ C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\En
 C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Entidades\obj\Debug\Entidades.dll
 C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Entidades\obj\Debug\Entidades.pdb
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\bin\Debug\Entidades.dll
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\bin\Debug\Entidades.pdb
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.dll
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.pdb
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Entidades\bin\Debug\Entidades.dll
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Entidades\bin\Debug\Entidades.pdb
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Entidades\obj\Debug\Entidades.dll
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\bin\Debug\Entidades.dll
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\bin\Debug\Entidades.pdb
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.dll
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Entidades\obj\Debug\Entidades.pdb

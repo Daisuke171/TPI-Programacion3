@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -15,28 +16,40 @@ namespace Datos
     public int insertarPaciente(Paciente paciente)
         {   
             int resultado = 0;
-            ///PONER EL NOMBRE DEL PROCEDIMIENTO ALMACENADO
-            String nombreSp = "nombbre procedimiento para insertar pacientes";
+            String nombreSp = "insertarPaciente";
             SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.Parameters.AddWithValue("@ID", paciente._id);
-            sqlCommand.Parameters.AddWithValue("@DNI", paciente._dni);
-            sqlCommand.Parameters.AddWithValue("@Nombre_Pac", paciente._nombre);
-            sqlCommand.Parameters.AddWithValue("@Apellido_Pac", paciente._apellido);
-            sqlCommand.Parameters.AddWithValue("@Sexo_Pac", paciente._sexo);
-            sqlCommand.Parameters.AddWithValue("@IdNacionalidad_Pac", paciente._idNacionalidad);
-            sqlCommand.Parameters.AddWithValue("@FechaNacimiento_Pac", paciente._fechaNacimiento);
-            sqlCommand.Parameters.AddWithValue("@Direccion_Pac", paciente._direccion);
-            sqlCommand.Parameters.AddWithValue("@IdProvincia_Pac", paciente._idProvincia);
-            sqlCommand.Parameters.AddWithValue("@IdLocalidad_Pac", paciente._idLocalidad);
-            sqlCommand.Parameters.AddWithValue("@TipoSangre_Pac", paciente._tipoSangre);
-            sqlCommand.Parameters.AddWithValue("@CorreoElectronico_Pac", paciente._correoElectronico);
-            sqlCommand.Parameters.AddWithValue("@Telefono_Pac", paciente._telefono);
-            sqlCommand.Parameters.AddWithValue("@Estado_Pac", paciente._estadoPaciente);
-
-
+            armarParametrosInsertarPaciente(ref sqlCommand, paciente);
             resultado = accesoDatos.EjecutarProcedimientoAlmacenado(sqlCommand, nombreSp);
-
             return resultado;
+        }
+
+    public  void armarParametrosInsertarPaciente(ref SqlCommand comando, Paciente paciente)
+        {
+            SqlParameter parametros = new SqlParameter();
+            parametros = comando.Parameters.Add("@DNI", SqlDbType.Int);
+            parametros.Value = paciente._dni;
+            parametros = comando.Parameters.Add("@NOMBRE", SqlDbType.VarChar);
+            parametros.Value = paciente._nombre;
+            parametros = comando.Parameters.Add("@APELLIDO", SqlDbType.VarChar);
+            parametros.Value = paciente._apellido;
+            parametros = comando.Parameters.Add("@SEXO", SqlDbType.VarChar);
+            parametros.Value = paciente._sexo;
+            parametros = comando.Parameters.Add("@IDNACIONALIDAD", SqlDbType.Int);
+            parametros.Value = paciente._idNacionalidad;
+            parametros = comando.Parameters.Add("@FECHANACIMIENTO", SqlDbType.Date);
+            parametros.Value = paciente._fechaNacimiento;
+            parametros = comando.Parameters.Add("@DIRECCION", SqlDbType.VarChar);
+            parametros.Value = paciente._direccion;
+            parametros = comando.Parameters.Add("@IDPROVINCIA", SqlDbType.Int);
+            parametros.Value = paciente._idProvincia;
+            parametros = comando.Parameters.Add("@IDLOCALIDAD", SqlDbType.Int);
+            parametros.Value = paciente._idLocalidad;
+            parametros = comando.Parameters.Add("@TIPOSANGRE", SqlDbType.VarChar);
+            parametros.Value = paciente._tipoSangre;
+            parametros = comando.Parameters.Add("@CORREOELECTRONICO", SqlDbType.VarChar);
+            parametros.Value = paciente._correoElectronico;
+            parametros = comando.Parameters.Add("@TELEFONO", SqlDbType.VarChar);
+            parametros.Value = paciente._telefono;
         }
 
     public bool subirPaciente(Paciente paciente)

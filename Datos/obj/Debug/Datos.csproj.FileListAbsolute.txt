@@ -7,15 +7,6 @@ C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Da
 C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.dll
 C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\Datos\obj\Debug\Datos.pdb
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Datos.dll
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Datos.pdb
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Entidades.dll
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Entidades.pdb
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.Up2Date
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.dll
-C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.pdb
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Datos\bin\Debug\Datos.dll
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Datos\bin\Debug\Datos.pdb
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Datos\bin\Debug\Entidades.dll
@@ -25,3 +16,12 @@ C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacio
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Datos\obj\Debug\Datos.dll
 C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\Datos\obj\Debug\Datos.pdb
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Datos.dll
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Datos.pdb
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Entidades.dll
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\bin\Debug\Entidades.pdb
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.dll
+C:\Users\franc\Desktop\TPI\TPI-Programacion3\Datos\obj\Debug\Datos.pdb
