@@ -96,6 +96,12 @@ namespace Datos
                 DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
                 return table;
         }
+
+        public bool existePaciente(Paciente paciente)
+        {
+            string consultaSql = "SELECT * FROM Pacientes WHERE Dni_Pac = " + paciente._dni;
+            return accesoDatos.existe(consultaSql);
+        }
         
     }
 }

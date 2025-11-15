@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades;
 using Negocio;
 
 namespace TPINT_GRUPO_5_PR3.Vistas
@@ -23,42 +24,48 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 // Cargar los dropdownlists de Nacionalidades, Localidades y Provincias
                 CargarNacionalidades();
-                CargarLocalidades();
                 CargarProvincias();
+                CargarLocalidades();
             }
         }
 
         protected void btnAltaPaciente_Click(object sender, EventArgs e)
         {
+            // CREA OBJ PACIENTE CON LOS DATOS INGRESADOS
+            string dni = txtBoxDNI.Text;
+            string nombre = txtBoxNombre.Text;
+            string apellido = txtBoxApellido.Text;
+            string sexo = ddlSexo.SelectedValue;
             int idNacionalidad = Convert.ToInt32(ddlNacionalidad.SelectedValue.ToString());
+            DateTime fechaNacimiento = DateTime.Parse(txtBoxFecha.Text);
+            string direccion = txtBoxDirecc.Text;
             int idProvincia = Convert.ToInt32(ddlProvincia.SelectedValue.ToString());
             int idLocalidad = Convert.ToInt32(ddlLocalidad.SelectedValue.ToString());
-            DateTime fechaNacimiento = DateTime.Parse(txtBoxFecha.Text);
-            bool confirmacion = negPaciente.agregarPaciente(txtBoxDNI.Text, txtBoxNombre.Text, txtBoxApellido.Text, ddlSexo.SelectedValue, idNacionalidad, fechaNacimiento, txtBoxDirecc.Text, idProvincia,
-            idLocalidad, ddlTipoSangre.SelectedValue, txtBoxCorreo.Text, txtBoxTelefono.Text);
+            string tipoSangre = ddlTipoSangre.SelectedValue;
+            string correo = txtBoxCorreo.Text;
+            string telefono = txtBoxTelefono.Text;
+
+            Paciente paciente = new Paciente(dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, tipoSangre, correo, telefono);
+
+            // BUSCA SI EL DNI YA EXISTE Y CORTA SI SÍ
+            if (negPaciente.buscarPaciente(paciente))
+            {
+                lblConfirmarSubirPaciente.ForeColor = Color.Red;
+                lblConfirmarSubirPaciente.Text = "Error. El DNI " + paciente._dni + " ya se encuentra registrado";
+                return;
+            }
+
+            // REGISTRO DEL PACIENTE
+            bool confirmacion = negPaciente.agregarPaciente(paciente);
 
 
             if (confirmacion)
             {
                 lblConfirmarSubirPaciente.Text = "Paciente Subido Correctamente!";
                 lblConfirmarSubirPaciente.ForeColor = Color.Green;
-
-
-                txtBoxDNI.Text = string.Empty;
-                txtBoxNombre.Text = string.Empty;
-                txtBoxApellido.Text = string.Empty;
-                ddlSexo.SelectedIndex = 0;
-                ddlNacionalidad.SelectedIndex = 0;
-                txtBoxFecha.Text = string.Empty;
-                txtBoxDirecc.Text = string.Empty;
-                ddlProvincia.SelectedIndex = 0;
-                ddlLocalidad.SelectedIndex = 0;
-                ddlTipoSangre.SelectedIndex = 0;
-                txtBoxCorreo.Text = string.Empty;
-                txtBoxTelefono.Text = string.Empty;
-
+                LimpiarCampos();
             }
-            else if (!confirmacion)
+            else
             {
                 lblConfirmarSubirPaciente.Text = "El paciente no se pudo subir";
                 lblConfirmarSubirPaciente.ForeColor = Color.Red;
@@ -76,17 +83,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             ddlNacionalidad.Items.Insert(0, new ListItem("--Seleccione--", "0"));
         }
 
-        private void CargarLocalidades()
-        {
-            DataTable datatableLoc = negLocalidad.getTable();
-            ddlLocalidad.DataSource = datatableLoc;
-            ddlLocalidad.DataTextField = "NombreLocalidad_Loc";
-            ddlLocalidad.DataValueField = "IdLocalidad_Loc";
-            ddlLocalidad.DataBind();
-
-            ddlLocalidad.Items.Insert(0, new ListItem("--Seleccione--", "0"));
-        }
-
         private void CargarProvincias()
         {
             DataTable datatableProv = negProvincia.getTable();
@@ -97,6 +93,39 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             ddlProvincia.Items.Insert(0, new ListItem("--Seleccione--", "0"));
         
+        }
+        private void CargarLocalidades()
+        {
+            string idProvincia = ddlProvincia.SelectedValue;
+            DataTable datatableLoc = negLocalidad.getTable(idProvincia);
+            ddlLocalidad.DataSource = datatableLoc;
+            ddlLocalidad.DataTextField = "NombreLocalidad_Loc";
+            ddlLocalidad.DataValueField = "IdLocalidad_Loc";
+            ddlLocalidad.DataBind();
+
+            ddlLocalidad.Items.Insert(0, new ListItem("--Seleccione--", "0"));
+        }
+
+
+        public void LimpiarCampos()
+        {
+            txtBoxDNI.Text = string.Empty;
+            txtBoxNombre.Text = string.Empty;
+            txtBoxApellido.Text = string.Empty;
+            ddlSexo.SelectedIndex = 0;
+            ddlNacionalidad.SelectedIndex = 0;
+            txtBoxFecha.Text = string.Empty;
+            txtBoxDirecc.Text = string.Empty;
+            ddlProvincia.SelectedIndex = 0;
+            ddlLocalidad.SelectedIndex = 0;
+            ddlTipoSangre.SelectedIndex = 0;
+            txtBoxCorreo.Text = string.Empty;
+            txtBoxTelefono.Text = string.Empty;
+        }
+
+        protected void ddlProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarLocalidades();
         }
     }
  }

@@ -10,9 +10,9 @@ namespace Datos
     public class DaoLocalidad
     {
         AccesoDatos accesoDatos = new AccesoDatos();
-        public DataTable getTablaLocalidad()
+        public DataTable getTablaLocalidad(string idProvincia)
         {
-            DataTable tablaLocalidad = accesoDatos.obtenerTabla("Localidades", "SELECT * FROM Localidades");
+            DataTable tablaLocalidad = accesoDatos.obtenerTabla("Localidades", "SELECT * FROM Localidades WHERE IdProvincia_Loc = " + idProvincia);
             return tablaLocalidad;
         }
     }

@@ -10,10 +10,10 @@ namespace Negocio
 {
     public class NegocioLocalidad
     {
-        public DataTable getTable()
+        public DataTable getTable(string idProvincia)
         {
             DaoLocalidad daoLocalidad = new DaoLocalidad();
-            return daoLocalidad.getTablaLocalidad();
+            return daoLocalidad.getTablaLocalidad(idProvincia);
         }
     }
 }

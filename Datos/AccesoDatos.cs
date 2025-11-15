@@ -92,6 +92,20 @@ namespace Datos
             return filasAfectadas;
         }
 
+        public bool existe(string consultaSql)
+        {
+            bool existe = false;
+            SqlConnection connection = obtenerConexion();
+            SqlCommand cmd = new SqlCommand(consultaSql, connection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                existe = true;
+            }
+            connection.Close();
+            return existe;
+        }
+
         
     }
 }

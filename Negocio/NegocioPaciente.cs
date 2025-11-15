@@ -3,6 +3,7 @@ using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,10 @@ namespace Negocio
 {
     public class NegocioPaciente
     {
-        public bool agregarPaciente(string dni, string nombre, string apellido, string sexo, int idNacionalidad, DateTime fechaNacimiento, string direccion, int idProvincia, int idLocalidad, string tipoSangre, string correo, string telefono)
+        DaoPaciente daoPaciente = new DaoPaciente();
+        public bool agregarPaciente(Paciente paciente)
         {
-            Paciente paciente = new Paciente(dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, tipoSangre, correo, telefono);
-            DaoPaciente dao = new DaoPaciente();
-            if(dao.insertarPaciente(paciente) > 0)
+            if(daoPaciente.insertarPaciente(paciente) > 0)
             {
                 return true;
             }
@@ -27,17 +27,13 @@ namespace Negocio
 
         public DataTable listarPaciente(bool pacActivo)
         {
-            DaoPaciente daoPaciente = new DaoPaciente();
             return daoPaciente.getTablePaciente(pacActivo);
         }
-
-
 
         public bool bajaPaciente(string dni)
         {
             Paciente paciente = new Paciente();
             paciente._dni = dni;
-            DaoPaciente daoPaciente = new DaoPaciente();
             if (daoPaciente.eliminarPaciente(paciente) == 1)
             {
                 return true;
@@ -46,7 +42,14 @@ namespace Negocio
             {
                 return false;
             }
-            
         }
+
+        public bool buscarPaciente(Paciente paciente)
+        {
+            bool existe = daoPaciente.existePaciente(paciente);
+            return existe;
+        }
+
+
     }
 }

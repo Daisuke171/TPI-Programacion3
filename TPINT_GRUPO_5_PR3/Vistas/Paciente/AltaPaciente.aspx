@@ -82,20 +82,12 @@
                 </div>
                 <div class="validatorContainer" style="left: 0px; top: -10px">
                     <asp:RequiredFieldValidator ID="rfvFechaNacimiento" runat="server" ControlToValidate="txtBoxFecha" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
-                    <asp:Label ID="lblFechaError" runat="server" CssClass="validator"></asp:Label>
                 </div>
 
-                <div class="campo">
-                    <p>Dirección:</p>
-                    <asp:TextBox ID="txtBoxDirecc" runat="server" CssClass="txtBox" ValidationGroup="1"></asp:TextBox>
-                </div>
-                <div class="validatorContainer">
-                    <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="txtBoxDirecc" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
-                </div>
 
                 <div class="campo">
                     <p>Provincia:</p>
-                    <asp:DropDownList ID="ddlProvincia" runat="server" ValidationGroup="1"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlProvincia" runat="server" ValidationGroup="1" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged"></asp:DropDownList>
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvProvincia" runat="server" ControlToValidate="ddlProvincia" CssClass="validator" Display="Dynamic" InitialValue="0" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
@@ -107,6 +99,14 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="ddlLocalidad" CssClass="validator" Display="Dynamic" InitialValue="0" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
+                </div>
+
+                <div class="campo">
+                    <p>Dirección:</p>
+                    <asp:TextBox ID="txtBoxDirecc" runat="server" CssClass="txtBox" ValidationGroup="1"></asp:TextBox>
+                </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="txtBoxDirecc" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
                 </div>
 
                 <div class="campo">
