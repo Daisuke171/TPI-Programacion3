@@ -53,3 +53,14 @@ C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.dll
 C:\TPI-Programacion3\Negocio\obj\Debug\Negocio.pdb
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\bin\Debug\Negocio.dll
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\bin\Debug\Negocio.pdb
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\bin\Debug\Datos.dll
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\bin\Debug\Entidades.dll
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\bin\Debug\Datos.pdb
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\bin\Debug\Entidades.pdb
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.dll
+C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.pdb

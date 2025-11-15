@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -33,7 +34,32 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             int idProvincia = Convert.ToInt32(ddlProvincia.SelectedValue.ToString());
             int idLocalidad = Convert.ToInt32(ddlLocalidad.SelectedValue.ToString());
             bool confirmacion = negPaciente.agregarPaciente(txtBoxDNI.Text, txtBoxNombre.Text, txtBoxApellido.Text, ddlSexo.SelectedValue, idNacionalidad, fechaNacimiento, txtBoxDirecc.Text, idProvincia,
-                                                    idLocalidad, ddlTipoSangre.SelectedValue, txtBoxCorreo.Text, txtBoxTelefono.Text);
+            idLocalidad, ddlTipoSangre.SelectedValue, txtBoxCorreo.Text, txtBoxTelefono.Text);
+
+            if (confirmacion)
+            {
+                lblConfirmarSubirPaciente.Text = "Paciente Subido Correctamente!";
+                lblConfirmarSubirPaciente.ForeColor = Color.Green;
+
+
+                txtBoxDNI.Text = string.Empty;
+                txtBoxNombre.Text = string.Empty;
+                txtBoxApellido.Text = string.Empty;
+                ddlSexo.SelectedIndex = 0;
+                ddlNacionalidad.SelectedIndex = 0;
+                txtBoxFecha.Text = string.Empty;
+                txtBoxDirecc.Text = string.Empty;
+                ddlProvincia.SelectedIndex = 0;
+                ddlLocalidad.SelectedIndex = 0;
+                ddlTipoSangre.SelectedIndex = 0;
+                txtBoxCorreo.Text = string.Empty;
+                txtBoxTelefono.Text = string.Empty;
+
+            }else if (!confirmacion)
+            {
+                lblConfirmarSubirPaciente.Text = "El paciente no se pudo subir";
+                lblConfirmarSubirPaciente.ForeColor = Color.Red;
+            }
         }
 
         private void CargarNacionalidades()

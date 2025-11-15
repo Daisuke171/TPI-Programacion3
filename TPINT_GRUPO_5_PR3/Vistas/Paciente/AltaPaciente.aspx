@@ -142,6 +142,7 @@
             </section>
 
             <asp:Button ID="btnAltaPaciente" CssClass="btnEnviar" runat="server" Text="Registrarse" OnClick="btnAltaPaciente_Click" />
+        <asp:Label ID="lblConfirmarSubirPaciente" runat="server" Font-Size="Large" ForeColor="#00CC00"></asp:Label>
         </main>
     </form>
 </body>
