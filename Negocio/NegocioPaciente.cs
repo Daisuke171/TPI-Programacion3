@@ -25,10 +25,28 @@ namespace Negocio
             }
         }
 
-        public DataTable listarPaciente()
+        public DataTable listarPaciente(bool pacActivo)
         {
             DaoPaciente daoPaciente = new DaoPaciente();
-            return daoPaciente.getTablePaciente();
+            return daoPaciente.getTablePaciente(pacActivo);
+        }
+
+
+
+        public bool bajaPaciente(string dni)
+        {
+            Paciente paciente = new Paciente();
+            paciente._dni = dni;
+            DaoPaciente daoPaciente = new DaoPaciente();
+            if (daoPaciente.eliminarPaciente(paciente) == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }

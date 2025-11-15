@@ -21,7 +21,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         }
         private void CargarPacientes()
         {
-            DataTable tablaPaciente = neg.listarPaciente();
+            bool pacActivo = false;
+            DataTable tablaPaciente = neg.listarPaciente(pacActivo);
             gvPacientes.DataSource = tablaPaciente;
             gvPacientes.DataBind();
         }

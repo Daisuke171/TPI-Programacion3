@@ -52,6 +52,13 @@ namespace Datos
             parametros.Value = paciente._telefono;
         }
 
+        public void armarParametrosBajaPaciente(ref SqlCommand comando, Paciente paciente)
+        {
+            SqlParameter parametros = new SqlParameter();
+            parametros = comando.Parameters.Add("@DNI", SqlDbType.Int);
+            parametros.Value = paciente._dni;
+        }
+
         public bool subirPaciente(Paciente paciente)
         {
             bool resultado = false;
@@ -65,20 +72,30 @@ namespace Datos
             return resultado;
         }
 
-        public bool eliminarPaciente(Paciente paciente)
+        public int eliminarPaciente(Paciente paciente)
         {
-            string consulta = "DELETE FROM Sucursal WHERE DNI_Pac = " + paciente._dni;
-            AccesoDatos datos = new AccesoDatos();
-            int filasAfectadas = datos.EjecutarTransaccion(consulta);
-            return filasAfectadas > 0;
+            int resultado = 0;
+            String nombreSp = "SP_BAJAPACIENTE";
+            SqlCommand sqlCommand = new SqlCommand();
+            armarParametrosBajaPaciente(ref sqlCommand, paciente);
+            resultado = accesoDatos.EjecutarProcedimientoAlmacenado(sqlCommand, nombreSp);
+            return resultado;
         }
 
-        public DataTable getTablePaciente()
+        public DataTable getTablePaciente(bool pacActivos)
         {
-            DataTable table = accesoDatos.obtenerTabla("Pacientes", "Select * from Pacientes");
-            return table;
+            string consulta = "";
+            if (pacActivos)
+            {
+                consulta = "Select * from Pacientes WHERE Estado_Pac = 1";
+            }
+            else
+            {
+                consulta = "Select * from Pacientes";
+            }
+                DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
+                return table;
         }
-
         
     }
 }
