@@ -21,7 +21,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         private void CargarMedicos()
         {
-                DataTable tablaMedico = negMedico.listarMedico();
+                bool MedActivo = false;
+                DataTable tablaMedico = negMedico.listarMedico(MedActivo);
                 gvMedico.DataSource = tablaMedico;
                 gvMedico.DataBind();
         }

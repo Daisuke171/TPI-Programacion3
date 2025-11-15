@@ -10,10 +10,20 @@ namespace Datos
     public class DaoMedico
     {
         AccesoDatos accesoDatos = new AccesoDatos();
-        public DataTable getTableMedicos()
+        public DataTable getTableMedicos(bool medActivos)
         {
-            DataTable tablaMedicos = accesoDatos.obtenerTabla("Medicos", "SELECT * FROM Medicos");
-            return tablaMedicos;
+            string consulta = "";
+            consulta = "exec SP_MOSTRARMEDICOS";
+            //if (medActivos)
+            //{
+                
+            //}
+            //else
+            //{
+            //    consulta = "Select * from Medicos";
+            //}
+            DataTable table = accesoDatos.obtenerTabla("Medicos", consulta);
+            return table;
         }
     }
 }

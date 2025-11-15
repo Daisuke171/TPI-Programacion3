@@ -10,10 +10,10 @@ namespace Negocio
 {
     public class NegocioMedico
     {
-        public DataTable listarMedico()
+        public DataTable listarMedico(bool medActivos)
         {
             DaoMedico daoMedico = new DaoMedico();
-            return daoMedico.getTableMedicos();
+            return daoMedico.getTableMedicos(medActivos);
         }
     }
 }
