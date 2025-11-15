@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -29,12 +30,25 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void btnAltaPaciente_Click(object sender, EventArgs e)
         {
+
+            if (DateTime.TryParse(txtBoxFecha.Text, out DateTime fechaNacimiento))
+            {
+                fechaNacimiento = Convert.ToDateTime(txtBoxFecha.Text);
+                lblFechaError.Text = string.Empty;
+            }
+            else
+            {
+                lblFechaError.Text = "Fecha invalida";
+                return;
+            }    
+
             int idNacionalidad = Convert.ToInt32(ddlNacionalidad.SelectedValue.ToString());
-            DateTime fechaNacimiento = Convert.ToDateTime(txtBoxFecha.Text);
             int idProvincia = Convert.ToInt32(ddlProvincia.SelectedValue.ToString());
             int idLocalidad = Convert.ToInt32(ddlLocalidad.SelectedValue.ToString());
             bool confirmacion = negPaciente.agregarPaciente(txtBoxDNI.Text, txtBoxNombre.Text, txtBoxApellido.Text, ddlSexo.SelectedValue, idNacionalidad, fechaNacimiento, txtBoxDirecc.Text, idProvincia,
             idLocalidad, ddlTipoSangre.SelectedValue, txtBoxCorreo.Text, txtBoxTelefono.Text);
+
+            
 
             if (confirmacion)
             {
@@ -55,7 +69,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 txtBoxCorreo.Text = string.Empty;
                 txtBoxTelefono.Text = string.Empty;
 
-            }else if (!confirmacion)
+            }
+            else if (!confirmacion)
             {
                 lblConfirmarSubirPaciente.Text = "El paciente no se pudo subir";
                 lblConfirmarSubirPaciente.ForeColor = Color.Red;
