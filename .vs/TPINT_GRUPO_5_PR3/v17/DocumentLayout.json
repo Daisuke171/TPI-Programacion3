@@ -1,65 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\TPI-Programacion3\\",
+  "WorkspaceRootPath": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\tpi-programacion3\\negocio\\negociopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\tpi-programacion3\\negocio\\negocioprovincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioprovincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\altapaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\altapaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\tpi-programacion3\\datos\\daonacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daonacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\tpi-programacion3\\negocio\\negocionacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocionacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\tpi-programacion3\\datos\\daolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\tpi-programacion3\\negocio\\negociolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\tpi-programacion3\\negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\tpi-programacion3\\datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\altapaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\altapaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\altapaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\tpi-programacion3\\datos\\daoprovincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\altapaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\altapaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negociopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\maria\\desktop\\utn\\programacion 3\\tp_integrador\\proyecto\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\listarmedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negocioprovincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioprovincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\datos\\daonacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daonacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negocionacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocionacionalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\datos\\daolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negociolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociolocalidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\listarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\datos\\daoprovincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daoprovincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -70,54 +70,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ListarPaciente.aspx.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T23:09:45.597Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NegocioMedico.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioMedico.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
-              "RelativeToolTip": "Negocio\\NegocioMedico.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T23:02:50.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DaoMedico.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Datos\\DaoMedico.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoMedico.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Datos\\DaoMedico.cs",
-              "RelativeToolTip": "Datos\\DaoMedico.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T23:00:38.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ListarMedico.aspx.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx.cs",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx.cs",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -126,24 +91,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ListarMedico.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ListarMedico.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-14T22:50:14.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "NegocioProvincia.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Negocio\\NegocioProvincia.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioProvincia.cs",
               "RelativeDocumentMoniker": "Negocio\\NegocioProvincia.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Negocio\\NegocioProvincia.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioProvincia.cs",
               "RelativeToolTip": "Negocio\\NegocioProvincia.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -154,9 +119,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "DaoProvincia.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Datos\\DaoProvincia.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoProvincia.cs",
               "RelativeDocumentMoniker": "Datos\\DaoProvincia.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Datos\\DaoProvincia.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoProvincia.cs",
               "RelativeToolTip": "Datos\\DaoProvincia.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -165,76 +130,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NegocioLocalidad.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Negocio\\NegocioLocalidad.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioLocalidad.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Negocio\\NegocioLocalidad.cs",
-              "RelativeToolTip": "Negocio\\NegocioLocalidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:22:50.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DaoLocalidad.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Datos\\DaoLocalidad.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoLocalidad.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Datos\\DaoLocalidad.cs",
-              "RelativeToolTip": "Datos\\DaoLocalidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:18:45.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NegocioNacionalidad.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Negocio\\NegocioNacionalidad.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioNacionalidad.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Negocio\\NegocioNacionalidad.cs",
-              "RelativeToolTip": "Negocio\\NegocioNacionalidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:12:04.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DaoNacionalidad.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Datos\\DaoNacionalidad.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoNacionalidad.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Datos\\DaoNacionalidad.cs",
-              "RelativeToolTip": "Datos\\DaoNacionalidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:11:56.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AltaPaciente.aspx.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T22:10:38.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "AltaPaciente.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
               "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -243,13 +143,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ListarPaciente.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T23:09:45.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NegocioLocalidad.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioLocalidad.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioLocalidad.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioLocalidad.cs",
+              "RelativeToolTip": "Negocio\\NegocioLocalidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T22:22:50.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AltaPaciente.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAnwCIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T22:10:38.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "NegocioPaciente.cs",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\Negocio\\NegocioPaciente.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioPaciente.cs",
               "RelativeDocumentMoniker": "Negocio\\NegocioPaciente.cs",
-              "ToolTip": "C:\\TPI-Programacion3\\Negocio\\NegocioPaciente.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioPaciente.cs",
               "RelativeToolTip": "Negocio\\NegocioPaciente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-14T22:08:03.594Z",
               "EditorCaption": ""
@@ -257,10 +196,75 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "DaoMedico.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoMedico.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoMedico.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoMedico.cs",
+              "RelativeToolTip": "Datos\\DaoMedico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T23:00:38.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NegocioMedico.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioMedico.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
+              "RelativeToolTip": "Negocio\\NegocioMedico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T23:02:50.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DaoLocalidad.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoLocalidad.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoLocalidad.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoLocalidad.cs",
+              "RelativeToolTip": "Datos\\DaoLocalidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T22:18:45.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NegocioNacionalidad.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioNacionalidad.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioNacionalidad.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioNacionalidad.cs",
+              "RelativeToolTip": "Negocio\\NegocioNacionalidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T22:12:04.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DaoNacionalidad.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoNacionalidad.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoNacionalidad.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoNacionalidad.cs",
+              "RelativeToolTip": "Datos\\DaoNacionalidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T22:11:56.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "ListarPaciente.aspx",
-              "DocumentMoniker": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx",
-              "ToolTip": "C:\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ListarPaciente.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",

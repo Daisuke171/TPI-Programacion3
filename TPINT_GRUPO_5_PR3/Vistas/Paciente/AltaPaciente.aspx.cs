@@ -33,7 +33,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             int idProvincia = Convert.ToInt32(ddlProvincia.SelectedValue.ToString());
             int idLocalidad = Convert.ToInt32(ddlLocalidad.SelectedValue.ToString());
             bool confirmacion = negPaciente.agregarPaciente(txtBoxDNI.Text, txtBoxNombre.Text, txtBoxApellido.Text, ddlSexo.SelectedValue, idNacionalidad, fechaNacimiento, txtBoxDirecc.Text, idProvincia,
-                                                    idLocalidad, (ddlTipoSangre1.SelectedValue + ddlTipoSangre2.SelectedValue), txtBoxCorreo.Text, txtBoxTelefono.Text);
+                                                    idLocalidad, ddlTipoSangre.SelectedValue, txtBoxCorreo.Text, txtBoxTelefono.Text);
         }
 
         private void CargarNacionalidades()

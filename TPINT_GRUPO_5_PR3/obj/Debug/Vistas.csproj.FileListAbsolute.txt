@@ -502,3 +502,5 @@ C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.dll
 C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Entidades.pdb
 C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.pdb
 C:\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.pdb
+C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.dll
+C:\Users\maria\Desktop\UTN\Programacion 3\TP_Integrador\Proyecto\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.pdb
