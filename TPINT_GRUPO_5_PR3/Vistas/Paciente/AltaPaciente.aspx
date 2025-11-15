@@ -78,7 +78,7 @@
 
                 <div class="campo">
                     <p>Fecha de Nacimiento:</p>
-                    <asp:TextBox ID="txtBoxFecha" runat="server" CssClass="txtBox" placeholder="DD-MM-AAAA" ValidationGroup="1"></asp:TextBox>
+                    <asp:TextBox ID="txtBoxFecha" runat="server" CssClass="txtBox" placeholder="DD-MM-AAAA" ValidationGroup="1" TextMode="Date"></asp:TextBox>
                 </div>
                 <div class="validatorContainer" style="left: 0px; top: -10px">
                     <asp:RequiredFieldValidator ID="rfvFechaNacimiento" runat="server" ControlToValidate="txtBoxFecha" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>

@@ -29,6 +29,60 @@ main section .validatorContainer {
     top: -10px;
 }
 
+
+/* MATCH DATE INPUT WITH OTHER FIELDS */
+main input[type="date"] {
+    width: 60%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #000;
+    /* Same neutral border aesthetic */
+    border: 2px solid #cfd8e3;
+    background: #ffffff;
+    caret-color: black;
+}
+
+    /* Hover subtle shade */
+    main input[type="date"]:hover {
+        border-color: #64b5f6;
+    }
+
+    /* Focus blue glow effect */
+    main input[type="date"]:focus {
+        background: rgba(255, 255, 255, 0.35);
+        border-color: #2196f3;
+        box-shadow: 0 0 6px rgba(33, 150, 243, 0.4);
+    }
+
+    /* Disabled state (optional) */
+    main input[type="date"]:disabled {
+        background: #f1f5f9;
+        color: #777;
+        cursor: not-allowed;
+    }
+
+    /* Style calendar picker button (Chrome/Edge) */
+    main input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: brightness(0.2) hue-rotate(180deg) invert(40%) sepia(50%) saturate(1800%) hue-rotate(190deg);
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.25s ease;
+    }
+
+        main input[type="date"]::-webkit-calendar-picker-indicator:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+
+
+
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;

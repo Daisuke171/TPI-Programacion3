@@ -64,3 +64,14 @@ C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Pr
 C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.dll
 C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\Negocio\obj\Debug\Negocio.pdb
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\bin\Debug\Negocio.dll
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\bin\Debug\Negocio.pdb
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\bin\Debug\Datos.dll
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\bin\Debug\Entidades.dll
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\bin\Debug\Datos.pdb
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\bin\Debug\Entidades.pdb
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\obj\Debug\Negocio.dll
+C:\Users\lain\Desktop\TPI-Programacion3\Negocio\obj\Debug\Negocio.pdb

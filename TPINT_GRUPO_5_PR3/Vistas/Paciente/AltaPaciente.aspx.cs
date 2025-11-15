@@ -30,25 +30,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void btnAltaPaciente_Click(object sender, EventArgs e)
         {
-
-            if (DateTime.TryParse(txtBoxFecha.Text, out DateTime fechaNacimiento))
-            {
-                fechaNacimiento = Convert.ToDateTime(txtBoxFecha.Text);
-                lblFechaError.Text = string.Empty;
-            }
-            else
-            {
-                lblFechaError.Text = "Fecha invalida";
-                return;
-            }    
-
             int idNacionalidad = Convert.ToInt32(ddlNacionalidad.SelectedValue.ToString());
             int idProvincia = Convert.ToInt32(ddlProvincia.SelectedValue.ToString());
             int idLocalidad = Convert.ToInt32(ddlLocalidad.SelectedValue.ToString());
+            DateTime fechaNacimiento = DateTime.Parse(txtBoxFecha.Text);
             bool confirmacion = negPaciente.agregarPaciente(txtBoxDNI.Text, txtBoxNombre.Text, txtBoxApellido.Text, ddlSexo.SelectedValue, idNacionalidad, fechaNacimiento, txtBoxDirecc.Text, idProvincia,
             idLocalidad, ddlTipoSangre.SelectedValue, txtBoxCorreo.Text, txtBoxTelefono.Text);
 
-            
 
             if (confirmacion)
             {
