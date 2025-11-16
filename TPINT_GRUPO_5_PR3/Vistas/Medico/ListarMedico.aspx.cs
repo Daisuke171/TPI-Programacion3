@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 {
     public partial class ListarMedico : System.Web.UI.Page
     {
-        Negocio.NegocioMedico negMedico = new Negocio.NegocioMedico();
+
+        NegocioMedico neg = new NegocioMedico();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,10 +23,10 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         private void CargarMedicos()
         {
-                //bool MedActivo = false;
-                //DataTable tablaMedico = negMedico.listarMedico(MedActivo);
-                //gvMedico.DataSource = tablaMedico;
-                //gvMedico.DataBind();
+                bool MedActivo = false;
+                DataTable tablaMedico = neg.listarMedico(MedActivo);
+                gvMedico.DataSource = tablaMedico;
+                gvMedico.DataBind();
         }
     }
 }

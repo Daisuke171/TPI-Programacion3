@@ -11,6 +11,7 @@ namespace Negocio
 {
     public class NegocioMedico
     {
+        DaoMedico daoMedico = new DaoMedico();
         public bool agregarMedico(Medico med)
         {
             DaoMedico dao = new DaoMedico();
@@ -23,6 +24,11 @@ namespace Negocio
             }
 
             return dao.insertarMedico(med);
+        }
+
+        public DataTable listarMedico(bool medActivo)
+        {
+            return daoMedico.getTableMedico(medActivo);
         }
     }
 }

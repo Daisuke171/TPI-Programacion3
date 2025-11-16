@@ -49,5 +49,20 @@ namespace Datos
 
             return filas > 0;
         }
+
+        public DataTable getTableMedico(bool medActivos)
+        {
+            string consulta = "";
+            if (medActivos)
+            {
+                consulta = "EXEC SP_MOSTRARMEDICOS";
+            }
+            else
+            {
+                consulta = "EXEC SP_MOSTRARMEDICOS";
+            }
+            DataTable table = datos.obtenerTabla("Medicos", consulta);
+            return table;
+        }
     }
 }
