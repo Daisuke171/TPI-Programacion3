@@ -133,7 +133,7 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtBoxCorreo" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtBoxCorreo" CssClass="validator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" ValidationGroup="1">Direccion de correo inválida</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtBoxCorreo" CssClass="validator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" ValidationGroup="1">* Direccion de correo inválida</asp:RegularExpressionValidator>
                 </div>
 
                 <div class="campo">

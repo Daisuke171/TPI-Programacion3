@@ -64,5 +64,18 @@ namespace Datos
             DataTable table = datos.obtenerTabla("Medicos", consulta);
             return table;
         }
+
+        public bool existeDniMedico(string dni)
+        {
+            string consulta = $"SELECT * FROM Medicos WHERE DNI_Med = '{dni}'";
+            return datos.existe(consulta);
+        }
+
+        public int generarLegajoMedico()
+        {
+            string consulta = "SELECT ISNULL(MAX(Legajo_Med), 0) + 1 AS NuevoLegajo FROM Medicos WITH (TABLOCKX)";
+            DataTable table = datos.obtenerTabla("Medicos", consulta);
+            return Convert.ToInt32(table.Rows[0]["NuevoLegajo"]);
+        }
     }
 }

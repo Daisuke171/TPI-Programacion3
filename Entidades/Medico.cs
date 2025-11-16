@@ -20,6 +20,7 @@ namespace Entidades
             _horarioAtencion = horarioAtencion;
             _estadoMedico = estadoMedico;
         }
+
         public int _legajoMedico { get; set; }
         public int _idEspecialidad { get; set; }
         public string _diasAtencion { get; set; }

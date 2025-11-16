@@ -80,6 +80,14 @@ namespace Datos
             Conexion.Close();
             return FilasCambiadas;
         }
+        public object EjecutarScalar(string consultaSql)
+        {
+            SqlConnection conexion = obtenerConexion();
+            SqlCommand cmd = new SqlCommand(consultaSql, conexion);
+            object resultado = cmd.ExecuteScalar();
+            conexion.Close();
+            return resultado;
+        }
 
         public int EjecutarTransaccion(String consultaSql)
         {

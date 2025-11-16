@@ -15,16 +15,14 @@
             <asp:Label ID="LlbSistema" runat="server" Text="Sistema Medico"></asp:Label>
 
             <asp:Label ID="LblUsuario" runat="server" Text="Usuario: "></asp:Label>
- 
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
 
             <asp:Label ID="LblContrasenia" runat="server" Text="Contraseña:"></asp:Label>
- 
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtContra" runat="server" TextMode="Password"></asp:TextBox>
 
-            <asp:Button ID="buttonIniciarSesion" runat="server" Text="Iniciar Sesión" />
+            <asp:Button ID="buttonIniciarSesion" runat="server" Text="Iniciar Sesión" OnClick="buttonIniciarSesion_Click" />
 
-            <asp:Label ID="LblError" runat="server"></asp:Label>
+            <asp:Label ID="lblError" runat="server"></asp:Label>
 
         </main>
     </form>

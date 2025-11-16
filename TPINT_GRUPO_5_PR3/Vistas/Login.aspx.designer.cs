@@ -42,13 +42,13 @@ namespace TPINT_GRUPO_5_PR3
         protected global::System.Web.UI.WebControls.Label LblUsuario;
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtUser;
 
         /// <summary>
         /// LblContrasenia control.
@@ -60,13 +60,13 @@ namespace TPINT_GRUPO_5_PR3
         protected global::System.Web.UI.WebControls.Label LblContrasenia;
 
         /// <summary>
-        /// TextBox2 control.
+        /// txtContra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtContra;
 
         /// <summary>
         /// buttonIniciarSesion control.
@@ -78,12 +78,12 @@ namespace TPINT_GRUPO_5_PR3
         protected global::System.Web.UI.WebControls.Button buttonIniciarSesion;
 
         /// <summary>
-        /// LblError control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblError;
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }
