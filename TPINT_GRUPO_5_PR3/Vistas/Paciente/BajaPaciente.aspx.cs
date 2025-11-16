@@ -50,7 +50,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             string dni = txtBoxDNI.Text;
 
-            if (negPaciente.buscarPaciente(dni))
+            if (negPaciente.existeDniPaciente(dni))
             {
                 bool elimino = negPaciente.bajaPaciente(dni);
                 
@@ -79,6 +79,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             DateTime fecha = DateTime.Parse(((Label)sender).Text);
             ((Label)sender).Text = fecha.ToShortDateString();
+        }
+
+        protected void gvPaciente_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvPaciente.PageIndex = e.NewPageIndex;
+            CargarPacientes();
         }
     }
 }

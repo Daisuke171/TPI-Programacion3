@@ -30,6 +30,11 @@ namespace Negocio
             return daoPaciente.getTablePaciente(pacActivo);
         }
 
+        public DataTable listarPaciente(bool pacActivo, string nombre)
+        {
+            return daoPaciente.getTablePaciente(pacActivo, nombre);
+        }
+
         public bool bajaPaciente(string dni)
         {
             Paciente paciente = new Paciente();
@@ -44,12 +49,17 @@ namespace Negocio
             }
         }
 
-        public bool buscarPaciente(string dni)
+        public bool existeDniPaciente(string dni)
         {
-            bool existe = daoPaciente.existePaciente(dni);
+            bool existe = daoPaciente.existeDniPaciente(dni);
             return existe;
         }
 
+        public bool existeNombrePaciente(string nombre)
+        {
+            bool existe = daoPaciente.existeNombrePaciente(nombre);
+            return existe;
+        }
 
     }
 }

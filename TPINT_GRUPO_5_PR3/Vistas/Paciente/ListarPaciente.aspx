@@ -28,7 +28,7 @@
             <section class="separador">
                 <p>Buscar Paciente:</p>
                 <asp:TextBox ID="txtboxNombrePaciente" runat="server" ValidationGroup="1"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="rfvTxtboxNombrePaciente" runat="server" ErrorMessage="* Ingrese el nombre de un paciente" ControlToValidate="txtboxNombrePaciente" Visible="False"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvTxtboxNombrePaciente" runat="server" ControlToValidate="txtboxNombrePaciente">* Ingrese el nombre de un paciente</asp:RequiredFieldValidator>
             </section>
 
             <section class="separador">
@@ -38,10 +38,83 @@
                 </asp:DropDownList>
             </section>
 
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Paciente" ValidationGroup="1" />
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Paciente" ValidationGroup="1" OnClick="btnBuscar_Click" />
 
             <section id="tablaPaciente">
-                <asp:GridView ID="gvPacientes" runat="server" EmptyDataText="asd">
+                <asp:GridView ID="gvPacientes" runat="server" EmptyDataText="asd" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="gvPacientes_PageIndexChanging" PageSize="8">
+                    <Columns>
+                         <asp:TemplateField HeaderText="DNI">
+                            <ItemTemplate>
+                                 <asp:Label ID="lbl_it_dni" runat="server" Text='<%# Bind("DNI_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Nombre">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("Nombre_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Apellido">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_apellido" runat="server" Text='<%# Bind("Apellido_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Sexo">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_sexo" runat="server" Text='<%# Bind("Sexo_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Nacionalidad">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_nacion" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Fecha de Nacimiento">                        
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Pac") %>' OnDataBinding="lbl_it_nacimiento_DataBinding"></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Dirección">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_direccion" runat="server" Text='<%# Bind("Direccion_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Localidad">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Provincia">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("NombreProvincia_Prov") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Tipo de Sangre">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_sangre" runat="server" Text='<%# Bind("TipoSangre_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Correo Electrónico">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_email" runat="server" Text='<%# Bind("CorreoElectronico_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+
+                         <asp:TemplateField HeaderText="Teléfono">
+                             <ItemTemplate>
+                                 <asp:Label ID="lbl_it_celu" runat="server" Text='<%# Bind("Telefono_Pac") %>'></asp:Label>
+                             </ItemTemplate>
+                         </asp:TemplateField>
+                    </Columns>
                 </asp:GridView>
             </section>
 

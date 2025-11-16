@@ -21,10 +21,42 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         }
         private void CargarPacientes()
         {
-            bool pacActivo = false;
+            bool pacActivo = true;
             DataTable tablaPaciente = neg.listarPaciente(pacActivo);
             gvPacientes.DataSource = tablaPaciente;
             gvPacientes.DataBind();
+        }
+
+        protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
+        }
+
+        protected void gvPacientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvPacientes.PageIndex = e.NewPageIndex;
+            CargarPacientes();
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtboxNombrePaciente.Text;
+
+            bool pacienteExiste = neg.existeNombrePaciente(nombre);
+
+            if (pacienteExiste)
+            {
+                gvPacientes.DataSource = neg.listarPaciente(true, nombre);
+                gvPacientes.DataBind();
+            }
+            else
+            {
+                // ACA FALTARÍA UN LABEL ACLARATORIO QUE NO HAY NINGUN PACIENTE CON ESE NOMBRE
+            }
+
+            txtboxNombrePaciente.Text = string.Empty;
+
         }
     }
 }
