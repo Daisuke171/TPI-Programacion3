@@ -34,7 +34,8 @@
             <section class="separador">
                 <p>Filtrar por:</p>
                 <asp:DropDownList ID="ddlFiltros" runat="server">
-                    <asp:ListItem>Seleccione un filtro</asp:ListItem>
+                    <asp:ListItem Value="0">Seleccione un filtro</asp:ListItem>
+                    <asp:ListItem Value="Sexo_Pac">Sexo</asp:ListItem>
                 </asp:DropDownList>
             </section>
 

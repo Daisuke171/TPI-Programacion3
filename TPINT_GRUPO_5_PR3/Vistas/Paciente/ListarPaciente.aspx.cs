@@ -47,8 +47,18 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             if (pacienteExiste)
             {
-                gvPacientes.DataSource = neg.listarPaciente(true, nombre);
-                gvPacientes.DataBind();
+                if (ddlFiltros.SelectedValue == "0")
+                {
+                    gvPacientes.DataSource = neg.listarPaciente(nombre, true);
+                    gvPacientes.DataBind();
+                }
+                else
+                {
+                    string filtro = ddlFiltros.SelectedValue;
+                    gvPacientes.DataSource = neg.listarPaciente(nombre, filtro);
+                    gvPacientes.DataBind();
+                }
+            
             }
             else
             {

@@ -77,5 +77,22 @@ namespace Datos
             DataTable table = datos.obtenerTabla("Medicos", consulta);
             return Convert.ToInt32(table.Rows[0]["NuevoLegajo"]);
         }
+
+        public void armarParametrosBajaMedico(ref SqlCommand comando, Medico medico)
+        {
+            SqlParameter parametros = new SqlParameter();
+            parametros = comando.Parameters.Add("@LEGAJO", SqlDbType.Int);
+            parametros.Value = medico._legajoMedico;
+        }
+
+        public int eliminarMedico(Medico medico)
+        {
+            int resultado = 0;
+            string nombreSp = "SP_BAJAMEDICO";
+            SqlCommand sqlCommand = new SqlCommand();
+            armarParametrosBajaMedico(ref sqlCommand, medico);
+            resultado = datos.EjecutarProcedimientoAlmacenado(sqlCommand, nombreSp);
+            return resultado;
+        }
     }
 }

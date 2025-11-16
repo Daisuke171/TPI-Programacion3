@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +41,20 @@ namespace Negocio
         {
             DaoMedico dao = new DaoMedico();
             return dao.generarLegajoMedico();
+        }
+
+        public bool bajaMedico(int legajo)
+        {
+            Medico medico = new Medico();
+            medico._legajoMedico= legajo;
+            if (daoMedico.eliminarMedico(medico) == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

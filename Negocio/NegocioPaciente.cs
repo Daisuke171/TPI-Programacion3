@@ -30,10 +30,16 @@ namespace Negocio
             return daoPaciente.getTablePaciente(pacActivo);
         }
 
-        public DataTable listarPaciente(bool pacActivo, string nombre)
+        public DataTable listarPaciente(string nombre, bool pacActivo)
         {
             return daoPaciente.getTablePaciente(pacActivo, nombre);
         }
+
+        public DataTable listarPaciente(string nombre, string filtro)
+        {
+            return daoPaciente.getTablePaciente(filtro, nombre);
+        }
+
 
         public bool bajaPaciente(string dni)
         {

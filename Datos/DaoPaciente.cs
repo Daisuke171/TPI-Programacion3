@@ -116,6 +116,17 @@ namespace Datos
             return table;
         }
 
+        public DataTable getTablePaciente(string filtro, string nombre)
+        {
+            string  consulta = "Select DNI_Pac, Nombre_Pac, Apellido_Pac, Sexo_Pac, NombreNacionalidad_Nac, FechaNacimiento_Pac, Direccion_Pac, NombreProvincia_Prov, NombreLocalidad_Loc, TipoSangre_Pac, CorreoElectronico_Pac, Telefono_Pac " +
+                    "from Pacientes INNER JOIN Localidades ON IdProvincia_Pac = IdProvincia_Loc AND IdLocalidad_Pac = IdLocalidad_Loc " +
+                    "INNER JOIN Provincias ON IdProvincia_Pac = IdProvincia_Prov " +
+                    "INNER JOIN Nacionalidades ON IdNacionalidad_Pac = IdNacionalidad_Nac " +
+                    "WHERE Nombre_Pac LIKE '%" + nombre + "%' ORDER BY " + filtro;
+            DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
+            return table;
+        }
+
         public bool existeDniPaciente(string dni)
         {
             string consultaSql = "SELECT * FROM Pacientes WHERE Dni_Pac = " + dni;

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Entidades;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,33 +13,54 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
+        NegocioMedico negMedico = new NegocioMedico();  
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                LlenarGridMedico();
+                CargarMedicos();
             }
         }
 
-        private void LlenarGridMedico()
+        private void CargarMedicos()
         {
-            DataTable dt = new DataTable();
-
-            dt.Columns.Add("Legajo");
-            dt.Columns.Add("DNI");
-            dt.Columns.Add("Nombre");
-            dt.Columns.Add("Apellido");
-            dt.Columns.Add("Especialidad");
-            dt.Columns.Add("CorreoElectronico");
-            dt.Columns.Add("Telefono");
-
-            // Datos de ejemplo
-            dt.Rows.Add("M001", "35498765", "Laura", "González", "Cardiología", "laura.gonzalez@hospital.com", "1159876543");
-            dt.Rows.Add("M002", "30987654", "Martín", "Pérez", "Pediatría", "martin.perez@hospital.com", "1134567890");
-            dt.Rows.Add("M003", "32876543", "Sofía", "Ruiz", "Neurología", "sofia.ruiz@hospital.com", "1147658392");
-
-            gvMedico.DataSource = dt;
+            bool medActivo = true;
+            DataTable tablaMedico = negMedico.listarMedico(medActivo);
+            gvMedico.DataSource = tablaMedico;
             gvMedico.DataBind();
         }
+
+        protected void gvMedico_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int legajo = Convert.ToInt32(((Label)gvMedico.Rows[e.RowIndex].FindControl("lbl_it_legajo")).Text);           
+            if (negMedico.bajaMedico(legajo))
+            {
+                lbl_confirmacion.ForeColor = Color.Green;
+                lbl_confirmacion.Text = "Medico dado de baja correctamente";
+            }
+            else
+            {
+                lbl_confirmacion.ForeColor = Color.Red;
+                lbl_confirmacion.Text = "Error al dar de baja al Medico";
+            }
+            CargarMedicos();
+        }
+
+        protected void btnBorrar_Click(object sender, EventArgs e)
+        {
+            int legajo = Convert.ToInt32(txtBoxLegajo.Text);
+            if (negMedico.bajaMedico(legajo))
+            {
+                lbl_confirmacion.ForeColor = Color.Green;
+                lbl_confirmacion.Text = "Medico dado de baja correctamente";
+            }
+            else
+            {
+                lbl_confirmacion.ForeColor = Color.Red;
+                lbl_confirmacion.Text = "Error al dar de baja al Medico";
+            }
+            CargarMedicos();
+        }
     }
+    
 }
