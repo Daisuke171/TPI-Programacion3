@@ -44,9 +44,9 @@ namespace Negocio
             }
         }
 
-        public bool buscarPaciente(Paciente paciente)
+        public bool buscarPaciente(string dni)
         {
-            bool existe = daoPaciente.existePaciente(paciente);
+            bool existe = daoPaciente.existePaciente(dni);
             return existe;
         }
 

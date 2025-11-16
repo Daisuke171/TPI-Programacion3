@@ -69,7 +69,6 @@ namespace Datos
 
         public int EjecutarProcedimientoAlmacenado(SqlCommand Comando, String NombreSP)
         {
-
             int FilasCambiadas;
             SqlConnection Conexion = obtenerConexion();
             SqlCommand cmd = new SqlCommand();

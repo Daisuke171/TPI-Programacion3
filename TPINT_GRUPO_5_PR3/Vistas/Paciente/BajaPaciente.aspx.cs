@@ -1,12 +1,13 @@
 ﻿using Entidades;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Negocio;
 
 namespace TPINT_GRUPO_5_PR3.Vistas
 {
@@ -29,20 +30,17 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             gvPaciente.DataBind();
         }
 
-        protected void gvPaciente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void gvPaciente_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             string dni = ((Label)gvPaciente.Rows[e.RowIndex].FindControl("lbl_it_dni")).Text;
             if (negPaciente.bajaPaciente(dni))
             {
+                lbl_confirmacion.ForeColor = Color.Green;
                 lbl_confirmacion.Text = "Paciente dado de baja correctamente";
             }
             else
             {
+                lbl_confirmacion.ForeColor = Color.Red;
                 lbl_confirmacion.Text = "Error al dar de baja al paciente";
             }
             CargarPacientes();
@@ -51,15 +49,36 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void btnBorrar_Click(object sender, EventArgs e)
         {
             string dni = txtBoxDNI.Text;
-            if (negPaciente.bajaPaciente(dni))
+
+            if (negPaciente.buscarPaciente(dni))
             {
-                lbl_confirmacion.Text = "Paciente dado de baja correctamente";
+                bool elimino = negPaciente.bajaPaciente(dni);
+                
+                if (elimino)
+                {
+                    lbl_confirmacion.ForeColor = Color.Green;
+                    lbl_confirmacion.Text = "Paciente dado de baja correctamente";
+                }
+                else
+                {
+                    lbl_confirmacion.ForeColor = Color.Red;
+                    lbl_confirmacion.Text = "Error al dar de baja al paciente";
+                }
+                CargarPacientes();
             }
             else
             {
-                lbl_confirmacion.Text = "Error al dar de baja al paciente";
+                lbl_confirmacion.ForeColor = Color.Red;
+                lbl_confirmacion.Text = "El DNI ingresado no está registrado";
             }
-            CargarPacientes();
+
+            lblUsuario.Text = string.Empty;
+        }
+
+        protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
         }
     }
 }

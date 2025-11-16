@@ -48,7 +48,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Paciente paciente = new Paciente(dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, tipoSangre, correo, telefono);
 
             // BUSCA SI EL DNI YA EXISTE Y CORTA SI SÍ
-            if (negPaciente.buscarPaciente(paciente))
+            if (negPaciente.buscarPaciente(paciente._dni))
             {
                 lblConfirmarSubirPaciente.ForeColor = Color.Red;
                 lblConfirmarSubirPaciente.Text = "Error. El DNI " + paciente._dni + " ya se encuentra registrado";
@@ -57,7 +57,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             // REGISTRO DEL PACIENTE
             bool confirmacion = negPaciente.agregarPaciente(paciente);
-
 
             if (confirmacion)
             {

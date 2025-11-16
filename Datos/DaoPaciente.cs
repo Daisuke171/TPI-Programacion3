@@ -93,13 +93,13 @@ namespace Datos
             {
                 consulta = "Select * from Pacientes";
             }
-                DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
-                return table;
+            DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
+            return table;
         }
 
-        public bool existePaciente(Paciente paciente)
+        public bool existePaciente(string dni)
         {
-            string consultaSql = "SELECT * FROM Pacientes WHERE Dni_Pac = " + paciente._dni;
+            string consultaSql = "SELECT * FROM Pacientes WHERE Dni_Pac = " + dni;
             return accesoDatos.existe(consultaSql);
         }
         
