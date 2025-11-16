@@ -21,10 +21,10 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         private void CargarMedicos()
         {
-                bool MedActivo = false;
-                DataTable tablaMedico = negMedico.listarMedico(MedActivo);
-                gvMedico.DataSource = tablaMedico;
-                gvMedico.DataBind();
+                //bool MedActivo = false;
+                //DataTable tablaMedico = negMedico.listarMedico(MedActivo);
+                //gvMedico.DataSource = tablaMedico;
+                //gvMedico.DataBind();
         }
     }
 }

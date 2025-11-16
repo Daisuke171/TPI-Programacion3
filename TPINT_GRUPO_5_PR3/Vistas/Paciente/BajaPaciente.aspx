@@ -72,7 +72,7 @@
                             <asp:TextBox ID="txt_eit_nacion" runat="server" Text='<%# Bind("Nacionalidad") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_nacion" runat="server" Text='<%# Bind("IdNacionalidad_Pac") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_nacion" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Fecha de Nacimiento">
@@ -96,7 +96,7 @@
                             <asp:TextBox ID="txt_eit_localidad" runat="server" Text='<%# Bind("Localidad") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("IdLocalidad_Pac") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Provincia">
@@ -104,7 +104,7 @@
                             <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("IdProvincia_Pac") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("NombreProvincia_Prov") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Tipo de Sangre">
