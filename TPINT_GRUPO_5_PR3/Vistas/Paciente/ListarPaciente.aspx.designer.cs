@@ -60,22 +60,31 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtboxNombrePaciente;
 
         /// <summary>
-        /// rfvTxtboxNombrePaciente control.
+        /// revNombrePaciente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTxtboxNombrePaciente;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombrePaciente;
 
         /// <summary>
-        /// ddlFiltros control.
+        /// ddlOrdenados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFiltros;
+        protected global::System.Web.UI.WebControls.DropDownList ddlOrdenados;
+
+        /// <summary>
+        /// ddlTipoSangre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoSangre;
 
         /// <summary>
         /// btnBuscar control.
@@ -85,6 +94,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBuscar;
+
+        /// <summary>
+        /// lblMensaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
 
         /// <summary>
         /// gvPacientes control.

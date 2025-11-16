@@ -25,19 +25,14 @@ namespace Negocio
             }
         }
 
-        public DataTable listarPaciente(bool pacActivo)
+        public DataTable listarPacientesActivos()
         {
-            return daoPaciente.getTablePaciente(pacActivo);
+            return daoPaciente.getTablaPacientesActivos();
         }
 
-        public DataTable listarPaciente(string nombre, bool pacActivo)
+        public DataTable listarPacientesActivos(string nombre, string orden, string filtroTSangre)
         {
-            return daoPaciente.getTablePaciente(pacActivo, nombre);
-        }
-
-        public DataTable listarPaciente(string nombre, string filtro)
-        {
-            return daoPaciente.getTablePaciente(filtro, nombre);
+            return daoPaciente.getTablaPacientesActivos(nombre, orden, filtroTSangre);
         }
 
 

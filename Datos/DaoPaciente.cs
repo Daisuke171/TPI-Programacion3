@@ -82,47 +82,36 @@ namespace Datos
             return resultado;
         }
 
-        public DataTable getTablePaciente(bool pacActivos)
+        public DataTable getTablaPacientesActivos()
         {
-            string consulta = "";
-            if (pacActivos)
-            {
-                consulta = "EXEC SP_MOSTRARPACIENTES";
-            }
-            else
-            {
-                consulta = "Select * from Pacientes";
-            }
+            string consulta = "EXEC SP_MOSTRARPACIENTES";
             DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
             return table;
         }
 
-        public DataTable getTablePaciente(bool pacActivos, string nombre)
+        public DataTable getTablaPacientesActivos(string nombre, string orden, string filtroTSangre)
         {
-            string consulta = "";
-            if (pacActivos)
-            {
-                consulta = "Select DNI_Pac, Nombre_Pac, Apellido_Pac, Sexo_Pac, NombreNacionalidad_Nac, FechaNacimiento_Pac, Direccion_Pac, NombreProvincia_Prov, NombreLocalidad_Loc, TipoSangre_Pac, CorreoElectronico_Pac, Telefono_Pac " +
+            // CONSULTA BASE
+            string consulta = "Select DNI_Pac, Nombre_Pac, Apellido_Pac, Sexo_Pac, NombreNacionalidad_Nac, FechaNacimiento_Pac, Direccion_Pac, NombreProvincia_Prov, NombreLocalidad_Loc, TipoSangre_Pac, CorreoElectronico_Pac, Telefono_Pac " +
                     "from Pacientes INNER JOIN Localidades ON IdProvincia_Pac = IdProvincia_Loc AND IdLocalidad_Pac = IdLocalidad_Loc " +
                     "INNER JOIN Provincias ON IdProvincia_Pac = IdProvincia_Prov " +
                     "INNER JOIN Nacionalidades ON IdNacionalidad_Pac = IdNacionalidad_Nac " +
-                    "WHERE Estado_Pac = 1 AND Nombre_Pac LIKE '%" + nombre + "%'";
-            }
-            else
-            {
-                consulta = "Select * from Pacientes";
-            }
-            DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
-            return table;
-        }
+                    "WHERE Estado_Pac = 1 ";
 
-        public DataTable getTablePaciente(string filtro, string nombre)
-        {
-            string  consulta = "Select DNI_Pac, Nombre_Pac, Apellido_Pac, Sexo_Pac, NombreNacionalidad_Nac, FechaNacimiento_Pac, Direccion_Pac, NombreProvincia_Prov, NombreLocalidad_Loc, TipoSangre_Pac, CorreoElectronico_Pac, Telefono_Pac " +
-                    "from Pacientes INNER JOIN Localidades ON IdProvincia_Pac = IdProvincia_Loc AND IdLocalidad_Pac = IdLocalidad_Loc " +
-                    "INNER JOIN Provincias ON IdProvincia_Pac = IdProvincia_Prov " +
-                    "INNER JOIN Nacionalidades ON IdNacionalidad_Pac = IdNacionalidad_Nac " +
-                    "WHERE Nombre_Pac LIKE '%" + nombre + "%' ORDER BY " + filtro;
+            // AGREGADOS PARA FILTRAR - ORDENAR
+            if (!string.IsNullOrEmpty(nombre.Trim()))
+            {
+                consulta += "AND Nombre_Pac LIKE '%" + nombre + "%' ";
+            }
+            if (filtroTSangre != "0")
+            {
+                consulta += "AND TipoSangre_Pac = '" + filtroTSangre + "' ";
+            }
+            if (orden != "0")
+            {
+                consulta += "ORDER BY " + orden;
+            }
+
             DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
             return table;
         }

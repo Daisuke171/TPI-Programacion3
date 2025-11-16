@@ -21,8 +21,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         }
         private void CargarPacientes()
         {
-            bool pacActivo = true;
-            DataTable tablaPaciente = neg.listarPaciente(pacActivo);
+            DataTable tablaPaciente = neg.listarPacientesActivos();
+            gvPacientes.DataSource = tablaPaciente;
+            gvPacientes.DataBind();
+        }
+        private void CargarPacientes(string nombre, string orden, string filtroTSangre)
+        {
+            DataTable tablaPaciente = neg.listarPacientesActivos(nombre, orden, filtroTSangre);
             gvPacientes.DataSource = tablaPaciente;
             gvPacientes.DataBind();
         }
@@ -36,37 +41,25 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void gvPacientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvPacientes.PageIndex = e.NewPageIndex;
-            CargarPacientes();
+            CargarPacientes(txtboxNombrePaciente.Text, ddlOrdenados.SelectedValue, ddlTipoSangre.SelectedValue);
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             string nombre = txtboxNombrePaciente.Text;
+            string orden = ddlOrdenados.SelectedValue;
+            string filtroTSangre = ddlTipoSangre.SelectedValue;
 
             bool pacienteExiste = neg.existeNombrePaciente(nombre);
-
             if (pacienteExiste)
             {
-                if (ddlFiltros.SelectedValue == "0")
-                {
-                    gvPacientes.DataSource = neg.listarPaciente(nombre, true);
-                    gvPacientes.DataBind();
-                }
-                else
-                {
-                    string filtro = ddlFiltros.SelectedValue;
-                    gvPacientes.DataSource = neg.listarPaciente(nombre, filtro);
-                    gvPacientes.DataBind();
-                }
-            
+                gvPacientes.DataSource = neg.listarPacientesActivos(nombre, orden, filtroTSangre);
+                gvPacientes.DataBind();
             }
             else
             {
-                // ACA FALTARÍA UN LABEL ACLARATORIO QUE NO HAY NINGUN PACIENTE CON ESE NOMBRE
+                lblMensaje.Text = "No existen pacientes registrados con esos datos";
             }
-
-            txtboxNombrePaciente.Text = string.Empty;
-
         }
     }
 }
