@@ -1,29 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace Datos
 {
     public class DaoMedico
     {
-        AccesoDatos accesoDatos = new AccesoDatos();
-        public DataTable getTableMedicos(bool medActivos)
+        AccesoDatos datos = new AccesoDatos();
+
+        public bool insertarMedico(Medico med)
         {
-            string consulta = "";
-            consulta = "exec SP_MOSTRARMEDICOS";
-            //if (medActivos)
-            //{
-                
-            //}
-            //else
-            //{
-            //    consulta = "Select * from Medicos";
-            //}
-            DataTable table = accesoDatos.obtenerTabla("Medicos", consulta);
-            return table;
+            SqlConnection cn = datos.obtenerConexion();
+
+            string consulta = @"INSERT INTO Medicos 
+        (Legajo_Med, DNI_Med, Nombre_Med, Apellido_Med, Sexo_Med, 
+         Telefono_Med, IdNacionalidad_Med, FechaNaciemiento_Med, 
+         Direccion_Med, IDLocalidad_Med, IDProvincia_Med, 
+         CorreoElectronico_Med, IDEspecialidad_Med, Estado_Med)
+        VALUES
+        (@Legajo, @DNI, @Nombre, @Apellido, @Sexo, 
+         @Telefono, @IdNacionalidad, @FechaNacimiento, 
+         @Direccion, @IdLocalidad, @IdProvincia, 
+         @Correo, @IdEspecialidad, @Estado);";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            cmd.Parameters.AddWithValue("@Legajo", med._legajoMedico);
+            cmd.Parameters.AddWithValue("@DNI", med._dni);
+            cmd.Parameters.AddWithValue("@Nombre", med._nombre);
+            cmd.Parameters.AddWithValue("@Apellido", med._apellido);
+            cmd.Parameters.AddWithValue("@Sexo", med._sexo);
+            cmd.Parameters.AddWithValue("@Telefono", med._telefono);
+            cmd.Parameters.AddWithValue("@IdNacionalidad", med._idNacionalidad);
+            cmd.Parameters.AddWithValue("@FechaNacimiento", med._fechaNacimiento);
+            cmd.Parameters.AddWithValue("@Direccion", med._direccion);
+            cmd.Parameters.AddWithValue("@IdLocalidad", med._idLocalidad);
+            cmd.Parameters.AddWithValue("@IdProvincia", med._idProvincia);
+            cmd.Parameters.AddWithValue("@Correo", med._correoElectronico);
+            cmd.Parameters.AddWithValue("@IdEspecialidad", med._idEspecialidad);
+            cmd.Parameters.AddWithValue("@Estado", med._estadoMedico);
+
+            int filas = cmd.ExecuteNonQuery();
+            cn.Close();
+
+            return filas > 0;
         }
     }
 }

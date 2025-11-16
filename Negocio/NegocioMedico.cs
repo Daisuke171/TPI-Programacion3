@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,10 +11,18 @@ namespace Negocio
 {
     public class NegocioMedico
     {
-        public DataTable listarMedico(bool medActivos)
+        public bool agregarMedico(Medico med)
         {
-            DaoMedico daoMedico = new DaoMedico();
-            return daoMedico.getTableMedicos(medActivos);
+            DaoMedico dao = new DaoMedico();
+
+            // esto es una validación combinada de DNI + Legajo único
+            string consulta = $"SELECT * FROM Medicos WHERE DNI_Med = '{med._dni}' OR Legajo_Med = {med._legajoMedico}";
+            if (new AccesoDatos().existe(consulta))
+            {
+                return false; // existe, no se puede cargar
+            }
+
+            return dao.insertarMedico(med);
         }
     }
 }
