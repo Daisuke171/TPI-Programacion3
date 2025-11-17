@@ -51,7 +51,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
                 }
 
                 // Cuando quieras agregar los otros informes, seguís acá:
-                // if (informe == "Cantidad de pacientes por medico") { ... }
+                else if (informe == "Cantidad de pacientes por medico")
+                {
+                    DataTable resultado = negInf.getCantidadPacientesPorMedico(true); // true para pacientes únicos
+                    gvResultado.DataSource = resultado;
+                    gvResultado.DataBind();
+                }
+
                 // if (informe == "Cantidad de medicos por especialidad") { ... }
                 // if (informe == "Dia con mas pacientes") { ... }
             }

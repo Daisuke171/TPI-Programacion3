@@ -80,6 +80,7 @@
     <Content Include="Vistas\Estilos\BajaPaciente.css" />
     <Content Include="Vistas\Estilos\Base.css" />
     <Content Include="Vistas\Estilos\ConsultarTurno.css" />
+    <Content Include="Vistas\Estilos\Informes.css" />
     <Content Include="Vistas\Estilos\Inicio.css" />
     <Content Include="Vistas\Estilos\ListarMedico.css" />
     <Content Include="Vistas\Estilos\ListarPaciente.css" />

@@ -7,6 +7,7 @@
     <title>Informes</title>
     <link rel="stylesheet" href="../Estilos/Base.css" />
     <link rel="stylesheet" href="../Estilos/NavBar.css" />
+    <link rel="stylesheet" href="../Estilos/Informes.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -25,7 +26,7 @@
             <h1>Informes</h1>
             <section class="selectInforme">
 
-           <%-- <asp:GridView ID="gvInformes" runat="server">
+                <%-- <asp:GridView ID="gvInformes" runat="server">
                 <Columns>
                     <asp:TemplateField HeaderText="Filtro">
                         <ItemTemplate>
@@ -36,23 +37,20 @@
                 </Columns>
             </asp:GridView>--%>
 
-                <asp:GridView ID="gvInformes" runat="server" AutoGenerateColumns="False" OnRowCommand="gvInformes_RowCommand">
-                 <Columns>
-                     <asp:ButtonField Text="Ver" CommandName="VerInforme" ButtonType="Button" />
-                          <asp:BoundField DataField="Informes" HeaderText="Informes" />
-                    </Columns>
-                </asp:GridView>
+                <section class="tablaInformes">
+                    <asp:GridView ID="gvInformes" runat="server" AutoGenerateColumns="False" OnRowCommand="gvInformes_RowCommand">
+                        <Columns>
+                            <asp:ButtonField Text="Ver" CommandName="VerInforme" ButtonType="Button" />
+                            <asp:BoundField DataField="Informes" HeaderText="Informes" />
+                        </Columns>
+                    </asp:GridView>
+                </section>
 
                 <h2>Resultado</h2>
                 <asp:GridView ID="gvResultado" runat="server" AutoGenerateColumns="true"></asp:GridView>
 
             </section>
-            <aside class="imgGrafico">
-
-                
-
-
-            </aside>
+           
         </main>
     </form>
 </body>

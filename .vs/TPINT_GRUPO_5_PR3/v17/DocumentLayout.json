@@ -1,74 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\",
+  "WorkspaceRootPath": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\datos\\daoinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daoinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\negocio\\negocioinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\lain\\Desktop\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\negocio\\negocioturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\lain\\Desktop\\TPI-Programacion3\\datos\\daoinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daoinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\negocio\\negociopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\lain\\Desktop\\TPI-Programacion3\\negocio\\negocioinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\lain\\desktop\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\datos\\daoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\lain\\desktop\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\informes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\informes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\datos\\daopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\lain\\desktop\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\modificarmedico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\modificarmedico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\mella\\onedrive\\documentos\\github\\tpi-programacion3\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\modificarmedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\modificarmedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\homepacientes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\homepacientes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\lain\\desktop\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\listarpaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\listarpaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,227 +38,105 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "ModificarMedico.css",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ModificarMedico.css",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ModificarMedico.css",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ModificarMedico.css",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ModificarMedico.css",
+              "ViewState": "AgIAADEAAAAAAAAAAAAYwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-17T19:55:43.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ListarPaciente.css",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-17T19:51:00.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Informes.css",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Informes.css",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Informes.css",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Informes.css",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Informes.css",
+              "ViewState": "AgIAADEAAAAAAAAAAAAYwEgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-17T19:49:58.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Informes.aspx",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-17T19:25:06.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "NegocioInformes.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioInformes.cs",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\Negocio\\NegocioInformes.cs",
               "RelativeDocumentMoniker": "Negocio\\NegocioInformes.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioInformes.cs",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\Negocio\\NegocioInformes.cs",
               "RelativeToolTip": "Negocio\\NegocioInformes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T19:21:54.931Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DaoInformes.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoInformes.cs",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\Datos\\DaoInformes.cs",
               "RelativeDocumentMoniker": "Datos\\DaoInformes.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoInformes.cs",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\Datos\\DaoInformes.cs",
               "RelativeToolTip": "Datos\\DaoInformes.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T19:18:02.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NegocioMedico.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioMedico.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
-              "RelativeToolTip": "Negocio\\NegocioMedico.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAqwEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T19:01:18.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NegocioPaciente.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioPaciente.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioPaciente.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioPaciente.cs",
-              "RelativeToolTip": "Negocio\\NegocioPaciente.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAEwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T19:00:16.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegistrarTurno.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAQwFQAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T18:53:00.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Informes.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T19:28:09.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NegocioTurno.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioTurno.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioTurno.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Negocio\\NegocioTurno.cs",
-              "RelativeToolTip": "Negocio\\NegocioTurno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T18:54:57.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DaoTurno.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoTurno.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoTurno.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoTurno.cs",
-              "RelativeToolTip": "Datos\\DaoTurno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T18:56:37.673Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DaoMedico.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoMedico.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoMedico.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoMedico.cs",
-              "RelativeToolTip": "Datos\\DaoMedico.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAhwI8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T19:01:36.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DaoPaciente.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoPaciente.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoPaciente.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\Datos\\DaoPaciente.cs",
-              "RelativeToolTip": "Datos\\DaoPaciente.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAhwL4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:42:24.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ModificarPaciente.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAmwDsAAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:41:55.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ModificarPaciente.aspx",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-17T14:39:19.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ModificarMedico.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ModificarMedico.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ModificarMedico.aspx.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ModificarMedico.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\ModificarMedico.aspx.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAA3wEwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T14:40:03.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA9wDQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T14:16:09.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-17T14:14:42.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "HomePacientes.aspx",
-              "DocumentMoniker": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx",
-              "ToolTip": "C:\\Users\\mella\\OneDrive\\Documentos\\GitHub\\TPI-Programacion3\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-17T14:21:41.211Z",
               "EditorCaption": ""
             }
           ]

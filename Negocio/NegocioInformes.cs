@@ -16,5 +16,10 @@ namespace Negocio
         {
             return dao.PromedioTiposDeSangre();
         }
+
+        public DataTable getCantidadPacientesPorMedico(bool pacientesUnicos = true)
+        {
+            return dao.CantidadPacientesPorMedico(pacientesUnicos);
+        }
     }
 }

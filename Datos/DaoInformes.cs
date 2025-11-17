@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using Datos; 
+using Datos;
 
 namespace Datos
 {
     public class DaoInformes
     {
         DaoPaciente daoPaciente = new DaoPaciente();
+        AccesoDatos accesoDatos = new AccesoDatos();
 
         public DataTable PromedioTiposDeSangre()
         {
@@ -42,6 +43,31 @@ namespace Datos
             }
 
             return resultado;
+        }
+
+        // Cantidad de pacientes por médico
+        // pacientesUnicos = true => COUNT(DISTINCT DNIPaciente_Tur)
+        // pacientesUnicos = false => COUNT(DNIPaciente_Tur) (total de turnos)
+        public DataTable CantidadPacientesPorMedico(bool pacientesUnicos = true)
+        {
+            string countExpr = pacientesUnicos
+                ? "COUNT(DISTINCT t.DNIPaciente_Tur)"
+                : "COUNT(t.DNIPaciente_Tur)";
+
+            string sql = $@"
+                SELECT 
+                    m.Legajo_Med         AS Legajo,
+                    (m.Nombre_Med + ' ' + m.Apellido_Med) AS Medico,
+                    {countExpr}          AS Cantidad
+                FROM Medicos m
+                LEFT JOIN Turnos t 
+                    ON t.LegajoMedico_Tur = m.Legajo_Med
+                    AND t.Estado_Tur = 1
+                WHERE m.Estado_Med = 1
+                GROUP BY m.Legajo_Med, m.Nombre_Med, m.Apellido_Med
+                ORDER BY Cantidad DESC, Medico ASC;";
+
+            return accesoDatos.obtenerTabla("PacientesPorMedico", sql);
         }
     }
 }
