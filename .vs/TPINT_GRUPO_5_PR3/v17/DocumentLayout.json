@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\lain\\desktop\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\lain\\Desktop\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\lain\\desktop\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\lain\\Desktop\\TPI-Programacion3\\negocio\\negocioinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioinformes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\lain\\Desktop\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\lain\\Desktop\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\informes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "RegistrarTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
+              "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-17T20:53:00.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ModificarMedico.css",
               "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ModificarMedico.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ModificarMedico.css",
@@ -58,11 +75,12 @@
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ModificarMedico.css",
               "ViewState": "AgIAADEAAAAAAAAAAAAYwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-17T19:55:43.29Z"
+              "WhenOpened": "2025-11-17T19:55:43.29Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ListarPaciente.css",
               "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
@@ -70,11 +88,12 @@
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\ListarPaciente.css",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-17T19:51:00.212Z"
+              "WhenOpened": "2025-11-17T19:51:00.212Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Informes.css",
               "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Informes.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Informes.css",
@@ -82,23 +101,25 @@
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Informes.css",
               "ViewState": "AgIAADEAAAAAAAAAAAAYwEgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-17T19:49:58.473Z"
+              "WhenOpened": "2025-11-17T19:49:58.473Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Informes.aspx",
               "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "ToolTip": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000192|",
-              "WhenOpened": "2025-11-17T19:25:06.821Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-17T19:25:06.821Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "NegocioInformes.cs",
               "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\Negocio\\NegocioInformes.cs",
               "RelativeDocumentMoniker": "Negocio\\NegocioInformes.cs",
@@ -106,11 +127,12 @@
               "RelativeToolTip": "Negocio\\NegocioInformes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T19:21:54.931Z"
+              "WhenOpened": "2025-11-17T19:21:54.931Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DaoInformes.cs",
               "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\Datos\\DaoInformes.cs",
               "RelativeDocumentMoniker": "Datos\\DaoInformes.cs",
@@ -118,11 +140,12 @@
               "RelativeToolTip": "Datos\\DaoInformes.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAADAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T19:18:02.793Z"
+              "WhenOpened": "2025-11-17T19:18:02.793Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Informes.aspx.cs",
               "DocumentMoniker": "C:\\Users\\lain\\Desktop\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",

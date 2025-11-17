@@ -30,7 +30,7 @@
                 <p>DNI:</p>
                 <asp:TextBox ID="txt_Dni" runat="server"></asp:TextBox>
             </div>
-            <asp:Button ID="btn_buscarPaciente" runat="server" Text="Buscar paciente" CssClass="btnEnviar" />
+            <asp:Button ID="btn_buscarPaciente" runat="server" Text="Buscar paciente" CssClass="btnEnviar" OnClick="btn_buscarPaciente_Click" />
 
             <h2>Datos del Paciente</h2>
 
@@ -83,10 +83,7 @@
             <div class="calendarioContainer">
             <asp:Calendar ID="cal_Fechas" runat="server"></asp:Calendar>
 
-            <asp:RadioButtonList ID="rbtnl_Horarios" runat="server">
-                <asp:ListItem>test1</asp:ListItem>
-                <asp:ListItem>test2</asp:ListItem>
-            </asp:RadioButtonList>
+           
             </div>
 
             <asp:Button ID="btn_Confirmar" runat="server" Text="Confirmar turno" CssClass="btnEnviar" />
