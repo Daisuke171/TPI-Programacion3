@@ -50,10 +50,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
                     gvResultado.DataBind();
                 }
 
-                // Cuando quieras agregar los otros informes, seguís acá:
-                // if (informe == "Cantidad de pacientes por medico") { ... }
-                // if (informe == "Cantidad de medicos por especialidad") { ... }
-                // if (informe == "Dia con mas pacientes") { ... }
             }
         }
     }
