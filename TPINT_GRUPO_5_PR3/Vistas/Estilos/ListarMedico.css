@@ -32,8 +32,14 @@
         box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
     }
 
+#tablaMedico {
+    overflow-x: auto;
+    width: 100%;
+}
+
 #gvMedico {
     width: 100%;
+    min-width: 900px;
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;

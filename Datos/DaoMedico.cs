@@ -94,5 +94,48 @@ namespace Datos
             resultado = datos.EjecutarProcedimientoAlmacenado(sqlCommand, nombreSp);
             return resultado;
         }
+
+        public bool modificarMedico(Medico med)
+        {
+            SqlConnection cn = datos.obtenerConexion();
+
+            string consulta = @"UPDATE Medicos SET
+                        DNI_Med = @DNI,
+                        Nombre_Med = @Nombre,
+                        Apellido_Med = @Apellido,
+                        Sexo_Med = @Sexo,
+                        Telefono_Med = @Telefono,
+                        IdNacionalidad_Med = @IdNacionalidad,
+                        FechaNaciemiento_Med = @FechaNacimiento,
+                        Direccion_Med = @Direccion,
+                        IDLocalidad_Med = @IdLocalidad,
+                        IDProvincia_Med = @IdProvincia,
+                        CorreoElectronico_Med = @Correo,
+                        IDEspecialidad_Med = @IdEspecialidad,
+                        Estado_Med = @Estado
+                    WHERE Legajo_Med = @Legajo";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            cmd.Parameters.AddWithValue("@Legajo", med._legajoMedico);
+            cmd.Parameters.AddWithValue("@DNI", med._dni);
+            cmd.Parameters.AddWithValue("@Nombre", med._nombre);
+            cmd.Parameters.AddWithValue("@Apellido", med._apellido);
+            cmd.Parameters.AddWithValue("@Sexo", med._sexo);
+            cmd.Parameters.AddWithValue("@Telefono", med._telefono);
+            cmd.Parameters.AddWithValue("@IdNacionalidad", med._idNacionalidad);
+            cmd.Parameters.AddWithValue("@FechaNacimiento", med._fechaNacimiento);
+            cmd.Parameters.AddWithValue("@Direccion", med._direccion);
+            cmd.Parameters.AddWithValue("@IdLocalidad", med._idLocalidad);
+            cmd.Parameters.AddWithValue("@IdProvincia", med._idProvincia);
+            cmd.Parameters.AddWithValue("@Correo", med._correoElectronico);
+            cmd.Parameters.AddWithValue("@IdEspecialidad", med._idEspecialidad);
+            cmd.Parameters.AddWithValue("@Estado", med._estadoMedico);
+
+            int filas = cmd.ExecuteNonQuery();
+            cn.Close();
+
+            return filas > 0;
+        }
     }
 }

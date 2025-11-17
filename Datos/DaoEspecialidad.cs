@@ -17,5 +17,11 @@ namespace Datos
             string consulta = "SELECT IdEspecialidad_Esp, NombreEspecialidad_Esp FROM Especialidades";
             return ad.obtenerTabla("Especialidades", consulta);
         }
+
+        public int getIdEspecialidadPorNombre(string nombreEspecialidad)
+        {
+            string consulta = "SELECT IdEspecialidad_Esp FROM Especialidades WHERE NombreEspecialidad_Esp = '" + nombreEspecialidad + "'";
+            return (int)ad.EjecutarScalar(consulta);
+        }
     }
 }

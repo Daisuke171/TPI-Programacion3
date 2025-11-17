@@ -39,8 +39,7 @@ namespace Negocio
 
         public int getNuevoLegajo()
         {
-            DaoMedico dao = new DaoMedico();
-            return dao.generarLegajoMedico();
+            return daoMedico.generarLegajoMedico();
         }
 
         public bool bajaMedico(int legajo)
@@ -55,6 +54,11 @@ namespace Negocio
             {
                 return false;
             }
+        }
+
+        public bool modificarMedico(Medico med)
+        {
+            return daoMedico.modificarMedico(med);
         }
     }
 }

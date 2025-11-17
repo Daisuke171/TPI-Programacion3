@@ -4,6 +4,10 @@
     justify-content: space-between;
 }
 
+main .separador p {
+    font-size: 1.2rem;
+}
+
 #lblTitulo {
     font-size: 2rem;
     font-weight: bold;
@@ -32,8 +36,14 @@
     box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
 }
 
+#tablaPaciente {
+    overflow-x: auto;
+    width: 100%;
+}
+
 #gvPacientes {
     width: 100%;
+    min-width: 900px;
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;

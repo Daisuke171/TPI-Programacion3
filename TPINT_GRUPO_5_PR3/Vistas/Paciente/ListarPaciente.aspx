@@ -28,9 +28,9 @@
             <section class="separador">
                 <p>Buscar Paciente:</p>
                 <asp:TextBox ID="txtboxNombrePaciente" runat="server"></asp:TextBox>
-                <br />
-                <asp:RegularExpressionValidator ID="revNombrePaciente" runat="server" ControlToValidate="txtboxNombrePaciente" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$">Nombre invalido. Solo caracteres alfabeticos</asp:RegularExpressionValidator>
+                
             </section>
+            <asp:RegularExpressionValidator ID="revNombrePaciente" runat="server" ControlToValidate="txtboxNombrePaciente" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$" Visible="False">Nombre invalido. Solo caracteres alfabeticos</asp:RegularExpressionValidator>
 
             <section class="separador">
                 <p>Ordenar por:</p>

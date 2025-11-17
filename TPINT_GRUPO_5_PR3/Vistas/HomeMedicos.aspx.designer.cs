@@ -11,7 +11,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 {
 
 
-    public partial class WebForm6
+    public partial class Inicio
     {
 
         /// <summary>
@@ -42,30 +42,21 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// lblTitulo control.
+        /// hlnkConsultarTurno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        protected global::System.Web.UI.WebControls.HyperLink hlnkConsultarTurno;
 
         /// <summary>
-        /// txtBuscar control.
+        /// img control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
-
-        /// <summary>
-        /// gvMedico control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMedico;
+        protected global::System.Web.UI.WebControls.Image img;
     }
 }

@@ -10,10 +10,15 @@ namespace Negocio
 {
     public class NegocioNacionalidad
     {
+        DaoNacionalidad daoNacionalidad = new DaoNacionalidad();
         public DataTable getTable()
         {
-            DaoNacionalidad daoNacionalidad = new DaoNacionalidad();
             return daoNacionalidad.getTablaNacionalidad();
+        }
+
+        public int getId(string nombre)
+        {
+            return daoNacionalidad.getIdNacionalidadPorNombre(nombre);
         }
     }
 }

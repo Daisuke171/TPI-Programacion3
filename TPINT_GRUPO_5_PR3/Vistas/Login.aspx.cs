@@ -43,13 +43,13 @@ namespace TPINT_GRUPO_5_PR3
                 {
                     Session["TipoUsuario"] = tipoUsuario;
 
-                    Response.Redirect("Medico/InicioMedico.aspx");
+                    Response.Redirect("HomeMedicos.aspx");
                 }
                 else
                 {
                     Session["TipoUsuario"] = tipoUsuario;
 
-                    Response.Redirect("Inicio.aspx");
+                    Response.Redirect("HomePacientes.aspx");
                 }
                 
             }

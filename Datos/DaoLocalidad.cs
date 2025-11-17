@@ -15,5 +15,11 @@ namespace Datos
             DataTable tablaLocalidad = accesoDatos.obtenerTabla("Localidades", "SELECT * FROM Localidades WHERE IdProvincia_Loc = " + idProvincia);
             return tablaLocalidad;
         }
+
+        public int getIdLocalidadPorNombre(string nombreLocalidad)
+        {
+            string consulta = "SELECT IdLocalidad_Loc FROM Localidades WHERE NombreLocalidad_Loc = '" + nombreLocalidad + "'";
+            return (int)accesoDatos.EjecutarScalar(consulta);
+        }
     }
 }

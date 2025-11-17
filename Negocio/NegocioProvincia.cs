@@ -15,6 +15,12 @@ namespace Negocio
             DaoProvincia daoProvincia = new DaoProvincia();
             return daoProvincia.getTablaProvincia();
         }
+
+        public int getIdProvinciaPorNombre(string nombreProvincia)
+        {
+            DaoProvincia daoProvincia = new DaoProvincia();
+            return daoProvincia.getIdProvinciaPorNombre(nombreProvincia);
+        }
     }
 }
 

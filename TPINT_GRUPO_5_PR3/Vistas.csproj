@@ -88,10 +88,11 @@
     <Content Include="Vistas\Estilos\ModificarPaciente.css" />
     <Content Include="Vistas\Estilos\NavBar.css" />
     <Content Include="Vistas\Estilos\RegistrarTurno.css" />
+    <Content Include="Vistas\HomePacientes.aspx" />
     <Content Include="Vistas\Imagenes\doctor-symbol-universal-png-2.png" />
     <Content Include="Vistas\Informes\Informes.aspx" />
     <Content Include="Vistas\InicioAdmin.aspx" />
-    <Content Include="Vistas\InicioMedico.aspx" />
+    <Content Include="Vistas\HomeMedicos.aspx" />
     <Content Include="Vistas\Medico\ListarMedico.aspx" />
     <Content Include="Vistas\Turno\RegistrarTurno.aspx" />
     <Content Include="Vistas\Estilos\Login.css" />
@@ -108,6 +109,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\HomePacientes.aspx.cs">
+      <DependentUpon>HomePacientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\HomePacientes.aspx.designer.cs">
+      <DependentUpon>HomePacientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Informes\Informes.aspx.cs">
       <DependentUpon>Informes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -122,12 +130,12 @@
     <Compile Include="Vistas\InicioAdmin.aspx.designer.cs">
       <DependentUpon>InicioAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\InicioMedico.aspx.cs">
-      <DependentUpon>InicioMedico.aspx</DependentUpon>
+    <Compile Include="Vistas\HomeMedicos.aspx.cs">
+      <DependentUpon>HomeMedicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\InicioMedico.aspx.designer.cs">
-      <DependentUpon>InicioMedico.aspx</DependentUpon>
+    <Compile Include="Vistas\HomeMedicos.aspx.designer.cs">
+      <DependentUpon>HomeMedicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Medico\ListarMedico.aspx.cs">
       <DependentUpon>ListarMedico.aspx</DependentUpon>

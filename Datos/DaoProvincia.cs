@@ -15,5 +15,11 @@ namespace Datos
             DataTable tablaProvincia = accesoDatos.obtenerTabla("Provincias", "SELECT * FROM Provincias");
             return tablaProvincia;
         }
+
+        public int getIdProvinciaPorNombre(string nombreProvincia)
+        {
+            string consulta = "SELECT IdProvincia_Prov FROM Provincias WHERE NombreProvincia_Prov = '" + nombreProvincia + "'";
+            return (int)accesoDatos.EjecutarScalar(consulta);
+        }
     }
 }

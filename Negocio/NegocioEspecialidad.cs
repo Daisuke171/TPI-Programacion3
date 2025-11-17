@@ -15,5 +15,11 @@ namespace Negocio
             DaoEspecialidad dao = new DaoEspecialidad();
             return dao.getTablaEspecialidades();
         }
+
+        public int getId(string nombreEspecialidad)
+        {
+            DaoEspecialidad dao = new DaoEspecialidad();
+            return dao.getIdEspecialidadPorNombre(nombreEspecialidad);
+        }
     }
 }

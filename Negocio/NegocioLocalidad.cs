@@ -15,5 +15,11 @@ namespace Negocio
             DaoLocalidad daoLocalidad = new DaoLocalidad();
             return daoLocalidad.getTablaLocalidad(idProvincia);
         }
+
+        public int getId(string nombreLocalidad)
+        {
+            DaoLocalidad daoLocalidad = new DaoLocalidad();
+            return daoLocalidad.getIdLocalidadPorNombre(nombreLocalidad);
+        }
     }
 }

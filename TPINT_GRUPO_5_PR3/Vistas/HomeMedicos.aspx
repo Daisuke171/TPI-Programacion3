@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InicioMedico.aspx.cs" Inherits="TPINT_GRUPO_5_PR3.Vistas.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeMedicos.aspx.cs" Inherits="TPINT_GRUPO_5_PR3.Vistas.Inicio" %>
 
 <!DOCTYPE html>
 
