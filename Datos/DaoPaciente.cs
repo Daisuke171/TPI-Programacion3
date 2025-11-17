@@ -84,7 +84,12 @@ namespace Datos
 
         public DataTable getTablaPacientesActivos()
         {
-            string consulta = "EXEC SP_MOSTRARPACIENTES";
+            //string consulta = "EXEC SP_MOSTRARPACIENTES";
+            string consulta = "Select * " +
+                    "from Pacientes INNER JOIN Localidades ON IdProvincia_Pac = IdProvincia_Loc AND IdLocalidad_Pac = IdLocalidad_Loc " +
+                    "INNER JOIN Provincias ON IdProvincia_Pac = IdProvincia_Prov " +
+                    "INNER JOIN Nacionalidades ON IdNacionalidad_Pac = IdNacionalidad_Nac " +
+                    "WHERE Estado_Pac = 1 ";
             DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
             return table;
         }
