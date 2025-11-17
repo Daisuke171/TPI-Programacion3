@@ -128,5 +128,46 @@ namespace Datos
             return accesoDatos.existe(consultaSql);
         }
 
+        public bool modificarPaciente(Paciente pac)
+        {
+            SqlConnection cn = accesoDatos.obtenerConexion();
+
+            string consulta = @"UPDATE Pacientes SET
+                        Nombre_Pac = @Nombre,
+                        Apellido_Pac = @Apellido,
+                        Sexo_Pac = @Sexo,
+                        Telefono_Pac = @Telefono,
+                        IdNacionalidad_Pac = @IdNacionalidad,
+                        FechaNacimiento_Pac = @FechaNacimiento,
+                        Direccion_Pac = @Direccion,
+                        IDLocalidad_Pac = @IdLocalidad,
+                        IDProvincia_Pac = @IdProvincia,
+                        CorreoElectronico_Pac = @Correo,
+                        TipoSangre_Pac = @TipoSangre,
+                        Estado_Pac = @Estado
+                    WHERE DNI_Pac = @DNI";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            cmd.Parameters.AddWithValue("@DNI", pac._dni);
+            cmd.Parameters.AddWithValue("@Nombre", pac._nombre);
+            cmd.Parameters.AddWithValue("@Apellido", pac._apellido);
+            cmd.Parameters.AddWithValue("@Sexo", pac._sexo);
+            cmd.Parameters.AddWithValue("@Telefono", pac._telefono);
+            cmd.Parameters.AddWithValue("@IdNacionalidad", pac._idNacionalidad);
+            cmd.Parameters.AddWithValue("@FechaNacimiento", pac._fechaNacimiento);
+            cmd.Parameters.AddWithValue("@Direccion", pac._direccion);
+            cmd.Parameters.AddWithValue("@IdLocalidad", pac._idLocalidad);
+            cmd.Parameters.AddWithValue("@IdProvincia", pac._idProvincia);
+            cmd.Parameters.AddWithValue("@Correo", pac._correoElectronico);
+            cmd.Parameters.AddWithValue("@TipoSangre", pac._tipoSangre);
+            cmd.Parameters.AddWithValue("@Estado", pac._estadoPaciente);
+
+            int filas = cmd.ExecuteNonQuery();
+            cn.Close();
+
+            return filas > 0;
+        }
+
     }
 }

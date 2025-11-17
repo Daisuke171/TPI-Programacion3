@@ -62,5 +62,10 @@ namespace Negocio
             return existe;
         }
 
+        public bool modificarPaciente(Paciente pac)
+        {
+            return daoPaciente.modificarPaciente(pac);
+        }
+
     }
 }

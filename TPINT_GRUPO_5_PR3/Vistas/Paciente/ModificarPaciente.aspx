@@ -31,102 +31,106 @@
                 <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox>
             </div>
 
-            <asp:GridView ID="gvPaciente" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False">
+            <asp:GridView ID="gvPaciente" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowCancelingEdit="gvPaciente_RowCancelingEdit" OnRowEditing="gvPaciente_RowEditing" OnRowUpdating="gvPaciente_RowUpdating" OnSelectedIndexChanged="gvPaciente_SelectedIndexChanged">
                 <Columns>
                     <asp:TemplateField HeaderText="DNI">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_dni" runat="server" Text='<%# Bind("DNI") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_dni" runat="server" Text='<%# Bind("DNI_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_dni" runat="server" Text='<%# Bind("DNI") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_dni" runat="server" Text='<%# Bind("DNI_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Nombre">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_nombre" runat="server" Text='<%# Bind("Nombre") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_nombre" runat="server" Text='<%# Bind("Nombre_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("Nombre") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("Nombre_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Apellido">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_apellido" runat="server" Text='<%# Bind("Apellido_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_apellido" runat="server" Text='<%# Bind("Apellido_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Sexo">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_sexo" runat="server" Text='<%# Bind("Sexo") %>'></asp:TextBox>
+                            <asp:DropDownList ID="ddl_eit_Sexo" runat="server" SelectedValue='<%# Bind("Sexo_Pac") %>'>
+                                <asp:ListItem Value="0">-- Seleccionar --</asp:ListItem>
+                                <asp:ListItem>Masculino</asp:ListItem>
+                                <asp:ListItem>Femenino</asp:ListItem>
+                            </asp:DropDownList>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_sexo" runat="server" Text='<%# Bind("Sexo") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_sexo" runat="server" Text='<%# Bind("Sexo_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Nacionalidad">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_nacion" runat="server" Text='<%# Bind("Nacionalidad") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_nacion" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_nacion" runat="server" Text='<%# Bind("Nacionalidad") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_nacion" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Fecha de Nacimiento">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Dirección">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_direccion" runat="server" Text='<%# Bind("Direccion") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_direccion" runat="server" Text='<%# Bind("Direccion_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_direccion" runat="server" Text='<%# Bind("Direccion") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_direccion" runat="server" Text='<%# Bind("Direccion_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Localidad">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_localidad" runat="server" Text='<%# Bind("Localidad") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("Localidad") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Provincia">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("NombreProvincia_Prov") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("NombreProvincia_Prov") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Tipo de Sangre">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_sangre" runat="server" Text='<%# Bind("TipoSangre") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_sangre" runat="server" Text='<%# Bind("TipoSangre_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_sangre" runat="server" Text='<%# Bind("TipoSangre") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_sangre" runat="server" Text='<%# Bind("TipoSangre_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Correo Electrónico">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_email" runat="server" Text='<%# Bind("CorreoElectronico") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_email" runat="server" Text='<%# Bind("CorreoElectronico_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_email" runat="server" Text='<%# Bind("CorreoElectronico") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_email" runat="server" Text='<%# Bind("CorreoElectronico_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Teléfono">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_celu" runat="server" Text='<%# Bind("Telefono") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_celu" runat="server" Text='<%# Bind("Telefono_Pac") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_celu" runat="server" Text='<%# Bind("Telefono") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_celu" runat="server" Text='<%# Bind("Telefono_Pac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
