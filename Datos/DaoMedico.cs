@@ -60,7 +60,13 @@ namespace Datos
             }
             else
             {
-                consulta = "EXEC SP_MOSTRARMEDICOS";
+                //consulta = "EXEC SP_MOSTRARMEDICOS";
+                consulta = "Select * " +
+                    "from Medicos INNER JOIN Localidades ON IdProvincia_Med = IdProvincia_Loc AND IdLocalidad_Med = IdLocalidad_Loc " +
+                    "INNER JOIN Provincias ON IdProvincia_Med = IdProvincia_Prov " +
+                    "INNER JOIN Nacionalidades ON IdNacionalidad_Med = IdNacionalidad_Nac " +
+                    "INNER JOIN Especialidades ON IdEspecialidad_Med = IdEspecialidad_Esp ";
+                    //"WHERE Estado_Med = 1 ";
             }
             DataTable table = datos.obtenerTabla("Medicos", consulta);
             return table;

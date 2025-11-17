@@ -84,6 +84,10 @@
             <asp:Calendar ID="cal_Fechas" runat="server"></asp:Calendar>
 
            
+                <asp:RadioButtonList ID="rbtnl_Horarios" runat="server">
+                </asp:RadioButtonList>
+
+           
             </div>
 
             <asp:Button ID="btn_Confirmar" runat="server" Text="Confirmar turno" CssClass="btnEnviar" />

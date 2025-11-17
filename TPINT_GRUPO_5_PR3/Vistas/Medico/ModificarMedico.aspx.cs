@@ -39,11 +39,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             CargarMedicos();
         }
 
-        protected void gvMedico_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarMedicos();
-        }
-
         protected void gvMedico_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gvMedico.EditIndex = -1;
@@ -52,31 +47,99 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void gvMedico_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            string legajo = ((Label)gvMedico.Rows[e.RowIndex].FindControl("lbl_it_legajo")).Text;
-            string dni = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_DNI")).Text;
-            string nombre = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_Nombre")).Text;
+            string legajo = ((Label)gvMedico.Rows[e.RowIndex].FindControl("lbl_eit_legajo")).Text;
+            string dni = ((Label)gvMedico.Rows[e.RowIndex].FindControl("lbl_eit_dni")).Text;
+            string nombre = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_nombre")).Text;
             string apellido = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_apellido")).Text;
-            string sexo = ((DropDownList)gvMedico.Rows[e.RowIndex].FindControl("ddl_eit_Sexo")).SelectedValue;
+            string sexo = ((DropDownList)gvMedico.Rows[e.RowIndex].FindControl("ddl_eit_sexo")).SelectedValue;
             string telefono = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_telefono")).Text;
-            string nacionalidad = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_nacionalidad")).Text;
-            DateTime fechaNacimiento = Convert.ToDateTime(((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_FechaNacimiento")).Text);
+            int idNacionalidad = Convert.ToInt32(((DropDownList)gvMedico.Rows[e.RowIndex].FindControl("ddl_eit_nacionalidad")).SelectedValue);
+            DateTime fechaNacimiento = Convert.ToDateTime(((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_nacimiento")).Text);
             string direccion = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_direccion")).Text;
-            string localidad = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_Localidad")).Text;
-            string provincia = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_provincia")).Text;
-            string correo = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_email")).Text;
-            string especialidad = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_especialidad")).Text;
-
-
-            int idNacionalidad = negocioNacionalidad.getId(nacionalidad);
-            int idProvincia = negocioProvincia.getIdProvinciaPorNombre(provincia);
-            int idLocalidad = negocioLocalidad.getId(localidad);
-            int idEspecialidad = negocioEspecialidad.getId(especialidad);
+            int idProvincia = Convert.ToInt32(((DropDownList)gvMedico.Rows[e.RowIndex].FindControl("ddl_eit_provincia")).SelectedValue);
+            int idLocalidad = Convert.ToInt32(((DropDownList)gvMedico.Rows[e.RowIndex].FindControl("ddl_eit_localidad")).SelectedValue);
+            string correo = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_correo")).Text;
+            int idEspecialidad = Convert.ToInt32(((DropDownList)gvMedico.Rows[e.RowIndex].FindControl("ddl_eit_especialidad")).SelectedValue);
+            string estado = ((DropDownList)gvMedico.Rows[e.RowIndex].FindControl("ddl_eit_estado")).SelectedValue;
 
             Medico medico = new Medico(Convert.ToInt32(legajo), dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, correo, telefono, idEspecialidad, "", "", true);
 
             neg.modificarMedico(medico);
             gvMedico.EditIndex = -1;
             CargarMedicos();
+        }
+
+        protected void gvMedico_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            // SI ESTA EN MODO EDIT
+            if ((e.Row.RowState & DataControlRowState.Edit) > 0)
+            {
+                DropDownList ddList = (DropDownList)e.Row.FindControl("ddl_eit_nacionalidad");
+                //NACIONALIDADES
+                DataTable dt = negocioNacionalidad.getTable();
+                ddList.DataSource = dt;
+                ddList.DataTextField = "NombreNacionalidad_Nac";
+                ddList.DataValueField = "IdNacionalidad_Nac";
+                ddList.DataBind();
+                //SETEA EL VALOR SELECCIONADO AL VALOR QUE ESTÁ EN LA GV
+                DataRowView dr = e.Row.DataItem as DataRowView;
+                ddList.SelectedValue = dr["IdNacionalidad_Med"].ToString();
+
+
+                //PROVINCIAS
+                ddList = (DropDownList)e.Row.FindControl("ddl_eit_provincia");
+                dt = negocioProvincia.getTable();
+                ddList.DataSource = dt;
+                ddList.DataTextField = "NombreProvincia_Prov";
+                ddList.DataValueField = "IdProvincia_Prov";
+                ddList.DataBind();
+                //SETEA EL VALOR SELECCIONADO AL VALOR QUE ESTÁ EN LA GV
+                string idProvincia = dr["IdProvincia_Med"].ToString();
+                ddList.SelectedValue = idProvincia;
+
+                //LOCALIDADES DE LA PCIA SELECCIONADA
+                ddList = (DropDownList)e.Row.FindControl("ddl_eit_localidad");
+                dt = negocioLocalidad.getTable(idProvincia);
+                ddList.DataSource = dt;
+                ddList.DataTextField = "NombreLocalidad_Loc";
+                ddList.DataValueField = "IdLocalidad_Loc";
+                ddList.DataBind();
+                //SETEA EL VALOR SELECCIONADO AL VALOR QUE ESTÁ EN LA GV
+                ddList.SelectedValue = dr["IdLocalidad_Med"].ToString();
+
+                // ESPECIALIDADES
+                ddList = (DropDownList)e.Row.FindControl("ddl_eit_especialidad");
+                dt = negocioEspecialidad.getTabla();
+                ddList.DataSource = dt;
+                ddList.DataTextField = "NombreEspecialidad_Esp";
+                ddList.DataValueField = "IdEspecialidad_Esp";
+                ddList.DataBind();
+                //SETEA EL VALOR SELECCIONADO AL VALOR QUE ESTÁ EN LA GV
+                ddList.SelectedValue = dr["IdEspecialidad_Med"].ToString();
+
+                TextBox txtbox = (TextBox)e.Row.FindControl("txt_eit_nacimiento");
+                txtbox.Text = (DateTime.Parse(dr["FechaNaciemiento_Med"].ToString())).ToString("yyyy-MM-dd");
+                //TextBox1.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            }
+        }
+
+        protected void lbl_it_FechaNacimiento_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
+        }
+
+        protected void ddl_eit_provincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // BUSCA LA ID DE LA PROVINCIA SELECCIONADA
+            string idProvincia = ((DropDownList)gvMedico.Rows[gvMedico.EditIndex].FindControl("ddl_eit_provincia")).SelectedValue;
+            // BUSCA LA DDL LOCALIDADES Y CARGA LAS LOCALIDADES
+            DropDownList ddList = (DropDownList)gvMedico.Rows[gvMedico.EditIndex].FindControl("ddl_eit_localidad");
+            DataTable dt = negocioLocalidad.getTable(idProvincia);
+            ddList.DataSource = dt;
+            ddList.DataTextField = "NombreLocalidad_Loc";
+            ddList.DataValueField = "IdLocalidad_Loc";
+            ddList.DataBind();
         }
     }
 }

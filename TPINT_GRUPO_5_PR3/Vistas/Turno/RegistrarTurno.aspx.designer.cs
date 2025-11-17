@@ -141,6 +141,15 @@ namespace TPINT_GRUPO_5_PR3
         protected global::System.Web.UI.WebControls.Calendar cal_Fechas;
 
         /// <summary>
+        /// rbtnl_Horarios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbtnl_Horarios;
+
+        /// <summary>
         /// btn_Confirmar control.
         /// </summary>
         /// <remarks>

@@ -33,9 +33,12 @@
             </div>
 
             <section id="tablaMedico">
-                <asp:GridView ID="gvMedico" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowEditing="gvMedico_RowEditing" OnSelectedIndexChanged="gvMedico_SelectedIndexChanged" OnRowCancelingEdit="gvMedico_RowCancelingEdit" OnRowUpdating="gvMedico_RowUpdating">
+                <asp:GridView ID="gvMedico" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowEditing="gvMedico_RowEditing" OnRowCancelingEdit="gvMedico_RowCancelingEdit" OnRowUpdating="gvMedico_RowUpdating" OnRowDataBound="gvMedico_RowDataBound">
                     <Columns>
                         <asp:TemplateField HeaderText="Legajo">
+                            <EditItemTemplate>
+                                <asp:Label ID="lbl_eit_legajo" runat="server" Text='<%# Eval("Legajo_Med") %>'></asp:Label>
+                            </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_legajo" runat="server" Text='<%# Bind("Legajo_Med") %>'></asp:Label>
                             </ItemTemplate>
@@ -43,7 +46,7 @@
 
                         <asp:TemplateField HeaderText="DNI">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_DNI" runat="server" Text='<%# Bind("DNI_Med") %>'></asp:TextBox>
+                                <asp:Label ID="lbl_eit_dni" runat="server" Text='<%# Eval("DNI_Med") %>'></asp:Label>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_DNI" runat="server" Text='<%# Bind("DNI_Med") %>'></asp:Label>
@@ -52,7 +55,7 @@
 
                         <asp:TemplateField HeaderText="Nombre">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_Nombre" runat="server" Text='<%# Bind("Nombre_Med") %>'></asp:TextBox>
+                                <asp:TextBox ID="txt_eit_nombre" runat="server" Text='<%# Bind("Nombre_Med") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="txt_it_Nombre" runat="server" Text='<%# Bind("Nombre_Med") %>'></asp:Label>
@@ -71,9 +74,8 @@
                         <asp:TemplateField HeaderText="Sexo">
                             <EditItemTemplate>
                                 <asp:DropDownList ID="ddl_eit_Sexo" runat="server" SelectedValue='<%# Bind("Sexo_Med") %>'>
-                                    <asp:ListItem Value="0">-- Seleccionar --</asp:ListItem>
-                                    <asp:ListItem Value="Masculino" Text="Masculino">Masculino</asp:ListItem>
                                     <asp:ListItem Value="Femenino" Text="Femenino">Femenino</asp:ListItem>
+                                    <asp:ListItem Value="Masculino" Text="Masculino"></asp:ListItem>
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -92,7 +94,8 @@
 
                         <asp:TemplateField HeaderText="Nacionalidad">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_nacionalidad" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:TextBox>
+                                <asp:DropDownList ID="ddl_eit_nacionalidad" runat="server">
+                                </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_Nacionalidad" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:Label>
@@ -101,10 +104,10 @@
 
                         <asp:TemplateField HeaderText="Fecha Nacimiento">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>' TextMode="DateTime"></asp:TextBox>
+                                <asp:TextBox ID="txt_eit_nacimiento" runat="server" TextMode="Date"></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>' OnDataBinding="lbl_it_FechaNacimiento_DataBinding"></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
@@ -117,27 +120,29 @@
                             </ItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Localidad">
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_Localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:TextBox>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label ID="lbl_it_Localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-
                         <asp:TemplateField HeaderText="Provincia">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("NombreProvincia_Prov") %>'></asp:TextBox>
+                                <asp:DropDownList ID="ddl_eit_provincia" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_eit_provincia_SelectedIndexChanged">
+                                </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("NombreProvincia_Prov") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
+                        <asp:TemplateField HeaderText="Localidad">
+                            <EditItemTemplate>
+                                <asp:DropDownList ID="ddl_eit_localidad" runat="server">
+                                </asp:DropDownList>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
                         <asp:TemplateField HeaderText="Correo Electrónico">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_email" runat="server" Text='<%# Bind("CorreoElectronico_Med") %>'></asp:TextBox>
+                                <asp:TextBox ID="txt_eit_correo" runat="server" Text='<%# Bind("CorreoElectronico_Med") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_email" runat="server" Text='<%# Bind("CorreoElectronico_Med") %>'></asp:Label>
@@ -146,7 +151,8 @@
 
                         <asp:TemplateField HeaderText="Especialidad">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_especialidad" runat="server" Text='<%# Bind("NombreEspecialidad_Esp") %>'></asp:TextBox>
+                                <asp:DropDownList ID="ddl_eit_especialidad" runat="server">
+                                </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_especialidad" runat="server" Text='<%# Bind("NombreEspecialidad_Esp") %>'></asp:Label>
@@ -154,6 +160,12 @@
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="Estado">
+                            <EditItemTemplate>
+                                <asp:DropDownList ID="ddl_eit_estado" runat="server" SelectedValue='<%# Bind("Estado_Med") %>'>
+                                    <asp:ListItem Value="True">Activo</asp:ListItem>
+                                    <asp:ListItem Value="False">Inactivo</asp:ListItem>
+                                </asp:DropDownList>
+                            </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_Estado" runat="server" Text='<%# Bind("Estado_Med") %>'></asp:Label>
                             </ItemTemplate>
