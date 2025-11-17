@@ -29,7 +29,7 @@
                 <section>
                     <h2>TURNOS</h2>
 
-                    <asp:HyperLink ID="hlnkConsultarTurno" runat="server" NavigateUrl="~/Vistas/ConsultarTurno.aspx">Consultar Turnos Asignados</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkConsultarTurno" runat="server" NavigateUrl="~/Vistas/Turno/ConsultarTurno.aspx">Consultar Turnos Asignados</asp:HyperLink>
 
                    <%-- <h2>PACIENTES</h2>
 

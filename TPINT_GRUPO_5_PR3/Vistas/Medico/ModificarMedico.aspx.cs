@@ -33,5 +33,10 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             gvMedico.EditIndex = e.NewEditIndex;
             CargarMedicos();
         }
+
+        protected void gvMedico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarMedicos();
+        }
     }
 }

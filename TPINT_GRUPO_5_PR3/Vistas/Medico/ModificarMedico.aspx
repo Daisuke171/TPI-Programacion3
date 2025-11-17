@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
         <nav>
             <div class="leftSide">
-                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/InicioAdmin.aspx"></asp:HyperLink>
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Pacientes" NavigateUrl="~/Vistas/HomePacientes.aspx"></asp:HyperLink>
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Medicos" NavigateUrl="~/Vistas/HomeMedicos.aspx"></asp:HyperLink>
             </div>
@@ -32,7 +32,7 @@
                 <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox>
             </div>
 
-            <asp:GridView ID="gvMedico" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowEditing="gvMedico_RowEditing">
+            <asp:GridView ID="gvMedico" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowEditing="gvMedico_RowEditing" OnSelectedIndexChanged="gvMedico_SelectedIndexChanged">
                 <Columns>
                     <asp:TemplateField HeaderText="Legajo">
                         <EditItemTemplate>
@@ -94,20 +94,21 @@
 
                     <asp:TemplateField HeaderText="Nacionalidad">
                         <EditItemTemplate>
-                            <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("IdProvincia_Med") %>'>
+                            <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("IDProvincia_Med") %>'>
                                 <asp:ListItem Value="0">-- Seleccionar --</asp:ListItem>
                             </asp:DropDownList>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_Nacionalidad" runat="server" Text='<%# Bind("NombreNacionalidad_Prov") %>'></asp:Label>
+<%--                            Estaba como "NombreNacionalidad_Prov"--%>
+                            <asp:Label ID="lbl_it_Nacionalidad" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Fecha Nacimiento">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_FechaNacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Med") %>' TextMode="DateTime"></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>' TextMode="DateTime"></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_FechaNacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Med") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
 
@@ -133,10 +134,10 @@
 
                     <asp:TemplateField HeaderText="Provincia">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_eit_provincia" runat="server" Text='<%# Bind("IDProvincia_Med") %>'></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_provincia" runat="server" Text='<%# Bind("NombreProvincia_Prov") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
 

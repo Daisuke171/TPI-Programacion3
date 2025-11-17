@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
         <nav>
             <div class="leftSide">
-                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/InicioAdmin.aspx"></asp:HyperLink>
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Pacientes" NavigateUrl="~/Vistas/HomePacientes.aspx"></asp:HyperLink>
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Medicos" NavigateUrl="~/Vistas/HomeMedicos.aspx"></asp:HyperLink>
             </div>
@@ -29,28 +29,28 @@
             <div class="gridRowMenu">
                 <div class="gridRowElement">
                     <h2>ALTA</h2>
-                    <asp:HyperLink ID="hlnkAltaPaciente" runat="server" NavigateUrl="~/Vistas/AltaPaciente.aspx">Paciente</asp:HyperLink>
-                    <asp:HyperLink ID="hlnkAltaMedico" runat="server" NavigateUrl="~/Vistas/RegistrarMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkAltaPaciente" runat="server" NavigateUrl="~/Vistas/Paciente/AltaPaciente.aspx">Paciente</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkAltaMedico" runat="server" NavigateUrl="~/Vistas/Medico/AltaMedico.aspx">Medico</asp:HyperLink>
                 </div>
 
                 <div class="gridRowElement">
                     <h2>BAJA</h2>
-                    <asp:HyperLink ID="hlnkBajaPaciente" runat="server" NavigateUrl="~/Vistas/AltaPaciente.aspx">Paciente</asp:HyperLink>
-                    <asp:HyperLink ID="hlnkBajaMedico" runat="server" NavigateUrl="~/Vistas/RegistrarMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkBajaPaciente" runat="server" NavigateUrl="~/Vistas/Paciente/BajaPaciente.aspx">Paciente</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkBajaMedico" runat="server" NavigateUrl="~/Vistas/Medico/BajaMedico.aspx">Medico</asp:HyperLink>
                 </div>
             </div>
 
             <div class="gridRowMenu">
                 <div class="gridRowElement">
                     <h2>LISTADO</h2>
-                    <asp:HyperLink ID="hlnkListadoPaciente0" runat="server" NavigateUrl="~/Vistas/AltaPaciente.aspx">Paciente</asp:HyperLink>
-                    <asp:HyperLink ID="hlnkListadoMedico0" runat="server" NavigateUrl="~/Vistas/ListarMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkListadoPaciente0" runat="server" NavigateUrl="~/Vistas/Paciente/ListarPaciente.aspx">Paciente</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkListadoMedico0" runat="server" NavigateUrl="~/Vistas/Medico/ListarMedico.aspx">Medico</asp:HyperLink>
                 </div>
 
                 <div class="gridRowElement">
                     <h2>MODIFICACION</h2>
-                    <asp:HyperLink ID="hlnkModificacionPaciente1" runat="server" NavigateUrl="~/Vistas/AltaPaciente.aspx">Paciente</asp:HyperLink>
-                    <asp:HyperLink ID="hlnkModificacionMedico1" runat="server" NavigateUrl="~/Vistas/RegistrarMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkModificacionPaciente1" runat="server" NavigateUrl="~/Vistas/Paciente/ModificarPaciente.aspx">Paciente</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkModificacionMedico1" runat="server" NavigateUrl="~/Vistas/Medico/ModificarMedico.aspx">Medico</asp:HyperLink>
                 </div>
             </div>
             <div class="gridRowMenu">

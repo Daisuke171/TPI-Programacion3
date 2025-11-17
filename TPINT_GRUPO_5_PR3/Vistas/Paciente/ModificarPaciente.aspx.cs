@@ -45,7 +45,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void gvPaciente_RowEditing(object sender, GridViewEditEventArgs e)
         {
-
+            CargarPacientes();
         }
     }
 }
