@@ -25,7 +25,7 @@
             <h1>Informes</h1>
             <section class="selectInforme">
 
-            <asp:GridView ID="gvInformes" runat="server">
+           <%-- <asp:GridView ID="gvInformes" runat="server">
                 <Columns>
                     <asp:TemplateField HeaderText="Filtro">
                         <ItemTemplate>
@@ -34,9 +34,23 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
-            </asp:GridView>
+            </asp:GridView>--%>
+
+                <asp:GridView ID="gvInformes" runat="server" AutoGenerateColumns="False" OnRowCommand="gvInformes_RowCommand">
+                 <Columns>
+                     <asp:ButtonField Text="Ver" CommandName="VerInforme" ButtonType="Button" />
+                          <asp:BoundField DataField="Informes" HeaderText="Informes" />
+                    </Columns>
+                </asp:GridView>
+
+                <h2>Resultado</h2>
+                <asp:GridView ID="gvResultado" runat="server" AutoGenerateColumns="true"></asp:GridView>
+
             </section>
             <aside class="imgGrafico">
+
+                
+
 
             </aside>
         </main>

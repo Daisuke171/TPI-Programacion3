@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using Datos;
 
 namespace Datos
 {
@@ -137,5 +138,26 @@ namespace Datos
 
             return filas > 0;
         }
+
+        public DataTable getMedicosPorEspecialidad(int idEspecialidad)
+        {
+            SqlConnection cn = datos.obtenerConexion();
+
+            string consulta = @"
+        SELECT Legajo_Med, Nombre_Med + ' ' + Apellido_Med AS NombreCompleto
+        FROM Medicos
+        WHERE IdEspecialidad_Med = @idEsp AND Estado_Med = 1";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            cmd.Parameters.AddWithValue("@idEsp", idEspecialidad);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            da.Fill(tabla);
+
+            cn.Close();
+            return tabla;
+        }
+
     }
 }

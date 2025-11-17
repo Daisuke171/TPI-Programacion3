@@ -510,3 +510,5 @@ C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Pr
 C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Entidades.pdb
 C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Negocio.pdb
 C:\Users\gomes\Documents\FACULTAD 2025 2DO CUATRIMIESTRE\PROGRAMACION III\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.pdb
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.dll
+C:\Users\mella\OneDrive\Documentos\GitHub\TPI-Programacion3\TPI-Programacion3\TPINT_GRUPO_5_PR3\bin\Datos.pdb

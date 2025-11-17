@@ -67,5 +67,12 @@ namespace Negocio
             return daoPaciente.modificarPaciente(pac);
         }
 
+
+        public DataTable BuscarPacientePorDNI(string dni)
+        {
+            return daoPaciente.BuscarPacientePorDNI(dni);
+        }
+
+
     }
 }

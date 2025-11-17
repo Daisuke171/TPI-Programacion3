@@ -60,5 +60,13 @@ namespace Negocio
         {
             return daoMedico.modificarMedico(med);
         }
+
+        public DataTable listarMedicoPorEspecialidad(int idEspecialidad)
+        {
+            DaoMedico dao = new DaoMedico();
+            return dao.getMedicosPorEspecialidad(idEspecialidad);
+        }
+
+
     }
 }

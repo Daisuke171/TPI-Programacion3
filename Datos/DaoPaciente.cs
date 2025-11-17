@@ -174,5 +174,21 @@ namespace Datos
             return filas > 0;
         }
 
+        public DataTable BuscarPacientePorDNI(string dni)
+        {
+            string consulta = "SELECT * FROM Pacientes WHERE DNI_Pac = @dni AND Estado_Pac = 1";
+
+            SqlConnection cn = accesoDatos.obtenerConexion();
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            da.Fill(tabla);
+
+            cn.Close();
+            return tabla;
+        }
+
     }
 }
