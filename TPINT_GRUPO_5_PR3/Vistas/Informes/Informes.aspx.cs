@@ -57,7 +57,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
                     gvResultado.DataBind();
                 }
 
-                // if (informe == "Cantidad de medicos por especialidad") { ... }
+                else if(informe == "Cantidad de medicos por especialidad")
+                {
+                    DataTable resultado = negInf.getCantidadMedicosPorEspecialidad();
+                    gvResultado.DataSource = resultado;
+                    gvResultado.DataBind();
+                }
                 // if (informe == "Dia con mas pacientes") { ... }
             }
         }

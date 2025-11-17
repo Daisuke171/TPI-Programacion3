@@ -21,5 +21,10 @@ namespace Negocio
         {
             return dao.CantidadPacientesPorMedico(pacientesUnicos);
         }
+
+        public DataTable getCantidadMedicosPorEspecialidad()
+        {
+            return dao.CantidadMedicosPorEspecialidad();
+        }
     }
 }

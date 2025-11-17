@@ -69,6 +69,15 @@ namespace Datos
 
             return accesoDatos.obtenerTabla("PacientesPorMedico", sql);
         }
+
+        //Cantidad de Medicos por Especialidad
+        public DataTable CantidadMedicosPorEspecialidad()
+        {
+            string consultaSql = @"SELECT NombreEspecialidad_Esp AS 'Especialidades', COUNT(DISTINCT Legajo_Med) AS 'Cantidad de Medicos' FROM Medicos 
+                                  INNER JOIN Especialidades ON Medicos.IDEspecialidad_Med = Especialidades.IdEspecialidad_Esp
+                                  GROUP BY NombreEspecialidad_Esp";
+            return accesoDatos.obtenerTabla("MedicosPorEspecialidad", consultaSql);
+        }
     }
 }
 

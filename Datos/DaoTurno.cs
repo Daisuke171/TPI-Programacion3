@@ -138,5 +138,12 @@ namespace Datos
             cn.Close();
             return filas;
         }
+
+        //TRAER LA TABLA DE TURNOS
+        public DataTable getTablaTurnos()
+        {
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS");
+            return tablaTurnos;
+        }
     }
 }
