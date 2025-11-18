@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Entidades;
 using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Entidades;
 
 namespace TPINT_GRUPO_5_PR3.Vistas
 {
@@ -64,7 +65,18 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             Medico medico = new Medico(Convert.ToInt32(legajo), dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, correo, telefono, idEspecialidad, "", "", true);
 
-            neg.modificarMedico(medico);
+            bool modifico = neg.modificarMedico(medico);
+            if (modifico)
+            {
+                lbl_mensaje.ForeColor = Color.Green;
+                lbl_mensaje.Text = "Modificación exitosa";
+            }
+            else
+            {
+                lbl_mensaje.ForeColor = Color.Red;
+                lbl_mensaje.Text = "Error en la operacion";
+            }
+
             gvMedico.EditIndex = -1;
             CargarMedicos();
         }

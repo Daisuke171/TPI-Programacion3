@@ -21,7 +21,6 @@
             <div class="rightSide">
                 <asp:Label ID="lblUsuario" CssClass="lbl_Usuario" runat="server" Text="Username"></asp:Label>
                 <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesion" CssClass="btn-logout" />
-                <asp:TextBox ID="TextBox1" runat="server" TextMode="Date"></asp:TextBox>
             </div>
         </nav>
         <main>
@@ -30,6 +29,11 @@
             <div class="campo">
                 <p>Buscar DNI:</p>
                 <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox>
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="List" Font-Bold="True" ForeColor="Red" />
+            </div>
+            
+            <div class ="campo">
+                <asp:Label ID="lbl_mensaje" runat="server" Font-Bold="True"></asp:Label>
             </div>
 
             <asp:GridView ID="gvPaciente" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowCancelingEdit="gvPaciente_RowCancelingEdit" OnRowEditing="gvPaciente_RowEditing" OnRowUpdating="gvPaciente_RowUpdating" OnRowDataBound="gvPaciente_RowDataBound">
@@ -45,6 +49,8 @@
                     <asp:TemplateField HeaderText="Nombre">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_nombre" runat="server" Text='<%# Bind("Nombre_Pac") %>'></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfv_eit_nombre" runat="server" ControlToValidate="txt_eit_nombre" Display="None" ErrorMessage="* Campo obligatorio: Nombre"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="rev_eit_nombre" runat="server" ControlToValidate="txt_eit_nombre" Display="None" ErrorMessage="* Nombre invalido" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_nombre" runat="server" Text='<%# Bind("Nombre_Pac") %>'></asp:Label>
@@ -53,6 +59,8 @@
                     <asp:TemplateField HeaderText="Apellido">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_apellido" runat="server" Text='<%# Bind("Apellido_Pac") %>'></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfv_eit_apellido" runat="server" ControlToValidate="txt_eit_apellido" Display="None" ErrorMessage="* Campo obligatorio: Apellido" ></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="rev_eit_apellido" runat="server" ControlToValidate="txt_eit_apellido" Display="None" ErrorMessage="* Apellido invalido" ValidationExpression="^[a-zA-Z\s]+$" ></asp:RegularExpressionValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_apellido" runat="server" Text='<%# Bind("Apellido_Pac") %>'></asp:Label>
@@ -89,6 +97,7 @@
                     <asp:TemplateField HeaderText="Dirección">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_direccion" runat="server" Text='<%# Bind("Direccion_Pac") %>'></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfv_eit_direccion" runat="server" ControlToValidate="txt_eit_direccion" Display="None" ErrorMessage="* Campo obligatorio: Direccion" ></asp:RequiredFieldValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_direccion" runat="server" Text='<%# Bind("Direccion_Pac") %>'></asp:Label>
@@ -132,6 +141,8 @@
                     <asp:TemplateField HeaderText="Correo Electrónico">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_email" runat="server" Text='<%# Bind("CorreoElectronico_Pac") %>'></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfv_eit_correo" runat="server" ControlToValidate="txt_eit_email" Display="None" ErrorMessage="*Campo obligatorio: correo" ></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="rev_eit_correo" runat="server" ControlToValidate="txt_eit_email" Display="None" ErrorMessage="* Direccion de correo invalida" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ></asp:RegularExpressionValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_email" runat="server" Text='<%# Bind("CorreoElectronico_Pac") %>'></asp:Label>
@@ -140,6 +151,8 @@
                     <asp:TemplateField HeaderText="Teléfono">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_celu" runat="server" Text='<%# Bind("Telefono_Pac") %>'></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="rev_eit_telefono" runat="server" ControlToValidate="txt_eit_celu" Display="None" ErrorMessage="* Telefono invalido" ValidationExpression="^[0-9,$]*$" ></asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="rfv_eit_telefono" runat="server" ControlToValidate="txt_eit_celu" Display="None" ErrorMessage="* Campo obligatorio: Telefono" ></asp:RequiredFieldValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_celu" runat="server" Text='<%# Bind("Telefono_Pac") %>'></asp:Label>

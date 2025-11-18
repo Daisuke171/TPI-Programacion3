@@ -3,6 +3,7 @@ using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -21,7 +22,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             if (!Page.IsPostBack)
             {
                 CargarPacientes();
-                TextBox1.Text = DateTime.Today.ToString("yyyy-MM-dd");
             }
         }
 
@@ -61,8 +61,18 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             Paciente paciente = new Paciente (dni, nombre,  apellido,  sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, tipoSangre, correo, telefono, true);
 
-            neg.modificarPaciente(paciente);
-            gvPaciente.EditIndex = -1;
+            bool modifico = neg.modificarPaciente(paciente);
+            if (modifico)
+            {
+                lbl_mensaje.ForeColor = Color.Green;
+                lbl_mensaje.Text = "Modificación exitosa";
+            }
+            else
+            {
+                lbl_mensaje.ForeColor = Color.Red;
+                lbl_mensaje.Text = "Error en la operacion";
+            }
+                gvPaciente.EditIndex = -1;
             CargarPacientes();
         }
 
