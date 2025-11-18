@@ -11,7 +11,17 @@ namespace TPINT_GRUPO_5_PR3.Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                lblUsuario.Text = Session["usuario"]?.ToString();
+            }
+        }
 
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

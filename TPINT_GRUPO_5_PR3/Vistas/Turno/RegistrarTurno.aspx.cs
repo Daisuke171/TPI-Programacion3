@@ -20,6 +20,8 @@ namespace TPINT_GRUPO_5_PR3
         {
             if (!IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
+
                 CargarEspecialidades();
                 ddl_Especialidades.AutoPostBack = true;
                 cal_Fechas.VisibleDate = DateTime.Today;
@@ -160,6 +162,13 @@ namespace TPINT_GRUPO_5_PR3
             ddl_Medicos.Items.Clear();
             rbtnl_Horarios.Items.Clear();
             lbl_Mensaje.Text = "";
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

@@ -18,6 +18,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!Page.IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
                 CargarPacientes();
             }
         }
@@ -84,6 +85,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             gvPaciente.PageIndex = e.NewPageIndex;
             CargarPacientes();
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

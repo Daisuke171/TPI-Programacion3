@@ -22,6 +22,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
                 CargarMedicos();
             }
         }
@@ -152,6 +153,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             ddList.DataTextField = "NombreLocalidad_Loc";
             ddList.DataValueField = "IdLocalidad_Loc";
             ddList.DataBind();
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

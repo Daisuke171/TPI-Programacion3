@@ -18,6 +18,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
         {
             if (!IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
                 CargarInformes();
             }
         }
@@ -65,6 +66,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
                 }
                 // if (informe == "Dia con mas pacientes") { ... }
             }
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

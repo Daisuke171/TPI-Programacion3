@@ -16,6 +16,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
                 CargarPacientes();
             }
         }
@@ -60,6 +61,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 lblMensaje.Text = "No existen pacientes registrados con esos datos";
             }
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

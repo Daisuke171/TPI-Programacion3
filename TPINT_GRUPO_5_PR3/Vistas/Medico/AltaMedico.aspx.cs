@@ -23,6 +23,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
                 // Cargar los dropdownlists de Nacionalidades y Especialidades
                 CargarNacionalidades();
                 CargarEspecialidades();
@@ -133,6 +134,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void ddlProvincia_SelectedIndexChanged(object sender, EventArgs e)
         {
             CargarLocalidades();
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }

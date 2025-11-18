@@ -18,6 +18,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
                 CargarMedicos();
             }
         }
@@ -60,6 +61,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 lbl_confirmacion.Text = "Error al dar de baja al Medico";
             }
             CargarMedicos();
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
     

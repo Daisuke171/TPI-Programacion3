@@ -21,6 +21,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!Page.IsPostBack)
             {
+                lblUsuario.Text = Session["usuario"]?.ToString();
                 CargarPacientes();
             }
         }
@@ -137,6 +138,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             DateTime fecha = DateTime.Parse(((Label)sender).Text);
             ((Label)sender).Text = fecha.ToShortDateString();
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("Login.aspx");
         }
     }
 }
