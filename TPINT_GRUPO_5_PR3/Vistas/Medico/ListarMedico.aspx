@@ -113,11 +113,7 @@
                                 <asp:Label ID="lbl_it_Estado" runat="server" Text='<%# Bind("Estado_Med") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Usuario">
-                            <ItemTemplate>
-                                <asp:Label ID="lbl_it_Usuario" runat="server" Text='<%# Bind("NombreUsuario_U") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        
                     </Columns>
                 </asp:GridView>
             </section>

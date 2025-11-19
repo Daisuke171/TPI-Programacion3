@@ -58,6 +58,29 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
+.btn-login {
+    background: linear-gradient(135deg, #1abc9c, #0b9d81);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    margin-left: 15px;
+}
+    .btn-login:hover {
+        background: linear-gradient(135deg, #48e5c2, #1abc9c);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-login:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
 
 @media (max-width: 768px) {
     nav {
