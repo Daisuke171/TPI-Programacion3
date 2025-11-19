@@ -80,9 +80,18 @@
                     </Columns>
                 </asp:GridView>
             </div>
-        <br />
-        <asp:Label ID="lbl_confirmacion" runat="server"></asp:Label>
+            <br />
+            <asp:Label ID="lbl_confirmacion" runat="server"></asp:Label>
         </main>
+
+        <asp:Panel ID="confirmModal" CssClass="modal" runat="server" Visible="False">
+            <div class="modal-content">
+                <p>¿Está seguro que desea eliminar este registro?</p>
+                <asp:Button ID="btnConfirmar" runat="server" Text="Sí, confirmar" CssClass="btn-confirmar" OnClick="btnConfirmar_Click" />
+                <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn-cancelar" OnClick="btnCancelar_Click" />
+            </div>
+        </asp:Panel>
+
     </form>
 </body>
 </html>
