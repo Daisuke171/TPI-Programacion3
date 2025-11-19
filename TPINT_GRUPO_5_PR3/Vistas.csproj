@@ -90,7 +90,7 @@
     <Content Include="Vistas\Estilos\NavBar.css" />
     <Content Include="Vistas\Estilos\RegistrarTurno.css" />
     <Content Include="Vistas\HomePacientes.aspx" />
-    <Content Include="Vistas\Homepage.aspx" />
+    <Content Include="Vistas\Inicio.aspx" />
     <Content Include="Vistas\Imagenes\doctor-symbol-universal-png-2.png" />
     <Content Include="Vistas\Informes\Informes.aspx" />
     <Content Include="Vistas\InicioAdmin.aspx" />
@@ -118,12 +118,12 @@
     <Compile Include="Vistas\HomePacientes.aspx.designer.cs">
       <DependentUpon>HomePacientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Homepage.aspx.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="Vistas\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\Homepage.aspx.designer.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="Vistas\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Informes\Informes.aspx.cs">
       <DependentUpon>Informes.aspx</DependentUpon>

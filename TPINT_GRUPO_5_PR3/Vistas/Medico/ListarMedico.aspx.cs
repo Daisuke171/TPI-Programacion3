@@ -18,6 +18,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             if (!IsPostBack)
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
+
+                if (Session["TipoUsuario"] == null)
+                {
+                    Response.Redirect("Inicio.aspx");
+                    return;
+                }
+
                 CargarMedicos();
             }
         }

@@ -15,7 +15,10 @@ namespace TPINT_GRUPO_5_PR3
         {
             if (!IsPostBack)
             {
-                
+                if(Session["TipoUsuario"] != null)
+                {
+                    Response.Redirect("Inicio.aspx");
+                }
             }
         }
 

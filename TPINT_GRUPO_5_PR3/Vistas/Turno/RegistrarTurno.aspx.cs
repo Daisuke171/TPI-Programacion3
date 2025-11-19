@@ -22,6 +22,12 @@ namespace TPINT_GRUPO_5_PR3
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
+                if (Session["TipoUsuario"] == null)
+                {
+                    Response.Redirect("Inicio.aspx");
+                    return;
+                }
+
                 CargarEspecialidades();
                 ddl_Especialidades.AutoPostBack = true;
                 cal_Fechas.VisibleDate = DateTime.Today;

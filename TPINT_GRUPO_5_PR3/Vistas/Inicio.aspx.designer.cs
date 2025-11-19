@@ -24,6 +24,24 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// hlnkHomePaciente control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlnkHomePaciente;
+
+        /// <summary>
+        /// hlnkHomeMedico control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlnkHomeMedico;
+
+        /// <summary>
         /// lblUsuario control.
         /// </summary>
         /// <remarks>

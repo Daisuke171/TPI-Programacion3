@@ -14,6 +14,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             if (!IsPostBack)
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
+
+                if(Session["TipoUsuario"] != null && Session["TipoUsuario"].ToString() == "Admin")
+                {
+                    btnLogout.Visible = true;
+                }
+                else
+                {
+                    Response.Redirect("Inicio.aspx");
+                }
             }
         }
 
@@ -21,6 +30,11 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             Session.Clear();
 
+            Response.Redirect("Inicio.aspx");
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
             Response.Redirect("Login.aspx");
         }
     }
