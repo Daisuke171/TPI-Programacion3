@@ -67,6 +67,18 @@ namespace Negocio
             return dao.getMedicosPorEspecialidad(idEspecialidad);
         }
 
+        public DataTable listarMedicoPorLegajo( int legajo)
+        {
+            DaoMedico dao = new DaoMedico();
+            return dao.getMedicoPorLegajo(legajo);
+        }
+
+        public DataTable listarMedicoPorNombre(string nombre)
+        {
+            DaoMedico dao = new DaoMedico();
+            return dao.getMedicoPorNombre(nombre);
+        }
+
 
     }
 }

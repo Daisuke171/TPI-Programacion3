@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using Entidades;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -42,6 +43,30 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Session.Clear();
 
             Response.Redirect("Login.aspx");
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {   
+
+            ////VALIDAR QUE SOLO ACEPTE NUMEROS
+            if(ddlFiltros.SelectedIndex == 1)
+            {
+                gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxNombreMedico.Text));
+                gvMedico.DataBind();
+            }
+            ////VALIDAR QUE SOLO ACEPTE LETRAS
+            else if(ddlFiltros.SelectedIndex == 2)
+            {
+                gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxNombreMedico.Text);
+                gvMedico.DataBind();
+            }
+
+        }
+
+        protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
         }
     }
 }

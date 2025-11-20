@@ -35,10 +35,12 @@
                 <p>Filtrar por:</p>
                 <asp:DropDownList ID="ddlFiltros" runat="server">
                     <asp:ListItem>Seleccione un filtro</asp:ListItem>
+                    <asp:ListItem>Legajo</asp:ListItem>
+                    <asp:ListItem>Nombre</asp:ListItem>
                 </asp:DropDownList>
             </section>
 
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Paciente" ValidationGroup="1" />
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Medico" ValidationGroup="1" OnClick="btnBuscar_Click" />
 
             <section id="tablaMedico">
                 <asp:GridView ID="gvMedico" runat="server" EmptyDataText="asd" AutoGenerateColumns="False">
@@ -80,7 +82,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Fecha Nacimiento">
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>' OnDataBinding="lbl_it_nacimiento_DataBinding"></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Dirección">

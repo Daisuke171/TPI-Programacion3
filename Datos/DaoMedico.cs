@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Datos;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Entidades;
-using Datos;
 
 namespace Datos
 {
@@ -164,6 +165,54 @@ namespace Datos
             cn.Close();
             return tabla;
         }
+
+        public DataTable getMedicoPorLegajo(int Legajo)
+        {
+            SqlConnection cn = datos.obtenerConexion();
+            string consulta = @"
+        SELECT *
+        FROM Medicos
+        INNER JOIN Nacionalidades ON Medicos.IdNacionalidad_Med = Nacionalidades.IdNacionalidad_Nac
+        INNER JOIN Localidades ON Medicos.IdLocalidad_Med = Localidades.IdLocalidad_Loc
+        INNER JOIN Provincias ON Medicos.IdProvincia_Med = Provincias.IdProvincia_Prov
+        INNER JOIN Especialidades ON Medicos.IdEspecialidad_Med = Especialidades.IdEspecialidad_Esp
+        WHERE Legajo_Med = @LegajoMedico AND Estado_Med = 1";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            cmd.Parameters.AddWithValue("@LegajoMedico", Legajo);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            da.Fill(tabla);
+
+            cn.Close();
+            return tabla;
+        }
+
+        public DataTable getMedicoPorNombre(string nombre)
+        {
+            SqlConnection cn = datos.obtenerConexion();
+            string consulta = @"
+        SELECT *
+        FROM Medicos
+        INNER JOIN Nacionalidades ON Medicos.IdNacionalidad_Med = Nacionalidades.IdNacionalidad_Nac
+        INNER JOIN Localidades ON Medicos.IdLocalidad_Med = Localidades.IdLocalidad_Loc
+        INNER JOIN Provincias ON Medicos.IdProvincia_Med = Provincias.IdProvincia_Prov
+        INNER JOIN Especialidades ON Medicos.IdEspecialidad_Med = Especialidades.IdEspecialidad_Esp
+        WHERE Nombre_Med LIKE '%" + nombre + "%' AND Estado_Med = 1";
+            
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            da.Fill(tabla);
+
+            cn.Close();
+            return tabla;
+        }
+
 
     }
 }
