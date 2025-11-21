@@ -21,7 +21,7 @@ namespace Datos
             DataTable resultado = new DataTable();
             resultado.Columns.Add("Tipo_Sangre");
             resultado.Columns.Add("Cantidad", typeof(int));
-            resultado.Columns.Add("Porcentaje", typeof(string));
+            resultado.Columns.Add("Porcentaje", typeof(double));
 
             if (pacientes.Rows.Count == 0)
                 return resultado;
@@ -39,7 +39,7 @@ namespace Datos
             // se pasa a tabla
             foreach (var g in grupos)
             {
-                resultado.Rows.Add(g.Tipo, g.Cantidad, g.Porcentaje.ToString("0.00") + "%");
+                resultado.Rows.Add(g.Tipo, g.Cantidad, g.Porcentaje);
             }
 
             return resultado;

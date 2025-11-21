@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Informes.aspx.cs" Inherits="TPINT_GRUPO_5_PR3.Vistas.Informes.Informes" %>
 
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -47,7 +49,19 @@
                 </section>
 
                 <h2>Resultado</h2>
-                <asp:GridView ID="gvResultado" runat="server" AutoGenerateColumns="true"></asp:GridView>
+                <section class="sectionInformes">
+                    <asp:GridView ID="gvResultado" runat="server" AutoGenerateColumns="true"></asp:GridView>
+                    <aside>
+                        <asp:Chart ID="chInformes" runat="server" Visible="False" Width="500px" Height="350px">
+                            <Series>
+                                <asp:Series Name="Series1"></asp:Series>
+                            </Series>
+                            <ChartAreas>
+                                <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                            </ChartAreas>
+                        </asp:Chart>
+                    </aside>
+                </section>
 
             </section>
            

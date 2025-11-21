@@ -74,3 +74,8 @@
         background-color: #eff7ff;
         transition: 0.2s ease;
     }
+
+main .sectionInformes {
+    display: flex;
+    flex-direction: row;
+}

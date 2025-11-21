@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Negocio;
 
 namespace TPINT_GRUPO_5_PR3.Vistas.Informes
 {
@@ -56,6 +57,55 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
                     DataTable resultado = negInf.getPromedioTiposSangre();
                     gvResultado.DataSource = resultado;
                     gvResultado.DataBind();
+
+                    chInformes.Series["Series1"].Points.Clear();
+                    chInformes.Series["Series1"].ChartType = System.Web.UI.DataVisualization.Charting.SeriesChartType.Pie;
+                    chInformes.Series["Series1"].IsValueShownAsLabel = true;
+                    chInformes.Series["Series1"].LabelForeColor = System.Drawing.Color.Black;
+                    chInformes.Series["Series1"].Font = new System.Drawing.Font("Segoe UI", 11, System.Drawing.FontStyle.Bold);
+                    chInformes.Series["Series1"].Label = "#PERCENT{P1}";
+                    chInformes.Series["Series1"].LegendText = "#VALX";
+
+                    chInformes.Series["Series1"]["LabelStyle"] = "Outside";
+                    chInformes.Series["Series1"]["LabelBorderColor"] = "Black";
+                    chInformes.Series["Series1"]["LabelBorderWidth"] = "2";
+                    chInformes.Series["Series1"]["LabelBackColor"] = "White";
+
+                    chInformes.Series["Series1"].ShadowOffset = 2;
+
+                    if (chInformes.Legends.Count == 0)
+                    {
+                        chInformes.Legends.Add("Leyenda");
+                    }
+
+                    chInformes.Legends[0].Enabled = true;
+                    chInformes.Legends[0].Font = new Font("Segoe UI", 10);
+                    chInformes.Legends[0].ForeColor = Color.Black;
+
+                    chInformes.Palette = System.Web.UI.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+                    chInformes.Titles.Clear();
+                    chInformes.Titles.Add("Promedio tipos de sangre");
+                    chInformes.Titles[0].ForeColor = System.Drawing.Color.DarkBlue;
+                    chInformes.Titles[0].Font = new System.Drawing.Font("Segoe UI", 15, System.Drawing.FontStyle.Bold);
+                    chInformes.Series["Series1"].BorderColor = Color.Black;
+                    chInformes.Series["Series1"].BorderWidth = 2;
+
+                    foreach (DataRow r in resultado.Rows)
+                    {
+                        string tipo = r["Tipo_Sangre"].ToString();
+                        double porcentaje = Convert.ToDouble(r["Porcentaje"]);
+
+                        chInformes.Series["Series1"].Points.AddXY(tipo, porcentaje);
+                    }
+
+                    // Formatear porcentaje en la grilla después de bind
+                    foreach (GridViewRow row in gvResultado.Rows)
+                    {
+                        double p = Convert.ToDouble(row.Cells[2].Text);
+                        row.Cells[2].Text = p.ToString("0.00") + "%";
+                    }
+
+                    chInformes.Visible = true;
                 }
 
                 else if (informe == "Cantidad de pacientes por medico")
