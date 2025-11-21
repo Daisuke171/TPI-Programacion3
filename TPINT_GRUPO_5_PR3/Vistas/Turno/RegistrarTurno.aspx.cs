@@ -32,6 +32,7 @@ namespace TPINT_GRUPO_5_PR3
                 ddl_Especialidades.AutoPostBack = true;
                 cal_Fechas.VisibleDate = DateTime.Today;
             }
+
         }
 
         private void CargarEspecialidades()

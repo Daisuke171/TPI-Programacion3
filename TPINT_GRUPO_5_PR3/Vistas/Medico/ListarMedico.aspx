@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<%--<head runat="server">
     <title>Listar Medico</title>
     <link rel="stylesheet" href="../Estilos/NavBar.css" />
     <link rel="stylesheet" href="../Estilos/Base.css" />
     <link rel="stylesheet" href="../Estilos/ListarMedico.css" />
-</head>
+</head>--%>
 <body>
     <form id="form1" runat="server">
         <nav>

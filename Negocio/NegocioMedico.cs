@@ -79,6 +79,5 @@ namespace Negocio
             return dao.getMedicoPorNombre(nombre);
         }
 
-
     }
 }

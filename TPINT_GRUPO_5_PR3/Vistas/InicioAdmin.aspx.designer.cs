@@ -60,6 +60,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.HyperLink hlnkAltaMedico;
 
         /// <summary>
+        /// hlAltaTurno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlAltaTurno;
+
+        /// <summary>
         /// hlnkBajaPaciente control.
         /// </summary>
         /// <remarks>
@@ -96,6 +105,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.HyperLink hlnkListadoMedico0;
 
         /// <summary>
+        /// hlListadoTurno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlListadoTurno;
+
+        /// <summary>
         /// hlnkModificacionPaciente1 control.
         /// </summary>
         /// <remarks>
@@ -121,5 +139,14 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlInformes;
+
+        /// <summary>
+        /// hlReportes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlReportes;
     }
 }

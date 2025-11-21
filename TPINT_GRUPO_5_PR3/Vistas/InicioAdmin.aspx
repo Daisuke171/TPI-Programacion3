@@ -31,6 +31,7 @@
                     <h2>ALTA</h2>
                     <asp:HyperLink ID="hlnkAltaPaciente" runat="server" NavigateUrl="~/Vistas/Paciente/AltaPaciente.aspx">Paciente</asp:HyperLink>
                     <asp:HyperLink ID="hlnkAltaMedico" runat="server" NavigateUrl="~/Vistas/Medico/AltaMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlAltaTurno" runat="server" NavigateUrl="~/Vistas/Turno/RegistrarTurno.aspx">Turno</asp:HyperLink>
                 </div>
 
                 <div class="gridRowElement">
@@ -45,6 +46,7 @@
                     <h2>LISTADO</h2>
                     <asp:HyperLink ID="hlnkListadoPaciente0" runat="server" NavigateUrl="~/Vistas/Paciente/ListarPaciente.aspx">Paciente</asp:HyperLink>
                     <asp:HyperLink ID="hlnkListadoMedico0" runat="server" NavigateUrl="~/Vistas/Medico/ListarMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlListadoTurno" runat="server" NavigateUrl="~/Vistas/Turno/ConsultarTurno.aspx">Turno</asp:HyperLink>
                 </div>
 
                 <div class="gridRowElement">
@@ -57,6 +59,11 @@
                 <div class="gridRowElement">
                     <h2>INFORMES</h2>
                     <asp:HyperLink ID="hlInformes" runat="server" NavigateUrl="~/Vistas/Informes/Informes.aspx">Informes</asp:HyperLink>
+                </div>
+   
+                <div class="gridRowElement">
+                    <h2>Reportes</h2>
+                    <asp:HyperLink ID="hlReportes" runat="server" NavigateUrl="~/Vistas/Reportes/Reportes.aspx">Reportes</asp:HyperLink>
                 </div>
             </div>
         </main>
