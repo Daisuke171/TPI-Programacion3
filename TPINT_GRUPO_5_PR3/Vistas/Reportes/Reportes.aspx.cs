@@ -55,7 +55,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Reportes
 
         protected void clTurnos_SelectionChanged(object sender, EventArgs e)
         {
-            DataTable turnos = negReporte.getTurnosPorFecha(Convert.ToString(clTurnos.SelectedDate));
+            DateTime dt = DateTime.Parse(Convert.ToString(clTurnos.SelectedDate));
+            DataTable turnos = negReporte.getTurnosPorFecha(dt.ToString("yyyy-M-dd"));
             gvTurnos.DataSource = turnos;
             gvTurnos.DataBind();
         }
