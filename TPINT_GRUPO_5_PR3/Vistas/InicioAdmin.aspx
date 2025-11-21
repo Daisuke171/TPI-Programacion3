@@ -62,7 +62,7 @@
                 </div>
    
                 <div class="gridRowElement">
-                    <h2>Reportes</h2>
+                    <h2>REPORTES</h2>
                     <asp:HyperLink ID="hlReportes" runat="server" NavigateUrl="~/Vistas/Reportes/Reportes.aspx">Reportes</asp:HyperLink>
                 </div>
             </div>
