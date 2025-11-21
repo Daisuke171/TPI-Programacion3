@@ -79,3 +79,7 @@ main .sectionInformes {
     display: flex;
     flex-direction: row;
 }
+
+main section h2{
+    margin: 1rem 0;
+}

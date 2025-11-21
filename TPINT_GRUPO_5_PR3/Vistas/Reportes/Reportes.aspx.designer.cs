@@ -42,15 +42,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Reportes
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// lblReportes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblReportes;
-
-        /// <summary>
         /// ddlMedicos control.
         /// </summary>
         /// <remarks>

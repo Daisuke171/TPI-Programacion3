@@ -90,6 +90,7 @@
     <Content Include="Vistas\Estilos\ModificarPaciente.css" />
     <Content Include="Vistas\Estilos\NavBar.css" />
     <Content Include="Vistas\Estilos\RegistrarTurno.css" />
+    <Content Include="Vistas\Estilos\Reportes.css" />
     <Content Include="Vistas\HomePacientes.aspx" />
     <Content Include="Vistas\Inicio.aspx" />
     <Content Include="Vistas\Imagenes\doctor-symbol-universal-png-2.png" />
