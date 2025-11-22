@@ -37,7 +37,7 @@ namespace Datos
             string consulta = "INSERT INTO Usuarios(NombreUsuario_U, ContraseniaUsuario_U, IdTipoUsuario_U) " +
                                "VALUES (@nombreUsuario, @contraseniaUsuario, @idTipoUsuario)";
             SqlCommand comando = new SqlCommand(consulta, conexion);
-            comando.Parameters.AddWithValue("@nombreUsuario", med._apellido);
+            comando.Parameters.AddWithValue("@nombreUsuario", med._apellido + "." + med._dni);
             comando.Parameters.AddWithValue("@contraseniaUsuario", med._dni + "." + med._legajoMedico);
             comando.Parameters.AddWithValue("@idTipoUsuario", 2);
             int filas = comando.ExecuteNonQuery();

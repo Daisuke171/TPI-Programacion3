@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -22,7 +23,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
                 if (Session["TipoUsuario"] == null)
                 {
-                    Response.Redirect("Inicio.aspx");
+                    Response.Redirect("~/Vistas/Inicio.aspx");
                     return;
                 }
 
@@ -40,17 +41,43 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void gvPaciente_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             string dni = ((Label)gvPaciente.Rows[e.RowIndex].FindControl("lbl_it_dni")).Text;
-            if (negPaciente.bajaPaciente(dni))
+
+            ViewState["DNIAEliminar"] = dni;
+
+            confirmModal.Visible = true;
+
+            e.Cancel = true;
+        }
+
+        protected void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (ViewState["DNIAEliminar"] != null)
             {
-                lbl_confirmacion.ForeColor = Color.Green;
-                lbl_confirmacion.Text = "Paciente dado de baja correctamente";
+                string dni = ViewState["DNIAEliminar"].ToString();
+
+                if (negPaciente.bajaPaciente(dni))
+                {
+                    lbl_confirmacion.ForeColor = Color.Green;
+                    lbl_confirmacion.Text = "Paciente dado de baja correctamente";
+                }
+                else
+                {
+                    lbl_confirmacion.ForeColor = Color.Red;
+                    lbl_confirmacion.Text = "Error al dar de baja al paciente";
+                }
+
+                // limpiar
+                ViewState["DNIAEliminar"] = null;
+                confirmModal.Visible = false;
+
+                CargarPacientes();
             }
-            else
-            {
-                lbl_confirmacion.ForeColor = Color.Red;
-                lbl_confirmacion.Text = "Error al dar de baja al paciente";
-            }
-            CargarPacientes();
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            confirmModal.Visible = false;
+            ViewState["DNIAEliminar"] = null;
         }
 
         protected void btnBorrar_Click(object sender, EventArgs e)
@@ -98,7 +125,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             Session.Clear();
 
-            Response.Redirect("Login.aspx");
+            Response.Redirect("~/Vistas/Login.aspx");
         }
     }
 }

@@ -20,7 +20,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
                 if (Session["TipoUsuario"] == null)
                 {
-                    Response.Redirect("Inicio.aspx");
+                    Response.Redirect("~/Vistas/Inicio.aspx");
                     return;
                 }
 
@@ -74,7 +74,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             Session.Clear();
 
-            Response.Redirect("Login.aspx");
+            Response.Redirect("~/Vistas/Login.aspx");
         }
     }
 }

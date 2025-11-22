@@ -21,7 +21,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 }
                 else
                 {
-                    Response.Redirect("Inicio.aspx");
+                    Response.Redirect("~/Vistas/Inicio.aspx");
                 }
             }
         }
@@ -30,12 +30,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             Session.Clear();
 
-            Response.Redirect("Inicio.aspx");
+            Response.Redirect("~/Vistas/Inicio.aspx");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("~/Vistas/Login.aspx");
         }
     }
 }
