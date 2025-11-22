@@ -3,32 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\reportes\\reportes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\reportes\\reportes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\medico\\altamedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\negocio\\negociousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\datos\\daousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\datos\\daopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\inicioadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\inicioadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\reportes\\reportes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\reportes\\reportes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\datos\\daoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\franc\\desktop\\tpi\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\reportes\\reportes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\reportes\\reportes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\reportes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\reportes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\paciente\\modificarpaciente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\inicioadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\inicioadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\estilos\\reportes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\estilos\\reportes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\informes\\informes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -54,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,46 +94,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ModificarPaciente.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAuwH0AAABUAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "DaoMedico.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoMedico.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoMedico.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoMedico.cs",
+              "RelativeToolTip": "Datos\\DaoMedico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T22:42:51.364Z",
+              "WhenOpened": "2025-11-22T13:03:31.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DaoPaciente.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoPaciente.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoPaciente.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoPaciente.cs",
+              "RelativeToolTip": "Datos\\DaoPaciente.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T13:03:15.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AltaMedico.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs*",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx.cs*",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAUwIcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T12:51:28.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AltaMedico.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx*",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Medico\\AltaMedico.aspx*",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-22T12:51:22.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NegocioUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Negocio\\NegocioUsuario.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioUsuario.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Negocio\\NegocioUsuario.cs",
+              "RelativeToolTip": "Negocio\\NegocioUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T12:50:20.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "Datos\\AccesoDatos.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\AccesoDatos.cs",
+              "RelativeToolTip": "Datos\\AccesoDatos.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwHAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T12:48:54.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DaoTurno.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoTurno.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoTurno.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoTurno.cs",
+              "RelativeToolTip": "Datos\\DaoTurno.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T12:48:15.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DaoUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoUsuario.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoUsuario.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\Datos\\DaoUsuario.cs",
+              "RelativeToolTip": "Datos\\DaoUsuario.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T12:39:13.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Reportes.aspx.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx.cs",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx.cs",
               "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx.cs",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswDwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T17:04:04.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "ModificarPaciente.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
               "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-11-21T22:42:47.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "InicioAdmin.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\InicioAdmin.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\InicioAdmin.aspx",
@@ -114,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Informes.aspx.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx.cs",
@@ -127,7 +250,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
+              "Title": "Reportes.aspx",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-21T16:54:52.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ModificarPaciente.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\ModificarPaciente.aspx.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAuwH0AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T22:42:51.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Informes.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
@@ -135,11 +284,12 @@
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Informes\\Informes.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-21T17:58:44.199Z"
+              "WhenOpened": "2025-11-21T17:58:44.199Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "Reportes.css",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Reportes.css",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Estilos\\Reportes.css",
@@ -152,20 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Reportes.aspx",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Reportes\\Reportes.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-21T16:54:52.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "AltaPaciente.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
@@ -173,11 +310,12 @@
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Paciente\\AltaPaciente.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-21T18:00:19.02Z"
+              "WhenOpened": "2025-11-21T18:00:19.02Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "HomePacientes.aspx.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx.cs",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx.cs",
@@ -185,11 +323,12 @@
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:03:54.325Z"
+              "WhenOpened": "2025-11-21T17:03:54.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "HomePacientes.aspx",
               "DocumentMoniker": "C:\\Users\\franc\\Desktop\\TPI\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx",
               "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx",
@@ -197,7 +336,8 @@
               "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\HomePacientes.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-21T16:57:22.206Z"
+              "WhenOpened": "2025-11-21T16:57:22.206Z",
+              "EditorCaption": ""
             }
           ]
         }

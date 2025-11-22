@@ -2,6 +2,7 @@
 using Negocio;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         NegocioLocalidad negLocalidad = new NegocioLocalidad();
         NegocioEspecialidad negEspecialidad = new NegocioEspecialidad();
         NegocioProvincia negProvincia = new NegocioProvincia();
+        NegocioUsuario negUsuario = new NegocioUsuario();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -130,6 +132,11 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 lblConfirmarSubirMedico.Text = "Medico  Subido Correctamente!";
                 lblConfirmarSubirMedico.ForeColor = Color.Green;
                 limpiarCampos();
+                if (negUsuario.agregarUsuarioMedico(medico))
+                {
+                    lblConfirmacionUsuarioMedico.Text = "Usuario " + medico._apellido + " registrado correctamente";
+                    lblConfirmacionUsuarioMedico.ForeColor = Color.Green;
+                }
             }
             else
             {

@@ -133,6 +133,7 @@
 
             <asp:Button ID="btnRegistrarMedico" CssClass="btnEnviar" runat="server" Text="Registrar Médico" OnClick="btnRegistrarMedico_Click" />
             <asp:Label ID="lblConfirmarSubirMedico" runat="server" Font-Size="Large" ForeColor="#00CC00"></asp:Label>
+            <asp:Label ID="lblConfirmacionUsuarioMedico" runat="server" Font-Size="Large" ForeColor="#00CC00"></asp:Label>
 
         </main>
     </form>

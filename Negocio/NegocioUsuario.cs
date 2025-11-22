@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,11 @@ namespace Negocio
             {
                 return "Paciente";
             }
+        }
+
+        public bool agregarUsuarioMedico(Medico med)
+        {
+            return daoUsuario.insertarUsuarioMedico(med);
         }
     }
 }
