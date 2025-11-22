@@ -134,6 +134,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 limpiarCampos();
                 if (negUsuario.agregarUsuarioMedico(medico))
                 {
+                    negMedico.asignarUsuarioMedico(medico);
                     lblConfirmacionUsuarioMedico.Text = "Usuario " + medico._apellido + " registrado correctamente";
                     lblConfirmacionUsuarioMedico.ForeColor = Color.Green;
                 }

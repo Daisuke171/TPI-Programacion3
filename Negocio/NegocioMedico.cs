@@ -79,5 +79,9 @@ namespace Negocio
             return dao.getMedicoPorNombre(nombre);
         }
 
+        public void asignarUsuarioMedico(Medico med)
+        {
+            daoMedico.asignarUsuario(med);
+        }
     }
 }

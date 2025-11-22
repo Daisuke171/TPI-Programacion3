@@ -14,6 +14,7 @@ namespace Datos
     public class DaoMedico
     {
         AccesoDatos datos = new AccesoDatos();
+        DaoUsuario daoUsuario = new DaoUsuario();
 
         public bool insertarMedico(Medico med)
         {
@@ -213,6 +214,22 @@ namespace Datos
             return tabla;
         }
 
+        public void asignarUsuario(Medico med)
+        {
+            SqlConnection cn = datos.obtenerConexion();
 
+            string consulta = @"UPDATE Medicos SET
+                        IDUsuario_Med = @IDuser
+                    WHERE Legajo_Med = @Legajo";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            cmd.Parameters.AddWithValue("@IDuser", daoUsuario.getCantidadUsuarios());
+            cmd.Parameters.AddWithValue("@Legajo", med._legajoMedico);
+            
+
+            int filas = cmd.ExecuteNonQuery();
+            cn.Close();
+        }
     }
 }
