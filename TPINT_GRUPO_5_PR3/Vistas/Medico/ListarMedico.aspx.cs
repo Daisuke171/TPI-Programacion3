@@ -3,10 +3,12 @@ using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TPINT_GRUPO_5_PR3.Vistas
 {
@@ -46,17 +48,47 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
-        {   
+        {
 
+
+            lblErrorListarPacientes.Text = " ";
+            if (ddlFiltros.SelectedIndex == 0)
+            {
+                lblErrorListarPacientes.Text = "Por favor seleccione un filtro";
+                lblErrorListarPacientes.ForeColor = Color.Green;
+            }
+            int resultado;
             ////VALIDAR QUE SOLO ACEPTE NUMEROS
             if(ddlFiltros.SelectedIndex == 1)
-            {
+            {   
+
+                ////Si es un numero, el try parse da true y pasa, en caso contrario se pide que se ingrese nuevamente, y se hace un return.
+                if (int.TryParse(txtboxNombreMedico.Text.ToString(), out resultado) == false){
+                    lblErrorListarPacientes.Text = "Por favor ingrese solo numeros para buscar por legajo";
+                    lblErrorListarPacientes.ForeColor = Color.Red;
+                    return;
+                }
+
+                lblErrorListarPacientes.Text = " ";
+
                 gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxNombreMedico.Text));
                 gvMedico.DataBind();
             }
             ////VALIDAR QUE SOLO ACEPTE LETRAS
             else if(ddlFiltros.SelectedIndex == 2)
             {
+                
+                lblErrorListarPacientes.Text = " ";
+
+                ////Si es un numero, el try parse da false y entra, se pide que se ingrese nuevamente, y se hace un return.
+                ////En caso contrario, si el try parse da false, pasa de largo y busca.
+                if (int.TryParse(txtboxNombreMedico.Text.ToString(), out resultado) == true)
+                {
+                    lblErrorListarPacientes.Text = "Por favor ingrese solo letras para buscar por nombre";
+                    lblErrorListarPacientes.ForeColor = Color.Red;
+                    return;
+                }
+                lblErrorListarPacientes.Text = " ";
                 gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxNombreMedico.Text);
                 gvMedico.DataBind();
             }

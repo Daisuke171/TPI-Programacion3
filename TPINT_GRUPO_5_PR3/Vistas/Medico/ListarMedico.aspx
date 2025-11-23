@@ -28,7 +28,8 @@
             <section class="separador">
                 <p>Buscar Medico:</p>
                 <asp:TextBox ID="txtboxNombreMedico" runat="server" ValidationGroup="1"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="rfvTxtboxNombrePaciente" runat="server" ErrorMessage="* Ingrese el nombre de un paciente" ControlToValidate="txtboxNombrePaciente" Visible="False"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtboxNombreMedico" ErrorMessage="Por favor no ingrese simbolos en la busqueda" ValidationExpression="^[a-zA-Z0-9]+$"></asp:RegularExpressionValidator>
+                <asp:Label ID="lblErrorListarPacientes" runat="server"></asp:Label>
             </section>
 
             <section class="separador">
