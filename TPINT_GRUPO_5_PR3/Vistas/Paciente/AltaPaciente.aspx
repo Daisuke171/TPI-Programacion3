@@ -82,6 +82,7 @@
                 </div>
                 <div class="validatorContainer" style="left: 0px; top: -10px">
                     <asp:RequiredFieldValidator ID="rfvFechaNacimiento" runat="server" ControlToValidate="txtBoxFecha" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="rvFechaNacimiento" runat="server" ControlToValidate="txtBoxFecha" CssClass="validator" MinimumValue="1/1/1900" Type="Date">Fecha invalida</asp:RangeValidator>
                 </div>
 
 
@@ -144,10 +145,6 @@
                     <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtBoxTelefono" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="revTelefono" runat="server" ControlToValidate="txtBoxTelefono" CssClass="validator" ValidationExpression="^[0-9,$]*$" Display="Dynamic" ValidationGroup="1">Teléfono inválido. Solo caracteres numéricos</asp:RegularExpressionValidator>
                 </div>
-
-<%--                <div class="validatorContainer">
-                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="validator" HeaderText="Atencion! Error." ValidationGroup="1" />
-                </div>--%>
 
             </section>
 

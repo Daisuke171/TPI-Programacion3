@@ -121,6 +121,35 @@ namespace Datos
             return table;
         }
 
+        public DataTable getTablaPacientes(string dni, string apellido, string tipoSangre, string orden)
+        {
+            // CONSULTA BASE
+            string consulta = "Select DNI_Pac, Nombre_Pac, Apellido_Pac, Sexo_Pac, NombreNacionalidad_Nac, FechaNacimiento_Pac, Direccion_Pac, NombreProvincia_Prov, NombreLocalidad_Loc, TipoSangre_Pac, CorreoElectronico_Pac, Telefono_Pac " +
+                    "from Pacientes INNER JOIN Localidades ON IdProvincia_Pac = IdProvincia_Loc AND IdLocalidad_Pac = IdLocalidad_Loc " +
+                    "INNER JOIN Provincias ON IdProvincia_Pac = IdProvincia_Prov " +
+                    "INNER JOIN Nacionalidades ON IdNacionalidad_Pac = IdNacionalidad_Nac " +
+                    "WHERE Estado_Pac = 1 ";
+
+            // AGREGADOS PARA FILTRAR - ORDENAR
+            if (!string.IsNullOrEmpty(dni.Trim()))
+            {
+                consulta += "AND CAST(DNI_Pac AS CHAR(8)) LIKE '%" + dni + "%' ";
+            }
+            if (!string.IsNullOrEmpty(apellido.Trim()))
+            {
+                consulta += "AND Apellido_Pac LIKE '%" + apellido + "%' ";
+            }
+            if (tipoSangre != "Todos")
+            {
+                consulta += "AND TipoSangre_Pac = '" + tipoSangre + "' ";
+            }
+
+            consulta += "ORDER BY " + orden;
+
+            DataTable table = accesoDatos.obtenerTabla("Pacientes", consulta);
+            return table;
+        }
+
         public bool existeDniPaciente(string dni)
         {
             string consultaSql = "SELECT * FROM Pacientes WHERE Dni_Pac = " + dni;

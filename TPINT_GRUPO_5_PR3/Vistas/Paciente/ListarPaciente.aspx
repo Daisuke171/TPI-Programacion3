@@ -26,16 +26,23 @@
             <asp:Label ID="lblTitulo" runat="server" Text="Listado de pacientes"></asp:Label>  
 
             <section class="separador">
-                <p>Buscar Paciente:</p>
-                <asp:TextBox ID="txtboxNombrePaciente" runat="server"></asp:TextBox>
-                
+                <p>Buscar DNI:</p>
+                <asp:TextBox ID="txtboxDNI" runat="server"></asp:TextBox>
             </section>
-            <asp:RegularExpressionValidator ID="revNombrePaciente" runat="server" ControlToValidate="txtboxNombrePaciente" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$" Visible="False">Nombre invalido. Solo caracteres alfabeticos</asp:RegularExpressionValidator>
+
+            <asp:RegularExpressionValidator ID="revDNI" runat="server" ControlToValidate="txtboxDNI" Font-Bold="True" ForeColor="Red" ValidationExpression="^[0-9,$]*$" Display="Dynamic">DNI Invalido</asp:RegularExpressionValidator>
+
+            <section class="separador">
+                <p>Buscar Apellido:</p>
+                <asp:TextBox ID="txtboxApellido" runat="server"></asp:TextBox>                
+            </section>
+            
+            <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtboxApellido" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$" Display="Dynamic">Apellido invalido. Solo caracteres alfabeticos</asp:RegularExpressionValidator>
 
             <section class="separador">
                 <p>Ordenar por:</p>
-                <asp:DropDownList ID="ddlOrdenados" runat="server">
-                    <asp:ListItem Value="0">-- Seleccione un orden --</asp:ListItem>
+                <asp:DropDownList ID="ddlOrdenDeListado" runat="server">
+                    <asp:ListItem Value="DNI_Pac" Selected="True">-- Seleccione un orden --</asp:ListItem>
                     <asp:ListItem Value="Apellido_Pac">Apellido</asp:ListItem>
                     <asp:ListItem Value="Sexo_Pac">Sexo</asp:ListItem>
                     <asp:ListItem Value="NombreNacionalidad_Nac">Nacionalidad</asp:ListItem>
@@ -47,7 +54,7 @@
             <section class="separador">
                 <p>Filtrar por:</p>
                 <asp:DropDownList ID="ddlTipoSangre" runat="server">
-                <asp:ListItem Value="0">-- Seleccione un tipo de Sangre --</asp:ListItem>
+                <asp:ListItem Value="Todos" Selected="True">-- Seleccione un tipo de Sangre --</asp:ListItem>
                     <asp:ListItem>A+</asp:ListItem>
                     <asp:ListItem>A-</asp:ListItem>
                     <asp:ListItem>B+</asp:ListItem>
@@ -60,10 +67,7 @@
             </section>
 
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar Paciente" OnClick="btnBuscar_Click" />
-
-            <section class="separador">
-                <asp:Label ID="lblMensaje" runat="server" Font-Bold="True" Font-Italic="False" ForeColor="Red"></asp:Label>
-            </section>
+            <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" CssClass="btnEnviar" OnClick="btnMostrarTodos_Click"/>
 
             <section id="tablaPaciente">
                 <asp:GridView ID="gvPacientes" runat="server" EmptyDataText="No se encontraron registros" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="gvPacientes_PageIndexChanging" PageSize="5">
@@ -148,3 +152,4 @@
     </form>
 </body>
 </html>
+

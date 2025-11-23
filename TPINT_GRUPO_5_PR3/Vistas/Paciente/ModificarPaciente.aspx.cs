@@ -23,6 +23,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
+                Session["DNIABuscar"] = "";
+
                 if (Session["TipoUsuario"] == null)
                 {
                     Response.Redirect("~/Vistas/Inicio.aspx");
@@ -35,7 +37,14 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         private void CargarPacientes()
         {
-            DataTable tablaPacientes = neg.listarPacientesActivos();
+            DataTable tablaPacientes = neg.getTablaPacientes();
+            gvPaciente.DataSource = tablaPacientes;
+            gvPaciente.DataBind();
+        }
+
+        private void CargarPacientes(string dni)
+        {
+            DataTable tablaPacientes = neg.getTablaPacientes(dni);
             gvPaciente.DataSource = tablaPacientes;
             gvPaciente.DataBind();
         }
@@ -43,13 +52,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void gvPaciente_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gvPaciente.EditIndex = e.NewEditIndex;
-            CargarPacientes();
+            CargarPacientes(Session["DNIABuscar"].ToString());
         }
 
         protected void gvPaciente_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
-           gvPaciente.EditIndex = -1;
-           CargarPacientes();
+            gvPaciente.EditIndex = -1;
+            CargarPacientes(Session["DNIABuscar"].ToString());
         }
 
         protected void gvPaciente_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -67,7 +76,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             string correo = ((TextBox)gvPaciente.Rows[e.RowIndex].FindControl("txt_eit_email")).Text;
             string telefono = ((TextBox)gvPaciente.Rows[e.RowIndex].FindControl("txt_eit_celu")).Text;
 
-            Paciente paciente = new Paciente (dni, nombre,  apellido,  sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, tipoSangre, correo, telefono, true);
+
+            Paciente paciente = new Paciente(dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, tipoSangre, correo, telefono, true);
 
             bool modifico = neg.modificarPaciente(paciente);
             if (modifico)
@@ -80,7 +90,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 lbl_mensaje.ForeColor = Color.Red;
                 lbl_mensaje.Text = "Error en la operacion";
             }
-                gvPaciente.EditIndex = -1;
+
+            limpiarCampos();
             CargarPacientes();
         }
 
@@ -98,7 +109,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 ddList.DataBind();
                 //SETEA EL VALOR SELECCIONADO AL VALOR QUE ESTÁ EN LA GV
                 DataRowView dr = e.Row.DataItem as DataRowView;
-                ddList.SelectedValue = dr["IdNacionalidad_Pac"].ToString();
+                ddList.SelectedItem.Text = dr["NombreNacionalidad_Nac"].ToString();
 
                 ddList = (DropDownList)e.Row.FindControl("ddl_eit_provincia");
 
@@ -109,8 +120,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 ddList.DataValueField = "IdProvincia_Prov";
                 ddList.DataBind();
                 //SETEA EL VALOR SELECCIONADO AL VALOR QUE ESTÁ EN LA GV
-                string idProvincia = dr["IdProvincia_Pac"].ToString();
-                ddList.SelectedValue = idProvincia;
+                ddList.SelectedItem.Text = dr["NombreProvincia_Prov"].ToString();
+                string idProvincia = ddList.SelectedValue;
 
                 ddList = (DropDownList)e.Row.FindControl("ddl_eit_localidad");
                 //CARGA DLL LOCALIDAD CON LAS LOCALIDADES DE LA PCIA SELECCIONADA
@@ -120,11 +131,14 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 ddList.DataValueField = "IdLocalidad_Loc";
                 ddList.DataBind();
                 //SETEA EL VALOR SELECCIONADO AL VALOR QUE ESTÁ EN LA GV
-                ddList.SelectedValue = dr["IdLocalidad_Pac"].ToString();
+                ddList.SelectedItem.Text = dr["NombreLocalidad_Loc"].ToString();
 
                 TextBox txtbox = (TextBox)e.Row.FindControl("txt_eit_nacimiento");
                 txtbox.Text = (DateTime.Parse(dr["FechaNacimiento_Pac"].ToString())).ToString("yyyy-MM-dd");
                 //TextBox1.Text = DateTime.Today.ToString("yyyy-MM-dd");
+
+                RangeValidator rv = (RangeValidator)e.Row.FindControl("rv_eit_FechaNacimiento");
+                rv.MaximumValue = DateTime.Now.ToShortDateString();
             }
         }
 
@@ -152,6 +166,36 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Session.Clear();
 
             Response.Redirect("~/Vistas/Login.aspx");
+        }
+
+        protected void limpiarCampos()
+        {
+            txtBuscar.Text = string.Empty;
+            Session["DNIABuscar"] = "";
+            gvPaciente.EditIndex = -1;
+            gvPaciente.PageIndex = 0;
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            lbl_mensaje.Text = string.Empty;
+            Session["DNIABuscar"] = txtBuscar.Text;
+            gvPaciente.EditIndex = -1;
+            CargarPacientes(Session["DNIABuscar"].ToString());
+        }
+
+        protected void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            lbl_mensaje.Text = string.Empty;
+            limpiarCampos();
+            CargarPacientes();
+        }
+
+        protected void gvPaciente_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvPaciente.EditIndex = -1;
+            gvPaciente.PageIndex = e.NewPageIndex;
+            CargarPacientes(Session["DNIABuscar"].ToString());
         }
     }
 }

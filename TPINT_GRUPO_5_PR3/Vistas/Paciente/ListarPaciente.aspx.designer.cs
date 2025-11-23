@@ -51,31 +51,49 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.Label lblTitulo;
 
         /// <summary>
-        /// txtboxNombrePaciente control.
+        /// txtboxDNI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtboxNombrePaciente;
+        protected global::System.Web.UI.WebControls.TextBox txtboxDNI;
 
         /// <summary>
-        /// revNombrePaciente control.
+        /// revDNI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombrePaciente;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDNI;
 
         /// <summary>
-        /// ddlOrdenados control.
+        /// txtboxApellido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOrdenados;
+        protected global::System.Web.UI.WebControls.TextBox txtboxApellido;
+
+        /// <summary>
+        /// revApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revApellido;
+
+        /// <summary>
+        /// ddlOrdenDeListado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlOrdenDeListado;
 
         /// <summary>
         /// ddlTipoSangre control.
@@ -96,13 +114,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
-        /// lblMensaje control.
+        /// btnMostrarTodos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Button btnMostrarTodos;
 
         /// <summary>
         /// gvPacientes control.

@@ -25,6 +25,11 @@ namespace Negocio
             }
         }
 
+        public DataTable getTablaPacientes(string dni = "", string apellido = "", string tipoSangre = "Todos", string orden = "DNI_Pac")
+        {
+            return daoPaciente.getTablaPacientes(dni, apellido, tipoSangre, orden);
+        }
+
         public DataTable listarPacientesActivos()
         {
             return daoPaciente.getTablaPacientesActivos();

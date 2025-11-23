@@ -21,6 +21,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
+                Session["DNIABuscar"] = "";
+
                 if (Session["TipoUsuario"] == null)
                 {
                     Response.Redirect("~/Vistas/Inicio.aspx");
@@ -33,16 +35,23 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         private void CargarPacientes()
         {
-            DataTable tablaPaciente = negPaciente.listarPacientesActivos();
+            DataTable tablaPaciente = negPaciente.getTablaPacientes();
+            gvPaciente.DataSource = tablaPaciente;
+            gvPaciente.DataBind();
+        }
+
+        private void CargarPacientes(string dni)
+        {
+            DataTable tablaPaciente = negPaciente.getTablaPacientes(dni);
             gvPaciente.DataSource = tablaPaciente;
             gvPaciente.DataBind();
         }
 
         protected void gvPaciente_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            string dni = ((Label)gvPaciente.Rows[e.RowIndex].FindControl("lbl_it_dni")).Text;
+            string DNIAEliminar = ((Label)gvPaciente.Rows[e.RowIndex].FindControl("lbl_it_dni")).Text;
 
-            ViewState["DNIAEliminar"] = dni;
+            ViewState["DNIAEliminar"] = DNIAEliminar;
 
             confirmModal.Visible = true;
 
@@ -53,9 +62,9 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (ViewState["DNIAEliminar"] != null)
             {
-                string dni = ViewState["DNIAEliminar"].ToString();
+                string DNIAEliminar = ViewState["DNIAEliminar"].ToString();
 
-                if (negPaciente.bajaPaciente(dni))
+                if (negPaciente.bajaPaciente(DNIAEliminar))
                 {
                     lbl_confirmacion.ForeColor = Color.Green;
                     lbl_confirmacion.Text = "Paciente dado de baja correctamente";
@@ -70,6 +79,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 ViewState["DNIAEliminar"] = null;
                 confirmModal.Visible = false;
 
+                // mostrar grid inicial
+                limpiarCampos();
                 CargarPacientes();
             }
         }
@@ -78,35 +89,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             confirmModal.Visible = false;
             ViewState["DNIAEliminar"] = null;
-        }
-
-        protected void btnBorrar_Click(object sender, EventArgs e)
-        {
-            string dni = txtBoxDNI.Text;
-
-            if (negPaciente.existeDniPaciente(dni))
-            {
-                bool elimino = negPaciente.bajaPaciente(dni);
-                
-                if (elimino)
-                {
-                    lbl_confirmacion.ForeColor = Color.Green;
-                    lbl_confirmacion.Text = "Paciente dado de baja correctamente";
-                }
-                else
-                {
-                    lbl_confirmacion.ForeColor = Color.Red;
-                    lbl_confirmacion.Text = "Error al dar de baja al paciente";
-                }
-                CargarPacientes();
-            }
-            else
-            {
-                lbl_confirmacion.ForeColor = Color.Red;
-                lbl_confirmacion.Text = "El DNI ingresado no está registrado";
-            }
-
-            lblUsuario.Text = string.Empty;
         }
 
         protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
@@ -118,7 +100,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void gvPaciente_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvPaciente.PageIndex = e.NewPageIndex;
-            CargarPacientes();
+            CargarPacientes(Session["DNIABuscar"].ToString());
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -126,6 +108,25 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Session.Clear();
 
             Response.Redirect("~/Vistas/Login.aspx");
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Session["DNIABuscar"] = txtBoxDNI.Text;
+            CargarPacientes(Session["DNIABuscar"].ToString());
+        }
+
+        protected void btnMostarTodos_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            CargarPacientes();
+        }
+
+        protected void limpiarCampos()
+        {
+            Session["DNIABuscar"] = "";
+            gvPaciente.PageIndex = 0;
+            txtBoxDNI.Text = string.Empty;
         }
     }
 }

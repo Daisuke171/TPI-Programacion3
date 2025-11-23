@@ -24,6 +24,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!IsPostBack)
             {
+                rvFechaNacimiento.MaximumValue = (DateTime.Now).ToShortDateString();
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
                 if (Session["TipoUsuario"] == null)
@@ -101,7 +102,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             ddlProvincia.DataBind();
 
             ddlProvincia.Items.Insert(0, new ListItem("--Seleccione--", "0"));
-        
+
         }
         private void CargarLocalidades()
         {
@@ -144,4 +145,4 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Response.Redirect("~/Vistas/Login.aspx");
         }
     }
- }
+}

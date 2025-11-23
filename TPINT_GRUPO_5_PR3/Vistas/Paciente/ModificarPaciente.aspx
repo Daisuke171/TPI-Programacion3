@@ -28,15 +28,20 @@
 
             <div class="campo">
                 <p>Buscar DNI:</p>
-                <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox>
-                <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="List" Font-Bold="True" ForeColor="Red" />
+                <asp:TextBox ID="txtBuscar" runat="server" ValidationGroup="2"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revDNI" runat="server" ControlToValidate="txtBuscar" Font-Bold="True" ForeColor="Red" ValidationExpression="^[0-9,$]*$" ValidationGroup="2">DNI invalido</asp:RegularExpressionValidator>
             </div>
+
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnEnviar" OnClick="btnBuscar_Click" ValidationGroup="2" />
+            <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar todos" CssClass="btnEnviar" OnClick="btnMostrarTodos_Click"/>
+
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="List" Font-Bold="True" ForeColor="Red" />
             
             <div class ="campo">
                 <asp:Label ID="lbl_mensaje" runat="server" Font-Bold="True"></asp:Label>
             </div>
 
-            <asp:GridView ID="gvPaciente" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowCancelingEdit="gvPaciente_RowCancelingEdit" OnRowEditing="gvPaciente_RowEditing" OnRowUpdating="gvPaciente_RowUpdating" OnRowDataBound="gvPaciente_RowDataBound">
+            <asp:GridView ID="gvPaciente" runat="server" AutoGenerateEditButton="True" AutoGenerateColumns="False" OnRowCancelingEdit="gvPaciente_RowCancelingEdit" OnRowEditing="gvPaciente_RowEditing" OnRowUpdating="gvPaciente_RowUpdating" OnRowDataBound="gvPaciente_RowDataBound" AllowPaging="True" OnPageIndexChanging="gvPaciente_PageIndexChanging" PageSize="5">
                 <Columns>
                     <asp:TemplateField HeaderText="DNI">
                         <EditItemTemplate>
@@ -89,6 +94,7 @@
                     <asp:TemplateField HeaderText="Fecha de Nacimiento">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Pac") %>' TextMode="Date"></asp:TextBox>
+                            <asp:RangeValidator ID="rv_eit_FechaNacimiento" runat="server" ControlToValidate="txt_eit_nacimiento" ErrorMessage="* Fecha invalida" MinimumValue="1-1-1900" Type="Date" Display="None"></asp:RangeValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Pac") %>' OnDataBinding="lbl_it_nacimiento_DataBinding"></asp:Label>
@@ -165,3 +171,4 @@
     </form>
 </body>
 </html>
+
