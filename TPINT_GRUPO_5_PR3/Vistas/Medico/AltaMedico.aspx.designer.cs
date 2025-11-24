@@ -96,6 +96,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombre;
 
         /// <summary>
+        /// revNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombre;
+
+        /// <summary>
         /// txtApellido control.
         /// </summary>
         /// <remarks>
@@ -112,6 +121,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvApellido;
+
+        /// <summary>
+        /// revApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revApellido;
 
         /// <summary>
         /// ddlSexo control.
@@ -204,6 +222,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNacimiento;
 
         /// <summary>
+        /// rvNacimiento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvNacimiento;
+
+        /// <summary>
         /// txtDireccion control.
         /// </summary>
         /// <remarks>
@@ -231,13 +258,22 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtCorreo;
 
         /// <summary>
-        /// rfvEmail control.
+        /// rfvCorreo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCorreo;
+
+        /// <summary>
+        /// revCorreo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCorreo;
 
         /// <summary>
         /// txtTelefono control.
@@ -256,6 +292,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTelefono;
+
+        /// <summary>
+        /// revTelefono control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTelefono;
 
         /// <summary>
         /// ddlEspecialidad control.

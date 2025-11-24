@@ -27,6 +27,9 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
+                rvNacimiento.MaximumValue = DateTime.Now.ToShortDateString();
+                txtBoxFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
+
                 if (Session["TipoUsuario"] == null)
                 {
                     Response.Redirect("~/Vistas/Inicio.aspx");

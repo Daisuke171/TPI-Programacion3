@@ -24,6 +24,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             if (!IsPostBack)
             {
+                txtBoxFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 rvFechaNacimiento.MaximumValue = (DateTime.Now).ToShortDateString();
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
