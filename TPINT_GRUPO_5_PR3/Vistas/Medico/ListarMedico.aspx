@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<%--<head runat="server">
+<head runat="server">
     <title>Listar Medico</title>
     <link rel="stylesheet" href="../Estilos/NavBar.css" />
     <link rel="stylesheet" href="../Estilos/Base.css" />
     <link rel="stylesheet" href="../Estilos/ListarMedico.css" />
-</head>--%>
+</head>
 <body>
     <form id="form1" runat="server">
         <nav>
@@ -28,13 +28,15 @@
             <section class="separador">
                 <p>Buscar Medico:</p>
                 <asp:TextBox ID="txtboxNombreMedico" runat="server" ValidationGroup="1"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtboxNombreMedico" ErrorMessage="Por favor no ingrese simbolos en la busqueda" ValidationExpression="^[a-zA-Z0-9]+$"></asp:RegularExpressionValidator>
-                <asp:Label ID="lblErrorListarPacientes" runat="server"></asp:Label>
+                <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtboxNombreMedico" ErrorMessage="Por favor no ingrese simbolos en la busqueda" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" Enabled="False" ForeColor="Red"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="revLegajo" runat="server" ControlToValidate="txtboxNombreMedico" Enabled="False" ErrorMessage="Por favor ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9]+$"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="rfvTxtNombre" runat="server" ControlToValidate="txtboxNombreMedico" ErrorMessage="Por favor ingrese un legajo o nombre" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:Label ID="lblErrorListarPacientes" runat="server" ForeColor="Red"></asp:Label>
             </section>
 
             <section class="separador">
                 <p>Filtrar por:</p>
-                <asp:DropDownList ID="ddlFiltros" runat="server">
+                <asp:DropDownList ID="ddlFiltros" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlFiltros_SelectedIndexChanged">
                     <asp:ListItem>Seleccione un filtro</asp:ListItem>
                     <asp:ListItem>Legajo</asp:ListItem>
                     <asp:ListItem>Nombre</asp:ListItem>
@@ -42,9 +44,10 @@
             </section>
 
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar Medico" ValidationGroup="1" OnClick="btnBuscar_Click" />
+            <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" CssClass="btnEnviar" ValidationGroup="1" OnClick="btnMostrarTodos_Click" />
 
             <section id="tablaMedico">
-                <asp:GridView ID="gvMedico" runat="server" EmptyDataText="asd" AutoGenerateColumns="False">
+                <asp:GridView ID="gvMedico" runat="server" EmptyDataText="No se encontraron registros" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="gvMedico_PageIndexChanging" PageSize="5">
                     <Columns>
                         <asp:TemplateField HeaderText="Legajo">
                             <ItemTemplate>
