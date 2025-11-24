@@ -57,13 +57,13 @@ namespace Datos
         {
             string consulta = "SELECT IDUsuario_Med FROM Medicos " +
                               "INNER JOIN Usuarios ON Medicos.IDUsuario_Med = Usuarios.IDUsuario_U " +
-                              "WHERE Medicos.IDUsuario_Med = " + legajo;
+                              "WHERE Medicos.Legajo_Med = " + "'" + legajo + "'";
             object resultado = accesoDatos.EjecutarScalar(consulta);
             if (resultado != null)
                 return Convert.ToInt32(resultado);
             return -1;
         }
-
+        
         public bool borrarUsuarioMedico(int legajo)
         {
             SqlConnection conexion = accesoDatos.obtenerConexion();

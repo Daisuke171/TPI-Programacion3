@@ -95,7 +95,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                     lbl_confirmacion.Text = "Error al eliminar el médico. ";
                 }
 
-                if(negUsuario.borrarUsuarioMedico(legajo))
+                if (negUsuario.borrarUsuarioMedico(legajo))
                 {
                     lbl_confirmacion.ForeColor = Color.Green;
                     lbl_confirmacion.Text += "Y Usuario asociado eliminado exitosamente.";
