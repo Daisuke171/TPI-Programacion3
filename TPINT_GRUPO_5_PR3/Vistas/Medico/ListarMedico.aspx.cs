@@ -98,12 +98,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             }
             else if (ddlFiltros.SelectedIndex == 1)
             {
-                gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxNombreMedico.Text));
+                gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxNombreMedico.Text.Trim()));
                 gvMedico.DataBind();
             }
             else if(ddlFiltros.SelectedIndex == 2)
             {
-                gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxNombreMedico.Text);
+                gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxNombreMedico.Text.Trim());
                 gvMedico.DataBind();
             }
 
