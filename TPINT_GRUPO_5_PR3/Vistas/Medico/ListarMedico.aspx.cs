@@ -98,12 +98,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             }
             else if (ddlFiltros.SelectedIndex == 1)
             {
-                gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxNombreMedico.Text.Trim()));
+                gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxListarMedico.Text.Trim()));
                 gvMedico.DataBind();
             }
             else if(ddlFiltros.SelectedIndex == 2)
             {
-                gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxNombreMedico.Text.Trim());
+                gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxListarMedico.Text.Trim());
                 gvMedico.DataBind();
             }
 
@@ -118,21 +118,21 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void ddlFiltros_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblErrorListarPacientes.Text = "";
-            revNombre.Enabled = false;
-            revLegajo.Enabled = false;
             if (ddlFiltros.SelectedIndex == 1)
             {
-                revLegajo.Enabled = true;
+                rev_txtListarMedico.ValidationExpression = "^[0-9 ]+$";
+                rev_txtListarMedico.ErrorMessage = "Ingrese solo numeros";
             }
             else if (ddlFiltros.SelectedIndex == 2)
             {
-                revNombre.Enabled = true;
+                rev_txtListarMedico.ValidationExpression = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$";
+                rev_txtListarMedico.ErrorMessage = "Ingrese solo letras";
             }
         }
 
         protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            txtboxNombreMedico.Text = "";
+            txtboxListarMedico.Text = "";
             ddlFiltros.SelectedIndex = 0;
             CargarMedicos();
         }

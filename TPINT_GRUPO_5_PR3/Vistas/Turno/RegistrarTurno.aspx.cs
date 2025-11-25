@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using Negocio;  
+using Negocio;
+using Entidades;
 
 namespace TPINT_GRUPO_5_PR3
 {

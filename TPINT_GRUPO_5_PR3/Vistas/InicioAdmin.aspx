@@ -53,6 +53,7 @@
                     <h2>MODIFICACION</h2>
                     <asp:HyperLink ID="hlnkModificacionPaciente1" runat="server" NavigateUrl="~/Vistas/Paciente/ModificarPaciente.aspx">Paciente</asp:HyperLink>
                     <asp:HyperLink ID="hlnkModificacionMedico1" runat="server" NavigateUrl="~/Vistas/Medico/ModificarMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkModificacionTurno1" runat="server" NavigateUrl="~/Vistas/Turno/ModificarTurno.aspx">Turno</asp:HyperLink>
                 </div>
             </div>
             <div class="gridRowMenu">

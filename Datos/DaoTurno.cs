@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace Datos
 {
@@ -144,6 +145,40 @@ namespace Datos
         {
             DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS");
             return tablaTurnos;
+        }
+
+        public DataTable getTablaTurnosPorId(int id)
+        {
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS WHERE IdTurno_Tur = " + id);
+            return tablaTurnos;
+        }
+
+        public bool modificarTurno(int id, DateTime fecha, int legajo, int dni, string asistencia, string observacion)
+        {
+            SqlConnection cn = ad.obtenerConexion();
+
+            string consulta = @"UPDATE Turnos SET
+                        Fecha_Tur = @Fecha,
+                        LegajoMedico_Tur = @Legajo,
+                        DNIPaciente_Tur = @Dni,
+                        Asistencia_Tur = @Asistencia,
+                        Observacion_Tur = @Observacion
+                    WHERE IdTurno_Tur = @idTurno";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            cmd.Parameters.AddWithValue("@idTurno", id);
+            cmd.Parameters.AddWithValue("@Fecha", fecha);
+            cmd.Parameters.AddWithValue("@Legajo", legajo);
+            cmd.Parameters.AddWithValue("@Dni", dni);
+            cmd.Parameters.AddWithValue("@Asistencia", asistencia);
+            cmd.Parameters.AddWithValue("@Observacion", observacion);
+            
+
+            int filas = cmd.ExecuteNonQuery();
+            cn.Close();
+
+            return filas > 0;
         }
     }
 }

@@ -27,10 +27,9 @@
 
             <section class="separador">
                 <p>Buscar Medico:</p>
-                <asp:TextBox ID="txtboxNombreMedico" runat="server" ValidationGroup="1"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtboxNombreMedico" ErrorMessage="Por favor ingrese solo letras" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" Enabled="False" ForeColor="Red"></asp:RegularExpressionValidator>
-                <asp:RegularExpressionValidator ID="revLegajo" runat="server" ControlToValidate="txtboxNombreMedico" Enabled="False" ErrorMessage="Por favor ingrese solo numeros" ForeColor="Red" ValidationExpression="^[0-9 ]+$"></asp:RegularExpressionValidator>
-                <asp:RequiredFieldValidator ID="rfvTxtNombre" runat="server" ControlToValidate="txtboxNombreMedico" ErrorMessage="Por favor ingrese un legajo o nombre" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtboxListarMedico" runat="server" ValidationGroup="1"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="rev_txtListarMedico" runat="server" ControlToValidate="txtboxListarMedico" ErrorMessage="Por favor ingrese solo letras" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" ForeColor="Red"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="rfvTxtNombre" runat="server" ControlToValidate="txtboxListarMedico" ErrorMessage="Por favor ingrese un legajo o nombre" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:Label ID="lblErrorListarPacientes" runat="server" ForeColor="Red"></asp:Label>
             </section>
 

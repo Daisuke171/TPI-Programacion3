@@ -132,6 +132,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.HyperLink hlnkModificacionMedico1;
 
         /// <summary>
+        /// hlnkModificacionTurno1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlnkModificacionTurno1;
+
+        /// <summary>
         /// hlInformes control.
         /// </summary>
         /// <remarks>

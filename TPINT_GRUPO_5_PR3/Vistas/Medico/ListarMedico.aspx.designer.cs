@@ -51,31 +51,22 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.Label lblTitulo;
 
         /// <summary>
-        /// txtboxNombreMedico control.
+        /// txtboxListarMedico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtboxNombreMedico;
+        protected global::System.Web.UI.WebControls.TextBox txtboxListarMedico;
 
         /// <summary>
-        /// revNombre control.
+        /// rev_txtListarMedico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombre;
-
-        /// <summary>
-        /// revLegajo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revLegajo;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rev_txtListarMedico;
 
         /// <summary>
         /// rfvTxtNombre control.
