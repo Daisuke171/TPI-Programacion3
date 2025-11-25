@@ -29,77 +29,71 @@
             <div class="container">
                 <p>Consultar por DNI:</p>
                 <asp:TextBox ID="txtDni" runat="server"></asp:TextBox>
-                <asp:Button ID="btnFiltrarDni" runat="server" Text="Filtrar" CssClass="btnEnviar" />
+                <asp:Button ID="btnFiltrarDni" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarDni_Click" />
+            &nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblErrorDni" runat="server"></asp:Label>
             </div>
             <div class="container">
                 <p>Consultar turnos de medico por LEGAJO:</p>
                 <asp:TextBox ID="txtLegajo" runat="server"></asp:TextBox>
-                <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" CssClass="btnEnviar" />
+                <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarLegajo_Click1" />
+                <asp:Label ID="lblErrorLegajo" runat="server"></asp:Label>
             </div>
 
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="gvTurnos">
+            <asp:GridView ID="gvConsultarTurnos" runat="server" AutoGenerateColumns="False" CssClass="gvTurnos">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Turno">
                         <ItemTemplate>
-                            <asp:Label ID="lblIdTurno" runat="server" Text='<%# Bind("IdTurno") %>'></asp:Label>
+                            <asp:Label ID="lblIdTurno" runat="server" Text='<%# Bind("IdTurno_Tur") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtIdTurno" runat="server" Text='<%# Bind("IdTurno") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtIdTurno" runat="server" Text='<%# Bind("IdTurno_Tur") %>'></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Legajo Medico">
                         <ItemTemplate>
-                            <asp:Label ID="lblLegajoMedico" runat="server" Text='<%# Bind("LegajoMedico") %>'></asp:Label>
+                            <asp:Label ID="lblLegajoMedico" runat="server" Text='<%# Bind("LegajoMedico_Tur") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtLegajoMedico" runat="server" Text='<%# Bind("LegajoMedico") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtLegajoMedico" runat="server" Text='<%# Bind("LegajoMedico_Tur") %>'></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="DNI Paciente">
                         <ItemTemplate>
-                            <asp:Label ID="lblDNIPaciente" runat="server" Text='<%# Bind("DNIPaciente") %>'></asp:Label>
+                            <asp:Label ID="lblDNIPaciente" runat="server" Text='<%# Bind("DNIPaciente_Tur") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtDNIPaciente" runat="server" Text='<%# Bind("DNIPaciente") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtDNIPaciente" runat="server" Text='<%# Bind("DNIPaciente_Tur") %>'></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Fecha">
                         <ItemTemplate>
-                            <asp:Label ID="lblFecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:Label>
+                            <asp:Label ID="lblFecha" runat="server" Text='<%# Bind("Fecha_Tur") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtFecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:TextBox>
-                        </EditItemTemplate>
-                    </asp:TemplateField>
-
-                    <asp:TemplateField HeaderText="Especialidad">
-                        <ItemTemplate>
-                            <asp:Label ID="lblEspecialidad" runat="server" Text='<%# Bind("Especialidad") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtEspecialidad" runat="server" Text='<%# Bind("Especialidad") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtFecha" runat="server" Text='<%# Bind("Fecha_Tur") %>'></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Asistencia">
                         <ItemTemplate>
-                            <asp:Label ID="lblAsistencia" runat="server" Text='<%# Bind("Asistencia") %>'></asp:Label>
+                            <asp:Label ID="lblAsistencia" runat="server" Text='<%# Bind("Asistencia_Tur") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtAsistencia" runat="server" Text='<%# Bind("Asistencia") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtAsistencia" runat="server" Text='<%# Bind("Asistencia_Tur") %>'></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Observacion">
                         <ItemTemplate>
-                            <asp:Label ID="lblObservacion" runat="server" Text='<%# Bind("Observacion") %>'></asp:Label>
+                            <asp:Label ID="lblObservacion" runat="server" Text='<%# Bind("Observacion_Tur") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="txtObservacion" runat="server" Text='<%# Bind("Observacion") %>'></asp:TextBox>
+                            <asp:TextBox ID="txtObservacion" runat="server" Text='<%# Bind("Observacion_Tur") %>'></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
 

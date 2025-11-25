@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -179,6 +180,18 @@ namespace Datos
             cn.Close();
 
             return filas > 0;
+        }
+
+        public DataTable getTablaTurnosPorDNI(int DNI)
+        {
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS WHERE DNIPaciente_Tur = " + DNI);
+            return tablaTurnos;
+        }
+
+        public DataTable getTablaTurnosPorLegajoMedico(int legajo)
+        {
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS WHERE LegajoMedico_Tur = " + legajo);
+            return tablaTurnos;
         }
     }
 }

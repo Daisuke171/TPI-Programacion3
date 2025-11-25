@@ -37,5 +37,15 @@ namespace Negocio
         {
             return daoTurno.modificarTurno(id, fecha, legajo, dni, asistencia, observacion);
         }
+
+        public DataTable obtenerTurnoPorDNI(int DNI)
+        {
+            return daoTurno.getTablaTurnosPorDNI(DNI);
+        }
+
+        public DataTable obtenerTurnoPorLegajoMedico(int legajo)
+        {
+            return daoTurno.getTablaTurnosPorLegajoMedico(legajo);
+        }
     }
 }
