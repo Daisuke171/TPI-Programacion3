@@ -95,6 +95,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             if (ddlFiltros.SelectedIndex == 0)
             {
                 lblErrorListarPacientes.Text = "Seleccione un filtro";
+                lblErrorListarPacientes.Visible = true;
             }
             else if (ddlFiltros.SelectedIndex == 1)
             {
@@ -122,11 +123,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 rev_txtListarMedico.ValidationExpression = "^[0-9 ]+$";
                 rev_txtListarMedico.ErrorMessage = "Ingrese solo numeros";
+                rev_txtListarMedico.Visible = true;
             }
             else if (ddlFiltros.SelectedIndex == 2)
             {
                 rev_txtListarMedico.ValidationExpression = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$";
                 rev_txtListarMedico.ErrorMessage = "Ingrese solo letras";
+                rev_txtListarMedico.Visible = true;
             }
         }
 

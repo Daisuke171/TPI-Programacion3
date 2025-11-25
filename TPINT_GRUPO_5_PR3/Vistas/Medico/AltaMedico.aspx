@@ -131,9 +131,33 @@
                     <asp:DropDownList ID="ddlEspecialidad" runat="server" ValidationGroup="1"></asp:DropDownList>
                 </div>
                 <div class="validatorContainer">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlEspecialidad" CssClass="validator" Display="Dynamic" ValidationGroup="1" InitialValue="0">* Requerido</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvEspacialidad" runat="server" ControlToValidate="ddlEspecialidad" CssClass="validator" Display="Dynamic" ValidationGroup="1" InitialValue="0">* Requerido</asp:RequiredFieldValidator>
                 </div>
 
+                <h2 class="titleUsuario">Creacion de usuario</h2>
+                <div class="campo">
+                    <p>Usuario</p>
+                    <asp:TextBox ID="txtUsuario" runat="server" CssClass="txtBox" ValidationGroup="1"></asp:TextBox>
+                </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvUsuario" runat="server" ControlToValidate="txtUsuario" CssClass="validator" Display="Dynamic" ValidationGroup="1" InitialValue="0">* Requerido</asp:RequiredFieldValidator>
+                </div>
+
+                <div class="campo">
+                    <p>Contraseña</p>
+                    <asp:TextBox ID="txtContraseña" runat="server" CssClass="txtBox" ValidationGroup="1" TextMode="Password"></asp:TextBox>
+                </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" CssClass="validator" Display="Dynamic" ValidationGroup="1" InitialValue="0">* Requerido</asp:RequiredFieldValidator>
+                </div>
+
+                <div class="campo">
+                    <p>Repetir Contraseña</p>
+                    <asp:TextBox ID="txtRepetirContra" runat="server" CssClass="txtBox" ValidationGroup="1" TextMode="Password"></asp:TextBox>
+                </div>
+                <div class="validatorContainer">
+                    <asp:RequiredFieldValidator ID="rfvRepetirContraseña" runat="server" ControlToValidate="txtRepetirContra" CssClass="validator" Display="Dynamic" ValidationGroup="1" InitialValue="0">* Requerido</asp:RequiredFieldValidator>
+                </div>
             </section>
 
             <asp:Button ID="btnRegistrarMedico" CssClass="btnEnviar" runat="server" Text="Registrar Médico" OnClick="btnRegistrarMedico_Click" ValidationGroup="1" />

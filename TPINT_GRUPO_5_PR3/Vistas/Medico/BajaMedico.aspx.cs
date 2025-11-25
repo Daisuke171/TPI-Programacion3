@@ -39,6 +39,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             gvMedico.DataBind();
         }
 
+        private void CargarMedicos(int legajo)
+        {
+            DataTable tablaPaciente = negMedico.listarMedicoPorLegajo(legajo);
+            gvMedico.DataSource = tablaPaciente;
+            gvMedico.DataBind();
+        }
+
         protected void gvMedico_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int legajo = Convert.ToInt32(((Label)gvMedico.Rows[e.RowIndex].FindControl("lbl_it_legajo")).Text);
@@ -48,24 +55,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             confirmModal.Visible = true;
 
             e.Cancel = true;
-        }
-
-        protected void btnBorrar_Click(object sender, EventArgs e)
-        {
-            int legajo = Convert.ToInt32(txtBoxLegajo.Text);
-            if (negMedico.bajaMedico(legajo))
-            {
-                lbl_confirmacion.ForeColor = Color.Green;
-                lbl_confirmacion.Text = "Medico dado de baja correctamente";
-            }
-            else
-            {
-                lbl_confirmacion.ForeColor = Color.Red;
-                lbl_confirmacion.Text = "Error al dar de baja al Medico";
-            }
-
-
-            CargarMedicos();
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -118,6 +107,17 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             confirmModal.Visible = false;
             ViewState["LegajoAEliminar"] = null;
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Session["LegajoABuscar"] = Convert.ToInt32(txtBoxLegajo.Text);
+            CargarMedicos(Convert.ToInt32(txtBoxLegajo.Text));
+        }
+
+        protected void btnMostarTodos_Click(object sender, EventArgs e)
+        {
+            CargarMedicos();
         }
     }
     

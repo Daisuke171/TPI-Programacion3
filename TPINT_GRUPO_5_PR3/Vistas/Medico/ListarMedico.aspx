@@ -28,10 +28,13 @@
             <section class="separador">
                 <p>Buscar Medico:</p>
                 <asp:TextBox ID="txtboxListarMedico" runat="server" ValidationGroup="1"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="rev_txtListarMedico" runat="server" ControlToValidate="txtboxListarMedico" ErrorMessage="Por favor ingrese solo letras" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" ForeColor="Red"></asp:RegularExpressionValidator>
-                <asp:RequiredFieldValidator ID="rfvTxtNombre" runat="server" ControlToValidate="txtboxListarMedico" ErrorMessage="Por favor ingrese un legajo o nombre" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:Label ID="lblErrorListarPacientes" runat="server" ForeColor="Red"></asp:Label>
             </section>
+
+            <div class="validatorContainer">
+                <asp:RegularExpressionValidator ID="rev_txtListarMedico" runat="server" ControlToValidate="txtboxListarMedico" ErrorMessage="Por favor ingrese solo letras" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" ForeColor="Red" Visible="False"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="rfvTxtNombre" runat="server" ControlToValidate="txtboxListarMedico" ErrorMessage="Por favor ingrese un legajo o nombre" ForeColor="Red" Visible="False"></asp:RequiredFieldValidator>
+                <asp:Label ID="lblErrorListarPacientes" runat="server" ForeColor="Red" Visible="False"></asp:Label>
+            </div>
 
             <section class="separador">
                 <p>Filtrar por:</p>

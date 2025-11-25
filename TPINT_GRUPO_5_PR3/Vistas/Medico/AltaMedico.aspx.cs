@@ -128,6 +128,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 return;
             }
 
+            string user = txtUsuario.Text;
+            string password = txtContraseña.Text;
+
+            if (password != txtRepetirContra.Text)
+            {
+                lblConfirmacionUsuarioMedico.Text = "Las contraseñas no coinciden.";
+                return;
+            }
+
             bool confirmacion = negMedico.agregarMedico(medico);
 
             if (confirmacion)
@@ -135,7 +144,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 lblConfirmarSubirMedico.Text = "Medico  Subido Correctamente!";
                 lblConfirmarSubirMedico.ForeColor = Color.Green;
                 limpiarCampos();
-                if (negUsuario.agregarUsuarioMedico(medico))
+                if (negUsuario.agregarUsuarioMedico(medico, user, password))
                 {
                     negMedico.asignarUsuarioMedico(medico);
                     lblConfirmacionUsuarioMedico.Text = "Usuario " + medico._apellido + " registrado correctamente";

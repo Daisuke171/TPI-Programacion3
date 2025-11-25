@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.DataVisualization.Charting;
 using System.Web.UI.WebControls;
 
 namespace TPINT_GRUPO_5_PR3.Vistas.Informes
@@ -110,9 +111,72 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
 
                 else if (informe == "Cantidad de pacientes por medico")
                 {
-                    DataTable resultado = negInf.getCantidadPacientesPorMedico(true); // true para pacientes únicos
-                    gvResultado.DataSource = resultado;
+                    DataTable resultado = negInf.getCantidadPacientesPorMedico(true);
+                    DataView dv = new DataView(resultado);
+                    dv.RowFilter = "Cantidad > 0";
+
+                    var series = chInformes.Series["Series1"];
+                    var chartArea = chInformes.ChartAreas[0];
+
+                    // Tipo de gráfico
+                    series.ChartType = SeriesChartType.Column;
+                    series.IsValueShownAsLabel = true;  // Muestra los valores arriba de cada barra
+                    series.XValueMember = "Medico";
+                    series.YValueMembers = "Cantidad";
+
+                    // Fuente del valor
+                    series.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                    series.LabelForeColor = Color.White;
+
+                    // Rotar textos del eje X
+                    chartArea.AxisX.LabelStyle.Angle = -45;
+                    chartArea.AxisX.LabelStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                    chartArea.AxisX.LabelStyle.ForeColor = Color.Black;
+
+                    // Aplicar color degradado por barra
+                    series.Color = Color.SteelBlue;
+                    series.BackSecondaryColor = Color.LightSkyBlue;
+                    series.BackGradientStyle = GradientStyle.VerticalCenter;
+
+                    // Bordes suaves
+                    series.BorderWidth = 2;
+                    series.BorderColor = Color.FromArgb(50, 50, 50);
+
+                    // ---- CONFIG VISUAL DEL ÁREA ----
+
+                    // Fondo limpio minimalista
+                    chartArea.BackColor = Color.FromArgb(245, 245, 245);
+
+                    // Líneas de cuadrícula suaves
+                    chartArea.AxisX.MajorGrid.Enabled = false;
+                    chartArea.AxisY.MajorGrid.LineColor = Color.LightGray;
+                    chartArea.AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
+
+                    // Títulos de los ejes
+                    chartArea.AxisX.Title = "Médicos";
+                    chartArea.AxisY.Title = "Cantidad de Pacientes";
+                    chartArea.AxisX.TitleFont = new Font("Segoe UI", 10, FontStyle.Bold);
+                    chartArea.AxisY.TitleFont = new Font("Segoe UI", 10, FontStyle.Bold);
+
+                    // Fuente del eje
+                    chartArea.AxisX.LabelStyle.Font = new Font("Segoe UI", 9);
+                    chartArea.AxisY.LabelStyle.Font = new Font("Segoe UI", 9);
+
+                    // Separación entre columnas
+                    series["PointWidth"] = "0.5";
+
+                    // Leyenda
+                    chInformes.Legends.Clear();
+
+
+                    chInformes.DataSource = dv;
+                    chInformes.DataBind();
+
+                    // GRIDVIEW
+                    gvResultado.DataSource = dv;
                     gvResultado.DataBind();
+
+                    chInformes.Visible = true;
                 }
 
                 else if(informe == "Cantidad de medicos por especialidad")
@@ -121,7 +185,10 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
                     gvResultado.DataSource = resultado;
                     gvResultado.DataBind();
                 }
-                // if (informe == "Dia con mas pacientes") { ... }
+                else if (informe == "Dia con mas pacientes")
+                {
+
+                }
             }
         }
 

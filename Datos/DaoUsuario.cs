@@ -32,14 +32,14 @@ namespace Datos
             return -1;
         }
 
-        public bool insertarUsuarioMedico(Medico med)
+        public bool insertarUsuarioMedico(Medico med, string user, string password)
         {
             SqlConnection conexion = accesoDatos.obtenerConexion();
             string consulta = "INSERT INTO Usuarios(NombreUsuario_U, ContraseniaUsuario_U, IdTipoUsuario_U) " +
                                "VALUES (@nombreUsuario, @contraseniaUsuario, @idTipoUsuario)";
             SqlCommand comando = new SqlCommand(consulta, conexion);
-            comando.Parameters.AddWithValue("@nombreUsuario", med._apellido + "." + med._dni);
-            comando.Parameters.AddWithValue("@contraseniaUsuario", med._dni + "." + med._legajoMedico);
+            comando.Parameters.AddWithValue("@nombreUsuario", user);
+            comando.Parameters.AddWithValue("@contraseniaUsuario", password);
             comando.Parameters.AddWithValue("@idTipoUsuario", 2);
             int filas = comando.ExecuteNonQuery();
             conexion.Close();

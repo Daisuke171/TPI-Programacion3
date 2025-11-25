@@ -32,9 +32,9 @@ namespace Negocio
             }
         }
 
-        public bool agregarUsuarioMedico(Medico med)
+        public bool agregarUsuarioMedico(Medico med, string user, string password)
         {
-            return daoUsuario.insertarUsuarioMedico(med);
+            return daoUsuario.insertarUsuarioMedico(med, user, password);
         }
 
         public bool borrarUsuarioMedico(int legajo)
