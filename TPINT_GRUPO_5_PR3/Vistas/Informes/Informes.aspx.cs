@@ -15,7 +15,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
     {
 
         NegocioInformes negInf = new NegocioInformes();
-
+        NegocioTurno negTurno = new NegocioTurno();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -182,12 +182,92 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
                 else if(informe == "Cantidad de medicos por especialidad")
                 {
                     DataTable resultado = negInf.getCantidadMedicosPorEspecialidad();
+
+                    var series = chInformes.Series["Series1"];
+                    var chartArea = chInformes.ChartAreas[0];
+
+                    // Tipo de gráfico
+                    series.ChartType = SeriesChartType.Column;
+                    series.IsValueShownAsLabel = true;  // Muestra los valores arriba de cada barra
+                    series.XValueMember = "Especialidades";
+                    series.YValueMembers = "Cantidad de Medicos";
+
+                    // Fuente del valor
+                    series.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                    series.LabelForeColor = Color.White;
+
+                    // Rotar textos del eje X
+                    chartArea.AxisX.LabelStyle.Angle = -45;
+                    chartArea.AxisX.LabelStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                    chartArea.AxisX.LabelStyle.ForeColor = Color.Black;
+
+                    // Aplicar color degradado por barra
+                    series.Color = Color.SteelBlue;
+                    series.BackSecondaryColor = Color.LightSkyBlue;
+                    series.BackGradientStyle = GradientStyle.VerticalCenter;
+
+                    // Bordes suaves
+                    series.BorderWidth = 2;
+                    series.BorderColor = Color.FromArgb(50, 50, 50);
+
+                    // ---- CONFIG VISUAL DEL ÁREA ----
+
+                    // Fondo limpio minimalista
+                    chartArea.BackColor = Color.FromArgb(245, 245, 245);
+
+                    // Líneas de cuadrícula suaves
+                    chartArea.AxisX.MajorGrid.Enabled = false;
+                    chartArea.AxisY.MajorGrid.LineColor = Color.LightGray;
+                    chartArea.AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
+
+                    // Títulos de los ejes
+                    chartArea.AxisX.Title = "Médicos";
+                    chartArea.AxisY.Title = "Cantidad de Pacientes";
+                    chartArea.AxisX.TitleFont = new Font("Segoe UI", 10, FontStyle.Bold);
+                    chartArea.AxisY.TitleFont = new Font("Segoe UI", 10, FontStyle.Bold);
+
+                    // Fuente del eje
+                    chartArea.AxisX.LabelStyle.Font = new Font("Segoe UI", 9);
+                    chartArea.AxisY.LabelStyle.Font = new Font("Segoe UI", 9);
+
+                    // Separación entre columnas
+                    series["PointWidth"] = "0.5";
+
+                    series.Points.Clear();
+                    chartArea.AxisX.Interval = 1;
+                    chartArea.AxisX.LabelAutoFitStyle = LabelAutoFitStyles.DecreaseFont | LabelAutoFitStyles.StaggeredLabels;
+
+                    // Leyenda
+                    chInformes.Legends.Clear();
+
+
+                    chInformes.DataSource = resultado;
+                    chInformes.DataBind();
+
                     gvResultado.DataSource = resultado;
                     gvResultado.DataBind();
+
+                    chInformes.Visible = true;
                 }
                 else if (informe == "Dia con mas pacientes")
                 {
+                    DateTime desde = DateTime.Now.AddDays(-30);
+                    DateTime hasta = DateTime.Now;
 
+                    DataTable resultado = negTurno.getHeatmapTurnos(desde, hasta);
+
+                    // Convertimos la tabla en formato calendario
+                    DataTable calendario = ConvertirEnCalendario(resultado, desde, hasta);
+
+                    // Mostramos en el GridView
+                    gvResultado.DataSource = calendario;
+                    gvResultado.DataBind();
+
+                    // Aplicamos colores estilo GitHub
+                    PintarHeatmap(gvResultado);
+
+                    // Ocultamos el gráfico (ya no se usa para esta opción)
+                    chInformes.Visible = false;
                 }
             }
         }
@@ -198,5 +278,85 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Informes
 
             Response.Redirect("~/Vistas/Login.aspx");
         }
+
+
+
+        public DataTable ConvertirEnCalendario(DataTable original, DateTime desde, DateTime hasta)
+        {
+            DataTable calendar = new DataTable();
+
+            // columnas Lunes -> Domingo
+            calendar.Columns.Add("Semana");
+            calendar.Columns.Add("Lunes");
+            calendar.Columns.Add("Martes");
+            calendar.Columns.Add("Miércoles");
+            calendar.Columns.Add("Jueves");
+            calendar.Columns.Add("Viernes");
+            calendar.Columns.Add("Sábado");
+            calendar.Columns.Add("Domingo");
+
+            int semana = 1;
+            DataRow row = calendar.NewRow();
+            row["Semana"] = "Semana " + semana;
+
+            for (DateTime fecha = desde; fecha <= hasta; fecha = fecha.AddDays(1))
+            {
+                int dayIndex = ((int)fecha.DayOfWeek == 0) ? 7 : (int)fecha.DayOfWeek; // Domingo = 7
+
+                // Buscar cantidad en la tabla original
+                var match = original.AsEnumerable()
+                    .FirstOrDefault(r => Convert.ToDateTime(r["Fecha"]).Date == fecha.Date);
+
+                int cantidad = match != null ? Convert.ToInt32(match["CantidadTurnos"]) : 0;
+                row[dayIndex] = cantidad;
+
+                // Cuando llega a domingo → nueva semana
+                if (dayIndex == 7)
+                {
+                    calendar.Rows.Add(row);
+                    semana++;
+                    row = calendar.NewRow();
+                    row["Semana"] = "Semana " + semana;
+                }
+            }
+
+            // Añadir última fila si no terminó en domingo
+            if (row.ItemArray.Skip(1).Any(v => v != DBNull.Value))
+                calendar.Rows.Add(row);
+
+            return calendar;
+        }
+
+        public void PintarHeatmap(GridView grid)
+        {
+            foreach (GridViewRow row in grid.Rows)
+            {
+                for (int i = 1; i < row.Cells.Count; i++) // saltar columna "Semana"
+                {
+                    string valorStr = row.Cells[i].Text;
+                    int valor = 0;
+
+                    int.TryParse(valorStr, out valor);
+
+                    Color color = Color.FromArgb(235, 237, 240); // base (gris claro)
+
+                    if (valor == 0)
+                        color = Color.FromArgb(235, 237, 240);
+                    else if (valor < 3)
+                        color = Color.FromArgb(198, 228, 139);
+                    else if (valor < 6)
+                        color = Color.FromArgb(123, 201, 111);
+                    else if (valor < 10)
+                        color = Color.FromArgb(35, 154, 59);
+                    else
+                        color = Color.FromArgb(25, 97, 39);
+
+                    row.Cells[i].BackColor = color;
+                    row.Cells[i].HorizontalAlign = HorizontalAlign.Center;
+                    row.Cells[i].ForeColor = Color.Black;
+                }
+            }
+        }
+
     }
 }

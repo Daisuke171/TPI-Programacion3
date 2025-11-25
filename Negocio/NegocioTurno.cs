@@ -47,5 +47,11 @@ namespace Negocio
         {
             return daoTurno.getTablaTurnosPorLegajoMedico(legajo);
         }
+
+        public DataTable getHeatmapTurnos(DateTime desde, DateTime hasta)
+        {
+            return daoTurno.GetCantidadTurnosPorDia(desde, hasta);
+        }
+
     }
 }

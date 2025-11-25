@@ -193,5 +193,31 @@ namespace Datos
             DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS WHERE LegajoMedico_Tur = " + legajo);
             return tablaTurnos;
         }
+
+        public DataTable GetCantidadTurnosPorDia(DateTime desde, DateTime hasta)
+        {
+            SqlConnection cn = ad.obtenerConexion();
+
+            string consulta = @"
+                            SELECT 
+                                Fecha_Tur AS Fecha,
+                                COUNT(*) AS CantidadTurnos
+                            FROM Turnos
+                            WHERE Estado_Tur = 1
+                            AND Fecha_Tur BETWEEN @desde AND @hasta
+                            GROUP BY Fecha_Tur
+                            ORDER BY Fecha_Tur";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            cmd.Parameters.AddWithValue("@desde", desde);
+            cmd.Parameters.AddWithValue("@hasta", hasta);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            da.Fill(tabla);
+
+            cn.Close();
+            return tabla;
+        }
     }
 }
