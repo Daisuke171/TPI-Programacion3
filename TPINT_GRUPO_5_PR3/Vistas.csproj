@@ -92,6 +92,7 @@
     <Content Include="Vistas\Estilos\RegistrarTurno.css" />
     <Content Include="Vistas\Estilos\Reportes.css" />
     <Content Include="Vistas\HomePacientes.aspx" />
+    <Content Include="Vistas\Horarios\AltaHorario.aspx" />
     <Content Include="Vistas\Inicio.aspx" />
     <Content Include="Vistas\Imagenes\doctor-symbol-universal-png-2.png" />
     <Content Include="Vistas\Informes\Informes.aspx" />
@@ -121,6 +122,13 @@
     </Compile>
     <Compile Include="Vistas\HomePacientes.aspx.designer.cs">
       <DependentUpon>HomePacientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Horarios\AltaHorario.aspx.cs">
+      <DependentUpon>AltaHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Horarios\AltaHorario.aspx.designer.cs">
+      <DependentUpon>AltaHorario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>

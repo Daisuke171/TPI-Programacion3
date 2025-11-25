@@ -80,6 +80,12 @@ namespace Datos
             return datos.existe(consulta);
         }
 
+        public bool existeLegajoMedico(string legajo)
+        {
+            string consulta = $"SELECT * FROM Medicos WHERE Legajo_Med = '{legajo}'";
+            return datos.existe(consulta);
+        }
+
         public int generarLegajoMedico()
         {
             string consulta = "SELECT ISNULL(MAX(Legajo_Med), 0) + 1 AS NuevoLegajo FROM Medicos WITH (TABLOCKX)";

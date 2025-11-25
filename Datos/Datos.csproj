@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="DaoHorario.cs" />
     <Compile Include="DaoInformes.cs" />
     <Compile Include="DaoReporte.cs" />
     <Compile Include="DaoTurno.cs" />

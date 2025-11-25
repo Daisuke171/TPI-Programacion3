@@ -37,6 +37,10 @@ namespace Negocio
             return daoMedico.existeDniMedico(dni);
         }
 
+        public bool existeLegajoMedico(string legajo)
+        {
+            return daoMedico.existeLegajoMedico(legajo);
+        }
         public int getNuevoLegajo()
         {
             return daoMedico.generarLegajoMedico();

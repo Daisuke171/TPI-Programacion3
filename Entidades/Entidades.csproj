@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Horario.cs" />
     <Compile Include="Localidad.cs" />
     <Compile Include="Nacionalidad.cs" />
     <Compile Include="Provincia.cs" />
