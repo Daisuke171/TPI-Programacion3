@@ -184,7 +184,7 @@ namespace Datos
 
         public DataTable getTablaTurnosPorDNI(int DNI)
         {
-            DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS WHERE DNIPaciente_Tur = " + DNI);
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM Turnos t INNER JOIN Pacientes p ON t.DNIPaciente_Tur = p.DNI_Pac WHERE t.DNIPaciente_Tur = " + DNI + "AND p.Estado_Pac = 1");
             return tablaTurnos;
         }
 

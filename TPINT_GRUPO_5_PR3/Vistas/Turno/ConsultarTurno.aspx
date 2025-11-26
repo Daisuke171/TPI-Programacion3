@@ -97,7 +97,6 @@
                         </EditItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Seleccionar Turno" />
                 </Columns>
             </asp:GridView>
 

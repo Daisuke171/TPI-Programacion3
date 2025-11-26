@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Datos;
+using System.Security.Permissions;
 
 namespace Negocio
 {
@@ -38,9 +39,36 @@ namespace Negocio
             return daoTurno.modificarTurno(id, fecha, legajo, dni, asistencia, observacion);
         }
 
-        public DataTable obtenerTurnoPorDNI(int DNI)
+        public DataTable obtenerTurnoPorDni(int DNI)
         {
-            return daoTurno.getTablaTurnosPorDNI(DNI);
+            DataTable dtDNI = daoTurno.getTablaTurnosPorDNI(DNI);
+            if (EstaDadoDeBaja(dtDNI) == false)
+            {
+                return dtDNI;
+            }
+            else
+                {
+                return null;
+                }
+        }
+
+        public bool EstaDadoDeBaja(DataTable dataTable)
+        {
+            // Verifica si el DataTable es nulo primero,
+            // lo que también puede considerarse "vacío".
+            if (dataTable == null)
+            {
+                return true;
+            }
+
+            // Si el conteo de filas es 0, está vacía.
+            if (dataTable.Rows.Count == 0)
+            {
+                return true;
+            }
+
+            // Si el conteo de filas es mayor que 0, no está vacía.
+            return false;
         }
 
         public DataTable obtenerTurnoPorLegajoMedico(int legajo)

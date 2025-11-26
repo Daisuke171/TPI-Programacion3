@@ -50,6 +50,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void btnFiltrarDni_Click(object sender, EventArgs e)
         {
+            DataTable dataTableTurnoXDNI;
             int resultado;
             if (txtDni.Text == "" || int.TryParse(txtDni.Text.ToString(), out resultado) == false)
             {
@@ -65,7 +66,16 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             lblErrorDni.Text = " ";
             int dniBuscar = Convert.ToInt32(txtDni.Text);
             txtDni.Text = null;
-            gvConsultarTurnos.DataSource = negocioTurno.obtenerTurnoPorDNI(dniBuscar);
+            dataTableTurnoXDNI = negocioTurno.obtenerTurnoPorDni(dniBuscar);
+            if (dataTableTurnoXDNI == null)
+            {
+                lblErrorDni.Text = "No se encontraron turnos para el DNI ingresado o el paciente esta dado de baja.";
+                gvConsultarTurnos.DataSource = null;
+                gvConsultarTurnos.DataBind();
+                CargarTurnos();
+                return;
+            }
+            gvConsultarTurnos.DataSource = dataTableTurnoXDNI;
             gvConsultarTurnos.DataBind();
 
 
