@@ -67,7 +67,7 @@
 
             <div class="container">
                 <p>Especialidad:</p>
-                <asp:DropDownList ID="ddl_Especialidades" runat="server">
+                <asp:DropDownList ID="ddl_Especialidades" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_Especialidades_SelectedIndexChanged">
                 </asp:DropDownList>
             </div>
 
@@ -75,13 +75,15 @@
 
                 <p>Medico:</p>
 
-                <asp:DropDownList ID="ddl_Medicos" runat="server">
+                <asp:DropDownList ID="ddl_Medicos" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddl_Medicos_SelectedIndexChanged">
                 </asp:DropDownList>
             </div>
 
-            <p>Fecha:</p>
+            <p>
+                <asp:Label ID="lbl_fecha" runat="server" Text="Fecha:" Visible="False"></asp:Label>
+        </p>
             <div class="calendarioContainer">
-            <asp:Calendar ID="cal_Fechas" runat="server"></asp:Calendar>
+            <asp:Calendar ID="cal_Fechas" runat="server" OnDayRender="cal_Fechas_DayRender" Visible="False"></asp:Calendar>
 
            
                 <asp:RadioButtonList ID="rbtnl_Horarios" runat="server">

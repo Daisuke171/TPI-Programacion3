@@ -16,6 +16,7 @@ namespace TPINT_GRUPO_5_PR3
         NegocioEspecialidad negEspecialidad = new NegocioEspecialidad();
         NegocioMedico negMedico = new NegocioMedico();
         NegocioTurno negTurno = new NegocioTurno();
+        NegocioHorario negHorario = new NegocioHorario();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -87,13 +88,16 @@ namespace TPINT_GRUPO_5_PR3
 
         protected void ddl_Especialidades_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lbl_fecha.Visible = false;
+            cal_Fechas.Visible = false;
+
             if (ddl_Especialidades.SelectedIndex <= 0)
                 return;
 
             int idEsp = int.Parse(ddl_Especialidades.SelectedValue);
 
             ddl_Medicos.DataSource = negMedico.listarMedicoPorEspecialidad(idEsp);
-            ddl_Medicos.DataTextField = "Apellido_Med";
+            ddl_Medicos.DataTextField = "NombreCompleto";
             ddl_Medicos.DataValueField = "Legajo_Med";
             ddl_Medicos.DataBind();
 
@@ -177,6 +181,46 @@ namespace TPINT_GRUPO_5_PR3
             Session.Clear();
 
             Response.Redirect("~/Vistas/Login.aspx");
+        }
+
+        protected void ddl_Medicos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddl_Medicos.SelectedIndex == 0)
+            {
+                lbl_fecha.Visible = false;
+                cal_Fechas.Visible = false;
+                return;
+            }
+
+            string legajo = ddl_Medicos.SelectedValue;
+            Session["horariosDeMedico"] = negHorario.buscarHorarioXLegajo(legajo);
+
+            lbl_fecha.Visible = true;
+            cal_Fechas.Visible = true;
+        }
+
+        protected void cal_Fechas_DayRender(object sender, DayRenderEventArgs e)
+        {
+            DataTable dt = (DataTable)Session["horariosDeMedico"];
+
+            DateTime fechaRender = e.Day.Date;
+            string legajo = ddl_Medicos.SelectedValue.ToString();
+            bool diaSeleccionable = false;
+
+
+            if (fechaRender > DateTime.Today)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (Convert.ToInt32(fechaRender.DayOfWeek) == Convert.ToInt32(row[2]))
+                    {
+                        diaSeleccionable = true;
+                        break;
+                    }
+                }
+            }
+
+            e.Day.IsSelectable = diaSeleccionable;
         }
     }
 }

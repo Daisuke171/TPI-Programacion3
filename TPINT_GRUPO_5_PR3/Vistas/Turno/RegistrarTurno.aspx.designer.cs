@@ -132,6 +132,15 @@ namespace TPINT_GRUPO_5_PR3
         protected global::System.Web.UI.WebControls.DropDownList ddl_Medicos;
 
         /// <summary>
+        /// lbl_fecha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_fecha;
+
+        /// <summary>
         /// cal_Fechas control.
         /// </summary>
         /// <remarks>

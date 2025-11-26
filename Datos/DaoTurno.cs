@@ -26,7 +26,7 @@ namespace Datos
                     dxm.HoraSalida_DiaXMed
                 FROM DiasXMedico dxm
                 WHERE dxm.LegajoMedico_DiaXMed = @legajo
-                AND dxm.Dia_DiaXMed = DATEPART(WEEKDAY, @fecha)
+                AND dxm.Dia_DiaXMed = DATEPART(WEEKDAY, @fecha)-1
             ";
 
             SqlCommand cmd = new SqlCommand(consulta, cn);

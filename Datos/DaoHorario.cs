@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,12 @@ namespace Datos
             cn.Close();
 
             return filas > 0;
+        }
+
+        public DataTable getTablaHorarioXLegajo(string legajo)
+        {
+            string consulta = "SELECT * FROM DiasXMedico WHERE LegajoMedico_DiaXMed = " + legajo;
+            return ad.obtenerTabla("DiasXMedico", consulta);
         }
     }
 }

@@ -160,7 +160,7 @@ namespace Datos
             string consulta = @"
         SELECT Legajo_Med, Nombre_Med + ' ' + Apellido_Med AS NombreCompleto
         FROM Medicos
-        WHERE IdEspecialidad_Med = @idEsp AND Estado_Med = 1";
+        WHERE IDEspecialidad_Med = @idEsp AND Estado_Med = 1";
 
             SqlCommand cmd = new SqlCommand(consulta, cn);
             cmd.Parameters.AddWithValue("@idEsp", idEspecialidad);
