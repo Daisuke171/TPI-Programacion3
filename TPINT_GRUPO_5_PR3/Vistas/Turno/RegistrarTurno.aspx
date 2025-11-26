@@ -83,7 +83,7 @@
                 <asp:Label ID="lbl_fecha" runat="server" Text="Fecha:" Visible="False"></asp:Label>
         </p>
             <div class="calendarioContainer">
-            <asp:Calendar ID="cal_Fechas" runat="server" OnDayRender="cal_Fechas_DayRender" Visible="False"></asp:Calendar>
+            <asp:Calendar ID="cal_Fechas" runat="server" OnDayRender="cal_Fechas_DayRender" Visible="False" OnSelectionChanged="cal_Fechas_SelectionChanged"></asp:Calendar>
 
            
                 <asp:RadioButtonList ID="rbtnl_Horarios" runat="server">
@@ -92,7 +92,7 @@
            
             </div>
 
-            <asp:Button ID="btn_Confirmar" runat="server" Text="Confirmar turno" CssClass="btnEnviar" />
+            <asp:Button ID="btn_Confirmar" runat="server" Text="Confirmar turno" CssClass="btnEnviar" OnClick="btn_Confirmar_Click" />
 
 
             <asp:Label ID="lbl_Mensaje" runat="server"></asp:Label>

@@ -18,9 +18,9 @@ namespace Negocio
             return daoTurno.GetHorariosDisponibles(legajo, fecha);
         }
 
-        public bool RegistrarTurno(int dniPaciente, int legajoMedico, DateTime fecha, string horario)
+        public bool RegistrarTurno(int dniPaciente, int legajoMedico, DateTime fecha)
         {
-            int filas = daoTurno.InsertarTurno(dniPaciente, legajoMedico, fecha, horario);
+            int filas = daoTurno.InsertarTurno(dniPaciente, legajoMedico, fecha);
             return filas > 0;
         }
 

@@ -150,15 +150,19 @@ namespace TPINT_GRUPO_5_PR3
 
             int legajo = int.Parse(ddl_Medicos.SelectedValue);
             int dni = int.Parse(txt_Dni.Text);
-            DateTime fecha = cal_Fechas.SelectedDate;
-            string horario = rbtnl_Horarios.SelectedValue;
+            int anio = cal_Fechas.SelectedDate.Year;
+            int mes = cal_Fechas.SelectedDate.Month;
+            int dia = cal_Fechas.SelectedDate.Day;
 
-            bool ok = negTurno.RegistrarTurno(dni, legajo, fecha, horario);
+            int hora = Convert.ToInt32(rbtnl_Horarios.SelectedItem.Text.Split(':')[0]);
+            DateTime fecha = new DateTime(anio, mes, dia, hora, 0, 0);
+
+            bool ok = negTurno.RegistrarTurno(dni, legajo, fecha);
 
             if (ok)
             {
-                lbl_Mensaje.Text = "Turno registrado correctamente.";
                 LimpiarTodo();
+                lbl_Mensaje.Text = "Turno registrado correctamente.";
             }
             else
             {
@@ -200,17 +204,14 @@ namespace TPINT_GRUPO_5_PR3
         }
 
         protected void cal_Fechas_DayRender(object sender, DayRenderEventArgs e)
-        {
-            DataTable dt = (DataTable)Session["horariosDeMedico"];
-
+        { 
             DateTime fechaRender = e.Day.Date;
-            string legajo = ddl_Medicos.SelectedValue.ToString();
             bool diaSeleccionable = false;
 
 
             if (fechaRender > DateTime.Today)
             {
-                foreach (DataRow row in dt.Rows)
+                foreach (DataRow row in ((DataTable)Session["horariosDeMedico"]).Rows)
                 {
                     if (Convert.ToInt32(fechaRender.DayOfWeek) == Convert.ToInt32(row[2]))
                     {

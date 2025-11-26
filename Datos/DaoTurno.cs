@@ -55,16 +55,16 @@ namespace Datos
 
             for (TimeSpan h = horaInicio; h < horaFin; h = h.Add(TimeSpan.FromHours(1)))
             {
-                horarios.Rows.Add(h.ToString(@"hh\:mm"));
+                horarios.Rows.Add(h.ToString());
             }
 
             // sacar horarios ya ocupados
             string consultaOcupados = @"
-                SELECT Observacion_Tur
-                FROM Turnos
-                WHERE LegajoMedico_Tur = @legajo
-                AND Fecha_Tur = @fecha
-                AND Estado_Tur = 1
+                SELECT CAST (Fecha_Turno AS TIME) AS HoraTurno
+                FROM TurnosPrueba
+                WHERE LegajoMedico_Turno = @legajo
+                AND CAST (Fecha_Turno AS DATE) = @fecha
+                AND Estado_Turno = 1
             ";
 
             SqlCommand cmdOcupados = new SqlCommand(consultaOcupados, cn);
@@ -76,7 +76,7 @@ namespace Datos
             List<string> ocupados = new List<string>();
             while (reader.Read())
             {
-                ocupados.Add(reader["Observacion_Tur"].ToString());
+                ocupados.Add(reader["HoraTurno"].ToString());
             }
             reader.Close();
 
@@ -95,10 +95,11 @@ namespace Datos
 
 
         //insertar turno 
-        public int InsertarTurno(int dni, int legajo, DateTime fecha, string horario)
+        public int InsertarTurno(int dni, int legajo, DateTime fecha)
         {
             SqlConnection cn = ad.obtenerConexion();
 
+            /*
             // valida q no haya superposicion de turnos
             string validar = @"
                 SELECT * 
@@ -122,18 +123,18 @@ namespace Datos
                 return 0; // turno ocupado
             }
             reader.Close();
+            */
 
             // aca se inserta el turno
             string insertar = @"
-                INSERT INTO Turnos (Fecha_Tur, LegajoMedico_Tur, DNIPaciente_Tur, Observacion_Tur, Asistencia_Tur, Estado_Tur)
-                VALUES (@fecha, @legajo, @dni, @horario, 'Pendiente', 1)
+                INSERT INTO TurnosPrueba (Fecha_Turno, LegajoMedico_Turno, DNIPaciente_Turno, Asistencia_Turno, Estado_Turno)
+                VALUES (@fecha, @legajo, @dni, 'Pendiente', 1)
             ";
 
             SqlCommand cmdInsert = new SqlCommand(insertar, cn);
             cmdInsert.Parameters.AddWithValue("@fecha", fecha);
             cmdInsert.Parameters.AddWithValue("@legajo", legajo);
             cmdInsert.Parameters.AddWithValue("@dni", dni);
-            cmdInsert.Parameters.AddWithValue("@horario", horario);
 
             int filas = cmdInsert.ExecuteNonQuery();
 
