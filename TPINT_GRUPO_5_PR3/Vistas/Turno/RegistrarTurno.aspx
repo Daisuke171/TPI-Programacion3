@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../Estilos/RegistrarTurno.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btn_buscarPaciente">
         <nav>
             <div class="leftSide">
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/InicioAdmin.aspx"></asp:HyperLink>

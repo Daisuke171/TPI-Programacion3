@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btnFiltrarDni">
         <nav>
            <div class="leftSide">
                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
@@ -29,15 +29,23 @@
             <div class="container">
                 <p>Consultar por DNI:</p>
                 <asp:TextBox ID="txtDni" runat="server"></asp:TextBox>
-                <asp:Button ID="btnFiltrarDni" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarDni_Click" />
-            &nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblErrorDni" runat="server"></asp:Label>
+                <asp:Button ID="btnFiltrarDni" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarDni_Click" ValidationGroup="1" />
             </div>
+
+            <div class="validatorContainer">
+                <asp:Label ID="lblErrorDni" runat="server" CssClass="validator"></asp:Label>
+                <asp:RequiredFieldValidator ID="rfvtxtDni" runat="server" ErrorMessage="" ControlToValidate="txtDni" Display="Dynamic" ValidationGroup="1"></asp:RequiredFieldValidator>
+            </div>
+
             <div class="container">
                 <p>Consultar turnos de medico por LEGAJO:</p>
                 <asp:TextBox ID="txtLegajo" runat="server"></asp:TextBox>
-                <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarLegajo_Click1" />
-                <asp:Label ID="lblErrorLegajo" runat="server"></asp:Label>
+                <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarLegajo_Click1" ValidationGroup="2" />
+            </div>
+
+            <div class="validatorContainer">
+                <asp:Label ID="lblErrorLegajo" runat="server" CssClass="validator"></asp:Label>
+                <asp:RequiredFieldValidator ID="rfvtxtLegajo" runat="server" ErrorMessage="" ControlToValidate="txtLegajo" ValidateRequestMode="Inherit" Display="Dynamic" ValidationGroup="2"></asp:RequiredFieldValidator>
             </div>
 
 

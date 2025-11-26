@@ -42,6 +42,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             gvMedico.DataBind();
         }
 
+        private void CargarMedicos(int legajo)
+        {
+            DataTable tablaPacientes = neg.listarMedicoPorLegajo(legajo);
+            gvMedico.DataSource = tablaPacientes;
+            gvMedico.DataBind();
+        }
+
         protected void gvMedico_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gvMedico.EditIndex = e.NewEditIndex;
@@ -167,6 +174,25 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Session.Clear();
 
             Response.Redirect("~/Vistas/Login.aspx");
+        }
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            lbl_mensaje.Text = string.Empty;
+            Session["LegajoABuscar"] = txtBuscar.Text;
+            gvMedico.EditIndex = -1;
+            CargarMedicos();
+        }
+        protected void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            lbl_mensaje.Text = string.Empty;
+            CargarMedicos();
+        }
+
+        protected void gvMedico_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvMedico.EditIndex = -1;
+            gvMedico.PageIndex = e.NewPageIndex;
+            CargarMedicos(Convert.ToInt32(Session["DNIABuscar"].ToString()));
         }
     }
 }

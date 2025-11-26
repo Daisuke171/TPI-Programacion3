@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../Estilos/AltaPaciente.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btnBuscarLegajo">
         <nav>
             <div class="leftSide">
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>

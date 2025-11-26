@@ -1,4 +1,9 @@
-﻿#gvPaciente {
+﻿#tablaPaciente {
+    overflow-x: auto;
+    width: 100%;
+}
+
+#gvPaciente {
     width: 100%;
     border-collapse: collapse;
     border-radius: 12px;

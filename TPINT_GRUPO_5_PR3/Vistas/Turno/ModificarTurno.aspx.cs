@@ -96,5 +96,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
             gvTurnos.DataSource = tablaTurno;
             gvTurnos.DataBind();
         }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("~/Vistas/Login.aspx");
+        }
     }
 }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../Estilos/AltaPaciente.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btnRegistrarMedico">
         <nav>
             <div class="leftSide">
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
@@ -145,7 +145,7 @@
 
                 <div class="campo">
                     <p>Contraseña</p>
-                    <asp:TextBox ID="txtContraseña" runat="server" CssClass="txtBox" ValidationGroup="1" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtContraseña" runat="server" CssClass="txtBox" ValidationGroup="1" TextMode="Password" ></asp:TextBox>
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" CssClass="validator" Display="Dynamic" ValidationGroup="1" InitialValue="0">* Requerido</asp:RequiredFieldValidator>

@@ -1,0 +1,72 @@
+﻿.gv-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+#gvTurnos {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+    #gvTurnos th {
+        background: #0078d4;
+        color: #fff;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px;
+    }
+
+    #gvTurnos td {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: #000;
+    }
+
+    #gvTurnos tr:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    #gvTurnos input[type="text"] {
+        width: 90%;
+        padding: 6px 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #f8f8f8;
+        font-size: 13px;
+        transition: all 0.2s ease-in-out;
+    }
+
+        #gvTurnos input[type="text"]:focus {
+            outline: none;
+            border-color: #0078d4;
+            background-color: #ffffff;
+            box-shadow: 0 0 4px rgba(0, 120, 212, 0.3);
+        }
+
+    #gvTurnos a {
+        background-color: #0078d4;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 13px;
+        transition: background-color 0.2s ease;
+    }
+
+        #gvTurnos a:hover {
+            background-color: #005fa3;
+        }
+
+    #gvTurnos tr:hover {
+        background-color: #f3f9ff;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    #gvTurnos tr:nth-child(even) {
+        background-color: #fafafa;
+    }

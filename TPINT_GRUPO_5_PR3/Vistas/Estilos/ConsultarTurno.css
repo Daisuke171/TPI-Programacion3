@@ -83,3 +83,30 @@ table {
         table button:hover {
             background-color: #155b83;
         }
+
+main .validatorContainer .validator {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding-top: 2px;
+    padding-bottom: 8px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+main .validatorContainer {
+    margin-bottom: 10px;
+    position: relative;
+    top: -10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

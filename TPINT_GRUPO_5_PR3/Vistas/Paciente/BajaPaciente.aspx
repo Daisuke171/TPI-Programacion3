@@ -9,23 +9,10 @@
     <link rel="stylesheet" href="../Estilos/Base.css" />
     <link rel="stylesheet" href="../Estilos/NavBar.css" />
     <link rel="stylesheet" href="../Estilos/BajaPaciente.css" />
-    <style type="text/css">
-        .auto-style1 {
-            position: fixed;
-            top: -1px;
-            left: -6px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(2px);
-            z-index: 9999;
-        }
-    </style>
+    
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="btnBuscar">
         <nav>
             <div class="leftSide">
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
@@ -155,7 +142,7 @@
             <asp:Label ID="lbl_confirmacion" runat="server"></asp:Label>
         </main>
 
-        <asp:Panel ID="confirmModal" CssClass="auto-style1" runat="server" Visible="False">
+        <asp:Panel ID="confirmModal" CssClass="modal" runat="server" Visible="False">
             <div class="modal-content">
                 <p>¿Está seguro que desea eliminar este registro?</p>
                 <asp:Button ID="btnConfirmar" runat="server" Text="Sí, confirmar" CssClass="btn-confirmar" OnClick="btnConfirmar_Click" />

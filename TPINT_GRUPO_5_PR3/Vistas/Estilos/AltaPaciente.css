@@ -86,8 +86,16 @@ main input[type="date"] {
     text-align: center;
 }
 
-
-
+main section input[type="password"] {
+    width: 60%;
+    caret-color: black;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
 
 @keyframes fadeIn {
     from {

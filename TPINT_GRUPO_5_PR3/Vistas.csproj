@@ -88,6 +88,7 @@
     <Content Include="Vistas\Estilos\MenuAdmin.css" />
     <Content Include="Vistas\Estilos\ModificarMedico.css" />
     <Content Include="Vistas\Estilos\ModificarPaciente.css" />
+    <Content Include="Vistas\Estilos\ModificarTurno.css" />
     <Content Include="Vistas\Estilos\NavBar.css" />
     <Content Include="Vistas\Estilos\RegistrarTurno.css" />
     <Content Include="Vistas\Estilos\Reportes.css" />

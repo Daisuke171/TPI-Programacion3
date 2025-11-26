@@ -119,6 +119,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             CargarMedicos();
         }
+
+        protected void gvMedico_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvMedico.PageIndex = e.NewPageIndex;
+            CargarMedicos(Convert.ToInt32(txtBoxLegajo.Text));
+        }
     }
     
 }
