@@ -90,11 +90,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
-        {
+        {   
             int id = Convert.ToInt32(txtIdTurno.Text.Trim());
             DataTable tablaTurno = negTurno.ObtenerTablaTurnosPorId(id);
             gvTurnos.DataSource = tablaTurno;
             gvTurnos.DataBind();
+            txtIdTurno.Text = "";
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

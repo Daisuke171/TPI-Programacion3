@@ -28,7 +28,14 @@ namespace Negocio
         {
             return daoTurno.getTablaTurnos();
         }
-        
+
+        //LA FECHA VA COMO AÑO-MES-DÍA
+
+        public DataTable ObtenerTablaTurnosDiaPuntual(DateTime fecha)
+        {
+            return daoTurno.getTablaTurnosDiaPuntual(fecha);
+        }
+
         public DataTable ObtenerTablaTurnosPorId(int id)
         {
             return daoTurno.getTablaTurnosPorId(id);

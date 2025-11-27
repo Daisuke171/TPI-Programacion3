@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -147,6 +149,28 @@ namespace Datos
         {
             DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS");
             return tablaTurnos;
+        }
+
+
+        //LA FECHA VA COMO AÑO, MES, DÍA
+        public DataTable getTablaTurnosDiaPuntual(DateTime fecha)
+        {
+
+            SqlConnection cn = ad.obtenerConexion();
+
+            string consulta = @"SELECT * FROM TURNOS WHERE Fecha_Tur = @fecha AND Asistencia_Tur = 'Pendiente'";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            cmd.Parameters.AddWithValue("@fecha", fecha.Date);
+
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tablaTurnos = new DataTable();
+            da.Fill(tablaTurnos);
+
+            cn.Close();
+            return tablaTurnos;
+
         }
 
         public DataTable getTablaTurnosPorId(int id)

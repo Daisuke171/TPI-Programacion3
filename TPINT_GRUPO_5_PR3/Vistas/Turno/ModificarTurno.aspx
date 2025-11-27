@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Mpdificar Turnos</title>
+    <title>Modificar Turnos</title>
     <link rel="stylesheet" href="../Estilos/Base.css" />
     <link rel="stylesheet" href="../Estilos/NavBar.css" />
     <link rel="stylesheet" href="../Estilos/ModificarTurno.css" />
@@ -27,12 +27,12 @@
 
             <div class="container">
                 <p>Buscar por id turno:</p>
-                <asp:TextBox ID="txtIdTurno" runat="server"></asp:TextBox>
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" CssClass="btnEnviar" />
+                <asp:TextBox ID="txtIdTurno" runat="server" ValidationGroup="1"></asp:TextBox>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" CssClass="btnEnviar" ValidationGroup="1" />
             </div>
             <div class="validatorContainer">
-                <asp:RegularExpressionValidator ID="rev_txtIdTurno" runat="server" ControlToValidate="txtIdTurno" ErrorMessage="Solo se admiten numeros" ForeColor="Red" ValidationExpression="^[0-9 ]+$"></asp:RegularExpressionValidator>
-                <asp:RequiredFieldValidator ID="rfv_txtIdTurno" runat="server" ControlToValidate="txtIdTurno" ErrorMessage="Ingrese un ID" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="rev_txtIdTurno" runat="server" ControlToValidate="txtIdTurno" ErrorMessage="Solo se admiten numeros" ForeColor="Red" ValidationExpression="^[0-9 ]+$" ValidationGroup="1"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="rfv_txtIdTurno" runat="server" ControlToValidate="txtIdTurno" ErrorMessage="Ingrese un ID" ForeColor="Red" ValidationGroup="1"></asp:RequiredFieldValidator>
             </div>
 
             <div class="gv-container">

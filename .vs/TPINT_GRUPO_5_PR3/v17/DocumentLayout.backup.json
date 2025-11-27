@@ -1,62 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\",
+  "WorkspaceRootPath": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\datos\\daoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\gomes\\documents\\facultad 2025 2do cuatrimiestre\\programacion iii\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\modificarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\modificarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\gomes\\documents\\facultad 2025 2do cuatrimiestre\\programacion iii\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\modificarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\modificarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\gomes\\documents\\facultad 2025 2do cuatrimiestre\\programacion iii\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\gomes\\documents\\facultad 2025 2do cuatrimiestre\\programacion iii\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\turnosdeldia.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\turnosdeldia.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|c:\\users\\gomes\\documents\\facultad 2025 2do cuatrimiestre\\programacion iii\\tpi-programacion3\\datos\\daoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negocioturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\registrarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\maria\\desktop\\utn\\programacion 3\\tp_integrador\\proyecto\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\consultarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\consultarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\consultarturno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\consultarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\datos\\daohorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824A5ABE-DA5B-4D3A-A16A-FB1F48AC4FB0}|Datos\\Datos.csproj|solutionrelative:datos\\daohorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negociohorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociohorario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\horarios\\altahorario.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\horarios\\altahorario.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\horarios\\altahorario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\horarios\\altahorario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\tpint_grupo_5_pr3\\vistas\\inicioadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\inicioadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B3C38D-41EE-4549-BE32-638584A8F62A}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociomedico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\entidades\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07DFE0CE-752B-42C9-AD54-B188FBD1325F}|Entidades\\Entidades.csproj|solutionrelative:entidades\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|c:\\users\\gomes\\documents\\facultad 2025 2do cuatrimiestre\\programacion iii\\tpi-programacion3\\tpint_grupo_5_pr3\\vistas\\turno\\turnosdeldia.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354A1287-16E0-4BE5-B573-22F048FDA1F1}|TPINT_GRUPO_5_PR3\\Vistas.csproj|solutionrelative:tpint_grupo_5_pr3\\vistas\\turno\\turnosdeldia.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,192 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NegocioTurno.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioTurno.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioTurno.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioTurno.cs",
-              "RelativeToolTip": "Negocio\\NegocioTurno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T17:19:43.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConsultarTurno.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAkwEoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T14:35:45.264Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DaoTurno.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoTurno.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoTurno.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoTurno.cs",
-              "RelativeToolTip": "Datos\\DaoTurno.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAqwFgAAAARAAAAAAAAAA==",
+              "Title": "ModificarTurno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx.cs",
+              "ToolTip": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAcwF0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T14:44:13.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ConsultarTurno.aspx",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-25T14:35:40.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegistrarTurno.aspx",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-26T16:07:50.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DaoMedico.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoMedico.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoMedico.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoMedico.cs",
-              "RelativeToolTip": "Datos\\DaoMedico.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:16:52.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AltaHorario.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAzwDUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:15:36.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NegocioMedico.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioMedico.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioMedico.cs",
-              "RelativeToolTip": "Negocio\\NegocioMedico.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:16:23.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "InicioAdmin.aspx",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\InicioAdmin.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\InicioAdmin.aspx",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\InicioAdmin.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\InicioAdmin.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-25T22:17:20.109Z",
+              "WhenOpened": "2025-11-27T19:21:48.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RegistrarTurno.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\RegistrarTurno.aspx.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAYwJ8AAAAkAAAAAAAAAA==",
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Login.aspx.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T16:07:56.322Z",
+              "WhenOpened": "2025-11-27T19:18:17.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DaoHorario.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoHorario.cs",
-              "RelativeDocumentMoniker": "Datos\\DaoHorario.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Datos\\DaoHorario.cs",
-              "RelativeToolTip": "Datos\\DaoHorario.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA1wCkAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "DaoTurno.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\Datos\\DaoTurno.cs",
+              "RelativeDocumentMoniker": "Datos\\DaoTurno.cs",
+              "ToolTip": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\Datos\\DaoTurno.cs",
+              "RelativeToolTip": "Datos\\DaoTurno.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAowKAAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:12:48.348Z",
+              "WhenOpened": "2025-11-27T19:02:25.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Horario.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Horario.cs",
-              "RelativeDocumentMoniker": "Entidades\\Horario.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Entidades\\Horario.cs",
-              "RelativeToolTip": "Entidades\\Horario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:12:35.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NegocioHorario.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioHorario.cs",
-              "RelativeDocumentMoniker": "Negocio\\NegocioHorario.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\Negocio\\NegocioHorario.cs",
-              "RelativeToolTip": "Negocio\\NegocioHorario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:12:20.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AltaHorario.aspx",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx",
-              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\UTN\\Programacion 3\\TP_Integrador\\Proyecto\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx",
-              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Horarios\\AltaHorario.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "DocumentIndex": 1,
+              "Title": "ModificarTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx",
+              "ToolTip": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ModificarTurno.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-25T22:11:31.988Z",
+              "WhenOpened": "2025-11-27T18:55:23.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TurnosDelDia.aspx",
+              "DocumentMoniker": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx",
+              "ToolTip": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-27T17:56:18.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TurnosDelDia.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx.cs",
+              "ToolTip": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\TurnosDelDia.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T18:00:16.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConsultarTurno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
+              "RelativeDocumentMoniker": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
+              "ToolTip": "C:\\Users\\gomes\\Documents\\FACULTAD 2025 2DO CUATRIMIESTRE\\PROGRAMACION III\\TPI-Programacion3\\TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
+              "RelativeToolTip": "TPINT_GRUPO_5_PR3\\Vistas\\Turno\\ConsultarTurno.aspx.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T14:35:45.264Z",
               "EditorCaption": ""
             }
           ]
