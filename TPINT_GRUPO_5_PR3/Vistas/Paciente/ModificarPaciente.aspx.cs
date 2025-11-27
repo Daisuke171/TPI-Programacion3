@@ -37,14 +37,9 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         private void CargarPacientes()
         {
-            DataTable tablaPacientes = neg.getTablaPacientes();
-            gvPaciente.DataSource = tablaPacientes;
-            gvPaciente.DataBind();
-        }
+            string dni = Session["DNIABuscar"].ToString();
 
-        private void CargarPacientes(string dni)
-        {
-            DataTable tablaPacientes = neg.getTablaPacientes(dni);
+            DataTable tablaPacientes = neg.BuscarPacientes(dni);
             gvPaciente.DataSource = tablaPacientes;
             gvPaciente.DataBind();
         }
@@ -52,13 +47,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void gvPaciente_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gvPaciente.EditIndex = e.NewEditIndex;
-            CargarPacientes(Session["DNIABuscar"].ToString());
+            CargarPacientes();
         }
 
         protected void gvPaciente_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gvPaciente.EditIndex = -1;
-            CargarPacientes(Session["DNIABuscar"].ToString());
+            CargarPacientes();
         }
 
         protected void gvPaciente_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -80,6 +75,9 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Paciente paciente = new Paciente(dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, tipoSangre, correo, telefono, true);
 
             bool modifico = neg.modificarPaciente(paciente);
+
+            limpiarCampos();
+
             if (modifico)
             {
                 lbl_mensaje.ForeColor = Color.Green;
@@ -91,7 +89,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 lbl_mensaje.Text = "Error en la operacion";
             }
 
-            limpiarCampos();
             CargarPacientes();
         }
 
@@ -170,6 +167,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void limpiarCampos()
         {
+            lbl_mensaje.Text = string.Empty;
             txtBuscar.Text = string.Empty;
             Session["DNIABuscar"] = "";
             gvPaciente.EditIndex = -1;
@@ -181,12 +179,11 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             lbl_mensaje.Text = string.Empty;
             Session["DNIABuscar"] = txtBuscar.Text;
             gvPaciente.EditIndex = -1;
-            CargarPacientes(Session["DNIABuscar"].ToString());
+            CargarPacientes();
         }
 
         protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            lbl_mensaje.Text = string.Empty;
             limpiarCampos();
             CargarPacientes();
         }
@@ -195,7 +192,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             gvPaciente.EditIndex = -1;
             gvPaciente.PageIndex = e.NewPageIndex;
-            CargarPacientes(Session["DNIABuscar"].ToString());
+            CargarPacientes();
         }
     }
 }

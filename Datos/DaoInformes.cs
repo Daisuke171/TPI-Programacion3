@@ -15,7 +15,7 @@ namespace Datos
 
         public DataTable PromedioTiposDeSangre()
         {
-            DataTable pacientes = daoPaciente.getTablaPacientesActivos();
+            DataTable pacientes = daoPaciente.getTablaPacientes();
 
             // crear tabla resultado
             DataTable resultado = new DataTable();

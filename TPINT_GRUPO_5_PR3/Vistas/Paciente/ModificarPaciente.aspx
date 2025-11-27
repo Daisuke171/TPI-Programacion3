@@ -96,6 +96,7 @@
                             <EditItemTemplate>
                                 <asp:TextBox ID="txt_eit_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Pac") %>' TextMode="Date"></asp:TextBox>
                                 <asp:RangeValidator ID="rv_eit_FechaNacimiento" runat="server" ControlToValidate="txt_eit_nacimiento" ErrorMessage="* Fecha invalida" MinimumValue="1-1-1900" Type="Date" Display="None"></asp:RangeValidator>
+                                <asp:RequiredFieldValidator ID="rfv_eit_fechaNacimiento" runat="server" ControlToValidate="txt_eit_nacimiento" Display="None" EnableTheming="True" ErrorMessage="* Campo obligatorio: Fecha"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_nacimiento" runat="server" Text='<%# Bind("FechaNacimiento_Pac") %>' OnDataBinding="lbl_it_nacimiento_DataBinding"></asp:Label>

@@ -21,29 +21,22 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
-                Session["DNIABuscar"] = "";
-
                 if (Session["TipoUsuario"] == null)
                 {
                     Response.Redirect("~/Vistas/Inicio.aspx");
                     return;
                 }
 
+                Session["DNIABuscar"] = "";
                 CargarPacientes();
             }
         }
 
         private void CargarPacientes()
         {
-            DataTable tablaPaciente = negPaciente.getTablaPacientes();
-            gvPaciente.DataSource = tablaPaciente;
-            gvPaciente.DataBind();
-        }
-
-        private void CargarPacientes(string dni)
-        {
-            DataTable tablaPaciente = negPaciente.getTablaPacientes(dni);
-            gvPaciente.DataSource = tablaPaciente;
+            string dni = Session["DNIABuscar"].ToString();
+            DataTable dt = negPaciente.BuscarPacientes(dni);
+            gvPaciente.DataSource = dt;
             gvPaciente.DataBind();
         }
 
@@ -66,6 +59,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
                 if (negPaciente.bajaPaciente(DNIAEliminar))
                 {
+                    gvPaciente.PageIndex = 0;
+                    limpiarCampos();
                     lbl_confirmacion.ForeColor = Color.Green;
                     lbl_confirmacion.Text = "Paciente dado de baja correctamente";
                 }
@@ -79,8 +74,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 ViewState["DNIAEliminar"] = null;
                 confirmModal.Visible = false;
 
-                // mostrar grid inicial
-                limpiarCampos();
+                // mostrar grid inicial o mantiene los datos en caso de fallar
                 CargarPacientes();
             }
         }
@@ -100,7 +94,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void gvPaciente_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvPaciente.PageIndex = e.NewPageIndex;
-            CargarPacientes(Session["DNIABuscar"].ToString());
+            CargarPacientes();
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -113,20 +107,21 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             Session["DNIABuscar"] = txtBoxDNI.Text;
-            CargarPacientes(Session["DNIABuscar"].ToString());
+            CargarPacientes();
         }
 
         protected void btnMostarTodos_Click(object sender, EventArgs e)
         {
             limpiarCampos();
+            gvPaciente.PageIndex = 0;
             CargarPacientes();
         }
 
         protected void limpiarCampos()
         {
-            Session["DNIABuscar"] = "";
-            gvPaciente.PageIndex = 0;
             txtBoxDNI.Text = string.Empty;
+            lbl_confirmacion.Text = string.Empty;
+            Session["DNIABuscar"] = "";
         }
     }
 }

@@ -33,16 +33,14 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 CargarPacientes();
             }
         }
-
         private void CargarPacientes()
         {
-            DataTable tablaPaciente = neg.getTablaPacientes();
-            gvPacientes.DataSource = tablaPaciente;
-            gvPacientes.DataBind();
-        }
-        private void CargarPacientes(string dni, string apellido, string tipoSangre, string orden)
-        {
-            DataTable tablaPaciente = neg.getTablaPacientes(dni, apellido, tipoSangre, orden);
+            string dni = Session["DNIABuscar"].ToString();
+            string apellido = Session["apellidoABuscar"].ToString();
+            string tipoSangre = Session["tipoSangreABuscar"].ToString();
+            string orden = Session["ordenABuscar"].ToString();
+
+            DataTable tablaPaciente = neg.BuscarPacientes(dni, apellido, tipoSangre, orden);
             gvPacientes.DataSource = tablaPaciente;
             gvPacientes.DataBind();
         }
@@ -56,7 +54,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void gvPacientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvPacientes.PageIndex = e.NewPageIndex;
-            CargarPacientes(Session["DNIABuscar"].ToString(), Session["apellidoABuscar"].ToString(), Session["tipoSangreABuscar"].ToString(), Session["ordenABuscar"].ToString());
+            CargarPacientes();
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -68,11 +66,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Session["tipoSangreABuscar"] = ddlTipoSangre.SelectedValue;
             Session["ordenABuscar"] = ddlOrdenDeListado.SelectedValue;
 
-            CargarPacientes(Session["DNIABuscar"].ToString(), Session["apellidoABuscar"].ToString(), Session["tipoSangreABuscar"].ToString(), Session["ordenABuscar"].ToString());
+            CargarPacientes();
         }
         protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
             limpiarCampos();
+            gvPacientes.PageIndex = 0;
             CargarPacientes();
         }
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -84,8 +83,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void limpiarCampos()
         {
-            gvPacientes.PageIndex = 0;
-
             Session["DNIABuscar"] = "";
             Session["apellidoABuscar"] = "";
             Session["tipoSangreABuscar"] = "Todos";
