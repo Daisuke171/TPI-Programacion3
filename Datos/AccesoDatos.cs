@@ -88,6 +88,13 @@ namespace Datos
             conexion.Close();
             return resultado;
         }
+        public object EjecutarScalar(SqlCommand comando)
+        {
+            comando.Connection = comando.Connection ?? obtenerConexion();
+
+            return comando.ExecuteScalar();
+        }
+
 
         public int EjecutarTransaccion(String consultaSql)
         {

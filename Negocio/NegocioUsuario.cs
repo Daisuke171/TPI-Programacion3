@@ -26,9 +26,13 @@ namespace Negocio
             {
                 return "Medico";
             }
-            else
+            else if (daoUsuario.tipoUsuario(usuario) == 3)
             {
                 return "Paciente";
+            }
+            else
+            {
+                return null;
             }
         }
 

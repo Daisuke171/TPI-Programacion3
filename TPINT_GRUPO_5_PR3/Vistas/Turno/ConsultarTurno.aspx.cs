@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using Entidades;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -105,6 +106,10 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             
         }
 
-
+        protected void gvConsultarTurnos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvConsultarTurnos.PageIndex = e.NewPageIndex;
+            CargarTurnos();
+        }
     }
 }

@@ -99,6 +99,16 @@ main .validatorContainer {
     top: -10px;
 }
 
+#gvConsultarTurnos a {
+    background-color: #0078d4;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background-color 0.2s ease;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

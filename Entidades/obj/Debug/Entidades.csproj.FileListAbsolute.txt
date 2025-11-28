@@ -40,3 +40,9 @@ C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Entidades\obj\Debug\Entid
 C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Entidades\obj\Debug\Entidades.dll
 C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Daisuke\Desktop\TPI-Programacion3\Entidades\bin\Debug\Entidades.dll
+C:\Users\Daisuke\Desktop\TPI-Programacion3\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Daisuke\Desktop\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Daisuke\Desktop\TPI-Programacion3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Daisuke\Desktop\TPI-Programacion3\Entidades\obj\Debug\Entidades.dll
+C:\Users\Daisuke\Desktop\TPI-Programacion3\Entidades\obj\Debug\Entidades.pdb

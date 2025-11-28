@@ -18,8 +18,14 @@ namespace Datos
 
         public bool validarUsuario(string usuario, string contrasenia)
         {
-            string consulta = $"SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario_U = '{usuario}' AND ContraseniaUsuario_U = '{contrasenia}'";
-            return accesoDatos.existe(consulta);
+            string consulta = $"SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario_U = @user AND ContraseniaUsuario_U = @contrasenia";
+            
+            SqlCommand comando = new SqlCommand(consulta);
+            comando.Parameters.AddWithValue("@user", usuario);
+            comando.Parameters.AddWithValue("@contrasenia", contrasenia);
+
+            bool resultado = Convert.ToInt32(accesoDatos.EjecutarScalar(comando)) == 1 ? true : false;
+            return resultado;
         }
 
         public int tipoUsuario(string usuario)

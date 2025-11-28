@@ -4,84 +4,67 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Turnos del Dia</title>
+    <link rel="stylesheet" href="../Estilos/Base.css" />
+    <link rel="stylesheet" href="../Estilos/NavBar.css" />
+    <style>
+        #gvListarTurnosDelDia {
             width: 100%;
+            min-width: 900px;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.15);
         }
-        .auto-style2 {
-            height: 20px;
-        }
-        .auto-style3 {
-            height: 122px;
-        }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
 
-    table th {
-        background-color: #1d6fa5;
-        color: white;
-        padding: 12px;
-        font-weight: 600;
-        font-size: 1rem;
-        border-bottom: 2px solid #155b83;
-    }
+            #gvListarTurnosDelDia th {
+                background: #0078d4;
+                color: #fff;
+                font-weight: bold;
+                text-align: left;
+                padding: 10px;
+            }
 
-        .gvTurnos {}
-        .auto-style4 {
-            width: 10px;
-        }
-        .auto-style5 {
-            height: 122px;
-            width: 10px;
-        }
-        .auto-style6 {
-            height: 20px;
-            width: 10px;
-        }
-        .auto-style7 {
-            width: 1130px;
-        }
-        .auto-style8 {
-            height: 122px;
-            width: 1130px;
-        }
-        .auto-style9 {
-            height: 20px;
-            width: 1130px;
-        }
+            #gvListarTurnosDelDia td {
+                padding: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                color: #000;
+            }
+
+            #gvListarTurnosDelDia tr:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            #gvListarTurnosDelDia a {
+                background-color: #0078d4;
+                color: white;
+                padding: 6px 10px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 13px;
+                transition: background-color 0.2s ease;
+            }
     </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style7">
-                    <asp:Label ID="Label1" runat="server" Text="Turnos del Día"></asp:Label>
-                </td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>
-                    <asp:Label ID="lblUsuarioTurnosDelDia" runat="server"></asp:Label>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style8">
-
-
+        <nav>
+            <div class="leftSide">
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Pacientes" NavigateUrl="~/Vistas/HomePacientes.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Medicos" NavigateUrl="~/Vistas/HomeMedicos.aspx"></asp:HyperLink>
+            </div>
+            <div class="rightSide">
+                <asp:Label ID="lblUsuario" CssClass="lbl_Usuario" runat="server" Text="Username"></asp:Label>
+                <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesion" CssClass="btn-logout" OnClick="btnLogout_Click" />
+            </div>
+        </nav>
+        <main>
+            <h1>Turnos del Dia de <asp:Label ID="lblUsuarioTurnosDelDia" runat="server"></asp:Label></h1>
+            
             <asp:GridView ID="gvListarTurnosDelDia" runat="server" AutoGenerateColumns="False" CssClass="gvTurnos" Width="1021px">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Turno">
@@ -141,27 +124,10 @@
                 </Columns>
             </asp:GridView>
 
-                </td>
-                <td class="auto-style5"></td>
-                <td class="auto-style3"></td>
-                <td class="auto-style3"></td>
-                <td class="auto-style3"></td>
-            </tr>
-            <tr>
-                <td class="auto-style7">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style9"></td>
-                <td class="auto-style6"></td>
-                <td class="auto-style2"></td>
-                <td class="auto-style2"></td>
-                <td class="auto-style2"></td>
-            </tr>
-        </table>
+
+            
+
+        </main>
     </form>
 </body>
 </html>
