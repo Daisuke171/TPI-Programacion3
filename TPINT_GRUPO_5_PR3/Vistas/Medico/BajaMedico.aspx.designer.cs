@@ -69,6 +69,15 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revLegajo;
 
         /// <summary>
+        /// rfvLegajo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLegajo;
+
+        /// <summary>
         /// btnBuscar control.
         /// </summary>
         /// <remarks>

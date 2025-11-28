@@ -29,7 +29,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Reportes
 
         public void CargarDDLMedicos()
         {
-            ddlMedicos.DataSource = negMedico.listarMedico(true);
+            ddlMedicos.DataSource = negMedico.buscarMedicos();
             ddlMedicos.DataTextField = "Apellido_Med";
             ddlMedicos.DataValueField = "Legajo_Med";
             ddlMedicos.DataBind();

@@ -19,16 +19,17 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
-                Session["DNIABuscar"] = "";
-                Session["apellidoABuscar"] = "";
-                Session["tipoSangreABuscar"] = "Todos";
-                Session["ordenABuscar"] = "DNI_Pac";
 
                 if (Session["TipoUsuario"] == null)
                 {
                     Response.Redirect("~/Vistas/Inicio.aspx");
                     return;
                 }
+
+                Session["DNIABuscar"] = "";
+                Session["apellidoABuscar"] = "";
+                Session["tipoSangreABuscar"] = "Todos";
+                Session["ordenABuscar"] = "DNI_Pac";
 
                 CargarPacientes();
             }

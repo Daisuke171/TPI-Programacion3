@@ -27,22 +27,16 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                     return;
                 }
 
-                CargarMedicos();
+                Session["legajoABuscar"] = "";
+                cargarMedicos();
             }
         }
 
-        private void CargarMedicos()
+        private void cargarMedicos()
         {
-            bool medActivo = true;
-            DataTable tablaMedico = negMedico.listarMedico(medActivo);
-            gvMedico.DataSource = tablaMedico;
-            gvMedico.DataBind();
-        }
-
-        private void CargarMedicos(int legajo)
-        {
-            DataTable tablaPaciente = negMedico.listarMedicoPorLegajo(legajo);
-            gvMedico.DataSource = tablaPaciente;
+            string legajo = Session["legajoABuscar"].ToString();
+            DataTable dt = negMedico.buscarMedicos(legajo);
+            gvMedico.DataSource = dt;
             gvMedico.DataBind();
         }
 
@@ -67,10 +61,10 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
             
-
-
             if (ViewState["LegajoAEliminar"] != null)
             {
+                limpiarConfirmacion();
+
                 int legajo = Convert.ToInt32(ViewState["LegajoAEliminar"]);
 
                 if (negMedico.bajaMedico(legajo))
@@ -99,7 +93,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 ViewState["LegajoAEliminar"] = null;
                 confirmModal.Visible = false;
 
-                CargarMedicos();
+                cargarMedicos();
             }
         }
 
@@ -111,19 +105,34 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            Session["LegajoABuscar"] = Convert.ToInt32(txtBoxLegajo.Text);
-            CargarMedicos(Convert.ToInt32(txtBoxLegajo.Text));
+            limpiarConfirmacion();
+            Session["legajoABuscar"] = txtBoxLegajo.Text;
+            cargarMedicos();
         }
 
         protected void btnMostarTodos_Click(object sender, EventArgs e)
         {
-            CargarMedicos();
+            limpiarCampos();
+            gvMedico.PageIndex = 0;
+            cargarMedicos();
+        }
+
+        protected void limpiarCampos()
+        {
+            txtBoxLegajo.Text = string.Empty;
+            Session["legajoABuscar"] = "";
+        }
+
+        protected void limpiarConfirmacion()
+        {
+            lbl_confirmacion.Text = string.Empty;
         }
 
         protected void gvMedico_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            limpiarConfirmacion();
             gvMedico.PageIndex = e.NewPageIndex;
-            CargarMedicos(Convert.ToInt32(txtBoxLegajo.Text));
+            cargarMedicos();
         }
     }
     

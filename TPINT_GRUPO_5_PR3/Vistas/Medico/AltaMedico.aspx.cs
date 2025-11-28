@@ -119,7 +119,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             string telefono = txtTelefono.Text;
             int idEspecialidad = Convert.ToInt32(ddlEspecialidad.SelectedValue.ToString());
 
-            Medico medico = new Medico(negMedico.getNuevoLegajo(), dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, correo, telefono, idEspecialidad, "", "", true);
+            Medico medico = new Medico(negMedico.getNuevoLegajo(), dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, correo, telefono, idEspecialidad);
 
             if (negMedico.existeDniMedico(medico._dni))
             {

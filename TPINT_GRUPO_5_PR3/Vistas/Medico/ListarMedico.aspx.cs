@@ -16,6 +16,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
     {
 
         NegocioMedico neg = new NegocioMedico();
+        NegocioEspecialidad negEspecialidad = new NegocioEspecialidad();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,16 +29,38 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                     return;
                 }
 
-                CargarMedicos();
+                Session["legajoABuscar"] = "";
+                Session["apellidoABuscar"] = "";
+                Session["especialidadABuscar"] = "Todos";
+                Session["ordenABuscar"] = "Legajo_Med";
+
+                cargarMedicos();
+                cargarEspecialidades();
             }
         }
 
-        private void CargarMedicos()
+        private void cargarMedicos()
         {
-                bool MedActivo = false;
-                DataTable tablaMedico = neg.listarMedico(MedActivo);
-                gvMedico.DataSource = tablaMedico;
-                gvMedico.DataBind();
+            string legajo = Session["legajoABuscar"].ToString();
+            string apellido = Session["apellidoABuscar"].ToString();
+            string especialidad = Session["especialidadABuscar"].ToString();
+            string orden = Session["ordenABuscar"].ToString();
+
+            DataTable tablaMedico = neg.buscarMedicos(legajo, apellido, especialidad, orden);
+            gvMedico.DataSource = tablaMedico;
+            gvMedico.DataBind();
+        }
+
+        private void cargarEspecialidades()
+        {
+            DataTable dtEspecialidades = negEspecialidad.getTabla();
+            
+            ddlEspecialidad.DataSource = dtEspecialidades;
+            ddlEspecialidad.DataTextField = "NombreEspecialidad_Esp";
+            ddlEspecialidad.DataValueField = "IdEspecialidad_Esp";
+            ddlEspecialidad.DataBind();
+
+            ddlEspecialidad.Items.Insert(0, new ListItem("Todos", "Todos"));
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -49,65 +72,14 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            //int resultado;
-            //////VALIDAR QUE SOLO ACEPTE NUMEROS
-            //if(ddlFiltros.SelectedIndex == 1)
-            //{   
+            gvMedico.PageIndex = 0;
 
-            //    ////Si es un numero, el try parse da true y pasa, en caso contrario se pide que se ingrese nuevamente, y se hace un return.
-            //    if (int.TryParse(txtboxNombreMedico.Text.ToString(), out resultado) == false){
-            //        lblErrorListarPacientes.Text = "Por favor ingrese solo numeros para buscar por legajo";
-            //        lblErrorListarPacientes.ForeColor = Color.Red;
-            //        return;
-            //    }
+            Session["legajoABuscar"] = txtLegajo.Text;
+            Session["apellidoABuscar"] = txtApellido.Text;
+            Session["especialidadABuscar"] = ddlEspecialidad.SelectedItem.Text;
+            Session["ordenABuscar"] = ddlOrdenListado.SelectedValue;
 
-            //    lblErrorListarPacientes.Text = " ";
-
-            //    gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxNombreMedico.Text));
-            //    gvMedico.DataBind();
-            //}
-            ////VALIDAR QUE SOLO ACEPTE LETRAS
-            //else if(ddlFiltros.SelectedIndex == 2)
-            //{
-
-            //    lblErrorListarPacientes.Text = " ";
-
-            //    ////Si es un numero, el try parse da false y entra, se pide que se ingrese nuevamente, y se hace un return.
-            //    ////En caso contrario, si el try parse da false, pasa de largo y busca.
-            //    if (int.TryParse(txtboxNombreMedico.Text.ToString(), out resultado) == true)
-            //    {
-            //        lblErrorListarPacientes.Text = "Por favor ingrese solo letras para buscar por nombre";
-            //        lblErrorListarPacientes.ForeColor = Color.Red;
-            //        return;
-            //    }
-            //    lblErrorListarPacientes.Text = " ";
-            //    gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxNombreMedico.Text);
-            //    gvMedico.DataBind();
-            //}
-            lblErrorListarPacientes.Text = "";
-            //Pide que se validen los controles
-            Page.Validate();
-            //Se asegura de que las validaciones den true
-            if (!Page.IsValid)
-            {
-                return;
-            }
-            if (ddlFiltros.SelectedIndex == 0)
-            {
-                lblErrorListarPacientes.Text = "Seleccione un filtro";
-                lblErrorListarPacientes.Visible = true;
-            }
-            else if (ddlFiltros.SelectedIndex == 1)
-            {
-                gvMedico.DataSource = neg.listarMedicoPorLegajo(int.Parse(txtboxListarMedico.Text.Trim()));
-                gvMedico.DataBind();
-            }
-            else if(ddlFiltros.SelectedIndex == 2)
-            {
-                gvMedico.DataSource = neg.listarMedicoPorNombre(txtboxListarMedico.Text.Trim());
-                gvMedico.DataBind();
-            }
-
+            cargarMedicos();
         }
 
         protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
@@ -116,34 +88,44 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             ((Label)sender).Text = fecha.ToShortDateString();
         }
 
-        protected void ddlFiltros_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblErrorListarPacientes.Text = "";
-            if (ddlFiltros.SelectedIndex == 1)
-            {
-                rev_txtListarMedico.ValidationExpression = "^[0-9 ]+$";
-                rev_txtListarMedico.ErrorMessage = "Ingrese solo numeros";
-                rev_txtListarMedico.Visible = true;
-            }
-            else if (ddlFiltros.SelectedIndex == 2)
-            {
-                rev_txtListarMedico.ValidationExpression = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$";
-                rev_txtListarMedico.ErrorMessage = "Ingrese solo letras";
-                rev_txtListarMedico.Visible = true;
-            }
-        }
-
         protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            txtboxListarMedico.Text = "";
-            ddlFiltros.SelectedIndex = 0;
-            CargarMedicos();
+            limpiarCampos();
+            gvMedico.PageIndex = 0;
+            cargarMedicos();
         }
 
         protected void gvMedico_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvMedico.PageIndex = e.NewPageIndex;
-            CargarMedicos();
+            cargarMedicos();
+        }
+
+        protected void limpiarCampos()
+        {
+            Session["legajoABuscar"] = "";
+            Session["apellidoABuscar"] = "";
+            Session["especialidadABuscar"] = "Todos";
+            Session["ordenABuscar"] = "Legajo_Med";
+
+            txtLegajo.Text = string.Empty;
+            txtApellido.Text = string.Empty;
+            ddlEspecialidad.SelectedIndex = 0;
+            ddlOrdenListado.SelectedIndex = 0;
+        }
+
+        protected void ddlOrdenListado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gvMedico.PageIndex = 0;
+            Session["ordenABuscar"] = ddlOrdenListado.SelectedValue;
+            cargarMedicos();
+        }
+
+        protected void ddlEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gvMedico.PageIndex = 0;
+            Session["especialidadABuscar"] = ddlEspecialidad.SelectedItem.Text;
+            cargarMedicos();
         }
     }
 }

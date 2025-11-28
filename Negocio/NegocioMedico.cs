@@ -27,9 +27,9 @@ namespace Negocio
             return dao.insertarMedico(med);
         }
 
-        public DataTable listarMedico(bool medActivo)
+        public DataTable buscarMedicos(string dni = "", string apellido = "", string especialidad = "Todos", string orden = "Legajo_Med")
         {
-            return daoMedico.getTableMedico(medActivo);
+            return daoMedico.getTablaMedicos(dni, apellido, especialidad, orden);
         }
 
         public bool existeDniMedico(string dni)

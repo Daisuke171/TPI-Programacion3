@@ -54,12 +54,22 @@
                             </ItemTemplate>
                         </asp:TemplateField>
 
+                        <asp:TemplateField HeaderText="Especialidad">
+                            <EditItemTemplate>
+                                <asp:DropDownList ID="ddl_eit_especialidad" runat="server">
+                                </asp:DropDownList>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_especialidad" runat="server" Text='<%# Bind("NombreEspecialidad_Esp") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
                         <asp:TemplateField HeaderText="DNI">
                             <EditItemTemplate>
                                 <asp:Label ID="lbl_eit_dni" runat="server" Text='<%# Eval("DNI_Med") %>'></asp:Label>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_DNI" runat="server" Text='<%# Bind("DNI_Med") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_dni" runat="server" Text='<%# Bind("DNI_Med") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
@@ -67,7 +77,7 @@
                             <EditItemTemplate>
                                 <asp:TextBox ID="txt_eit_nombre" runat="server" Text='<%# Bind("Nombre_Med") %>'></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfv_eit_nombre" runat="server" ControlToValidate="txt_eit_nombre" Display="None" ErrorMessage="* Campo obligatorio: Nombre"></asp:RequiredFieldValidator>
-                                <asp:RegularExpressionValidator ID="rev_eit_nombre" runat="server" ControlToValidate="txt_eit_nombre" Display="None" ErrorMessage="* Nombre invalido" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="rev_eit_nombre" runat="server" ControlToValidate="txt_eit_nombre" Display="None" ErrorMessage="* Nombre invalido" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ' ]+$"></asp:RegularExpressionValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_Nombre" runat="server" Text='<%# Bind("Nombre_Med") %>'></asp:Label>
@@ -78,7 +88,7 @@
                             <EditItemTemplate>
                                 <asp:TextBox ID="txt_eit_apellido" runat="server" Text='<%# Bind("Apellido_Med") %>'></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfv_eit_apellido" runat="server" ControlToValidate="txt_eit_apellido" Display="None" ErrorMessage="* Campo obligatorio: Apellido"></asp:RequiredFieldValidator>
-                                <asp:RegularExpressionValidator ID="rev_eit_apellido" runat="server" ControlToValidate="txt_eit_apellido" Display="None" ErrorMessage="* Apellido invalido" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="rev_eit_apellido" runat="server" ControlToValidate="txt_eit_apellido" Display="None" ErrorMessage="* Apellido invalido" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ' ]+$"></asp:RegularExpressionValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_apellido" runat="server" Text='<%# Bind("Apellido_Med") %>'></asp:Label>
@@ -87,24 +97,13 @@
 
                         <asp:TemplateField HeaderText="Sexo">
                             <EditItemTemplate>
-                                <asp:DropDownList ID="ddl_eit_Sexo" runat="server" SelectedValue='<%# Bind("Sexo_Med") %>'>
+                                <asp:DropDownList ID="ddl_eit_sexo" runat="server" SelectedValue='<%# Bind("Sexo_Med") %>'>
                                     <asp:ListItem Value="Femenino" Text="Femenino">Femenino</asp:ListItem>
                                     <asp:ListItem Value="Masculino" Text="Masculino"></asp:ListItem>
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_Sexo" runat="server" Text='<%# Bind("Sexo_Med") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="Teléfono">
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_telefono" runat="server" Text='<%# Bind("Telefono_Med") %>'></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="rev_eit_telefono" runat="server" ControlToValidate="txt_eit_telefono" Display="None" ErrorMessage="* Telefono invalido" ValidationExpression="^[0-9,$]*$"></asp:RegularExpressionValidator>
-                                <asp:RequiredFieldValidator ID="rfv_eit_telefono" runat="server" ControlToValidate="txt_eit_telefono" Display="None" ErrorMessage="* Campo obligatorio: Telefono"></asp:RequiredFieldValidator>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label ID="lbl_it_telefono" runat="server" Text='<%# Bind("Telefono_Med") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_sexo" runat="server" Text='<%# Bind("Sexo_Med") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
@@ -114,26 +113,18 @@
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_Nacionalidad" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_nacionalidad" runat="server" Text='<%# Bind("NombreNacionalidad_Nac") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="Fecha Nacimiento">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_nacimiento" runat="server" TextMode="Date"></asp:TextBox>
+                                <asp:TextBox ID="txt_eit_fechaNacimiento" runat="server" TextMode="Date"></asp:TextBox>
+                                <asp:RangeValidator ID="rv_eit_fechaNacimiento" runat="server" ControlToValidate="txt_eit_fechaNacimiento" ErrorMessage="* Fecha invalida" MinimumValue="1-1-1900" Type="Date" Display="None"></asp:RangeValidator>
+                                <asp:RequiredFieldValidator ID="rfv_eit_fechaNacimiento" runat="server" ControlToValidate="txt_eit_fechaNacimiento" Display="None" EnableTheming="True" ErrorMessage="* Campo obligatorio: Fecha"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_FechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>' OnDataBinding="lbl_it_FechaNacimiento_DataBinding"></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="Dirección">
-                            <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_direccion" runat="server" Text='<%# Bind("Direccion_Med") %>'></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfv_eit_direccion" runat="server" ControlToValidate="txt_eit_direccion" Display="None" ErrorMessage="* Campo obligatorio: Direccion"></asp:RequiredFieldValidator>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label ID="lbl_it_direccion" runat="server" Text='<%# Bind("Direccion_Med") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_fechaNacimiento" runat="server" Text='<%# Bind("FechaNaciemiento_Med") %>' OnDataBinding="lbl_it_fechaNacimiento_DataBinding1"></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
@@ -153,7 +144,17 @@
                                 </asp:DropDownList>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_Localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_localidad" runat="server" Text='<%# Bind("NombreLocalidad_Loc") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Dirección">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_eit_direccion" runat="server" Text='<%# Bind("Direccion_Med") %>'></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfv_eit_direccion" runat="server" ControlToValidate="txt_eit_direccion" Display="None" ErrorMessage="* Campo obligatorio: Direccion"></asp:RequiredFieldValidator>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_direccion" runat="server" Text='<%# Bind("Direccion_Med") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
@@ -164,31 +165,21 @@
                                 <asp:RegularExpressionValidator ID="rev_eit_correo" runat="server" ControlToValidate="txt_eit_correo" Display="None" ErrorMessage="* Direccion de correo invalida" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_email" runat="server" Text='<%# Bind("CorreoElectronico_Med") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_correo" runat="server" Text='<%# Bind("CorreoElectronico_Med") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Especialidad">
+                        <asp:TemplateField HeaderText="Teléfono">
                             <EditItemTemplate>
-                                <asp:DropDownList ID="ddl_eit_especialidad" runat="server">
-                                </asp:DropDownList>
+                                <asp:TextBox ID="txt_eit_telefono" runat="server" Text='<%# Bind("Telefono_Med") %>'></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="rev_eit_telefono" runat="server" ControlToValidate="txt_eit_telefono" Display="None" ErrorMessage="* Telefono invalido" ValidationExpression="^[0-9,$]*$"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator ID="rfv_eit_telefono" runat="server" ControlToValidate="txt_eit_telefono" Display="None" ErrorMessage="* Campo obligatorio: Telefono"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lbl_it_especialidad" runat="server" Text='<%# Bind("NombreEspecialidad_Esp") %>'></asp:Label>
+                                <asp:Label ID="lbl_it_telefono" runat="server" Text='<%# Bind("Telefono_Med") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="Estado">
-                            <EditItemTemplate>
-                                <asp:DropDownList ID="ddl_eit_estado" runat="server" SelectedValue='<%# Bind("Estado_Med") %>'>
-                                    <asp:ListItem Value="True">Activo</asp:ListItem>
-                                    <asp:ListItem Value="False">Inactivo</asp:ListItem>
-                                </asp:DropDownList>
-                            </EditItemTemplate>
-                            <ItemTemplate>
-                                <asp:Label ID="lbl_it_Estado" runat="server" Text='<%# Bind("Estado_Med") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
             </section>

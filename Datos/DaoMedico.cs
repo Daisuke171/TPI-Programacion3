@@ -53,23 +53,27 @@ namespace Datos
             return filas > 0;
         }
 
-        public DataTable getTableMedico(bool medActivos)
+        public DataTable getTablaMedicos(string legajo, string apellido, string especialidad, string orden)
         {
-            string consulta = "";
-            if (medActivos)
+            // CONSULTA BASE
+            string consulta = "SELECT * FROM VW_MEDICOS WHERE Estado_Med = 1 ";
+
+            // AGREGADOS PARA FILTRAR - ORDENAR
+            if (!string.IsNullOrEmpty(legajo.Trim()))
             {
-                consulta = "EXEC SP_MOSTRARMEDICOS";
+                consulta += "AND CAST(Legajo_Med AS CHAR(4)) LIKE '%" + legajo + "%' ";
             }
-            else
+            if (!string.IsNullOrEmpty(apellido.Trim()))
             {
-                //consulta = "EXEC SP_MOSTRARMEDICOS";
-                consulta = "Select * " +
-                    "from Medicos INNER JOIN Localidades ON IdProvincia_Med = IdProvincia_Loc AND IdLocalidad_Med = IdLocalidad_Loc " +
-                    "INNER JOIN Provincias ON IdProvincia_Med = IdProvincia_Prov " +
-                    "INNER JOIN Nacionalidades ON IdNacionalidad_Med = IdNacionalidad_Nac " +
-                    "INNER JOIN Especialidades ON IdEspecialidad_Med = IdEspecialidad_Esp ";
-                    //"WHERE Estado_Med = 1 ";
+                consulta += "AND Apellido_Med LIKE '%" + apellido + "%' ";
             }
+            if (especialidad != "Todos")
+            {
+                consulta += "AND NombreEspecialidad_Esp = '" + especialidad + "' ";
+            }
+
+            consulta += "ORDER BY " + orden;
+
             DataTable table = datos.obtenerTabla("Medicos", consulta);
             return table;
         }
@@ -126,8 +130,7 @@ namespace Datos
                         IDLocalidad_Med = @IdLocalidad,
                         IDProvincia_Med = @IdProvincia,
                         CorreoElectronico_Med = @Correo,
-                        IDEspecialidad_Med = @IdEspecialidad,
-                        Estado_Med = @Estado
+                        IDEspecialidad_Med = @IdEspecialidad
                     WHERE Legajo_Med = @Legajo";
 
             SqlCommand cmd = new SqlCommand(consulta, cn);
@@ -145,7 +148,6 @@ namespace Datos
             cmd.Parameters.AddWithValue("@IdProvincia", med._idProvincia);
             cmd.Parameters.AddWithValue("@Correo", med._correoElectronico);
             cmd.Parameters.AddWithValue("@IdEspecialidad", med._idEspecialidad);
-            cmd.Parameters.AddWithValue("@Estado", med._estadoMedico);
 
             int filas = cmd.ExecuteNonQuery();
             cn.Close();

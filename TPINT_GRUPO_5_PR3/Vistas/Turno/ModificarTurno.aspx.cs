@@ -67,7 +67,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
             {
                 ///Medicos
                 DropDownList ddl = (DropDownList)e.Row.FindControl("ddl_eit_legajoMedico");
-                DataTable dataTable = negMedico.listarMedico(true);
+                DataTable dataTable = negMedico.buscarMedicos();
                 ddl.DataSource = dataTable;
                 ddl.DataTextField = "Apellido_Med";
                 ddl.DataValueField = "Legajo_Med";
