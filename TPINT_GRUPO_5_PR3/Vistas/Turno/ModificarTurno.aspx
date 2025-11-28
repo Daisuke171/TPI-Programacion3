@@ -48,7 +48,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Fecha">
                             <EditItemTemplate>
-                                <asp:Calendar ID="cl_eit_fechaTur" runat="server"></asp:Calendar>
+                                <asp:Calendar ID="cl_eit_fechaTur" runat="server" SelectedDate='<%# Eval("Fecha_Tur") %>'></asp:Calendar>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_fechaTur" runat="server" Text='<%# Bind("Fecha_Tur") %>'></asp:Label>
@@ -65,7 +65,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="DNI Paciente">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_DNIPac" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txt_eit_DNIPac" runat="server" Text='<%# Eval("DNIPaciente_Tur") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_DNIPac" runat="server" Text='<%# Bind("DNIPaciente_Tur") %>'></asp:Label>
@@ -85,7 +85,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Observaciones">
                             <EditItemTemplate>
-                                <asp:TextBox ID="txt_eit_observacion" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txt_eit_observacion" runat="server" Text='<%# Eval("Observacion_Tur") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
                                 <asp:Label ID="lbl_it_observacion" runat="server" Text='<%# Bind("Observacion_Tur") %>'></asp:Label>

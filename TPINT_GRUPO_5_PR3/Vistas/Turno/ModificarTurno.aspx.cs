@@ -45,9 +45,9 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
             string asistencia = Convert.ToString(((DropDownList)gvTurnos.Rows[e.RowIndex].FindControl("ddl_eit_asistencia")).SelectedItem.Text);
             string observacion = Convert.ToString(((TextBox)gvTurnos.Rows[e.RowIndex].FindControl("txt_eit_observacion")).Text);
 
-            
+            Entidades.Turno turno = new Entidades.Turno(id, fecha, legajo, dni, asistencia, observacion);
 
-            if(negTurno.ModificarTurno(id, fecha, legajo, dni, asistencia, observacion))
+            if(negTurno.ModificarTurno(turno))
             {
                 lblConfirmacion.Text = "Se modifico el turno con exito";
                 lblConfirmacion.ForeColor = Color.Green;
@@ -57,7 +57,9 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
                 lblConfirmacion.Text = "No se pudo modificar el turno";
                 lblConfirmacion.ForeColor = Color.Red;
             }
-           
+
+            gvTurnos.EditIndex = -1;
+            CargarGridView();
 
         }
 
@@ -91,6 +93,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {   
+            gvTurnos.EditIndex = -1;
             int id = Convert.ToInt32(txtIdTurno.Text.Trim());
             DataTable tablaTurno = negTurno.ObtenerTablaTurnosPorId(id);
             gvTurnos.DataSource = tablaTurno;

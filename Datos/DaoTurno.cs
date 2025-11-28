@@ -179,7 +179,7 @@ namespace Datos
             return tablaTurnos;
         }
 
-        public bool modificarTurno(int id, DateTime fecha, int legajo, int dni, string asistencia, string observacion)
+        public bool modificarTurno(Entidades.Turno turno)
         {
             SqlConnection cn = ad.obtenerConexion();
 
@@ -188,17 +188,24 @@ namespace Datos
                         LegajoMedico_Tur = @Legajo,
                         DNIPaciente_Tur = @Dni,
                         Asistencia_Tur = @Asistencia,
-                        Observacion_Tur = @Observacion
-                    WHERE IdTurno_Tur = @idTurno";
+                        Observacion_Tur = @Observacion";
 
-            SqlCommand cmd = new SqlCommand(consulta, cn);
+            if(turno._asistencia != "Cancelado")
+            {
+                consulta += ", Estado_Tur = 1 WHERE IdTurno_Tur = @idTurno";
+            }
+            else
+            {
+                consulta += ", Estado_Tur = 0 WHERE IdTurno_Tur = @idTurno";    
+            }
+                SqlCommand cmd = new SqlCommand(consulta, cn);
 
-            cmd.Parameters.AddWithValue("@idTurno", id);
-            cmd.Parameters.AddWithValue("@Fecha", fecha);
-            cmd.Parameters.AddWithValue("@Legajo", legajo);
-            cmd.Parameters.AddWithValue("@Dni", dni);
-            cmd.Parameters.AddWithValue("@Asistencia", asistencia);
-            cmd.Parameters.AddWithValue("@Observacion", observacion);
+            cmd.Parameters.AddWithValue("@idTurno", turno._id);
+            cmd.Parameters.AddWithValue("@Fecha", turno._fecha);
+            cmd.Parameters.AddWithValue("@Legajo", turno._legajoMedico);
+            cmd.Parameters.AddWithValue("@Dni", turno._dniPaciente);
+            cmd.Parameters.AddWithValue("@Asistencia", turno._asistencia);
+            cmd.Parameters.AddWithValue("@Observacion", turno._observacion);
             
 
             int filas = cmd.ExecuteNonQuery();

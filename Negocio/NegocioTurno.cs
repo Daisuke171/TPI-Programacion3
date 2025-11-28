@@ -41,9 +41,9 @@ namespace Negocio
             return daoTurno.getTablaTurnosPorId(id);
         }
 
-        public bool ModificarTurno(int id, DateTime fecha, int legajo, int dni, string asistencia, string observacion)
+        public bool ModificarTurno(Entidades.Turno turno)
         {
-            return daoTurno.modificarTurno(id, fecha, legajo, dni, asistencia, observacion);
+            return daoTurno.modificarTurno(turno);
         }
 
         public DataTable obtenerTurnoPorDni(int DNI)

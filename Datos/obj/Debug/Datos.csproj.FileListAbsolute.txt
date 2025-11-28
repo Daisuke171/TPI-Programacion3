@@ -61,3 +61,12 @@ C:\Users\lain\Desktop\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.CoreCompile
 C:\Users\lain\Desktop\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\lain\Desktop\TPI-Programacion3\Datos\obj\Debug\Datos.dll
 C:\Users\lain\Desktop\TPI-Programacion3\Datos\obj\Debug\Datos.pdb
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\bin\Debug\Datos.dll
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\bin\Debug\Datos.pdb
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\bin\Debug\Entidades.dll
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\bin\Debug\Entidades.pdb
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\obj\Debug\Datos.dll
+C:\Users\Administrador\Desktop\TPI 2\TPI-Programacion3\Datos\obj\Debug\Datos.pdb
