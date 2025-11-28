@@ -38,6 +38,7 @@
                     <h2>ADMINISTRADORES</h2>
 
                     <asp:HyperLink ID="hlnkMenuAdministrador" runat="server" NavigateUrl="~/Vistas/MenuAdmin.aspx">Menu Administrador</asp:HyperLink>--%>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Vistas/Turno/TurnosDelDia.aspx">Consultar Turnos del Dia</asp:HyperLink>
                 </section>
                 <aside>
                     <asp:Image ID="img" runat="server" ImageUrl="~/Vistas/Imagenes/doctor-symbol-universal-png-2.png" />

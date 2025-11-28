@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,7 +44,7 @@ namespace Datos
             comando.Parameters.AddWithValue("@idTipoUsuario", 2);
             int filas = comando.ExecuteNonQuery();
             conexion.Close();
-            if(filas > 0)
+            if (filas > 0)
             {
                 return true;
             }
@@ -63,7 +64,7 @@ namespace Datos
                 return Convert.ToInt32(resultado);
             return -1;
         }
-        
+
         public bool borrarUsuarioMedico(int legajo)
         {
             SqlConnection conexion = accesoDatos.obtenerConexion();
@@ -92,5 +93,31 @@ namespace Datos
                 return Convert.ToInt32(resultado);
             return -1;
         }
+
+        public string getLegajoConUsuario(string usuario)
+        {
+            string resultado = "";
+
+            using (SqlConnection conexion = accesoDatos.obtenerConexion())
+            {
+                string consulta = "SELECT IDUsuario_U, Legajo_Med FROM Usuarios " +
+                                  "INNER JOIN Medicos ON Medicos.IDUsuario_Med = Usuarios.IDUsuario_U " +
+                                  "WHERE NombreUsuario_U = @nombreUsuario";
+
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@nombreUsuario", usuario);
+
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        resultado = reader["Legajo_Med"].ToString();
+
+                    }
+                }
+            }
+            return resultado;
+        }
+        
     }
-}
+    }

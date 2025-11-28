@@ -42,5 +42,10 @@ namespace Negocio
             return daoUsuario.borrarUsuarioMedico(legajo);
         }
 
+        public string ObtenerLegajoConUsuario(string usuario)
+        {
+            return daoUsuario.getLegajoConUsuario(usuario);
+        }
+
     }
 }

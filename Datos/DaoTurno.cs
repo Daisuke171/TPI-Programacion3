@@ -153,15 +153,16 @@ namespace Datos
 
 
         //LA FECHA VA COMO AÑO, MES, DÍA
-        public DataTable getTablaTurnosDiaPuntual(DateTime fecha)
+        public DataTable getTablaTurnosDiaPuntual(DateTime fecha, string legajoMedico)
         {
 
             SqlConnection cn = ad.obtenerConexion();
 
-            string consulta = @"SELECT * FROM TURNOS WHERE Fecha_Tur = @fecha AND Asistencia_Tur = 'Pendiente'";
+            string consulta = @"SELECT * FROM TURNOS WHERE Fecha_Tur = @fecha AND Asistencia_Tur = 'Pendiente' AND LegajoMedico_Tur = @legajoMedico";
 
             SqlCommand cmd = new SqlCommand(consulta, cn);
             cmd.Parameters.AddWithValue("@fecha", fecha.Date);
+            cmd.Parameters.AddWithValue("@legajoMedico", Convert.ToInt32(legajoMedico));
 
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);

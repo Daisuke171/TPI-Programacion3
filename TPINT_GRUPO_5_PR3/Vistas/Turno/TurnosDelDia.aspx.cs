@@ -24,7 +24,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
                 else
                 {   
                     //DateTime.Now.ToString("yyyy-MM-dd");
-                    gvListarTurnosDelDia.DataSource = negocioTurno.ObtenerTablaTurnosDiaPuntual(DateTime.Now);
+                    gvListarTurnosDelDia.DataSource = negocioTurno.ObtenerTablaTurnosDiaPuntual(DateTime.Now, Session["LegajoMedico"].ToString());
                     gvListarTurnosDelDia.DataBind();
                 }
 

@@ -45,8 +45,9 @@ namespace TPINT_GRUPO_5_PR3
                 else if (tipoUsuario == "Medico")
                 {
                     Session["TipoUsuario"] = tipoUsuario;
-
+                    Session["LegajoMedico"] = negUsuario.ObtenerLegajoConUsuario(txtUser.Text.ToString());
                     Response.Redirect("HomeMedicos.aspx");
+
                 }
                 else
                 {

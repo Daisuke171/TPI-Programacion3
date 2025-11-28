@@ -31,9 +31,9 @@ namespace Negocio
 
         //LA FECHA VA COMO AÑO-MES-DÍA
 
-        public DataTable ObtenerTablaTurnosDiaPuntual(DateTime fecha)
+        public DataTable ObtenerTablaTurnosDiaPuntual(DateTime fecha, string legajoMedico)
         {
-            return daoTurno.getTablaTurnosDiaPuntual(fecha);
+            return daoTurno.getTablaTurnosDiaPuntual(fecha, legajoMedico);
         }
 
         public DataTable ObtenerTablaTurnosPorId(int id)
