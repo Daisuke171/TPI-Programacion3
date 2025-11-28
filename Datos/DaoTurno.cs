@@ -144,6 +144,7 @@ namespace Datos
             return filas;
         }
 
+
         //TRAER LA TABLA DE TURNOS
         public DataTable getTablaTurnos()
         {
@@ -172,6 +173,21 @@ namespace Datos
             cn.Close();
             return tablaTurnos;
 
+        }
+
+        public bool actualizarAsistenciaTurno(int idTurno, bool asistencia)
+        {
+            SqlConnection cn = ad.obtenerConexion();
+            string resultadoAsistencia = asistencia ? "Confirmado" : "Ausente";
+            string consulta = @"UPDATE Turnos SET 
+                        Asistencia_Tur = @Asistencia
+                        WHERE IdTurno_Tur = @idTurno";
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            cmd.Parameters.AddWithValue("@idTurno", idTurno);
+            cmd.Parameters.AddWithValue("@Asistencia", resultadoAsistencia);
+            int filas = cmd.ExecuteNonQuery();
+            cn.Close();
+            return filas > 0;
         }
 
         public DataTable getTablaTurnosPorId(int id)

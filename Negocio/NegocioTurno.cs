@@ -59,6 +59,10 @@ namespace Negocio
                 }
         }
 
+        public void actualizarAsistenciaTurno(int idTurno, bool asistencia)
+        {
+            daoTurno.actualizarAsistenciaTurno(idTurno, asistencia);
+        }
         public bool EstaDadoDeBaja(DataTable dataTable)
         {
             // Verifica si el DataTable es nulo primero,

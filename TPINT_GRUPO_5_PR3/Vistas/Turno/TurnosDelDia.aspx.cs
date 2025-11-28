@@ -32,6 +32,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
                     //DateTime.Now.ToString("yyyy-MM-dd");
                     gvListarTurnosDelDia.DataSource = negocioTurno.ObtenerTablaTurnosDiaPuntual(DateTime.Now, Session["LegajoMedico"].ToString());
                     gvListarTurnosDelDia.DataBind();
+
                 }
                 else
                 {   
@@ -48,6 +49,33 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
             Session.Clear();
 
             Response.Redirect("~/Vistas/Login.aspx");
+        }
+
+        protected void btn_it_Confirmar_Click(object sender, EventArgs e)
+        {
+            // 1. Obtener el botón clickeado
+            Button btn = (Button)sender;
+
+            // 2. Obtener la fila donde está ese botón
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+
+            // 3. Buscar el label con el ID
+            Label lblId = (Label)row.FindControl("lblIdTurno");
+
+            // 4. Convertir a entero y usarlo
+            int id = int.Parse(lblId.Text);
+            
+            negocioTurno.actualizarAsistenciaTurno(id, true);
+        }
+
+        protected void btn_it_ausente(object sender, EventArgs e)
+        {
+            
+            Button btn = (Button)sender;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            Label lblId = (Label)row.FindControl("lblIdTurno");
+            int id = int.Parse(lblId.Text);
+            negocioTurno.actualizarAsistenciaTurno(id, false);
         }
     }
 }

@@ -121,6 +121,17 @@
                         </EditItemTemplate>
                     </asp:TemplateField>
 
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button ID="btn_it_Confirmar" runat="server" OnClick="btn_it_Confirmar_Click" Text="Confirmar" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button ID="btn_it_Ausente" runat="server" OnClick="btn_it_ausente" Text="Ausente" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                 </Columns>
             </asp:GridView>
 
