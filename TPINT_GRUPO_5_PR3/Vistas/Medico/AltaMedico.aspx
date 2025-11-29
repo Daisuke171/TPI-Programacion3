@@ -123,7 +123,7 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtTelefono" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Requerido</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revTelefono" runat="server" ControlToValidate="txtTelefono" CssClass="validator" Display="Dynamic" ValidationExpression="^\d$" ValidationGroup="1">* Telefono invalido</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revTelefono" runat="server" ControlToValidate="txtTelefono" CssClass="validator" Display="Dynamic" ValidationExpression="^[0-9,$]*$" ValidationGroup="1">* Telefono invalido</asp:RegularExpressionValidator>
                 </div>
 
                 <div class="campo">
