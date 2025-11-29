@@ -102,27 +102,20 @@ namespace Datos
 
         public string getLegajoConUsuario(string usuario)
         {
-            string resultado = "";
-
-            using (SqlConnection conexion = accesoDatos.obtenerConexion())
-            {
-                string consulta = "SELECT IDUsuario_U, Legajo_Med FROM Usuarios " +
+            SqlConnection conexion = accesoDatos.obtenerConexion();
+            string consulta = "SELECT Legajo_Med FROM Usuarios " +
                                   "INNER JOIN Medicos ON Medicos.IDUsuario_Med = Usuarios.IDUsuario_U " +
                                   "WHERE NombreUsuario_U = @nombreUsuario";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("@nombreUsuario", usuario);
 
-                SqlCommand comando = new SqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@nombreUsuario", usuario);
-
-                using (SqlDataReader reader = comando.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        resultado = reader["Legajo_Med"].ToString();
-
-                    }
-                }
+            object resultado = accesoDatos.EjecutarScalar(comando);
+            if(resultado != null)
+            {
+                return resultado.ToString();
             }
-            return resultado;
+
+            return null;
         }
         
     }

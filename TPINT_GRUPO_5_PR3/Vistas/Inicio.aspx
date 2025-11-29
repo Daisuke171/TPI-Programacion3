@@ -26,6 +26,7 @@
         </nav>
         <main>
             <h1>Bienvenido</h1>
+            <h2><asp:Label ID="lblDia" CssClass="lbl_Usuario" runat="server" text="" ForeColor="Black" ></asp:Label></h2>
             <div class="container">
                 <section>
                     <h2>Menu</h2>

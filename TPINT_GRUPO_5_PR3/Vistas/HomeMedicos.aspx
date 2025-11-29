@@ -25,6 +25,7 @@
         </nav>
         <main>
             <h1>Clínica Medica</h1>
+            <h2><asp:Label ID="lblLegajo" CssClass="lbl_Usuario" runat="server" Text=""></asp:Label></h2>
             <div class="container">
                 <section>
                     <h2>TURNOS</h2>

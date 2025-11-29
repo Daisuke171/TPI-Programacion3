@@ -19,6 +19,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 {
                     lblUsuario.Text = Session["usuario"].ToString();
                     string tipoUsuario = negUsuario.validarTipoUsuario(Session["usuario"].ToString());
+                    lblDia.Text = DateTime.Now.ToLongDateString();
 
                     if (tipoUsuario == "Admin")
                     {

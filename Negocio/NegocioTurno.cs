@@ -35,6 +35,10 @@ namespace Negocio
         {
             return daoTurno.getTablaTurnosDiaPuntual(fecha, legajoMedico);
         }
+        public DataTable ObtenerTablaTurnosDiaPuntual(string legajoMedico)
+        {
+            return daoTurno.getTablaTurnosDiaPuntual(legajoMedico);
+        }
 
         public DataTable ObtenerTablaTurnosPorId(int id)
         {

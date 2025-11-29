@@ -30,7 +30,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
                 if (tipoUsuario == "Medico" || tipoUsuario == "Admin")
                 {
                     //DateTime.Now.ToString("yyyy-MM-dd");
-                    gvListarTurnosDelDia.DataSource = negocioTurno.ObtenerTablaTurnosDiaPuntual(DateTime.Now, Session["LegajoMedico"].ToString());
+                    gvListarTurnosDelDia.DataSource = negocioTurno.ObtenerTablaTurnosDiaPuntual(Session["LegajoMedico"].ToString());
                     gvListarTurnosDelDia.DataBind();
 
                 }

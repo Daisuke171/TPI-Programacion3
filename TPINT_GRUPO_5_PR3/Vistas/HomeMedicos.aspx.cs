@@ -14,6 +14,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             if (!IsPostBack)
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
+                lblLegajo.Text = Session["LegajoMedico"]?.ToString();
 
                 if (Session["TipoUsuario"] == null)
                 {

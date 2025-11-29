@@ -156,24 +156,57 @@ namespace Datos
         //LA FECHA VA COMO AÑO, MES, DÍA
         public DataTable getTablaTurnosDiaPuntual(DateTime fecha, string legajoMedico)
         {
+            using (SqlConnection cn = ad.obtenerConexion())
+            {
+                string consulta = @"SELECT * 
+                            FROM TURNOS 
+                            WHERE Fecha_Tur = @fecha 
+                            AND Asistencia_Tur = 'Pendiente' 
+                            AND LegajoMedico_Tur = @legajoMedico";
 
-            SqlConnection cn = ad.obtenerConexion();
+                using (SqlCommand cmd = new SqlCommand(consulta, cn))
+                {
+                    cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = fecha.Date;
+                    cmd.Parameters.Add("@legajoMedico", SqlDbType.Int).Value = int.Parse(legajoMedico);
 
-            string consulta = @"SELECT * FROM TURNOS WHERE Fecha_Tur = @fecha AND Asistencia_Tur = 'Pendiente' AND LegajoMedico_Tur = @legajoMedico";
+                    DataTable tablaTurnos = new DataTable();
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(tablaTurnos);
+                    }
 
-            SqlCommand cmd = new SqlCommand(consulta, cn);
-            cmd.Parameters.AddWithValue("@fecha", fecha.Date);
-            cmd.Parameters.AddWithValue("@legajoMedico", Convert.ToInt32(legajoMedico));
-
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable tablaTurnos = new DataTable();
-            da.Fill(tablaTurnos);
-
-            cn.Close();
-            return tablaTurnos;
-
+                    return tablaTurnos;
+                }
+            }
         }
+
+        public DataTable getTablaTurnosDiaPuntual(string legajoMedico)
+        {
+            using (SqlConnection cn = ad.obtenerConexion())
+            {
+                string consulta = @"SELECT * 
+                            FROM TURNOS 
+                            WHERE Fecha_Tur = @fechaHoy
+                            AND Asistencia_Tur = 'Pendiente' 
+                            AND LegajoMedico_Tur = @legajoMedico";
+
+                using (SqlCommand cmd = new SqlCommand(consulta, cn))
+                {
+                    cmd.Parameters.Add("@fechaHoy", SqlDbType.Date).Value = DateTime.Today;
+                    cmd.Parameters.Add("@legajoMedico", SqlDbType.Int).Value = int.Parse(legajoMedico);
+
+                    DataTable tablaTurnos = new DataTable();
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(tablaTurnos);
+                    }
+
+                    return tablaTurnos;
+                }
+            }
+        }
+
+
 
         public bool actualizarAsistenciaTurno(int idTurno, bool asistencia)
         {
