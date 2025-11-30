@@ -29,6 +29,7 @@
                 <p>Buscar por id turno:</p>
                 <asp:TextBox ID="txtIdTurno" runat="server" ValidationGroup="1"></asp:TextBox>
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" CssClass="btnEnviar" ValidationGroup="1" />
+                <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" OnClick="btnMostrarTodos_Click" CssClass="btnEnviar" ValidationGroup="1" />
             </div>
             <div class="validatorContainer">
                 <asp:RegularExpressionValidator ID="rev_txtIdTurno" runat="server" ControlToValidate="txtIdTurno" ErrorMessage="Solo se admiten numeros" ForeColor="Red" ValidationExpression="^[0-9 ]+$" ValidationGroup="1"></asp:RegularExpressionValidator>
@@ -36,7 +37,7 @@
             </div>
 
             <div class="gv-container">
-                <asp:GridView ID="gvTurnos" runat="server" AllowPaging="True" AutoGenerateColumns="False" AutoGenerateEditButton="True" OnPageIndexChanging="gvTurnos_PageIndexChanging" OnRowDataBound="gvTurnos_RowDataBound" OnRowUpdating="gvTurnos_RowUpdating" PageSize="5" OnRowCancelingEdit="gvTurnos_RowCancelingEdit" OnRowEditing="gvTurnos_RowEditing">
+                <asp:GridView ID="gvTurnos" runat="server" AllowPaging="True" AutoGenerateColumns="False" AutoGenerateEditButton="True" OnPageIndexChanging="gvTurnos_PageIndexChanging" OnRowDataBound="gvTurnos_RowDataBound" OnRowUpdating="gvTurnos_RowUpdating" PageSize="5" OnRowCancelingEdit="gvTurnos_RowCancelingEdit" OnRowEditing="gvTurnos_RowEditing" EmptyDataText="No se encontraron registros">
                     <Columns>
                         <asp:TemplateField HeaderText="ID">
                             <EditItemTemplate>

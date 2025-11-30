@@ -107,5 +107,11 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
 
             Response.Redirect("~/Vistas/Login.aspx");
         }
+
+        protected void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            gvTurnos.PageIndex = 0;
+            CargarGridView();
+        }
     }
 }

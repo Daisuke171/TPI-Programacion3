@@ -39,6 +39,7 @@
                     <h2>BAJA</h2>
                     <asp:HyperLink ID="hlnkBajaPaciente" runat="server" NavigateUrl="~/Vistas/Paciente/BajaPaciente.aspx">Paciente</asp:HyperLink>
                     <asp:HyperLink ID="hlnkBajaMedico" runat="server" NavigateUrl="~/Vistas/Medico/BajaMedico.aspx">Medico</asp:HyperLink>
+                    <asp:HyperLink ID="hlnkBajaTurno" runat="server" NavigateUrl="~/Vistas/Turno/BajaTurno.aspx">Turno</asp:HyperLink>
                 </div>
             </div>
 

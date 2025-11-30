@@ -41,6 +41,11 @@ namespace Negocio
             return porcentaje;
         }
 
+        public bool borrarTurno(int id)
+        {
+            return daoTurno.bajaTurno(id);
+        }
+
         //LA FECHA VA COMO AÑO-MES-DÍA
 
         public DataTable ObtenerTablaTurnosDiaPuntual(DateTime fecha, string legajoMedico)
