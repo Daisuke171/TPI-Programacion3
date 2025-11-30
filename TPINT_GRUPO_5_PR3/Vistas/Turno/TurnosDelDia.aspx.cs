@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using Entidades;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,12 +28,10 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
                 lblUsuarioTurnosDelDia.Text = Session["usuario"]?.ToString();
                 string tipoUsuario = negUsuario.validarTipoUsuario(Session["usuario"]?.ToString());
 
-                if (tipoUsuario == "Medico" || tipoUsuario == "Admin")
+                if (tipoUsuario == "Medico") // || tipoUsuario == "Admin")
                 {
                     //DateTime.Now.ToString("yyyy-MM-dd");
-                    gvListarTurnosDelDia.DataSource = negocioTurno.ObtenerTablaTurnosDiaPuntual(Session["LegajoMedico"].ToString());
-                    gvListarTurnosDelDia.DataBind();
-
+                    cargarTurnos();
                 }
                 else
                 {   
@@ -44,6 +43,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
 
         }
 
+        private void cargarTurnos()
+        {
+            gvListarTurnosDelDia.DataSource = negocioTurno.ObtenerTablaTurnosDiaPuntual(Session["LegajoMedico"].ToString());
+            gvListarTurnosDelDia.DataBind();
+        }
+
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session.Clear();
@@ -51,31 +56,64 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
             Response.Redirect("~/Vistas/Login.aspx");
         }
 
-        protected void btn_it_Confirmar_Click(object sender, EventArgs e)
+        protected void gvListarTurnosDelDia_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            // 1. Obtener el botón clickeado
-            Button btn = (Button)sender;
-
-            // 2. Obtener la fila donde está ese botón
-            GridViewRow row = (GridViewRow)btn.NamingContainer;
-
-            // 3. Buscar el label con el ID
-            Label lblId = (Label)row.FindControl("lblIdTurno");
-
-            // 4. Convertir a entero y usarlo
-            int id = int.Parse(lblId.Text);
-            
-            negocioTurno.actualizarAsistenciaTurno(id, true);
+            gvListarTurnosDelDia.EditIndex = e.NewEditIndex;
+            cargarTurnos();
         }
 
-        protected void btn_it_ausente(object sender, EventArgs e)
+        protected void gvListarTurnosDelDia_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
-            
-            Button btn = (Button)sender;
-            GridViewRow row = (GridViewRow)btn.NamingContainer;
-            Label lblId = (Label)row.FindControl("lblIdTurno");
-            int id = int.Parse(lblId.Text);
-            negocioTurno.actualizarAsistenciaTurno(id, false);
+            gvListarTurnosDelDia.EditIndex = -1;
+            cargarTurnos();
+        }
+
+        protected void lbl_it_fechaTurno_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
+        }
+
+        protected void lbl_eit_fechaTurno_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
+        }
+
+        protected void ddl_eit_asistencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropDownList ddlAsistencia = (DropDownList)gvListarTurnosDelDia.Rows[gvListarTurnosDelDia.EditIndex].FindControl("ddl_eit_asistencia");
+            TextBox txtObservacion = (TextBox)gvListarTurnosDelDia.Rows[gvListarTurnosDelDia.EditIndex].FindControl("txt_eit_observacion");
+            if (ddlAsistencia.SelectedValue == "Ausente")
+            {
+                txtObservacion.Text = "Ausente";
+                txtObservacion.Enabled = false;
+            }
+            else
+            {
+                txtObservacion.Enabled = true;
+                txtObservacion.Text = string.Empty;
+            }
+        }
+
+        protected void gvListarTurnosDelDia_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            string idTurno = ((Label)gvListarTurnosDelDia.Rows[e.RowIndex].FindControl("lbl_eit_idTurno")).Text;
+            string asistencia = ((DropDownList)gvListarTurnosDelDia.Rows[e.RowIndex].FindControl("ddl_eit_asistencia")).SelectedValue;
+            string observacion = ((TextBox)gvListarTurnosDelDia.Rows[e.RowIndex].FindControl("txt_eit_observacion")).Text;
+
+            bool actualizo = negocioTurno.actualizarAsistenciaTurno(idTurno, asistencia, observacion);
+
+            lblMensaje.Text = string.Empty;
+
+            if (actualizo)
+            {
+                lblMensaje.Text = "Turno actualizado correctamente";
+            }
+            else lblMensaje.Text = "Error al actualizar el turno";
+
+            gvListarTurnosDelDia.EditIndex = -1;
+            cargarTurnos();
         }
     }
 }

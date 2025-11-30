@@ -178,6 +178,9 @@ namespace TPINT_GRUPO_5_PR3
             ddl_Medicos.Items.Clear();
             rbtnl_Horarios.Items.Clear();
             lbl_Mensaje.Text = "";
+            lbl_fecha.Visible = false;
+            cal_Fechas.Visible = false;
+            cal_Fechas.SelectedDate = DateTime.Today;
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

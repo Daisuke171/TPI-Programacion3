@@ -96,7 +96,7 @@ namespace Datos
         }
 
 
-        public int EjecutarTransaccion(String consultaSql)
+        public int EjecutarTransaccion(string consultaSql)
         {
             SqlConnection conexion = obtenerConexion();
             SqlCommand cmd = new SqlCommand(consultaSql, conexion);

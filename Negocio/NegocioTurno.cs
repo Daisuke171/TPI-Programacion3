@@ -63,10 +63,13 @@ namespace Negocio
                 }
         }
 
-        public void actualizarAsistenciaTurno(int idTurno, bool asistencia)
+        public bool actualizarAsistenciaTurno(string idTurno, string asistencia, string observacion)
         {
-            daoTurno.actualizarAsistenciaTurno(idTurno, asistencia);
+            return daoTurno.actualizarAsistenciaTurno(idTurno, asistencia, observacion);
         }
+
+
+
         public bool EstaDadoDeBaja(DataTable dataTable)
         {
             // Verifica si el DataTable es nulo primero,

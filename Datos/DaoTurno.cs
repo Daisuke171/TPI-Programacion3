@@ -184,11 +184,18 @@ namespace Datos
         {
             using (SqlConnection cn = ad.obtenerConexion())
             {
-                string consulta = @"SELECT * 
-                            FROM TURNOS 
-                            WHERE Fecha_Tur = @fechaHoy
-                            AND Asistencia_Tur = 'Pendiente' 
-                            AND LegajoMedico_Tur = @legajoMedico";
+                string consulta = @"SELECT 
+                            CAST(Fecha_Turno AS DATE) AS Fecha,
+                            CAST(Fecha_Turno AS TIME(0)) AS Horario,
+                            IdTurno_Turno,
+                            LegajoMedico_Turno,
+                            DNIPaciente_Turno,
+                            Asistencia_Turno,
+                            Observacion_Turno
+                            FROM TurnosPrueba 
+                            WHERE CAST(Fecha_Turno AS DATE) = @fechaHoy
+                            AND Asistencia_Turno = 'Pendiente' 
+                            AND LegajoMedico_Turno = @legajoMedico";
 
                 using (SqlCommand cmd = new SqlCommand(consulta, cn))
                 {
@@ -208,16 +215,17 @@ namespace Datos
 
 
 
-        public bool actualizarAsistenciaTurno(int idTurno, bool asistencia)
+        public bool actualizarAsistenciaTurno(string idTurno, string asistencia, string observacion)
         {
             SqlConnection cn = ad.obtenerConexion();
-            string resultadoAsistencia = asistencia ? "Confirmado" : "Ausente";
-            string consulta = @"UPDATE Turnos SET 
-                        Asistencia_Tur = @Asistencia
-                        WHERE IdTurno_Tur = @idTurno";
+            string consulta = @"UPDATE TurnosPrueba SET 
+                        Asistencia_Turno = @Asistencia,
+                        Observacion_Turno = @Observacion
+                        WHERE IdTurno_Turno = @idTurno";
             SqlCommand cmd = new SqlCommand(consulta, cn);
             cmd.Parameters.AddWithValue("@idTurno", idTurno);
-            cmd.Parameters.AddWithValue("@Asistencia", resultadoAsistencia);
+            cmd.Parameters.AddWithValue("@Asistencia", asistencia);
+            cmd.Parameters.AddWithValue("@Observacion", observacion);
             int filas = cmd.ExecuteNonQuery();
             cn.Close();
             return filas > 0;
