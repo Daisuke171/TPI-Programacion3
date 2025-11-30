@@ -51,13 +51,13 @@ main .separador p {
     background: rgba(255, 255, 255, 0.15);
 }
 
-#gvPacientes th {
-    background: rgba(25, 118, 210, 0.8);
-    color: #fff;
-    font-weight: bold;
-    text-align: left;
-    padding: 10px;
-}
+    #gvPacientes th {
+        background: #0078d4;
+        color: #fff;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px;
+    }
 
 #gvPacientes td {
     padding: 10px;

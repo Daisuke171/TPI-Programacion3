@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="Estilos/Base.css" />
     <link rel="stylesheet" href="Estilos/Navbar.css" />
     <link rel="stylesheet" href="Estilos/Inicio.css" />
+    <style>
+        #lblDia{
+            width: fit-content;
+            padding-left: 30px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">

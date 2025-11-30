@@ -27,40 +27,47 @@
 
             <h2>Elegir Especialidad:</h2>
             <section class="sectionTurnosMedicosCant">
-                <asp:DropDownList ID="ddlEspecialidad" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlEspecialidad_SelectedIndexChanged" ></asp:DropDownList>
+                <asp:DropDownList ID="ddlEspecialidad" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlEspecialidad_SelectedIndexChanged"></asp:DropDownList>
             </section>
-            
+
             <h2>Elegir Médico:</h2>
             <section class="sectionTurnosMedicosCant">
-                <asp:DropDownList ID="ddlMedico" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlMedicos_SelectedIndexChanged" ></asp:DropDownList>
+                <asp:DropDownList ID="ddlMedico" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlMedicos_SelectedIndexChanged"></asp:DropDownList>
             </section>
-            
+
             <h2>Elegir rango de Fechas:</h2>
             <section>
                 Desde
                 <asp:TextBox ID="txtFechaI" runat="server" TextMode="Date"></asp:TextBox>
-                &nbsp;Hasta
+                Hasta
                 <asp:TextBox ID="txtFechaF" runat="server" TextMode="Date"></asp:TextBox>
             </section>
-            
+
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar Fechas" CssClass="btnEnviar" OnClick="btnBuscar_Click" />
             <asp:Button ID="btnLimpiar" runat="server" Text="Mostrar Todos" CssClass="btnEnviar" OnClick="btnLimpiar_Click" />
-            
-            <h2>Turnos Totales</h2>
-            <section>
-                <asp:Label ID="lblTurnosTotal" runat="server" ></asp:Label>
-            </section>
-            
-            <h2>Porcentaje Presentismo</h2>
-            <section>
-                <asp:Label ID="lblTurnosPres" runat="server" ></asp:Label>
-            </section>
-            
-            <h2>Porcentaje Ausentismo</h2>
-            <section>
-                <asp:Label ID="lblTurnosAu" runat="server" ></asp:Label>
-            </section>
-            
+
+            <div class="container">
+                <h2>Turnos Totales: </h2>
+
+                <asp:Label ID="lblTurnosTotal" runat="server" CssClass="container_label"></asp:Label>
+
+            </div>
+
+            <div class="container">
+                <h2>Porcentaje Presentismo: </h2>
+
+                <asp:Label ID="lblTurnosPres" runat="server" CssClass="container_label"></asp:Label>
+
+            </div>
+
+            <div class="container">
+                <h2>Porcentaje Ausentismo: </h2>
+
+                <asp:Label ID="lblTurnosAu" runat="server" CssClass="container_label"></asp:Label>
+
+            </div>
+
+
             <h2>Turnos</h2>
             <section>
                 <asp:GridView ID="gvTurnos" runat="server" AutoGenerateColumns="False">

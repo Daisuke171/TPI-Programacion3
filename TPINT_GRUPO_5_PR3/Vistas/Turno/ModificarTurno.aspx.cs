@@ -17,7 +17,14 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
         NegocioMedico negMedico = new NegocioMedico();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            lblUsuario.Text = Session["usuario"]?.ToString();
+
+            if (Session["TipoUsuario"] == null)
+            {
+                Response.Redirect("~/Vistas/Inicio.aspx");
+            }
+
+            if (!IsPostBack)
             {
                 CargarGridView();
             }

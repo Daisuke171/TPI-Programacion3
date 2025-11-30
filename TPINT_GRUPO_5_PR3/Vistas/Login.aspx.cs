@@ -39,6 +39,7 @@ namespace TPINT_GRUPO_5_PR3
                 if (tipoUsuario == "Admin")
                 {
                     Session["TipoUsuario"] = tipoUsuario;
+                    //Session["LegajoMedico"] = "1001";
 
                     Response.Redirect("InicioAdmin.aspx");
                 }

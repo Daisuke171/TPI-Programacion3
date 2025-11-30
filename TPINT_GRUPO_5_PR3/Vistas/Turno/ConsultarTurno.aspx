@@ -37,10 +37,15 @@
 
             <div class="container">
                 <p>Consultar turnos de medico por FECHA:</p>
-                DESDE
-                <asp:TextBox ID="txtFechaInicial" runat="server" TextMode="Date"></asp:TextBox>
-                &nbsp;HASTA
-                <asp:TextBox ID="txtFechaFinal" runat="server" TextMode="Date"></asp:TextBox>
+                <div class="dateContainer">
+                    <p>DESDE</p>
+                    <asp:TextBox ID="txtFechaInicial" runat="server" TextMode="Date"></asp:TextBox>
+                </div>
+
+                <div class="dateContainer">
+                    <p>HASTA</p>
+                    <asp:TextBox ID="txtFechaFinal" runat="server" TextMode="Date"></asp:TextBox>
+                </div>
                 <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarLegajo_Click" ValidationGroup="2" />
             </div>
 

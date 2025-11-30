@@ -30,7 +30,7 @@
 }
 
 #gvPaciente input[type="text"] {
-    width: 90%;
+    width: fit-content;
     padding: 6px 8px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -46,10 +46,14 @@
     box-shadow: 0 0 4px rgba(0, 120, 212, 0.3);
 }
 
-#gvPaciente tr:hover {
-    background-color: #f3f9ff;
-    transition: background-color 0.2s ease-in-out;
-}
+    #gvPaciente select {
+        width: fit-content;
+    }
+
+    #gvPaciente tr:hover {
+        background-color: #f3f9ff;
+        transition: background-color 0.2s ease-in-out;
+    }
 
 #gvPaciente tr:nth-child(even) {
     background-color: #fafafa;
@@ -65,6 +69,49 @@
     font-size: 13px;
     transition: background-color 0.2s ease;
 }
+
+    #gvPaciente input[type="date"] {
+        width: fit-content;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        outline: none;
+        color: #000;
+        border: 2px solid #cfd8e3;
+        background: #ffffff;
+        caret-color: black;
+    }
+
+        #gvPaciente input[type="date"]:hover {
+            border-color: #64b5f6;
+        }
+
+        #gvPaciente input[type="date"]:focus {
+            background: rgba(255, 255, 255, 0.35);
+            border-color: #2196f3;
+            box-shadow: 0 0 6px rgba(33, 150, 243, 0.4);
+        }
+
+        #gvPaciente input[type="date"]:disabled {
+            background: #f1f5f9;
+            color: #777;
+            cursor: not-allowed;
+        }
+
+    /* Style calendar picker button (Chrome/Edge) */
+        #gvPaciente input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: brightness(0.2) hue-rotate(180deg) invert(40%) sepia(50%) saturate(1800%) hue-rotate(190deg);
+            cursor: pointer;
+            opacity: 0.7;
+            transition: 0.25s ease;
+        }
+
+            #gvPaciente input[type="date"]::-webkit-calendar-picker-indicator:hover {
+                opacity: 1;
+                transform: scale(1.1);
+            }
 
 .campo {
     display: flex;
