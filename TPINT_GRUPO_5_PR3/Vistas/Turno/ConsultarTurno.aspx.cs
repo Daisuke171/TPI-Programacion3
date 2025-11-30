@@ -37,16 +37,26 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             }
         }
 
-        private void cargarTurnos()
+private void cargarTurnos()
         {
-            string legajo = Session["LegajoMedico"].ToString();
+
             string paciente = Session["pacienteABuscar"].ToString();
             string fechaI = Session["fechaIABuscar"].ToString();
             string fechaF = Session["fechaFABuscar"].ToString();
             string asistencia = Session["asistenciaABuscar"].ToString();
+            if (Session["TipoUsuario"].ToString() == "Admin")
+            {
+                gvConsultarTurnos.DataSource = negocioTurno.ObtenerTablaTurnosAdmin(paciente, "Todos", asistencia, fechaI, fechaF);
+                gvConsultarTurnos.DataBind();
+            }
+            else 
+            { 
+                string legajo = Session["LegajoMedico"].ToString();
+                gvConsultarTurnos.DataSource = negocioTurno.ObtenerTablaTurnos(legajo, paciente, "Todos", asistencia, fechaI, fechaF);
+                gvConsultarTurnos.DataBind();
+            }
 
-            gvConsultarTurnos.DataSource = negocioTurno.ObtenerTablaTurnos(legajo, paciente, "Todos", asistencia, fechaI, fechaF);
-            gvConsultarTurnos.DataBind();
+            
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

@@ -176,6 +176,35 @@ namespace Datos
             return tablaTurnos;
         }
 
+        public DataTable getTablaTurnosParaAdmin(string paciente, string especialidad, string asistencia, string fechaI, string fechaF, int estado)
+        {
+            // Si no se especificaron fechas setea min. o max. absurdos
+            if (string.IsNullOrEmpty(fechaI)) fechaI = "1900-01-01";
+            if (string.IsNullOrEmpty(fechaF)) fechaF = "2100-01-01";
+
+            // Consulta base
+            string consulta = "SELECT * FROM VW_TURNOS WHERE " +
+                " Paciente LIKE '%" + paciente +
+                "%' AND Fecha BETWEEN '" + fechaI + "' AND '" + fechaF +
+                "' AND Estado_Turno = " + estado;
+
+            // Si se especifican los agrega
+            if (asistencia != "Todos")
+            {
+                consulta += " AND Asistencia_Turno = '" + asistencia + "' ";
+            }
+            if (especialidad != "Todos")
+            {
+                consulta += " AND NombreEspecialidad_Esp = '" + especialidad + "' ";
+            }
+
+            // Ordenados por fecha y horario
+            consulta += " ORDER BY Fecha, Horario";
+
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", consulta);
+            return tablaTurnos;
+        }
+
 
         //LA FECHA VA COMO AÑO, MES, DÍA
         public DataTable getTablaTurnosDiaPuntual(DateTime fecha, string legajoMedico)

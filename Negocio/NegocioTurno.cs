@@ -29,6 +29,11 @@ namespace Negocio
             return daoTurno.getTablaTurnos(legajoMedico, paciente, especialidad, asistencia, fechaI, fechaF, estado);
         }
 
+        public DataTable ObtenerTablaTurnosAdmin(string paciente = "", string especialidad = "Todos", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
+        {
+            return daoTurno.getTablaTurnosParaAdmin(paciente, especialidad, asistencia, fechaI, fechaF, estado);
+        }
+
         public DataTable ObtenerCantidadTurnos(string legajoMedico = "LegajoMedico_Turno", string paciente = "", string especialidad = "Todos", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
         {
             return daoTurno.getCantidadTurnos(legajoMedico, paciente, especialidad, asistencia, fechaI, fechaF, estado);
