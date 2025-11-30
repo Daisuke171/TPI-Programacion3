@@ -24,9 +24,9 @@ namespace Negocio
             return filas > 0;
         }
 
-        public DataTable ObtenerTablaTurnos()
+        public DataTable ObtenerTablaTurnos(string legajoMedico = "LegajoMedico_Turno", string paciente = "", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
         {
-            return daoTurno.getTablaTurnos();
+            return daoTurno.getTablaTurnos(legajoMedico, paciente, asistencia, fechaI, fechaF, estado);
         }
 
         //LA FECHA VA COMO AÑO-MES-DÍA

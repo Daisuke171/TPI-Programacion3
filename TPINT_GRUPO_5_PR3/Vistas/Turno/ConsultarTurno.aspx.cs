@@ -15,6 +15,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
     public partial class ConsultarTurno : System.Web.UI.Page
     {
         NegocioTurno negocioTurno = new NegocioTurno();
+        NegocioUsuario negocioUsuario = new NegocioUsuario();
         
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,19 +27,25 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 {
                     Response.Redirect("~/Vistas/Inicio.aspx");
                 }
-                else
-                {
-                    CargarTurnos();
-                }
 
+                Session["pacienteABuscar"] = "";
+                Session["fechaIABuscar"] = "";
+                Session["fechaFABuscar"] = "";
+                Session["asistenciaABuscar"] = "Todos";
 
+                cargarTurnos();
             }
         }
 
-        private void CargarTurnos()
+        private void cargarTurnos()
         {
-           
-            gvConsultarTurnos.DataSource = negocioTurno.ObtenerTablaTurnos();
+            string legajo = Session["LegajoMedico"].ToString();
+            string paciente = Session["pacienteABuscar"].ToString();
+            string fechaI = Session["fechaIABuscar"].ToString();
+            string fechaF = Session["fechaFABuscar"].ToString();
+            string asistencia = Session["asistenciaABuscar"].ToString();
+
+            gvConsultarTurnos.DataSource = negocioTurno.ObtenerTablaTurnos(legajo, paciente, asistencia, fechaI, fechaF);
             gvConsultarTurnos.DataBind();
         }
 
@@ -49,67 +56,52 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Response.Redirect("~/Vistas/Login.aspx");
         }
 
-        protected void btnFiltrarDni_Click(object sender, EventArgs e)
-        {
-            DataTable dataTableTurnoXDNI;
-            int resultado;
-            if (txtDni.Text == "" || int.TryParse(txtDni.Text.ToString(), out resultado) == false)
-            {
-                lblErrorDni.Text = "Por favor ingrese valores validos";
-                txtDni.Text = null;
-                return;
-            }
-
-            lblErrorLegajo.Text = " ";
-            txtLegajo.Text = "";
-
-
-            lblErrorDni.Text = " ";
-            int dniBuscar = Convert.ToInt32(txtDni.Text);
-            txtDni.Text = null;
-            dataTableTurnoXDNI = negocioTurno.obtenerTurnoPorDni(dniBuscar);
-            if (dataTableTurnoXDNI == null)
-            {
-                lblErrorDni.Text = "No se encontraron turnos para el DNI ingresado o el paciente esta dado de baja.";
-                gvConsultarTurnos.DataSource = null;
-                gvConsultarTurnos.DataBind();
-                CargarTurnos();
-                return;
-            }
-            gvConsultarTurnos.DataSource = dataTableTurnoXDNI;
-            gvConsultarTurnos.DataBind();
-
-
-        }
-
-        protected void btnFiltrarLegajo_Click1(object sender, EventArgs e)
-        {
-            int resultado;
-            if (txtLegajo.Text == "" || int.TryParse(txtLegajo.Text.ToString(), out resultado) == false)
-            {
-                lblErrorLegajo.Text = "Por favor ingrese valores validos";
-
-                txtLegajo.Text = null;
-            return;
-            }
-
-
-            lblErrorDni.Text = " ";
-            txtDni.Text = "";
-
-
-            lblErrorLegajo.Text = "";
-            int legajoBuscar = Convert.ToInt32(txtLegajo.Text);
-            txtLegajo.Text = null;
-            gvConsultarTurnos.DataSource = negocioTurno.obtenerTurnoPorLegajoMedico(legajoBuscar);
-            gvConsultarTurnos.DataBind();
-            
-        }
-
         protected void gvConsultarTurnos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvConsultarTurnos.PageIndex = e.NewPageIndex;
-            CargarTurnos();
+            cargarTurnos();
+        }
+
+        protected void btnFiltrarPaciente_Click(object sender, EventArgs e)
+        {
+            Session["pacienteABuscar"] = txtPaciente.Text;
+            gvConsultarTurnos.PageIndex = 0;
+            cargarTurnos();
+        }
+
+        protected void btnFiltrarLegajo_Click(object sender, EventArgs e)
+        {
+            Session["fechaIABuscar"] = txtFechaInicial.Text;
+            Session["fechaFABuscar"] = txtFechaFinal.Text;
+            gvConsultarTurnos.PageIndex = 0;
+            cargarTurnos();
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["asistenciaABuscar"] = ddl_asistencia.SelectedValue;
+            gvConsultarTurnos.PageIndex = 0;
+            cargarTurnos();
+        }
+
+        private void limpiarCampos()
+        {
+            Session["pacienteABuscar"] = "";
+            Session["fechaIABuscar"] = "";
+            Session["fechaFABuscar"] = "";
+            Session["asistenciaABuscar"] = "Todos";
+
+            txtPaciente.Text = string.Empty;
+            txtFechaInicial.Text = string.Empty;
+            txtFechaFinal.Text = string.Empty;
+            ddl_asistencia.SelectedIndex = 0;
+        }
+
+        protected void btnLimpiarBusqueda_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            gvConsultarTurnos.PageIndex = 0;
+            cargarTurnos();
         }
     }
 }

@@ -42,49 +42,49 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// txtDni control.
+        /// txtPaciente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDni;
+        protected global::System.Web.UI.WebControls.TextBox txtPaciente;
 
         /// <summary>
-        /// btnFiltrarDni control.
+        /// btnFiltrarPaciente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFiltrarDni;
+        protected global::System.Web.UI.WebControls.Button btnFiltrarPaciente;
 
         /// <summary>
-        /// lblErrorDni control.
+        /// revPaciente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorDni;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPaciente;
 
         /// <summary>
-        /// rfvtxtDni control.
+        /// txtFechaInicial control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtDni;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaInicial;
 
         /// <summary>
-        /// txtLegajo control.
+        /// txtFechaFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLegajo;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaFinal;
 
         /// <summary>
         /// btnFiltrarLegajo control.
@@ -96,22 +96,22 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected global::System.Web.UI.WebControls.Button btnFiltrarLegajo;
 
         /// <summary>
-        /// lblErrorLegajo control.
+        /// ddl_asistencia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorLegajo;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_asistencia;
 
         /// <summary>
-        /// rfvtxtLegajo control.
+        /// btnLimpiarBusqueda control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtLegajo;
+        protected global::System.Web.UI.WebControls.Button btnLimpiarBusqueda;
 
         /// <summary>
         /// gvConsultarTurnos control.

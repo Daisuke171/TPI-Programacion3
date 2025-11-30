@@ -94,6 +94,15 @@
                         </ItemTemplate>
                     </asp:TemplateField>
 
+                    <asp:TemplateField HeaderText="Paciente">
+                        <EditItemTemplate>
+                            <asp:Label ID="lbl_eit_nombrePaciente" runat="server" Text='<%# Bind("Paciente") %>'></asp:Label>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_nombrePaciente" runat="server" Text='<%# Bind("Paciente") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                     <asp:TemplateField HeaderText="Fecha">
                         <EditItemTemplate>
                             <asp:Label ID="lbl_eit_fechaTurno" runat="server" Text='<%# Bind("Fecha") %>' OnDataBinding="lbl_eit_fechaTurno_DataBinding"></asp:Label>

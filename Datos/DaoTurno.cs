@@ -146,9 +146,29 @@ namespace Datos
 
 
         //TRAER LA TABLA DE TURNOS
-        public DataTable getTablaTurnos()
+        public DataTable getTablaTurnos(string legajoMedico, string paciente, string asistencia, string fechaI, string fechaF, int estado)
         {
-            DataTable tablaTurnos = ad.obtenerTabla("Turnos", "SELECT * FROM TURNOS");
+            // Si no se especificaron fechas setea min. o max. absurdos
+            if (string.IsNullOrEmpty(fechaI)) fechaI = "1900-01-01";
+            if(string.IsNullOrEmpty(fechaF)) fechaF = "2100-01-01";
+
+            // Consulta base
+            string consulta = "SELECT * FROM VW_TURNOS WHERE " +
+                "LegajoMedico_Turno = " + legajoMedico +
+                " AND Paciente LIKE '%" + paciente +
+                "%' AND Fecha BETWEEN '" + fechaI + "' AND '" + fechaF +
+                "' AND Estado_Turno = " + estado;
+
+            // Si se especifica asistencia lo agrega
+            if (asistencia != "Todos")
+            {
+                consulta += " AND Asistencia_Turno = '" + asistencia + "' ";
+            }
+
+            // Ordenados por fecha y horario
+            consulta += " ORDER BY Fecha, Horario";
+
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", consulta);
             return tablaTurnos;
         }
 
@@ -190,16 +210,19 @@ namespace Datos
                             IdTurno_Turno,
                             LegajoMedico_Turno,
                             DNIPaciente_Turno,
+                            (Nombre_Pac + ' ' + Apellido_Pac) AS Paciente,
                             Asistencia_Turno,
                             Observacion_Turno
-                            FROM TurnosPrueba 
+                            FROM TurnosPrueba INNER JOIN Pacientes
+                            ON DNI_Pac = DNIPaciente_Turno
                             WHERE CAST(Fecha_Turno AS DATE) = @fechaHoy
                             AND Asistencia_Turno = 'Pendiente' 
                             AND LegajoMedico_Turno = @legajoMedico";
 
                 using (SqlCommand cmd = new SqlCommand(consulta, cn))
                 {
-                    cmd.Parameters.Add("@fechaHoy", SqlDbType.Date).Value = DateTime.Today;
+                    DateTime fecha = new DateTime(2025, 12, 01);
+                    cmd.Parameters.Add("@fechaHoy", SqlDbType.Date).Value = fecha;
                     cmd.Parameters.Add("@legajoMedico", SqlDbType.Int).Value = int.Parse(legajoMedico);
 
                     DataTable tablaTurnos = new DataTable();

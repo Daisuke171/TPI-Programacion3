@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../Estilos/ConsultarTurno.css" />
 </head>
 <body>
-    <form id="form1" runat="server" defaultbutton="btnFiltrarDni">
+    <form id="form1" runat="server" defaultbutton="btnFiltrarPaciente">
         <nav>
             <div class="leftSide">
                 <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
@@ -26,25 +26,36 @@
             <h1>Consultar Turno</h1>
 
             <div class="container">
-                <p>Consultar por DNI:</p>
-                <asp:TextBox ID="txtDni" runat="server"></asp:TextBox>
-                <asp:Button ID="btnFiltrarDni" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarDni_Click" ValidationGroup="1" />
+                <p>Consultar por NOMBRE / APELLIDO Paciente:</p>
+                <asp:TextBox ID="txtPaciente" runat="server" ValidationGroup="1"></asp:TextBox>
+                <asp:Button ID="btnFiltrarPaciente" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarPaciente_Click" ValidationGroup="1" />
             </div>
 
             <div class="validatorContainer">
-                <asp:Label ID="lblErrorDni" runat="server" CssClass="validator"></asp:Label>
-                <asp:RequiredFieldValidator ID="rfvtxtDni" runat="server" ErrorMessage="" ControlToValidate="txtDni" Display="Dynamic" ValidationGroup="1"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="revPaciente" runat="server" ControlToValidate="txtPaciente" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$" ValidationGroup="1">* Nombre / Apellido invalidos</asp:RegularExpressionValidator>
             </div>
 
             <div class="container">
-                <p>Consultar turnos de medico por LEGAJO:</p>
-                <asp:TextBox ID="txtLegajo" runat="server"></asp:TextBox>
-                <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarLegajo_Click1" ValidationGroup="2" />
+                <p>Consultar turnos de medico por FECHA:</p>
+                DESDE
+                <asp:TextBox ID="txtFechaInicial" runat="server" TextMode="Date"></asp:TextBox>
+                &nbsp;HASTA
+                <asp:TextBox ID="txtFechaFinal" runat="server" TextMode="Date"></asp:TextBox>
+                <asp:Button ID="btnFiltrarLegajo" runat="server" Text="Filtrar" CssClass="btnEnviar" OnClick="btnFiltrarLegajo_Click" ValidationGroup="2" />
             </div>
 
-            <div class="validatorContainer">
-                <asp:Label ID="lblErrorLegajo" runat="server" CssClass="validator"></asp:Label>
-                <asp:RequiredFieldValidator ID="rfvtxtLegajo" runat="server" ErrorMessage="" ControlToValidate="txtLegajo" ValidateRequestMode="Inherit" Display="Dynamic" ValidationGroup="2"></asp:RequiredFieldValidator>
+            <div class="container">
+                <p>Filtrar ASISTENCIA:</p>
+                <asp:DropDownList ID="ddl_asistencia" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                    <asp:ListItem Selected="True" Value="Todos">Todos</asp:ListItem>
+                    <asp:ListItem>Presente</asp:ListItem>
+                    <asp:ListItem>Pendiente</asp:ListItem>
+                    <asp:ListItem>Ausente</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+
+            <div class="container">
+                <asp:Button ID="btnLimpiarBusqueda" runat="server" Text="Limpiar Búsqueda" CssClass="btnEnviar" OnClick="btnLimpiarBusqueda_Click" />
             </div>
 
 
@@ -52,56 +63,38 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Id Turno">
                         <ItemTemplate>
-                            <asp:Label ID="lblIdTurno" runat="server" Text='<%# Bind("IdTurno_Tur") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_idTurno" runat="server" Text='<%# Bind("IdTurno_Turno") %>'></asp:Label>
                         </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtIdTurno" runat="server" Text='<%# Bind("IdTurno_Tur") %>'></asp:TextBox>
-                        </EditItemTemplate>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Legajo Medico">
+                    <asp:TemplateField HeaderText="Nombre Paciente">
                         <ItemTemplate>
-                            <asp:Label ID="lblLegajoMedico" runat="server" Text='<%# Bind("LegajoMedico_Tur") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_nombrePaciente" runat="server" Text='<%# Bind("Paciente") %>'></asp:Label>
                         </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtLegajoMedico" runat="server" Text='<%# Bind("LegajoMedico_Tur") %>'></asp:TextBox>
-                        </EditItemTemplate>
-                    </asp:TemplateField>
-
-                    <asp:TemplateField HeaderText="DNI Paciente">
-                        <ItemTemplate>
-                            <asp:Label ID="lblDNIPaciente" runat="server" Text='<%# Bind("DNIPaciente_Tur") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtDNIPaciente" runat="server" Text='<%# Bind("DNIPaciente_Tur") %>'></asp:TextBox>
-                        </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Fecha">
                         <ItemTemplate>
-                            <asp:Label ID="lblFecha" runat="server" Text='<%# Bind("Fecha_Tur") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_fecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:Label>
                         </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtFecha" runat="server" Text='<%# Bind("Fecha_Tur") %>'></asp:TextBox>
-                        </EditItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Horario">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_horario" runat="server" Text='<%# Bind("Horario") %>'></asp:Label>
+                        </ItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Asistencia">
                         <ItemTemplate>
-                            <asp:Label ID="lblAsistencia" runat="server" Text='<%# Bind("Asistencia_Tur") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_asistencia" runat="server" Text='<%# Bind("Asistencia_Turno") %>'></asp:Label>
                         </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtAsistencia" runat="server" Text='<%# Bind("Asistencia_Tur") %>'></asp:TextBox>
-                        </EditItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Observacion">
                         <ItemTemplate>
-                            <asp:Label ID="lblObservacion" runat="server" Text='<%# Bind("Observacion_Tur") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_observacion" runat="server" Text='<%# Bind("Observacion_Turno") %>'></asp:Label>
                         </ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="txtObservacion" runat="server" Text='<%# Bind("Observacion_Tur") %>'></asp:TextBox>
-                        </EditItemTemplate>
                     </asp:TemplateField>
 
                 </Columns>
