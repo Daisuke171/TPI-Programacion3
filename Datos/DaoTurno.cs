@@ -146,11 +146,11 @@ namespace Datos
 
 
         //TRAER LA TABLA DE TURNOS
-        public DataTable getTablaTurnos(string legajoMedico, string paciente, string asistencia, string fechaI, string fechaF, int estado)
+        public DataTable getTablaTurnos(string legajoMedico, string paciente, string especialidad, string asistencia, string fechaI, string fechaF, int estado)
         {
             // Si no se especificaron fechas setea min. o max. absurdos
             if (string.IsNullOrEmpty(fechaI)) fechaI = "1900-01-01";
-            if(string.IsNullOrEmpty(fechaF)) fechaF = "2100-01-01";
+            if (string.IsNullOrEmpty(fechaF)) fechaF = "2100-01-01";
 
             // Consulta base
             string consulta = "SELECT * FROM VW_TURNOS WHERE " +
@@ -159,10 +159,14 @@ namespace Datos
                 "%' AND Fecha BETWEEN '" + fechaI + "' AND '" + fechaF +
                 "' AND Estado_Turno = " + estado;
 
-            // Si se especifica asistencia lo agrega
+            // Si se especifican los agrega
             if (asistencia != "Todos")
             {
                 consulta += " AND Asistencia_Turno = '" + asistencia + "' ";
+            }
+            if (especialidad != "Todos")
+            {
+                consulta += " AND NombreEspecialidad_Esp = '" + especialidad + "' ";
             }
 
             // Ordenados por fecha y horario
@@ -331,6 +335,62 @@ namespace Datos
 
             cn.Close();
             return tabla;
+        }
+
+        public DataTable getCantidadTurnos(string legajoMedico, string paciente, string especialidad, string asistencia, string fechaI, string fechaF, int estado)
+        {
+            // Si no se especificaron fechas setea min. o max. absurdos
+            if (string.IsNullOrEmpty(fechaI)) fechaI = "1900-01-01";
+            if (string.IsNullOrEmpty(fechaF)) fechaF = "2100-01-01";
+
+            // Consulta base
+            string consulta = "SELECT COUNT(*) AS Total FROM VW_TURNOS WHERE " +
+                "LegajoMedico_Turno = " + legajoMedico +
+                " AND Paciente LIKE '%" + paciente +
+                "%' AND Fecha BETWEEN '" + fechaI + "' AND '" + fechaF +
+                "' AND Estado_Turno = " + estado;
+
+            // Si se especifican los agrega
+            if (asistencia != "Todos")
+            {
+                consulta += " AND Asistencia_Turno = '" + asistencia + "' ";
+            }
+            if (especialidad != "Todos")
+            {
+                consulta += " AND NombreEspecialidad_Esp = '" + especialidad + "' ";
+            }
+
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", consulta);
+            return tablaTurnos;
+        }
+
+        public DataTable getPorcentajeAsistencia(string legajoMedico, string paciente, string especialidad, string asistencia, string fechaI, string fechaF, int estado)
+        {
+            // Si no se especificaron fechas setea min. o max. absurdos
+            if (string.IsNullOrEmpty(fechaI)) fechaI = "1900-01-01";
+            if (string.IsNullOrEmpty(fechaF)) fechaF = "2100-01-01";
+
+            // Consulta base
+            string consultaFiltros = "SELECT COUNT(*) AS Total FROM VW_TURNOS WHERE " +
+                "LegajoMedico_Turno = " + legajoMedico +
+                " AND Paciente LIKE '%" + paciente +
+                "%' AND Fecha BETWEEN '" + fechaI + "' AND '" + fechaF +
+                "' AND Estado_Turno = " + estado;
+
+            // Si se especifican los agrega
+            if (especialidad != "Todos")
+            {
+                consultaFiltros += " AND NombreEspecialidad_Esp = '" + especialidad + "' ";
+            }
+
+            // Consulta para obtener el porcentaje de Presentismo sobre el total de turnos
+            string consultaFinal = "IF (" + consultaFiltros + ") = 0 SELECT 0 AS PorcentajeAsistencia ELSE " +
+                "SELECT ROUND(100*Presentes.Total/Totales.Total, 2) AS PorcentajeAsistencia " +
+                "FROM (" + consultaFiltros + ")Totales, (" +
+                consultaFiltros + " AND Asistencia_Turno = 'Presente')Presentes";
+
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", consultaFinal);
+            return tablaTurnos;
         }
     }
 }

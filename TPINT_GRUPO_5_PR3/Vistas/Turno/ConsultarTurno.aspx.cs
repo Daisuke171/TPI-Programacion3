@@ -45,7 +45,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             string fechaF = Session["fechaFABuscar"].ToString();
             string asistencia = Session["asistenciaABuscar"].ToString();
 
-            gvConsultarTurnos.DataSource = negocioTurno.ObtenerTablaTurnos(legajo, paciente, asistencia, fechaI, fechaF);
+            gvConsultarTurnos.DataSource = negocioTurno.ObtenerTablaTurnos(legajo, paciente, "Todos", asistencia, fechaI, fechaF);
             gvConsultarTurnos.DataBind();
         }
 

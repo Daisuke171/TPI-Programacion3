@@ -24,9 +24,21 @@ namespace Negocio
             return filas > 0;
         }
 
-        public DataTable ObtenerTablaTurnos(string legajoMedico = "LegajoMedico_Turno", string paciente = "", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
+        public DataTable ObtenerTablaTurnos(string legajoMedico = "LegajoMedico_Turno", string paciente = "", string especialidad = "Todos", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
         {
-            return daoTurno.getTablaTurnos(legajoMedico, paciente, asistencia, fechaI, fechaF, estado);
+            return daoTurno.getTablaTurnos(legajoMedico, paciente, especialidad, asistencia, fechaI, fechaF, estado);
+        }
+
+        public DataTable ObtenerCantidadTurnos(string legajoMedico = "LegajoMedico_Turno", string paciente = "", string especialidad = "Todos", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
+        {
+            return daoTurno.getCantidadTurnos(legajoMedico, paciente, especialidad, asistencia, fechaI, fechaF, estado);
+        }
+
+        public int obtenerPorcentajeAsistencia(string legajoMedico = "LegajoMedico_Turno", string paciente = "", string especialidad = "Todos", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
+        {
+            DataTable dt = daoTurno.getPorcentajeAsistencia(legajoMedico, paciente, especialidad, asistencia, fechaI, fechaF, estado);
+            int porcentaje = Convert.ToInt32(dt.Rows[0]["PorcentajeAsistencia"].ToString());
+            return porcentaje;
         }
 
         //LA FECHA VA COMO AÑO-MES-DÍA
