@@ -4,176 +4,144 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
+    <title>Baja Turno</title>
+    <link rel="stylesheet" href="../Estilos/Base.css" />
+    <link rel="stylesheet" href="../Estilos/NavBar.css" />
+    <style>
+        #gvTurnos {
+            margin: 20px auto;
+            display: block;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: fit-content;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #f4f8fb;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            justify-self: center;
         }
-        .auto-style2 {
-            height: 22px;
-        }
-        .auto-style3 {
-            height: 22px;
-            width: 160px;
-        }
-        .auto-style4 {
-            width: 160px;
-        }
-        .auto-style5 {
-            height: 22px;
-            width: 142px;
-        }
-        .auto-style6 {
-            width: 142px;
-        }
-        .auto-style7 {
-            height: 22px;
-            width: 65px;
-        }
-        .auto-style8 {
-            width: 65px;
-        }
-        .auto-style9 {
-            height: 22px;
-            width: 69px;
-        }
-        .auto-style10 {
-            width: 69px;
-        }
-        .auto-style11 {
-            height: 22px;
-            width: 1063px;
-        }
-        .auto-style12 {
-            width: 1063px;
-        }
-        .auto-style13 {
-            height: 22px;
-            width: 248px;
-        }
-        .auto-style14 {
-            width: 248px;
-        }
+
+            #gvTurnos th {
+                background-color: #1976d2;
+                color: white;
+                padding: 10px;
+                font-weight: 600;
+            }
+
+            #gvTurnos td {
+                padding: 10px;
+                border: 1px solid #e3f2fd;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+            }
+
+                #gvTurnos td:hover {
+                    background-color: #bbdefb;
+                }
+
+            #gvTurnos .selected {
+                background-color: #1976d2 !important;
+                color: white;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+
+            #gvTurnos a {
+                background-color: #0078d4;
+                color: white;
+                padding: 6px 10px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 13px;
+                transition: background-color 0.2s ease;
+            }
+
+                #gvTurnos a:hover {
+                    background-color: #005fa3;
+                }
+
+                main .container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-content: center;
+                    height: fit-content;
+                }
+
+                #txtDni{
+                    width: 50%;
+                    padding: 1rem 1rem !important;
+                }
+
+                #btnBuscar{
+                    width: 30%;
+                }
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style3">
-                        <asp:Label ID="lblBajaTurno" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Baja Turno"></asp:Label>
-                    </td>
-                    <td class="auto-style5"></td>
-                    <td class="auto-style7"></td>
-                    <td class="auto-style13"></td>
-                    <td class="auto-style11"></td>
-                    <td class="auto-style9">
-                        <asp:Label ID="lblUsuario" runat="server"></asp:Label>
-                    </td>
-                    <td class="auto-style2">
-                        <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesion" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">Buscar DNI:</td>
-                    <td class="auto-style6">
-                        <asp:TextBox ID="txtDni" runat="server"></asp:TextBox>
-                    </td>
-                    <td class="auto-style8">
-                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
-                    </td>
-                    <td class="auto-style14">
-                        <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" />
-                    </td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">
-                        <asp:GridView ID="gvTurnos" runat="server" AllowPaging="True" AutoGenerateColumns="False" AutoGenerateDeleteButton="True" EmptyDataText="No se encontraron registros" OnPageIndexChanging="gvTurnos_PageIndexChanging" OnRowDeleting="gvTurnos_RowDeleting" PageSize="5">
-                            <Columns>
-                                <asp:TemplateField HeaderText="ID">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lbl_it_id" runat="server" Text='<%# Bind("IdTurno_Turno") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Fecha">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lbl_it_fecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Legajo Medico">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lbl_it_legajoMedico" runat="server" Text='<%# Bind("LegajoMedico_Turno") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="DNI Paciente">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lbl_it_dniPaciente" runat="server" Text='<%# Bind("DNIPaciente_Turno") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Asistencia">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lbl_it_asistencia" runat="server" Text='<%# Bind("Asistencia_Turno") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Observacion">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lbl_it_observacion" runat="server" Text='<%# Bind("Observacion_Turno") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
-                    </td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">
-                        <asp:Label ID="lblConfirmacion" runat="server"></asp:Label>
-                    </td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style14">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-        </div>
+    <form id="form1" runat="server" defaultbutton="btnBuscar">
+        <nav>
+            <div class="leftSide">
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Inicio" NavigateUrl="~/Vistas/Inicio.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Pacientes" NavigateUrl="~/Vistas/HomePacientes.aspx"></asp:HyperLink>
+                <asp:HyperLink CssClass="hlnk_Inicio" runat="server" Text="Medicos" NavigateUrl="~/Vistas/HomeMedicos.aspx"></asp:HyperLink>
+            </div>
+            <div class="rightSide">
+                <asp:Label ID="lblUsuario" CssClass="lbl_Usuario" runat="server" Text="Username"></asp:Label>
+                <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesion" CssClass="btn-logout" OnClick="btnLogout_Click" />
+            </div>
+        </nav>
+        <main>
+            <h1>Baja Turno</h1>
+
+            <p>Buscar DNI:</p>
+            <div class="container">
+                <asp:TextBox ID="txtDni" runat="server"></asp:TextBox>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnEnviar" />
+            </div>
+            <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" CssClass="btnEnviar" />
+
+
+            <asp:GridView ID="gvTurnos" runat="server" AllowPaging="True" AutoGenerateColumns="False" AutoGenerateDeleteButton="True" EmptyDataText="No se encontraron registros" OnPageIndexChanging="gvTurnos_PageIndexChanging" OnRowDeleting="gvTurnos_RowDeleting" PageSize="5">
+                <Columns>
+                    <asp:TemplateField HeaderText="ID">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_id" runat="server" Text='<%# Bind("IdTurno_Turno") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Fecha">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_fecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Legajo Medico">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_legajoMedico" runat="server" Text='<%# Bind("LegajoMedico_Turno") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="DNI Paciente">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_dniPaciente" runat="server" Text='<%# Bind("DNIPaciente_Turno") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Asistencia">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_asistencia" runat="server" Text='<%# Bind("Asistencia_Turno") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Observacion">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_it_observacion" runat="server" Text='<%# Bind("Observacion_Turno") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+
+
+            <asp:Label ID="lblConfirmacion" runat="server"></asp:Label>
+        </main>
     </form>
 </body>
 </html>

@@ -24,15 +24,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblBajaTurno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBajaTurno;
-
-        /// <summary>
         /// lblUsuario control.
         /// </summary>
         /// <remarks>
