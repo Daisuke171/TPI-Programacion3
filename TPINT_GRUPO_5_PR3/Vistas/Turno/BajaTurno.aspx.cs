@@ -14,7 +14,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
         NegocioTurno negTurnos = new NegocioTurno();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
                 lblUsuario.Text = Session["usuario"]?.ToString();
 
@@ -50,8 +50,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            int dni = Convert.ToInt32(txtDni.Text.Trim());
-            gvTurnos.DataSource = negTurnos.obtenerTurnoPorDni(dni);
+            gvTurnos.DataSource = negTurnos.obtenerTurnoPorDni(Convert.ToInt32(txtDni.Text.Trim()));
+            lblError.Text = txtDni.Text.ToString();
             gvTurnos.DataBind();
         }
 

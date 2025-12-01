@@ -99,6 +99,7 @@
             <p>Buscar DNI:</p>
             <div class="container">
                 <asp:TextBox ID="txtDni" runat="server"></asp:TextBox>
+                <asp:Label ID="lblError" runat="server"></asp:Label>
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnEnviar" />
             </div>
             <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" CssClass="btnEnviar" />

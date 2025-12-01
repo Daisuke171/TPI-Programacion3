@@ -75,7 +75,7 @@ namespace Negocio
         public DataTable obtenerTurnoPorDni(int DNI)
         {
             DataTable dtDNI = daoTurno.getTablaTurnosPorDNI(DNI);
-            if (EstaDadoDeBaja(dtDNI) == false)
+            if (!EstaDadoDeBaja(dtDNI))
             {
                 return dtDNI;
             }
