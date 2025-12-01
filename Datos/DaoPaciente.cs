@@ -59,19 +59,6 @@ namespace Datos
             parametros.Value = paciente._dni;
         }
 
-        public bool subirPaciente(Paciente paciente)
-        {
-            bool resultado = false;
-
-            int filasAfectadas = insertarPaciente(paciente);
-            
-            if(filasAfectadas > 0)
-            {
-                return true;
-            }
-            return resultado;
-        }
-
         public int eliminarPaciente(Paciente paciente)
         {
             int resultado = 0;
@@ -110,12 +97,6 @@ namespace Datos
         public bool existeDniPaciente(string dni)
         {
             string consultaSql = "SELECT * FROM Pacientes WHERE Dni_Pac = " + dni;
-            return accesoDatos.existe(consultaSql);
-        }
-
-        public bool existeNombrePaciente(string nombre)
-        {
-            string consultaSql = "SELECT * FROM Pacientes WHERE Nombre_Pac LIKE '%" + nombre + "%'";
             return accesoDatos.existe(consultaSql);
         }
 

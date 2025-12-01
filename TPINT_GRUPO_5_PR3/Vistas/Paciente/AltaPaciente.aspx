@@ -44,7 +44,7 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtBoxNombre" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtBoxNombre" CssClass="validator" ValidationExpression="^[a-zA-Z\s]+$" Display="Dynamic" ValidationGroup="1">Nombre invalido. Solo caracteres alfabeticos</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtBoxNombre" CssClass="validator" ValidationExpression="^[a-zA-Z\s]+$" Display="Dynamic" ValidationGroup="1">Nombre invalido</asp:RegularExpressionValidator>
                 </div>
 
                 <div class="campo">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtBoxApellido" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtBoxApellido" CssClass="validator" ValidationExpression="^[a-zA-Z\s]+$" Display="Dynamic" ValidationGroup="1">Apellido invalido. Solo caracteres alfabeticos</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtBoxApellido" CssClass="validator" ValidationExpression="^[a-zA-Z\s]+$" Display="Dynamic" ValidationGroup="1">Apellido invalido</asp:RegularExpressionValidator>
                 </div>
 
                 <div class="campo">
@@ -143,7 +143,7 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtBoxTelefono" CssClass="validator" Display="Dynamic" ValidationGroup="1" >* Campo obligatorio</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revTelefono" runat="server" ControlToValidate="txtBoxTelefono" CssClass="validator" ValidationExpression="^[0-9,$]*$" Display="Dynamic" ValidationGroup="1">Teléfono inválido. Solo caracteres numéricos</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revTelefono" runat="server" ControlToValidate="txtBoxTelefono" CssClass="validator" ValidationExpression="^[0-9,$]*$" Display="Dynamic" ValidationGroup="1">Teléfono inválido</asp:RegularExpressionValidator>
                 </div>
 
             </section>

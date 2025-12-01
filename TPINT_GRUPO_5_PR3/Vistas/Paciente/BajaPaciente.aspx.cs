@@ -42,6 +42,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void gvPaciente_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            limpiarMensaje();
+
             string DNIAEliminar = ((Label)gvPaciente.Rows[e.RowIndex].FindControl("lbl_it_dni")).Text;
 
             ViewState["DNIAEliminar"] = DNIAEliminar;
@@ -87,16 +89,32 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
         {
+            // Conversion de la fecha para que no muestre hora (00:00:00)
             DateTime fecha = DateTime.Parse(((Label)sender).Text);
             ((Label)sender).Text = fecha.ToShortDateString();
         }
 
         protected void gvPaciente_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            limpiarMensaje();
             gvPaciente.PageIndex = e.NewPageIndex;
             CargarPacientes();
         }
 
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            limpiarMensaje();
+            Session["DNIABuscar"] = txtBoxDNI.Text;
+            CargarPacientes();
+        }
+        protected void btnMostarTodos_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            limpiarMensaje();
+            gvPaciente.PageIndex = 0;
+            CargarPacientes();
+        }
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session.Clear();
@@ -104,24 +122,16 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             Response.Redirect("~/Vistas/Login.aspx");
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-            Session["DNIABuscar"] = txtBoxDNI.Text;
-            CargarPacientes();
-        }
-
-        protected void btnMostarTodos_Click(object sender, EventArgs e)
-        {
-            limpiarCampos();
-            gvPaciente.PageIndex = 0;
-            CargarPacientes();
-        }
 
         protected void limpiarCampos()
         {
             txtBoxDNI.Text = string.Empty;
-            lbl_confirmacion.Text = string.Empty;
             Session["DNIABuscar"] = "";
+        }
+
+        protected void limpiarMensaje()
+        {
+            lbl_confirmacion.Text = string.Empty;
         }
     }
 }

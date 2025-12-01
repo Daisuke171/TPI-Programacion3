@@ -48,6 +48,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
         {
+            // Conversion de la fecha para que no muestre hora (00:00:00)
             DateTime fecha = DateTime.Parse(((Label)sender).Text);
             ((Label)sender).Text = fecha.ToShortDateString();
         }
@@ -64,8 +65,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             Session["DNIABuscar"] = txtboxDNI.Text;
             Session["apellidoABuscar"] = txtboxApellido.Text;
-            Session["tipoSangreABuscar"] = ddlTipoSangre.SelectedValue;
-            Session["ordenABuscar"] = ddlOrdenDeListado.SelectedValue;
 
             CargarPacientes();
         }
@@ -95,5 +94,16 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             ddlOrdenDeListado.SelectedIndex = 0;
         }
 
+        protected void ddlOrdenDeListado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["ordenABuscar"] = ddlOrdenDeListado.SelectedValue;
+            CargarPacientes();
+        }
+
+        protected void ddlTipoSangre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["tipoSangreABuscar"] = ddlTipoSangre.SelectedValue;
+            CargarPacientes();
+        }
     }
 }

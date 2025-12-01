@@ -50,12 +50,6 @@ namespace Negocio
             return existe;
         }
 
-        public bool existeNombrePaciente(string nombre)
-        {
-            bool existe = daoPaciente.existeNombrePaciente(nombre);
-            return existe;
-        }
-
         public bool modificarPaciente(Paciente pac)
         {
             return daoPaciente.modificarPaciente(pac);

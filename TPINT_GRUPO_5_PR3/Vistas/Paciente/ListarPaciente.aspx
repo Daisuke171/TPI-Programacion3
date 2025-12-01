@@ -27,21 +27,21 @@
 
             <section class="separador">
                 <p>Buscar DNI:</p>
-                <asp:TextBox ID="txtboxDNI" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtboxDNI" runat="server" ValidationGroup="2"></asp:TextBox>
             </section>
 
-            <asp:RegularExpressionValidator ID="revDNI" runat="server" ControlToValidate="txtboxDNI" Font-Bold="True" ForeColor="Red" ValidationExpression="^[0-9,$]*$" Display="Dynamic">DNI Invalido</asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="revDNI" runat="server" ControlToValidate="txtboxDNI" Font-Bold="True" ForeColor="Red" ValidationExpression="^[0-9,$]*$" Display="Dynamic" ValidationGroup="2">DNI Invalido</asp:RegularExpressionValidator>
 
             <section class="separador">
                 <p>Buscar Apellido:</p>
-                <asp:TextBox ID="txtboxApellido" runat="server"></asp:TextBox>                
+                <asp:TextBox ID="txtboxApellido" runat="server" ValidationGroup="2"></asp:TextBox>                
             </section>
             
-            <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtboxApellido" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$" Display="Dynamic">Apellido invalido. Solo caracteres alfabeticos</asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtboxApellido" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$" Display="Dynamic" ValidationGroup="2">Apellido invalido</asp:RegularExpressionValidator>
 
             <section class="separador">
                 <p>Ordenar por:</p>
-                <asp:DropDownList ID="ddlOrdenDeListado" runat="server">
+                <asp:DropDownList ID="ddlOrdenDeListado" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlOrdenDeListado_SelectedIndexChanged">
                     <asp:ListItem Value="DNI_Pac" Selected="True">-- Seleccione un orden --</asp:ListItem>
                     <asp:ListItem Value="Apellido_Pac">Apellido</asp:ListItem>
                     <asp:ListItem Value="Sexo_Pac">Sexo</asp:ListItem>
@@ -53,7 +53,7 @@
             
             <section class="separador">
                 <p>Filtrar por:</p>
-                <asp:DropDownList ID="ddlTipoSangre" runat="server">
+                <asp:DropDownList ID="ddlTipoSangre" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlTipoSangre_SelectedIndexChanged">
                 <asp:ListItem Value="Todos" Selected="True">-- Seleccione un tipo de Sangre --</asp:ListItem>
                     <asp:ListItem>A+</asp:ListItem>
                     <asp:ListItem>A-</asp:ListItem>
@@ -66,7 +66,7 @@
                 </asp:DropDownList>
             </section>
 
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Paciente" OnClick="btnBuscar_Click" />
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Paciente" OnClick="btnBuscar_Click" ValidationGroup="2" />
             <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" CssClass="btnEnviar" OnClick="btnMostrarTodos_Click"/>
 
             <section id="tablaPaciente">
