@@ -14,6 +14,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
     public partial class WebForm6 : System.Web.UI.Page
     {
         NegocioMedico neg = new NegocioMedico();
+        NegocioUsuario negocioUsuario = new NegocioUsuario();
         NegocioNacionalidad negocioNacionalidad = new NegocioNacionalidad();
         NegocioProvincia negocioProvincia = new NegocioProvincia();
         NegocioLocalidad negocioLocalidad = new NegocioLocalidad();
@@ -79,16 +80,30 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             Medico medico = new Medico(Convert.ToInt32(legajo), dni, nombre, apellido, sexo, idNacionalidad, fechaNacimiento, direccion, idProvincia, idLocalidad, correo, telefono, idEspecialidad);
 
+            string idUsuario = negocioUsuario.obtenerIdUsuarioConLegajo(legajo);
+            string usuario = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_usuario")).Text;
+            string contraseña = ((TextBox)gvMedico.Rows[e.RowIndex].FindControl("txt_eit_contraseña")).Text;
 
-            // Ejecuta la transacción y muestra un mensaje con el resultado
             bool modifico = neg.modificarMedico(medico);
 
             limpiarMensaje();
 
+            // Ejecuta la transacción y muestra un mensaje con el resultado
             if (modifico)
             {
                 lbl_mensaje.ForeColor = Color.Green;
-                lbl_mensaje.Text = "Modificación exitosa";
+                lbl_mensaje.Text = "Modificación de medico exitosa. ";
+
+                modifico = negocioUsuario.actualizarUsuario(idUsuario, usuario, contraseña);
+                
+                if (modifico)
+                {
+                    lbl_mensaje.Text += "Modificacion de usuario exitosa";
+                }
+                else
+                {
+                    lbl_mensaje.Text += "Error al modificar usuario";
+                }
             }
             else
             {

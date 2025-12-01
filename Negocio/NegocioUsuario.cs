@@ -51,5 +51,14 @@ namespace Negocio
             return daoUsuario.getLegajoConUsuario(usuario);
         }
 
+        public string obtenerIdUsuarioConLegajo(string legajo)
+        {
+            return daoUsuario.getIdUsuarioConLegajo(legajo);
+        }
+
+        public bool actualizarUsuario(string id, string nombre, string contraseña) 
+        {
+            return daoUsuario.actualizarUsuario(id, nombre, contraseña);
+        }
     }
 }

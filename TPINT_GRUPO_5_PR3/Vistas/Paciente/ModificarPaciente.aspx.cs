@@ -77,8 +77,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             bool modifico = neg.modificarPaciente(paciente);
 
-            limpiarCampos();
-
             if (modifico)
             {
                 lbl_mensaje.ForeColor = Color.Green;

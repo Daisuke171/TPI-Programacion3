@@ -181,6 +181,30 @@
                             </ItemTemplate>
                         </asp:TemplateField>
 
+                        <asp:TemplateField HeaderText="Nombre Usuario">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt_eit_usuario" runat="server" Text='<%# Eval("NombreUsuario_U") %>'></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfv_eit_Usuario" runat="server" ControlToValidate="txt_eit_usuario" Display="None" ErrorMessage="* Campo obligatorio: Usuario"></asp:RequiredFieldValidator>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_usuario" runat="server" Text='<%# Eval("NombreUsuario_U") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Contraseña Usuario">
+                            <EditItemTemplate>
+                                Contraseña:
+                                <asp:TextBox ID="txt_eit_contraseña" runat="server" Text='<%# Eval("ContraseniaUsuario_U") %>'></asp:TextBox>
+                                <br />
+                                Repetir Contraseña:<asp:TextBox ID="txt_eit_repetirContraseña" runat="server" Text='<%# Eval("ContraseniaUsuario_U") %>'></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfv_eit_contraseña" runat="server" ControlToValidate="txt_eit_contraseña" Display="None" ErrorMessage="* Campo obligatorio: Contraseña"></asp:RequiredFieldValidator>
+                                <asp:CompareValidator ID="cv_eit_contraseña" runat="server" ControlToCompare="txt_eit_contraseña" ControlToValidate="txt_eit_repetirContraseña" Display="None" ErrorMessage="Las contraseñas no coinciden"></asp:CompareValidator>
+                                <asp:RequiredFieldValidator ID="rfv_eit_repetirContraseña" runat="server" ControlToValidate="txt_eit_repetirContraseña" Display="None" ErrorMessage="*Campo obligatorio: Repetir Contraseña"></asp:RequiredFieldValidator>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_contraseña" runat="server" Text='<%# Eval("ContraseniaUsuario_U") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
                     </Columns>
                 </asp:GridView>
             </section>

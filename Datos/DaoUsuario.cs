@@ -110,6 +110,7 @@ namespace Datos
             comando.Parameters.AddWithValue("@nombreUsuario", usuario);
 
             object resultado = accesoDatos.EjecutarScalar(comando);
+            conexion.Close();
             if(resultado != null)
             {
                 return resultado.ToString();
@@ -117,6 +118,31 @@ namespace Datos
 
             return null;
         }
-        
+
+        public string getIdUsuarioConLegajo(string legajo) 
+        {
+            SqlConnection conexion = accesoDatos.obtenerConexion();
+            string consulta = "SELECT IDUsuario_U FROM Usuarios " +
+                                  "INNER JOIN Medicos ON IDUsuario_Med = IDUsuario_U " +
+                                  "WHERE Legajo_Med = @legajo";
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("@legajo", legajo);
+
+            object resultado = accesoDatos.EjecutarScalar(comando);
+            conexion.Close();
+            if (resultado != null)
+            {
+                return resultado.ToString();
+            }
+            return null;
+        }
+
+        public bool actualizarUsuario(string id, string usuario, string contraseña) 
+        {
+            string consulta = "UPDATE Usuarios SET NombreUsuario_U = '" + usuario + "', ContraseniaUsuario_U = '" + contraseña + "' WHERE IDUsuario_U = " + id;
+            int filas = accesoDatos.EjecutarTransaccion(consulta);
+            return filas > 0;
+        }
+
     }
-    }
+}

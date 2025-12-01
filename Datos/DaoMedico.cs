@@ -56,7 +56,7 @@ namespace Datos
         public DataTable getTablaMedicos(string legajo, string apellido, string especialidad, string orden)
         {
             // CONSULTA BASE
-            string consulta = "SELECT * FROM VW_MEDICOS WHERE Estado_Med = 1 ";
+            string consulta = "SELECT * FROM VW_MEDICOS_ACTIVOS WHERE Estado_Med = 1 ";
 
             // AGREGADOS PARA FILTRAR - ORDENAR
             if (!string.IsNullOrEmpty(legajo.Trim()))
