@@ -42,13 +42,40 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// txtIdTurno control.
+        /// txtPaciente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdTurno;
+        protected global::System.Web.UI.WebControls.TextBox txtPaciente;
+
+        /// <summary>
+        /// revPaciente control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPaciente;
+
+        /// <summary>
+        /// txtDni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDni;
+
+        /// <summary>
+        /// revDni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDni;
 
         /// <summary>
         /// btnBuscar control.
@@ -67,24 +94,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnMostrarTodos;
-
-        /// <summary>
-        /// rev_txtIdTurno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator rev_txtIdTurno;
-
-        /// <summary>
-        /// rfv_txtIdTurno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_txtIdTurno;
 
         /// <summary>
         /// gvTurnos control.

@@ -29,6 +29,11 @@ namespace Negocio
             return daoTurno.getTablaTurnos(legajoMedico, paciente, especialidad, asistencia, fechaI, fechaF, estado);
         }
 
+        public DataTable ObtenerTurnosPorPaciente(string paciente, string dniPaciente)
+        {
+            return daoTurno.getTurnosPorPaciente(paciente, dniPaciente);
+        }
+
         public DataTable ObtenerTablaTurnosAdmin(string paciente = "", string especialidad = "Todos", string asistencia = "Todos", string fechaI = "", string fechaF = "", int estado = 1)
         {
             return daoTurno.getTablaTurnosParaAdmin(paciente, especialidad, asistencia, fechaI, fechaF, estado);
@@ -67,9 +72,9 @@ namespace Negocio
             return daoTurno.getTablaTurnosPorId(id);
         }
 
-        public bool ModificarTurno(Entidades.Turno turno)
+        public bool ReprogramarTurno(int id, DateTime fecha)
         {
-            return daoTurno.modificarTurno(turno);
+            return daoTurno.modificarTurno(id, fecha);
         }
 
         public DataTable obtenerTurnoPorDni(int DNI)

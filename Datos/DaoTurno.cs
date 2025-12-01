@@ -205,6 +205,40 @@ namespace Datos
             return tablaTurnos;
         }
 
+        public DataTable getTurnosPorPaciente(string paciente, string dni)
+        {
+            // Consulta base
+            string consulta = "SELECT * FROM VW_TURNOS WHERE " +
+                " Paciente LIKE '%" + paciente +
+                "%' AND DNIPaciente_Turno LIKE '" + dni +
+                "%' AND Estado_Turno = 1 AND Asistencia_Turno = 'Pendiente' ";
+
+            // Ordenados por fecha y horario
+            consulta += " ORDER BY Fecha, Horario";
+
+            DataTable tablaTurnos = ad.obtenerTabla("Turnos", consulta);
+            return tablaTurnos;
+        }
+
+        public bool modificarTurno(int id, DateTime fecha)
+        {
+            SqlConnection cn = ad.obtenerConexion();
+
+            string consulta = @"UPDATE TurnosPrueba SET 
+                        Fecha_Turno = @Fecha 
+                        WHERE IdTurno_Turno = @idTurno";
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            cmd.Parameters.AddWithValue("@idTurno", id);
+            cmd.Parameters.AddWithValue("@Fecha", fecha);
+
+            int filas = cmd.ExecuteNonQuery();
+            cn.Close();
+
+            return filas > 0;
+        }
+
 
         //LA FECHA VA COMO AÑO, MES, DÍA
         public DataTable getTablaTurnosDiaPuntual(DateTime fecha, string legajoMedico)
