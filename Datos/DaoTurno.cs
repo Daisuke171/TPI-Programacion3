@@ -376,9 +376,9 @@ namespace Datos
 
             return filas > 0;
         }
-        public DataTable getTablaTurnosPorDNI(int DNI)
+        public DataTable getTablaTurnosPorDNI(string dni)
         {
-            DataTable tablaTurnos = ad.obtenerTabla("TurnosPrueba", "SELECT * FROM TurnosPrueba t INNER JOIN Pacientes p ON t.DNIPaciente_Turno = p.DNI_Pac WHERE t.DNIPaciente_Turno = " + DNI + "AND p.Estado_Pac = 1");
+            DataTable tablaTurnos = ad.obtenerTabla("TurnosPrueba", "SELECT * FROM TurnosPrueba t INNER JOIN Pacientes p ON t.DNIPaciente_Turno = p.DNI_Pac WHERE CAST(t.DNIPaciente_Turno AS VARCHAR(8)) LIKE '" + dni + "%' AND p.Estado_Pac = 1");
             return tablaTurnos;
         }
 

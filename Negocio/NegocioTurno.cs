@@ -57,19 +57,9 @@ namespace Negocio
         }
 
         //LA FECHA VA COMO AÑO-MES-DÍA
-
-        public DataTable ObtenerTablaTurnosDiaPuntual(DateTime fecha, string legajoMedico)
-        {
-            return daoTurno.getTablaTurnosDiaPuntual(fecha, legajoMedico);
-        }
         public DataTable ObtenerTablaTurnosDiaPuntual(string legajoMedico)
         {
             return daoTurno.getTablaTurnosDiaPuntual(legajoMedico);
-        }
-
-        public DataTable ObtenerTablaTurnosPorId(int id)
-        {
-            return daoTurno.getTablaTurnosPorId(id);
         }
 
         public bool ReprogramarTurno(int id, DateTime fecha)
@@ -77,9 +67,9 @@ namespace Negocio
             return daoTurno.modificarTurno(id, fecha);
         }
 
-        public DataTable obtenerTurnoPorDni(int DNI)
+        public DataTable obtenerTurnoPorDni(string dni)
         {
-            DataTable dtDNI = daoTurno.getTablaTurnosPorDNI(DNI);
+            DataTable dtDNI = daoTurno.getTablaTurnosPorDNI(dni);
             if (!EstaDadoDeBaja(dtDNI))
             {
                 return dtDNI;
@@ -94,8 +84,6 @@ namespace Negocio
         {
             return daoTurno.actualizarAsistenciaTurno(idTurno, asistencia, observacion);
         }
-
-
 
         public bool EstaDadoDeBaja(DataTable dataTable)
         {
@@ -114,11 +102,6 @@ namespace Negocio
 
             // Si el conteo de filas es mayor que 0, no está vacía.
             return false;
-        }
-
-        public DataTable obtenerTurnoPorLegajoMedico(int legajo)
-        {
-            return daoTurno.getTablaTurnosPorLegajoMedico(legajo);
         }
 
         public DataTable getHeatmapTurnos(DateTime desde, DateTime hasta)

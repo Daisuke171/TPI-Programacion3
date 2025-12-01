@@ -80,7 +80,7 @@
 
                     <asp:TemplateField HeaderText="Fecha">
                         <ItemTemplate>
-                            <asp:Label ID="lbl_it_fecha" runat="server" Text='<%# Bind("Fecha") %>'></asp:Label>
+                            <asp:Label ID="lbl_it_fecha" runat="server" Text='<%# Bind("Fecha") %>' OnDataBinding="lbl_it_fecha_DataBinding"></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
 

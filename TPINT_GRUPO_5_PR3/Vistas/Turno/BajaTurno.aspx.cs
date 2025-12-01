@@ -22,21 +22,28 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
                 {
                     Response.Redirect("~/Vistas/Inicio.aspx");
                 }
-                CargarGridView();
+
+                Session["DNIABuscar"] = "";
+                cargarTurnos();
             }
         }
 
-        public void CargarGridView()
+        public void cargarTurnos()
         {
-            gvTurnos.DataSource = negTurnos.ObtenerTablaTurnos();
+            string dni = Session["DNIABuscar"].ToString();
+
+            gvTurnos.DataSource = negTurnos.ObtenerTurnosPorPaciente("", dni);
             gvTurnos.DataBind();
         }
 
         protected void gvTurnos_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            limpiarConfirmacion();
             int idTurno = Convert.ToInt32(((Label)gvTurnos.Rows[e.RowIndex].FindControl("lbl_it_id")).Text);
             if (negTurnos.borrarTurno(idTurno))
             {
+                limpiarCampos();
+                gvTurnos.PageIndex = 0;
                 lblConfirmacion.Text = "Baja de turno confirmada";
                 lblConfirmacion.ForeColor = Color.Green;
             }
@@ -45,26 +52,41 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
                 lblConfirmacion.Text = "Hubo un  error al dar de baja el turno";
                 lblConfirmacion.ForeColor = Color.Red;
             }
-            CargarGridView();
+
+            cargarTurnos();
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
+        protected void btnBuscar_Click1(object sender, EventArgs e)
         {
-            gvTurnos.DataSource = negTurnos.obtenerTurnoPorDni(Convert.ToInt32(txtDni.Text.Trim()));
-            lblError.Text = txtDni.Text.ToString();
-            gvTurnos.DataBind();
+            limpiarConfirmacion();
+            Session["DNIABuscar"] = txtDni.Text;
+            cargarTurnos();
         }
 
         protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
+            limpiarConfirmacion();
+            limpiarCampos();
             gvTurnos.PageIndex = 0;
-            CargarGridView();
+            cargarTurnos();
         }
 
         protected void gvTurnos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            limpiarConfirmacion();
             gvTurnos.PageIndex = e.NewPageIndex;
-            CargarGridView();
+            cargarTurnos();
+        }
+
+        protected void limpiarCampos()
+        {
+            txtDni.Text = string.Empty;
+            Session["DNIABuscar"] = "";
+        }
+
+        protected void limpiarConfirmacion()
+        {
+            lblConfirmacion.Text = string.Empty;
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -72,6 +94,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Turno
             Session.Clear();
 
             Response.Redirect("~/Vistas/Login.aspx");
+        }
+
+        protected void lbl_it_fecha_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
         }
     }
 }

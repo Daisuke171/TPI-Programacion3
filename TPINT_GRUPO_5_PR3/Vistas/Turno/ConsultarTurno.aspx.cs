@@ -37,7 +37,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             }
         }
 
-private void cargarTurnos()
+        private void cargarTurnos()
         {
 
             string paciente = Session["pacienteABuscar"].ToString();
@@ -112,6 +112,12 @@ private void cargarTurnos()
             limpiarCampos();
             gvConsultarTurnos.PageIndex = 0;
             cargarTurnos();
+        }
+
+        protected void lbl_it_fecha_DataBinding(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
         }
     }
 }
