@@ -39,6 +39,9 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Horarios
 
         protected void btnBuscarLegajo_Click(object sender, EventArgs e)
         {
+            lbl_mensaje2.Text = string.Empty;
+            lbl_mensaje1.Text = string.Empty;
+
             int legajo = Convert.ToInt32(txtLegajo.Text);
             lbl_mensaje1.Text = string.Empty;
 

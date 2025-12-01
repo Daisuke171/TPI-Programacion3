@@ -289,7 +289,7 @@ namespace Datos
                 using (SqlCommand cmd = new SqlCommand(consulta, cn))
                 {
                     DateTime fecha = new DateTime(2025, 12, 01);
-                    cmd.Parameters.Add("@fechaHoy", SqlDbType.Date).Value = fecha;
+                    cmd.Parameters.Add("@fechaHoy", SqlDbType.Date).Value = DateTime.Today;
                     cmd.Parameters.Add("@legajoMedico", SqlDbType.Int).Value = int.Parse(legajoMedico);
 
                     DataTable tablaTurnos = new DataTable();
