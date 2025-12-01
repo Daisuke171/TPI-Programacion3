@@ -27,20 +27,20 @@
 
             <section class="separador">
                 <p>Buscar Legajo:</p>
-                <asp:TextBox ID="txtLegajo" runat="server" ValidationGroup="1" MaxLength="4"></asp:TextBox>
+                <asp:TextBox ID="txtLegajo" runat="server" ValidationGroup="2" MaxLength="4"></asp:TextBox>
             </section>
 
             <div class="validatorContainer">
-                <asp:RegularExpressionValidator ID="rev_legajo" runat="server" ControlToValidate="txtLegajo" ValidationExpression="^[0-9,$]*$" ForeColor="Red" Visible="False" Display="Dynamic" Font-Bold="True"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="rev_legajo" runat="server" ControlToValidate="txtLegajo" ValidationExpression="^[0-9,$]*$" ForeColor="Red" Display="Dynamic" Font-Bold="True" ValidationGroup="2">* Legajo invalido</asp:RegularExpressionValidator>
             </div>
 
             <section class="separador">
                 <p>Buscar Apellido:</p>
-                <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>                
+                <asp:TextBox ID="txtApellido" runat="server" ValidationGroup="2"></asp:TextBox>                
             </section>
             
             <div class="validatorContainer">
-                <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ' ]+$" Display="Dynamic" Font-Bold="True" ForeColor="Red">* Error. Ingresar caracteres alfabéticos</asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ' ]+$" Display="Dynamic" Font-Bold="True" ForeColor="Red" ValidationGroup="2">* Apellido invalido</asp:RegularExpressionValidator>
             </div>
 
             <section class="separador">
@@ -62,7 +62,7 @@
                 </asp:DropDownList>
             </section>
 
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Medico" ValidationGroup="1" OnClick="btnBuscar_Click" />
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar Medico" ValidationGroup="2" OnClick="btnBuscar_Click" />
             <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar Todos" CssClass="btnEnviar" ValidationGroup="1" OnClick="btnMostrarTodos_Click" />
 
             <section id="tablaMedico">

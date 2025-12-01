@@ -36,7 +36,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                     return;
                 }
 
-                // Cargar los dropdownlists de Nacionalidades y Especialidades
+                // Cargar los dropdownlists de Nacionalidades, Provincias, Localidades y Especialidades
                 CargarNacionalidades();
                 CargarEspecialidades();
                 CargarProvincias();
@@ -88,21 +88,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             ddlEspecialidad.Items.Insert(0, new ListItem("--Seleccione--", "0"));
         }
 
-        private void limpiarCampos()
-        {
-            txtDni.Text = "";
-            txtNombre.Text = "";
-            txtApellido.Text = "";
-            ddlSexo.SelectedIndex = 0;
-            ddlNacionalidad.SelectedIndex = 0;
-            ddlLocalidad.SelectedIndex = 0;
-            ddlProvincia.SelectedIndex = 0;
-            txtBoxFecha.Text = "";
-            txtDireccion.Text = "";
-            txtCorreo.Text = "";
-            txtTelefono.Text = "";
-            ddlEspecialidad.SelectedIndex = 0;
-        }
 
         protected void btnRegistrarMedico_Click(object sender, EventArgs e)
         {
@@ -131,12 +116,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             string user = txtUsuario.Text;
             string password = txtContraseña.Text;
 
-            if (password != txtRepetirContra.Text)
-            {
-                lblConfirmacionUsuarioMedico.Text = "Las contraseñas no coinciden.";
-                return;
-            }
-
             bool confirmacion = negMedico.agregarMedico(medico);
 
             if (confirmacion)
@@ -163,6 +142,21 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             CargarLocalidades();
         }
 
+        private void limpiarCampos()
+        {
+            txtDni.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            ddlSexo.SelectedIndex = 0;
+            ddlNacionalidad.SelectedIndex = 0;
+            ddlLocalidad.SelectedIndex = 0;
+            ddlProvincia.SelectedIndex = 0;
+            txtBoxFecha.Text = "";
+            txtDireccion.Text = "";
+            txtCorreo.Text = "";
+            txtTelefono.Text = "";
+            ddlEspecialidad.SelectedIndex = 0;
+        }
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session.Clear();

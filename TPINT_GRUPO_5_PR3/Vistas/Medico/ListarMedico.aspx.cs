@@ -62,31 +62,16 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
             ddlEspecialidad.Items.Insert(0, new ListItem("Todos", "Todos"));
         }
-
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Session.Clear();
-
-            Response.Redirect("~/Vistas/Login.aspx");
-        }
-
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             gvMedico.PageIndex = 0;
 
             Session["legajoABuscar"] = txtLegajo.Text;
             Session["apellidoABuscar"] = txtApellido.Text;
-            Session["especialidadABuscar"] = ddlEspecialidad.SelectedItem.Text;
-            Session["ordenABuscar"] = ddlOrdenListado.SelectedValue;
 
             cargarMedicos();
         }
 
-        protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
-        {
-            DateTime fecha = DateTime.Parse(((Label)sender).Text);
-            ((Label)sender).Text = fecha.ToShortDateString();
-        }
 
         protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
@@ -99,6 +84,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         {
             gvMedico.PageIndex = e.NewPageIndex;
             cargarMedicos();
+        }
+        protected void lbl_it_nacimiento_DataBinding(object sender, EventArgs e)
+        {
+            // Conversion de la fecha para que no muestre hora (00:00:00)
+            DateTime fecha = DateTime.Parse(((Label)sender).Text);
+            ((Label)sender).Text = fecha.ToShortDateString();
         }
 
         protected void limpiarCampos()
@@ -126,6 +117,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             gvMedico.PageIndex = 0;
             Session["especialidadABuscar"] = ddlEspecialidad.SelectedItem.Text;
             cargarMedicos();
+        }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("~/Vistas/Login.aspx");
         }
     }
 }

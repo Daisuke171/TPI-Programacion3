@@ -30,10 +30,11 @@
             <div class="campo">
                 <p>Buscar Legajo:</p>
                 <asp:TextBox ID="txtBuscar" runat="server" ValidationGroup="2"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revLegajo" runat="server" ControlToValidate="txtBuscar" ErrorMessage="* Legajo invalido" ValidationExpression="^[0-9,$]*$"></asp:RegularExpressionValidator>
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="List" Font-Bold="True" ForeColor="Red" />
             </div>
 
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnEnviar" OnClick="btnBuscar_Click" ValidationGroup="2" />
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnEnviar" OnClick="btnBuscar_Click" />
             <asp:Button ID="btnMostrarTodos" runat="server" Text="Mostrar todos" CssClass="btnEnviar" OnClick="btnMostrarTodos_Click" />
 
             <div class="campo">

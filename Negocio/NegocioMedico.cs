@@ -15,16 +15,13 @@ namespace Negocio
         DaoMedico daoMedico = new DaoMedico();
         public bool agregarMedico(Medico med)
         {
-            DaoMedico dao = new DaoMedico();
-
             // esto es una validación combinada de DNI + Legajo único
             string consulta = $"SELECT * FROM Medicos WHERE DNI_Med = '{med._dni}' OR Legajo_Med = {med._legajoMedico}";
             if (new AccesoDatos().existe(consulta))
             {
                 return false; // existe, no se puede cargar
             }
-
-            return dao.insertarMedico(med);
+            return daoMedico.insertarMedico(med);
         }
 
         public DataTable buscarMedicos(string dni = "", string apellido = "", string especialidad = "Todos", string orden = "Legajo_Med")

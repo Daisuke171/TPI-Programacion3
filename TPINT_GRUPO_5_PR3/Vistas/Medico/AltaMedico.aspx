@@ -34,16 +34,16 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvDni" runat="server" ControlToValidate="txtDni" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Requerido</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revDni" runat="server" ErrorMessage="* Solo se acepta 8 numeros" ControlToValidate="txtDni" ValidationExpression="^\d{7,8}$" EnableClientScript="True" CssClass="validator" Display="Dynamic" ValidationGroup="1"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revDni" runat="server" ErrorMessage="* Dni invalido" ControlToValidate="txtDni" ValidationExpression="^\d{7,8}$" EnableClientScript="True" CssClass="validator" Display="Dynamic" ValidationGroup="1"></asp:RegularExpressionValidator>
                 </div>
 
                 <div class="campo">
                     <p>Nombre:</p>
                     <asp:TextBox ID="txtNombre" runat="server" CssClass="txtBox" ValidationGroup="1"></asp:TextBox>
                 </div>
-                <div class="validatorContainer">
+                <div class="validatorContainer" style="left: 0px; top: -10px">
                     <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Requerido</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationExpression="^[a-zA-Z\s]+$" EnableClientScript="True" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Solo caracteres alfabeticos</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationExpression="^[a-zA-Z\s']+$" EnableClientScript="True" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Nombre invalido</asp:RegularExpressionValidator>
                 </div>
 
                 <div class="campo">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="* Requerido" ControlToValidate="txtApellido" CssClass="validator" Display="Dynamic" ValidationGroup="1"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationExpression="^[a-zA-Z\s]+$" EnableClientScript="True" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Solo caracteres alfabeticos</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationExpression="^[a-zA-Z\s']+$" EnableClientScript="True" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Apellido invalido</asp:RegularExpressionValidator>
                 </div>
 
                 <div class="campo">
@@ -157,6 +157,7 @@
                 </div>
                 <div class="validatorContainer">
                     <asp:RequiredFieldValidator ID="rfvRepetirContraseña" runat="server" ControlToValidate="txtRepetirContra" CssClass="validator" Display="Dynamic" ValidationGroup="1" InitialValue="0">* Requerido</asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="cvContraseña" runat="server" ControlToCompare="txtContraseña" ControlToValidate="txtRepetirContra" CssClass="validator" Display="Dynamic" ValidationGroup="1">* Las contraseñas no coinciden</asp:CompareValidator>
                 </div>
             </section>
 

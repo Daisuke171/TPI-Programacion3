@@ -96,7 +96,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas
                 lbl_mensaje.Text = "Error en la operacion";
             }
 
-            // Sale del modo edit, limpia el txt y carga la Grid (EL VALOR BUSCADO SIGUE GUARDADO)
+            // Sale del modo edit, limpia el txt y carga la Grid
             gvMedico.EditIndex = -1;
             limpiarCampos();
             cargarMedicos();
@@ -104,54 +104,58 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void gvMedico_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            // SI ESTA EN MODO EDIT
+            // Si esta en modo edit
             if ((e.Row.RowState & DataControlRowState.Edit) > 0)
             {
                 // ddl Para cargar los descolgables
                 DropDownList ddList = (DropDownList)e.Row.FindControl("ddl_eit_nacionalidad");
                 
-                //NACIONALIDADES
+                //Nacionalidades
                 DataTable dt = negocioNacionalidad.getTable();
                 ddList.DataSource = dt;
                 ddList.DataTextField = "NombreNacionalidad_Nac";
                 ddList.DataValueField = "IdNacionalidad_Nac";
                 ddList.DataBind();
+
                 //Iguala el valor seleccionado inicial al valor que está en la Grid normal
-                DataRowView dr = e.Row.DataItem as DataRowView;
+                DataRowView dr = (DataRowView)e.Row.DataItem;
                 ddList.SelectedItem.Text = dr["NombreNacionalidad_Nac"].ToString();
 
-                //PROVINCIAS
+                //Provincias
                 ddList = (DropDownList)e.Row.FindControl("ddl_eit_provincia");
                 dt = negocioProvincia.getTable();
                 ddList.DataSource = dt;
                 ddList.DataTextField = "NombreProvincia_Prov";
                 ddList.DataValueField = "IdProvincia_Prov";
                 ddList.DataBind();
+
                 //Iguala el valor seleccionado inicial al valor que está en la Grid normal
                 ddList.SelectedItem.Text = dr["NombreProvincia_Prov"].ToString();
                 string idProvincia = ddList.SelectedValue;
 
-                //LOCALIDADES DE LA PCIA SELECCIONADA
+                //Localidades de la Pcia seleccionada
                 ddList = (DropDownList)e.Row.FindControl("ddl_eit_localidad");
                 dt = negocioLocalidad.getTable(idProvincia);
                 ddList.DataSource = dt;
                 ddList.DataTextField = "NombreLocalidad_Loc";
                 ddList.DataValueField = "IdLocalidad_Loc";
                 ddList.DataBind();
+
                 //Iguala el valor seleccionado inicial al valor que está en la Grid normal
                 ddList.SelectedItem.Text = dr["NombreLocalidad_Loc"].ToString();
 
-                // ESPECIALIDADES
+                // Especialidades
                 ddList = (DropDownList)e.Row.FindControl("ddl_eit_especialidad");
                 dt = negocioEspecialidad.getTabla();
                 ddList.DataSource = dt;
                 ddList.DataTextField = "NombreEspecialidad_Esp";
                 ddList.DataValueField = "IdEspecialidad_Esp";
                 ddList.DataBind();
+
                 //Iguala el valor seleccionado inicial al valor que está en la Grid normal
                 ddList.SelectedItem.Text = dr["NombreEspecialidad_Esp"].ToString();
 
-                //Convierte el formato de la fecha para que no muestre la parte horaria
+                //Convierte el formato de la fecha para que no muestre la parte horaria (00:00:00)
                 TextBox txtbox = (TextBox)e.Row.FindControl("txt_eit_fechaNacimiento");
                 txtbox.Text = (DateTime.Parse(dr["FechaNaciemiento_Med"].ToString())).ToString("yyyy-MM-dd");
 
@@ -175,21 +179,13 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             ddList.DataBind();
         }
 
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Session.Clear();
-
-            Response.Redirect("~/Vistas/Login.aspx");
-        }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            // Si está en modo Edit se cancela
             gvMedico.EditIndex = -1;
-            // Setea un nuevo indice = 0
             gvMedico.PageIndex = 0;
             
             limpiarMensaje();
-            // Asigna nuevo valor a buscar y carga la Grid
+            
             Session["LegajoABuscar"] = txtBuscar.Text;
             cargarMedicos();
         }
@@ -226,6 +222,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         private void limpiarMensaje()
         {
             lbl_mensaje.Text = string.Empty;
+        }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+
+            Response.Redirect("~/Vistas/Login.aspx");
         }
     }
 }

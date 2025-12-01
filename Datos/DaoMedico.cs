@@ -235,7 +235,6 @@ namespace Datos
             cmd.Parameters.AddWithValue("@IDuser", daoUsuario.getCantidadUsuarios());
             cmd.Parameters.AddWithValue("@Legajo", med._legajoMedico);
             
-
             int filas = cmd.ExecuteNonQuery();
             cn.Close();
         }

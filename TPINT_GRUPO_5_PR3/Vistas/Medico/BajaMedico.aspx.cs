@@ -42,6 +42,8 @@ namespace TPINT_GRUPO_5_PR3.Vistas
 
         protected void gvMedico_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            limpiarConfirmacion();
+
             int legajo = Convert.ToInt32(((Label)gvMedico.Rows[e.RowIndex].FindControl("lbl_it_legajo")).Text);
 
             ViewState["LegajoAEliminar"] = legajo;
@@ -51,12 +53,6 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             e.Cancel = true;
         }
 
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Session.Clear();
-
-            Response.Redirect("~/Vistas/Login.aspx");
-        }
 
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
@@ -106,14 +102,22 @@ namespace TPINT_GRUPO_5_PR3.Vistas
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             limpiarConfirmacion();
+            gvMedico.PageIndex = 0;
             Session["legajoABuscar"] = txtBoxLegajo.Text;
             cargarMedicos();
         }
 
         protected void btnMostarTodos_Click(object sender, EventArgs e)
         {
+            limpiarConfirmacion();
             limpiarCampos();
             gvMedico.PageIndex = 0;
+            cargarMedicos();
+        }
+        protected void gvMedico_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            limpiarConfirmacion();
+            gvMedico.PageIndex = e.NewPageIndex;
             cargarMedicos();
         }
 
@@ -128,11 +132,11 @@ namespace TPINT_GRUPO_5_PR3.Vistas
             lbl_confirmacion.Text = string.Empty;
         }
 
-        protected void gvMedico_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void btnLogout_Click(object sender, EventArgs e)
         {
-            limpiarConfirmacion();
-            gvMedico.PageIndex = e.NewPageIndex;
-            cargarMedicos();
+            Session.Clear();
+
+            Response.Redirect("~/Vistas/Login.aspx");
         }
     }
     
