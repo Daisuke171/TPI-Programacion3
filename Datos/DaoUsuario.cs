@@ -18,7 +18,7 @@ namespace Datos
 
         public bool validarUsuario(string usuario, string contrasenia)
         {
-            string consulta = $"SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario_U = @user AND ContraseniaUsuario_U = @contrasenia";
+            string consulta = $"SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario_U = @user AND ContraseniaUsuario_U = @contrasenia AND EstadoUsuario_U = 1";
             
             SqlCommand comando = new SqlCommand(consulta);
             comando.Parameters.AddWithValue("@user", usuario);

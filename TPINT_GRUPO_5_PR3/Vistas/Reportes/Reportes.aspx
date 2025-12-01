@@ -70,7 +70,7 @@
 
             <h2>Turnos</h2>
             <section>
-                <asp:GridView ID="gvTurnos" runat="server" AutoGenerateColumns="False">
+                <asp:GridView ID="gvTurnos" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="gvTurnos_PageIndexChanging" PageSize="5">
                     <Columns>
                         <asp:TemplateField HeaderText="ID Turno">
                             <ItemTemplate>

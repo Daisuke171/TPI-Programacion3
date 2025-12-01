@@ -92,6 +92,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Reportes
         {
             // Carga los turnos de 1 medico o la especialidad en gral.
             Session["legajoABuscar"] = ddlMedico.SelectedValue;
+            gvTurnos.PageIndex = 0;
             cargarTurnos();
         }
 
@@ -109,6 +110,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Reportes
             }
 
             // Carga los turnos de una especialidad o todas.
+            gvTurnos.PageIndex = 0;
             Session["especialidadABuscar"] = ddlEspecialidad.SelectedItem.Text;
             cargarTurnos();
         }
@@ -123,6 +125,7 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Reportes
         {
             Session["fechaIABuscar"] = txtFechaI.Text;
             Session["fechaFABuscar"] = txtFechaF.Text;
+            gvTurnos.PageIndex = 0;
             cargarTurnos();
         }
 
@@ -145,6 +148,12 @@ namespace TPINT_GRUPO_5_PR3.Vistas.Reportes
         {
             DateTime fecha = DateTime.Parse(((Label)sender).Text);
             ((Label)sender).Text = fecha.ToShortDateString();
+        }
+
+        protected void gvTurnos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvTurnos.PageIndex = e.NewPageIndex;
+            cargarTurnos();
         }
     }
 }
